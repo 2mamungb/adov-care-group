@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fairytales SMM // Executive Card Showcase & Cinema Mockup (Draft 2)</title>
+  <style>
+    :root {
+      --bg: #030712;
+      --card-bg: #070a12;
+      --accent: #00f0ff;
+      --silver: #e2e8f0;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 15%, #0f172a 0%, #030712 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(0, 240, 255, 0.08);
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      color: var(--accent);
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 60%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 14.5px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Tab Switcher */
+    .tab-container {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 35px;
+      background: rgba(15, 23, 42, 0.8);
+      padding: 6px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .tab-btn {
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      background: transparent;
+      color: var(--text-muted);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, #00f0ff 0%, #38bdf8 100%);
+      color: #030712;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+    }
+
+    .tab-btn:hover:not(.active) {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Cinema Mockup Banner */
+    .mockup-hero-container {
+      max-width: 1050px;
+      width: 100%;
+      margin-bottom: 45px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9),
+                  0 0 0 1px rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+
+    .mockup-hero-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .mockup-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(3, 7, 18, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .showcase-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: center;
+      max-width: 1050px;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+
+    .card-container {
+      flex: 1 1 360px;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-label span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    .card-wrapper {
+      width: 100%;
+      aspect-ratio: 540 / 856;
+      border-radius: 24px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8),
+                  0 0 0 1px rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+      background: #020408;
+      position: relative;
+    }
+
+    .card-wrapper.white-surface {
+      background: #ffffff;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85),
+                  0 0 0 1px rgba(255, 255, 255, 0.2);
+    }
+
+    .card-wrapper:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 35px 70px -15px rgba(0, 0, 0, 0.9),
+                  0 0 0 1px rgba(0, 240, 255, 0.35);
+    }
+
+    .card-wrapper object {
+      width: 100%;
+      height: 100%;
+      display: block;
+      pointer-events: none;
+    }
+
+    .specs-panel {
+      max-width: 1000px;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 35px;
+      backdrop-filter: blur(14px);
+    }
+
+    .specs-title {
+      font-size: 16.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 22px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .spec-item {
+      background: rgba(2, 6, 23, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .spec-key {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .spec-val {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #e2e8f0;
+      word-break: break-word;
+    }
+
+    .actions {
+      margin-top: 35px;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 13px 26px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #00f0ff 0%, #38bdf8 100%);
+      color: #030712;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge">ISO/IEC 7810 ID-1 Standard Credit Card Form-Factor</div>
+    <h1>CHARLES WILSON • EXECUTIVE DIRECTOR</h1>
+    <p class="subtitle">Fairytales SMM • Standard Credit Card Dimensions: 54.0 mm × 85.6 mm (rx: 3.18 mm)</p>
+  </header>
+
+  <!-- Interactive Version Switcher -->
+  <div class="tab-container">
+    <button class="tab-btn active" id="btnDraft2" onclick="switchVersion('draft2')">Draft 2: Porcelain White &amp; Zero Background Lines</button>
+    <button class="tab-btn" id="btnDraft1" onclick="switchVersion('draft1')">Draft 1: Obsidian Noir Edition</button>
+  </div>
+
+  <!-- Cinema Quality Studio Lighting Mockup -->
+  <div class="mockup-hero-container">
+    <div class="mockup-badge">Cinema Studio Mockup • Rustic Wood Lighting</div>
+    <img src="fairytales_smm_card_mockup_draft2.png" alt="Fairytales SMM Cinema Quality Card Mockup on Rustic Wood">
+  </div>
+
+  <main class="showcase-grid">
+    <!-- FRONT OF CARD -->
+    <div class="card-container">
+      <div class="card-label" id="frontLabel"><span></span> Front // Charles Wilson • Live vCard QR</div>
+      <div class="card-wrapper white-surface" id="frontWrapper">
+        <object id="frontObject" data="draft2_white/fairytales_smm_card_front_white.svg" type="image/svg+xml"></object>
+      </div>
+    </div>
+
+    <!-- BACK OF CARD -->
+    <div class="card-container">
+      <div class="card-label" id="backLabel"><span></span> Back // Phoenix • Production Campus</div>
+      <div class="card-wrapper" id="backWrapper">
+        <object id="backObject" data="draft2_white/fairytales_smm_card_back_obsidian.svg" type="image/svg+xml"></object>
+      </div>
+    </div>
+  </main>
+
+  <section class="specs-panel">
+    <div class="specs-title">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2">
+        <rect x="5" y="2" width="14" height="20" rx="2"></rect>
+        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+      </svg>
+      Executive Design Specifications &amp; Architectural Comparison
+    </div>
+
+    <div class="specs-grid">
+      <div class="spec-item">
+        <div class="spec-key">Current Active Version</div>
+        <div class="spec-val" id="specVersionName">Draft 2: Porcelain White Front + Obsidian Back (Zero Background Lines)</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-key">Standard Form-Factor</div>
+        <div class="spec-val">ISO/IEC 7810 ID-1 (54.0 mm × 85.6 mm • rx: 3.18 mm)</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-key">Background Treatment</div>
+        <div class="spec-val">Pure Silky Smooth Surfaces (All Background Lines &amp; Grid Removed)</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-key">Front Header Brand Mark</div>
+        <div class="spec-val">Mini Phoenix Logo Beside FAIRYTALES SMM</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-key">Back Campus Address</div>
+        <div class="spec-val">Yard 1, High Heath Farm, Codicote, Hitchin, SG4 8SZ</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-key">what3words Location</div>
+        <div class="spec-val">///chest.vision.moth (Back Header)</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-key">Live Scannable QR</div>
+        <div class="spec-val">Universal vCard 3.0 (Tested &amp; Verified on Apple Scanner)</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-key">Direct Contact Line</div>
+        <div class="spec-val">+44 7501 060101 (Clean International Tabular Monospace)</div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a href="../../Fairytales_SMM_Executive_Card_Mockup_Draft2.pdf" download class="btn btn-primary">Download Boardroom PDF Mockup</a>
+      <a id="btnDlFront" href="draft2_white/fairytales_smm_card_front_white.svg" download class="btn btn-secondary">Download Front SVG</a>
+      <a id="btnDlBack" href="draft2_white/fairytales_smm_card_back_obsidian.svg" download class="btn btn-secondary">Download Back SVG</a>
+    </div>
+  </section>
+
+  <script>
+    function switchVersion(ver) {
+      const btnD1 = document.getElementById('btnDraft1');
+      const btnD2 = document.getElementById('btnDraft2');
+      const frontObj = document.getElementById('frontObject');
+      const backObj = document.getElementById('backObject');
+      const frontWrap = document.getElementById('frontWrapper');
+      const specName = document.getElementById('specVersionName');
+      const dlFront = document.getElementById('btnDlFront');
+      const dlBack = document.getElementById('btnDlBack');
+
+      if (ver === 'draft1') {
+        btnD1.classList.add('active');
+        btnD2.classList.remove('active');
+        frontObj.data = 'draft1_obsidian/fairytales_smm_card_front_obsidian.svg';
+        backObj.data = 'draft1_obsidian/fairytales_smm_card_back_obsidian.svg';
+        frontWrap.classList.remove('white-surface');
+        specName.innerText = 'Draft 1: Obsidian Noir Edition (Both Faces Matte Dark)';
+        dlFront.href = 'draft1_obsidian/fairytales_smm_card_front_obsidian.svg';
+        dlBack.href = 'draft1_obsidian/fairytales_smm_card_back_obsidian.svg';
+      } else {
+        btnD2.classList.add('active');
+        btnD1.classList.remove('active');
+        frontObj.data = 'draft2_white/fairytales_smm_card_front_white.svg';
+        backObj.data = 'draft2_white/fairytales_smm_card_back_obsidian.svg';
+        frontWrap.classList.add('white-surface');
+        specName.innerText = 'Draft 2: Porcelain White Front + Obsidian Back (Zero Background Lines)';
+        dlFront.href = 'draft2_white/fairytales_smm_card_front_white.svg';
+        dlBack.href = 'draft2_white/fairytales_smm_card_back_obsidian.svg';
+      }
+    }
+  </script>
+
+</body>
+</html>

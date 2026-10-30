@@ -1,0 +1,225 @@
+
+    # ==========================================================================
+    # PAGE 5: 4.0 WORKFORCE ECONOMICS & NIGHT SHIFT MODELING + FIGURE 2
+    # ==========================================================================
+    p5 = pdf.add_page()
+    p5.draw_academic_header("SECTION 4.0", "WORKFORCE ECONOMICS & NIGHT SHIFTS")
+    
+    y = p5.height - 48
+    y = p5.draw_section_heading("4.0", "OPERATIONAL WORKFORCE & NIGHT SHIFT ECONOMICS", y)
+    
+    p5_txt = (
+        "In residential care and supported living operations, frontline workforce costs represent the single largest operational "
+        "expenditure, typically absorbing 60% to 70% of gross fee income. The physical layout of property assets dictates shift "
+        "establishment ratios, lone-working risk exposure, and statutory compliance under CQC Regulation 18 (Staffing). The choice "
+        "between a unified contiguous campus (Scenario A) and disconnected properties (Scenario B) creates a profound structural divergence "
+        "in workforce efficiency and commercial profitability."
+    )
+    y = p5.draw_wrapped_text(p5_txt, p5.mx, y, p5.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    y = p5.draw_section_heading("4.1", "CQC Regulation 18 Compliance & Waking Night Staffing Law", y)
+    p5_reg18 = (
+        "Under Regulation 18 of the Health and Social Care Act 2008 (Regulated Activities) Regulations 2014, registered providers must "
+        "deploy sufficient numbers of suitably qualified, competent, and skilled staff at all times. In high-dependency autism services, "
+        "active waking night cover is legally mandatory due to high rates of nocturnal wandering, seizure risks, and severe behavioural meltdowns. "
+        "Crucially, CQC fundamental standards and lone-worker safeguarding regulations strictly prohibit a lone waking night worker from "
+        "managing two disconnected residential properties located 30 meters apart across a public highway. If an incident or medical crisis "
+        "erupts at 78 Marston Gardens, a carer stationed at 82 cannot lawfully abandon their post to render assistance."
+    )
+    y = p5.draw_wrapped_text(p5_reg18, p5.mx, y, p5.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    # Table 4.0: Shift Rota Architecture & Annual Staffing Establishment
+    cols_t4 = [("Shift Designation", 95), ("Scenario A: Unified Hub (78 & 80)", 165), ("Scenario B: Split Sites (78 & 82)", 165), ("Variance / Cost Delta", 90)]
+    rows_t4 = [
+        ("Day Shift (08:00 - 20:00)", "4 Care Staff + 1 Shift Leader (Unified)", "3 Staff at 78 + 2 Staff at 82 (Fragmented)", "Equal Base (5 Staff/Day)"),
+        ("Waking Night (20:00 - 08:00)", "1 Dedicated Waking Night Carer (Shared)", "2 Waking Night Carers (1 at 78 + 1 at 82)", "+1 Waking Night (£70.2k/yr)"),
+        ("Sleep-In Night Cover", "1 Sleep-In Carer (Active Reserve in 80 Hub)", "2 Sleep-In Carers (1 at 78 + 1 at 82)", "+1 Sleep-In Carer (£18.5k/yr)"),
+        ("Total Annual Rota Hours", "21,900 Hours / Year (Optimized)", "26,280 Hours / Year (Duplicated)", "+4,380 Unproductive Hours"),
+        ("Total Annual Care Payroll", "£385,000 / year (31.2% of Turnover)", "£473,700 / year (38.4% of Turnover)", "+£88,700 Annual Deadweight")
+    ]
+    y = p5.draw_booktabs_table("TABLE 4.0: COMPARATIVE SHIFT ROTA & ANNUAL STAFFING ESTABLISHMENT", cols_t4, rows_t4, y, row_h=9.6, font_size=5.6)
+    y -= 3
+    
+    # --------------------------------------------------------------------------
+    # FIGURE 2: OPERATIONAL WORKFORCE & NIGHT SHIFT ROTA MODEL (VECTOR SCHEMATIC)
+    # --------------------------------------------------------------------------
+    p5.set_fill_color(0.08, 0.14, 0.24)
+    p5.draw_text("FIGURE 2: OPERATIONAL WORKFORCE & NIGHT SHIFT ROTA MODEL", p5.mx, y, font="F2", size=7.4)
+    y -= 5
+    
+    fig2_h = 155
+    fig2_y = y - fig2_h
+    p5.set_fill_color(0.99, 0.995, 1.0)
+    p5.set_stroke_color(0.70, 0.78, 0.88)
+    p5.draw_rect(p5.mx, fig2_y, p5.cw, fig2_h, fill=True, stroke=True, stroke_w=0.8)
+    
+    # Left Side: Scenario A Unified Hub
+    w_box = 230
+    h_box = 120
+    x_left = p5.mx + 15
+    y_box = fig2_y + 18
+    
+    p5.set_fill_color(0.95, 0.98, 0.96)
+    p5.set_stroke_color(0.12, 0.45, 0.22)
+    p5.draw_rect(x_left, y_box, w_box, h_box, fill=True, stroke=True, stroke_w=1.0)
+    
+    p5.set_fill_color(0.12, 0.45, 0.22)
+    p5.draw_text("SCENARIO A: UNIFIED CAMPUS NIGHT HUB", x_left + 8, y_box + h_box - 14, font="F2", size=7.0)
+    p5.set_fill_color(0.20, 0.28, 0.38)
+    p5.draw_text("Contiguous Scheme: 78 & 80 Marston Gardens", x_left + 8, y_box + h_box - 25, font="F3", size=6.2)
+    p5.draw_text("• 1 Active Waking Night Carer (Patrolling 78 & 80)", x_left + 8, y_box + h_box - 37, font="F1", size=6.2)
+    p5.draw_text("• 1 Sleep-In Carer (Resting in 80 Staff Hub)", x_left + 8, y_box + h_box - 48, font="F1", size=6.2)
+    p5.draw_text("• Mutual Support: 2 Carers on site for 2:1 interventions", x_left + 8, y_box + h_box - 59, font="F1", size=6.2)
+    p5.draw_text("• Unified Cat L1 Fire Alarm & Intercom Link", x_left + 8, y_box + h_box - 70, font="F1", size=6.2)
+    p5.draw_text("• Zero public street crossing required", x_left + 8, y_box + h_box - 81, font="F1", size=6.2)
+    
+    p5.set_fill_color(0.12, 0.45, 0.22)
+    p5.draw_rect(x_left + 8, y_box + 8, w_box - 16, 16, fill=True)
+    p5.set_fill_color(1.0, 1.0, 1.0)
+    p5.draw_text("OPTIMAL ROSTER: £140,400 / YR (100% CQC COMPLIANT)", x_left + 12, y_box + 13, font="F2", size=5.8)
+    
+    # Right Side: Scenario B Disconnected Rota
+    x_right = p5.mx + p5.cw - w_box - 15
+    p5.set_fill_color(0.99, 0.95, 0.95)
+    p5.set_stroke_color(0.70, 0.20, 0.20)
+    p5.draw_rect(x_right, y_box, w_box, h_box, fill=True, stroke=True, stroke_w=1.0)
+    
+    p5.set_fill_color(0.70, 0.20, 0.20)
+    p5.draw_text("SCENARIO B: DISCONNECTED DUPLICATE ROTAS", x_right + 8, y_box + h_box - 14, font="F2", size=7.0)
+    p5.set_fill_color(0.38, 0.20, 0.20)
+    p5.draw_text("Split Facilities: 78 & 82 Marston Gardens (30m Road Gap)", x_right + 8, y_box + h_box - 25, font="F3", size=6.2)
+    p5.draw_text("• 78 Rota: 1 Waking Night + 1 Sleep-In Carer", x_right + 8, y_box + h_box - 37, font="F1", size=6.2)
+    p5.draw_text("• 82 Rota: 1 Waking Night + 1 Sleep-In Carer (Mandatory)", x_right + 8, y_box + h_box - 48, font="F1", size=6.2)
+    p5.draw_text("• Isolated Workers: Inability to assist across public road", x_right + 8, y_box + h_box - 59, font="F1", size=6.2)
+    p5.draw_text("• Severe Lone-Worker Risk & CQC Reg 18 Breach", x_right + 8, y_box + h_box - 70, font="F1", size=6.2)
+    p5.draw_text("• Structural £70,200/yr deadweight payroll penalty", x_right + 8, y_box + h_box - 81, font="F1", size=6.2)
+    
+    p5.set_fill_color(0.70, 0.20, 0.20)
+    p5.draw_rect(x_right + 8, y_box + 8, w_box - 16, 16, fill=True)
+    p5.set_fill_color(1.0, 1.0, 1.0)
+    p5.draw_text("DUPLICATE ROTA: £210,600 / YR (+£70,200 PENALTY)", x_right + 12, y_box + 13, font="F2", size=5.8)
+    
+    y = fig2_y - 6
+    
+    y = p5.draw_section_heading("4.2", "Economic Cost Analysis of Rota Duplication (£70,200/Year Penalty)", y)
+    p5_deadweight = (
+        "The economic penalty of Scenario B is mathematically inescapable. Mandating a second waking night carer across 365 nights "
+        "requires 4,380 additional operational hours (12 hours/night * 365 nights). At a living wage rate of £14.50/hour plus employer "
+        "National Insurance (13.8%), statutory pension (3.0%), and holiday coverage (12.07%), the fully loaded cost is £16.03/hour. "
+        "This totals exactly £70,211 per annum in non-value-added deadweight expenditure. Over a 3-year commissioning horizon, Scenario B "
+        "destroys £210,633 in post-tax cashflow solely on duplicated night cover."
+    )
+    y = p5.draw_wrapped_text(p5_deadweight, p5.mx, y, p5.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    cols_t41 = [("Horizon / Financial Year", 125), ("Scenario A (Unified Hub)", 135), ("Scenario B (Duplicate Rotas)", 135), ("Cumulative Net Loss (B)", 120)]
+    rows_t41 = [
+        ("Year 1 Night Cover", "£140,400", "£210,600", "-£70,200 (Deadweight Loss)"),
+        ("Year 2 Night Cover", "£147,420 (5% wage inflation)", "£221,130 (5% wage inflation)", "-£143,910 (Cumulative)"),
+        ("Year 3 Night Cover", "£154,791 (5% wage inflation)", "£232,186 (5% wage inflation)", "-£221,305 (Cumulative)"),
+        ("3-Year Total Payroll Impact", "£442,611 Total Night OpEx", "£663,916 Total Night OpEx", "-£221,305 CASH DESTRUCTION")
+    ]
+    y = p5.draw_booktabs_table("TABLE 4.1: THREE-YEAR CUMULATIVE NIGHT ROTA CASHFLOW IMPACT", cols_t41, rows_t41, y, row_h=9.6, font_size=5.6)
+    y -= 3
+    
+    cols_t42 = [("Lone-Worker Risk Vector", 125), ("Scenario A Risk Control", 195), ("Scenario B Residual Hazard", 195)]
+    rows_t42 = [
+        ("Physical De-escalation (2:1)", "Instant 10-second response from sleep-in hub", "Carer isolated; unable to summon emergency help"),
+        ("Medical Crisis / Seizure", "Second carer immediately initiates CPR / 999", "Lone worker must abandon resident to unlock front door"),
+        ("CQC Enforcement Vulnerability", "Zero lone-working breach under Regulation 18", "Immediate Warning Notice or Rating Downgrade")
+    ]
+    y = p5.draw_booktabs_table("TABLE 4.2: LONE-WORKER RISK ASSESSMENT & WORKFORCE GOVERNANCE", cols_t42, rows_t42, y, row_h=9.6, font_size=5.6)
+    y -= 2
+    
+    p5_rec_box = (
+        "REGULATORY WORKFORCE MANDATE // CQC REGULATION 18 COMPLIANCE: Operating 78 and 80 as a contiguous single campus is the only "
+        "structure that satisfies CQC Regulation 18 without incurring structural workforce duplication. Scenario A eliminates £70,200/year "
+        "in unnecessary night staff wages while guaranteeing 2:1 crisis coverage, safe handovers, and full lone-worker statutory compliance."
+    )
+    y = p5.draw_academic_callout("REGULATORY WORKFORCE MANDATE // CQC REGULATION 18 COMPLIANCE", p5_rec_box, y, h=36)
+
+
+    # ==========================================================================
+    # PAGE 6: 5.0 CAPEX & PHYSICAL CONVERSION ANALYSIS
+    # ==========================================================================
+    p6 = pdf.add_page()
+    p6.draw_academic_header("SECTION 5.0", "CAPEX & PHYSICAL CONVERSION ANALYSIS")
+    
+    y = p6.height - 48
+    y = p6.draw_section_heading("5.0", "CAPEX & PHYSICAL CONVERSION ANALYSIS", y)
+    
+    p6_txt = (
+        "Conversion capital expenditure represents the primary upfront barrier to commissioning. Adapting residential dwellings for "
+        "high-dependency autism care requires substantial structural and engineering modifications, including Category L1 addressable "
+        "fire detection systems, commercial DDA compliant wetrooms, anti-ligature ironmongery, acoustic wall and ceiling linings, and secure "
+        "staff administrative hubs. A rigorous engineering assessment of 78, 80, and 82 Marston Gardens reveals profound CapEx asymmetries."
+    )
+    y = p6.draw_wrapped_text(p6_txt, p6.mx, y, p6.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    # Table 5.0: Itemised CapEx Budget & Works Breakdown
+    cols_t5 = [("CapEx Works Package / Specification", 155), ("Scenario A: Campus (78 & 80)", 120), ("Scenario B: Split (78 & 82)", 120), ("CapEx Delta / Savings", 120)]
+    rows_t5 = [
+        ("Commercial DDA Wetrooms", "£22,000 (80 already has wetroom)", "£58,000 (Convert 2 baths at 82)", "£36,000 Saved (Pre-existing in 80)"),
+        ("Cat L1 Fire Alarm System", "£18,000 (Integrated loop 78 & 80)", "£32,000 (Two independent systems)", "£14,000 Saved (Shared panel)"),
+        ("Fire Doors (FD30S) & Partitioning", "£16,000 (8 fire door sets)", "£24,000 (14 fire door sets across 2 sites)", "£8,000 Saved (Optimized layout)"),
+        ("Acoustic Decoupling (Rockwool RW3)", "£14,000 (Internal flanking walls)", "£26,000 (Acoustic lining at 82 party walls)", "£12,000 Saved (Insulated curtilage)"),
+        ("Sensory Suite & Calming Pods", "£15,000 (Integrated Ground Floor 80)", "£15,000 (Single sensory room at 78)", "Neutral (£15,000 Base)"),
+        ("Kitchen & Anti-Ligature Life Skills", "£18,000 (Commercial appliances 78)", "£28,000 (2 commercial kitchens)", "£10,000 Saved (Single catering hub)"),
+        ("Driveways & Parking Hard-Standing", "£6,000 (Minor resurfacing & EV)", "£12,000 (Driveway alterations at 82)", "£6,000 Saved (Existing capacity)"),
+        ("Contingency & Professional Fees", "£34,000 (Architect, QS, CQC prep)", "£35,000 (Dual planning applications)", "£1,000 Saved (Single submission)"),
+        ("TOTAL INITIAL CAPEX BUDGET", "£143,000 (DELIVERED IN 12 WEEKS)", "£230,000 (PROTRACTED 24 WEEKS)", "£87,000 CAPITAL PRESERVED")
+    ]
+    y = p6.draw_booktabs_table("TABLE 5.0: ITEMISED CONVERSION CAPEX BUDGET & ENGINEERING ESTIMATES", cols_t5, rows_t5, y, row_h=9.6, font_size=5.6)
+    y -= 3
+    
+    y = p6.draw_section_heading("5.1", "Town Planning Law: Use Class C3b vs. Class C2 & Section 192 CLEUD", y)
+    planning_summary = (
+        "Under the Town and Country Planning (Use Classes) Order 1987 (as amended), Use Class C3(b) permits the use of a dwellinghouse "
+        "by up to six residents living together as a single household where care is provided. Crucially, the landmark Court of Appeal ruling "
+        "in North Devon District Council v First Secretary of State [2004] established that where residents live as a single household with "
+        "resident or non-resident care staff, the operation falls squarely within Class C3(b). In Scenario A, 78 accommodates 5 residents and "
+        "80 accommodates 3 residents, meaning both individual semi-detached properties remain strictly under the 6-resident statutory threshold. "
+        "This enables ADOV Care Group to secure a Certificate of Lawfulness of Proposed Use or Development (CLEUD) under Section 192 of the "
+        "Town and Country Planning Act 1990 without requiring full planning permission."
+    )
+    y = p6.draw_wrapped_text(planning_summary, p6.mx, y, p6.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    y = p6.draw_section_heading("5.2", "Building Regulations Part M, Part B & Fire Safety Order 2005", y)
+    p6_bld = (
+        "Building Regulations Approved Document M (Access to and Use of Buildings) requires step-free level thresholds, wide door clearances, "
+        "and accessible sanitary facilities. The pre-existing ground-floor commercial wetroom in 80 Marston Gardens meets Category 3 (Wheelchair "
+        "Accessible) specifications, avoiding destructive structural underpinning. Fire compartmentation under Approved Document B and the "
+        "Regulatory Reform (Fire Safety) Order 2005 is achieved via 30-minute fire-resisting partitions and self-closing FD30S doors."
+    )
+    y = p6.draw_wrapped_text(p6_bld, p6.mx, y, p6.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    cols_t51 = [("Statutory Planning Pillar", 125), ("Scenario A: Contiguous Scheme", 195), ("Scenario B: Disconnected Properties", 195)]
+    rows_t51 = [
+        ("Town Planning Classification", "Class C3b Permitted Development (CLEUD s.192)", "Class C2 Full Planning Application Required for 82"),
+        ("Planning Approval Risk", "Zero Planning Risk // Lawful Development Right", "High Risk: Neighbour Objections to Commercial Use at 82"),
+        ("Highways & Parking (Policy LLP32)", "8 Private Driveway Bays satisfy policy", "Substandard parking at 82 triggers highway objections"),
+        ("Commissioning Timeline", "12 Weeks (Fast-track contractor mobilization)", "24-36 Weeks (Protracted planning committee delays)")
+    ]
+    y = p6.draw_booktabs_table("TABLE 5.1: STATUTORY PLANNING & CONVERSION RISK LEDGER", cols_t51, rows_t51, y, row_h=9.6, font_size=5.6)
+    y -= 3
+    
+    cols_t52 = [("Procurement Package", 125), ("Contractor Scope & JCT Minor Works", 195), ("Delivery Assurance", 195)]
+    rows_t52 = [
+        ("Phase 1: Fire & Life Safety", "Cat L1 addressable fire alarm, FD30S doors", "NICEIC & BAFE certification upon handover"),
+        ("Phase 2: Sanitary & DDA", "Commissioning 80 DDA wetroom, anti-ligature fittings", "Building Control Part M sign-off"),
+        ("Phase 3: Sensory & Finishes", "Sensory calming pods, acoustic RW3 wall linings", "Environmental Health acoustic certification")
+    ]
+    y = p6.draw_booktabs_table("TABLE 5.2: CONTRACTOR PROCUREMENT & MILESTONE GOVERNANCE", cols_t52, rows_t52, y, row_h=9.6, font_size=5.6)
+    y -= 2
+    
+    p6_rec_box = (
+        "PLANNING & INFRASTRUCTURE EFFICIENCY TAKEAWAY: Scenario A captures an immediate £87,000 capital expenditure saving by leveraging "
+        "the existing commercial DDA wetroom and extensive ground-floor footprint of 80 Marston Gardens. By maintaining bed densities below "
+        "6 residents per building, Scenario A qualifies for Class C3b permitted development under Section 192 TCPA 1990, eliminating planning risk."
+    )
+    y = p6.draw_academic_callout("PLANNING & INFRASTRUCTURE EFFICIENCY TAKEAWAY", p6_rec_box, y, h=36)

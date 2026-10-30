@@ -1,0 +1,181 @@
+
+    # ==========================================================================
+    # PAGE 9: 8.0 FAMILY LIFESTYLE, CLINICAL RISK & GOVERNANCE
+    # ==========================================================================
+    p9 = pdf.add_page()
+    p9.draw_academic_header("SECTION 8.0", "FAMILY LIFESTYLE & RISK GOVERNANCE")
+    
+    y = p9.height - 48
+    y = p9.draw_section_heading("8.0", "FAMILY LIFESTYLE, CLINICAL RISK & GOVERNANCE", y)
+    
+    p9_txt = (
+        "Operating a residential care facility for adults presenting with severe autism, high sensory needs, and complex challenging "
+        "behaviours is an exceptionally demanding enterprise. While financial and planning metrics dominate commercial appraisals, the "
+        "human dimension of director resilience, mental health, and family domestic life represents the ultimate foundation of enterprise "
+        "continuity. The spatial relationship between the founding Director's domestic home and the care facility determines whether the "
+        "business achieves stable, multi-decade success or collapses under chronic burnout."
+    )
+    y = p9.draw_wrapped_text(p9_txt, p9.mx, y, p9.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    y = p9.draw_section_heading("8.1", "Physical Separation of Domestic Sanctum & Acoustic Immunity", y)
+    p9_sanctum = (
+        "Under Scenario B, the Director's family remains residing at 80 Marston Gardens, sharing an immediate party wall with 78 Marston "
+        "Gardens. Adults with severe autism and behavioural distress frequently vocalise loudly, pace violently, bang on walls, or suffer "
+        "profound nocturnal meltdowns between 01:00 and 05:00. In an adjoining semi-detached house, acoustic vibrations transmit through "
+        "structural brickwork, waking young children and parents. Staff inevitably knock on the Director's door during nocturnal crises, "
+        "obliterating work-life separation and inducing severe psychological exhaustion. In contrast, Scenario A relocates the family to 82 "
+        "Marston Gardens, an executive detached home completely decoupled from the care campus."
+    )
+    y = p9.draw_wrapped_text(p9_sanctum, p9.mx, y, p9.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    y = p9.draw_section_heading("8.2", "Safeguarding Children & Family Privacy (Working Together 2023)", y)
+    p9_child = (
+        "Under statutory safeguarding guidance (Working Together to Safeguard Children 2023), children have an absolute right to a secure, "
+        "peaceful domestic environment free from witnessing distressing physical incidents. Residential care interventions for violent "
+        "meltdowns often involve physical restraint, emergency paramedic responses, or police attendance. Subjecting young children to "
+        "these distressing occurrences directly through an adjoining wall creates long-term trauma. Relocating to detached 82 preserves "
+        "absolute domestic privacy, protecting children while ensuring a tranquil, normal home life."
+    )
+    y = p9.draw_wrapped_text(p9_child, p9.mx, y, p9.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    # Table 8.0: Multi-Criteria Family Impact & Domestic Quality-of-Life Scorecard
+    cols_t8 = [("Domestic Life Dimension", 125), ("Scenario A: Relocation to 82", 195), ("Scenario B: Family Trapped at 80", 195)]
+    rows_t8 = [
+        ("Acoustic Isolation", "100% Decoupled (Detached residence 30m away)", "Direct party wall transmission of noise & distress"),
+        ("Family Privacy & Sanctum", "Pure domestic sanctity; secure private garden", "Staff knocking on door; resident line-of-sight"),
+        ("Child Safeguarding", "Children fully insulated from clinical distress", "Children exposed to nocturnal meltdowns & sirens"),
+        ("Director Burnout Risk", "Negligible; psychological recovery at home", "Extreme burnout; unable to disconnect from crises"),
+        ("Work-Life Boundary", "Strict operational boundary; off-duty tranquility", "Zero separation; domestic home becomes care annex"),
+        ("Emergency Oversight Feasibility", "Optimal: 60-second walk for genuine crises", "Suffocating: Constant daily trivial interruptions")
+    ]
+    y = p9.draw_booktabs_table("TABLE 8.0: MULTI-CRITERIA FAMILY IMPACT & DOMESTIC QUALITY-OF-LIFE SCORECARD", cols_t8, rows_t8, y, row_h=9.6, font_size=5.6)
+    y -= 3
+    
+    y = p9.draw_section_heading("8.3", "The 30-Meter Oversight Protocol: Instant Emergency Access Without Living On-Site", y)
+    p9_oversight = (
+        "A decisive advantage of 82 Marston Gardens is its precise physical location. Situated exactly 30 meters down the street, it is "
+        "a 60-second walk from the 78 & 80 campus. This proximity creates the ideal operational balance: the founding Director can provide "
+        "immediate on-call senior leadership and emergency physical presence within two minutes during genuine emergencies, while maintaining "
+        "total domestic detachment during normal hours. Living 30 meters away prevents staff from treating the family home as an informal "
+        "breakroom, establishing professional boundaries under CQC Well-Led governance."
+    )
+    y = p9.draw_wrapped_text(p9_oversight, p9.mx, y, p9.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    cols_t81 = [("Incident Severity Tier", 110), ("Trigger Event Example", 175), ("Operational Escalation Response", 155), ("Director Response Protocol", 75)]
+    rows_t81 = [
+        ("Tier 1: Minor Query", "Medication count query, rota shift swap", "On-duty Shift Leader resolves via 80 Hub", "No contact permitted"),
+        ("Tier 2: Behavioural Agitation", "Sensory escalation, resident verbal distress", "Staff deploy PBS sensory calming suite in 80", "Logged on system"),
+        ("Tier 3: 2:1 Physical Restraint", "Prolonged violent crisis, property damage", "Active waking night summons sleep-in carer", "Registered Manager notified"),
+        ("Tier 4: Major Emergency", "Fire alarm activation, ambulance 999 call", "Emergency evacuation to front driveway assembly", "Director 60s walk to site")
+    ]
+    y = p9.draw_booktabs_table("TABLE 8.1: CLINICAL INCIDENT ESCALATION & DIRECTOR CALLOUT PROTOCOL", cols_t81, rows_t81, y, row_h=9.6, font_size=5.6)
+    y -= 3
+    
+    cols_t82 = [("Well-being Objective", 125), ("Statutory Standard / Mandate", 195), ("Operational Assurance Mechanism", 195)]
+    rows_t82 = [
+        ("Director Psychological Resilience", "CQC Regulation 5 (Fit & Proper Person)", "Guarantees uninterrupted nocturnal rest & recovery"),
+        ("Family Domestic Immunity", "Article 8 ECHR (Right to Private Life)", "Zero care home operational spillover into family sanctum"),
+        ("Child Emotional Safeguarding", "Working Together to Safeguard Children 2023", "Complete physical insulation from care distress & trauma")
+    ]
+    y = p9.draw_booktabs_table("TABLE 8.2: FAMILY SAFEGUARDING & GOVERNANCE COMPLIANCE ACTION PLAN", cols_t82, rows_t82, y, row_h=9.6, font_size=5.6)
+    y -= 2
+    
+    p9_rec_box = (
+        "FAMILY WELFARE & GOVERNANCE SYNTHESIS: The Board recognises that commercial care success depends fundamentally upon Director "
+        "health and family stability. Scenario A guarantees complete domestic tranquility at detached 82 Marston Gardens, protecting children "
+        "and eliminating burnout while retaining a 60-second emergency walking response time to the 78 & 80 campus."
+    )
+    y = p9.draw_academic_callout("FAMILY WELFARE & GOVERNANCE SYNTHESIS", p9_rec_box, y, h=36)
+
+
+    # ==========================================================================
+    # PAGE 10: 9.0 IMPLEMENTATION SCHEDULE & STATUTORY BOARD RESOLUTION
+    # ==========================================================================
+    p10 = pdf.add_page()
+    p10.draw_academic_header("SECTION 9.0", "IMPLEMENTATION SCHEDULE & BOARD RESOLUTION")
+    
+    y = p10.height - 48
+    y = p10.draw_section_heading("9.0", "IMPLEMENTATION SCHEDULE & COMMISSIONING ROADMAP", y)
+    
+    p10_txt = (
+        "The commissioning of an 8-bed specialist supported living scheme represents a multi-track operational undertaking spanning legal "
+        "conveyancing, town planning certification, physical CapEx adaptations, CQC registration, and commissioner placement ramp-up. "
+        "A structured 12-month phased transition roadmap ensures uninterrupted operational momentum while strictly controlling cash outflows."
+    )
+    y = p10.draw_wrapped_text(p10_txt, p10.mx, y, p10.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    # Table 9.0: Phased Commissioning Gantt Schedule
+    cols_t9 = [("Phase / Milestone Track", 110), ("Calendar Window", 85), ("Key Deliverables & Statutory Filings", 230), ("Governance Sign-Off", 90)]
+    rows_t9 = [
+        ("Phase 1: Legal & Corporate", "Month 1 - Month 3", "Execute 10-yr OpCo leases for 78 & 80 (£50k rent); Director AST for 82 (£18k)", "Board Approval"),
+        ("Phase 2: Planning & DDA", "Month 3 - Month 5", "Submit Section 192 CLEUD for Class C3b; complete building control DDA pack", "Luton Borough Council"),
+        ("Phase 3: Physical CapEx", "Month 5 - Month 8", "Mobilize JCT Minor Works: Cat L1 fire alarms, DDA wetrooms, RW3 acoustic walls", "Building Control"),
+        ("Phase 4: CQC & Staffing", "Month 8 - Month 10", "Submit CQC registration for single 8-bed scheme; recruit Registered Manager", "CQC Fit & Proper"),
+        ("Phase 5: Intake & Ramp-up", "Month 10 - Month 12", "Contract with Bedfordshire ICB & Luton Council; phased intake of 8 residents", "ICB Commissioning")
+    ]
+    y = p10.draw_booktabs_table("TABLE 9.0: TWELVE-MONTH PHASED COMMISSIONING GANTT SCHEDULE", cols_t9, rows_t9, y, row_h=9.6, font_size=5.6)
+    y -= 3
+    
+    y = p10.draw_section_heading("9.1", "Strategic Risk Register & Mitigation Controls", y)
+    p10_risk = (
+        "Project delivery risks are proactively controlled via contract mechanisms, legal statutory protections, and clinical oversight. "
+        "Fixed-price JCT construction contracts cap CapEx inflation; S.192 CLEUD eliminates planning appeal delays; and proactive ICB framework "
+        "engagement secures high-occupancy commitments prior to practical completion."
+    )
+    y = p10.draw_wrapped_text(p10_risk, p10.mx, y, p10.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    cols_t91 = [("Risk Event", 110), ("Inherent Severity", 80), ("Mitigation Control & Governance Safeguard", 235), ("Residual Risk Level", 90)]
+    rows_t91 = [
+        ("Planning Reclassification", "High", "S.192 CLEUD confirms lawful Class C3b permitted development use", "Low (Legally Bound)"),
+        ("CapEx Budget Overrun", "Medium", "Fixed-price JCT Minor Works contract with 10% contingency allowance", "Low (Guaranteed Max)"),
+        ("CQC Registration Delay", "High", "Single registered scheme submission under veteran Nominated Individual", "Low (Streamlined Hub)"),
+        ("Waking Night Turnover", "High", "Unified single rota eliminates lone-worker fatigue, reducing turnover", "Low (Optimal Roster)")
+    ]
+    y = p10.draw_booktabs_table("TABLE 9.1: STRATEGIC RISK REGISTER & MITIGATION MATRIX", cols_t91, rows_t91, y, row_h=9.6, font_size=5.6)
+    y -= 3
+    
+    y = p10.draw_section_heading("9.2", "Formal Statutory Board Resolution (Companies Act 2006)", y)
+    
+    # Board Resolution Box (Clean Hairline Box, Pure White Background)
+    res_h = 105
+    res_y = y - res_h
+    p10.set_fill_color(0.99, 0.995, 1.0)
+    p10.set_stroke_color(0.08, 0.14, 0.24)
+    p10.draw_rect(p10.mx, res_y, p10.cw, res_h, fill=True, stroke=True, stroke_w=1.0)
+    p10.draw_rect(p10.mx + 2, res_y + 2, p10.cw - 4, res_h - 4, fill=False, stroke=True, stroke_w=0.5)
+    
+    p10.set_fill_color(0.08, 0.14, 0.24)
+    p10.draw_text("FAIRYTALES GROUP // BOARD OF DIRECTORS STATUTORY RESOLUTION", p10.mx + 10, res_y + res_h - 14, font="F2", size=7.5)
+    
+    p10_res_body = (
+        "IT WAS RESOLVED UNANIMOUSLY BY THE BOARD OF DIRECTORS OF FAIRYTALES GROUP (MAMUN LIMITED):\n"
+        "1. That SCENARIO A (The Unified 8-Bed Specialist Campus) is hereby APPROVED and ADOPTED as the definitive corporate strategy.\n"
+        "2. That ADOV LIMITED is authorized to execute 10-year commercial FRI leases for 78 & 80 Marston Gardens to ADOV Care Group LIMITED at £50,000/year.\n"
+        "3. That the founding Director is authorized to execute an open-market Assured Shorthold Tenancy (AST) for 82 Marston Gardens at £1,500/month (£18,000/year).\n"
+        "4. That a Section 192 CLEUD application for Class C3b care use be submitted immediately to Luton Borough Council.\n"
+        "5. That CapEx works of £143,000 be commissioned under fixed-price JCT Minor Works contract, targeting practical completion within 12 weeks."
+    )
+    p10.set_fill_color(0.12, 0.16, 0.24)
+    p10.draw_wrapped_text(p10_res_body, p10.mx + 10, res_y + res_h - 26, p10.cw - 20, font="F1", size=6.5, leading=8.4)
+    
+    y = res_y - 8
+    
+    # Sign-off & Execution Block
+    cols_t92 = [("Authorized Corporate Signatory", 145), ("Corporate Role & Entity", 185), ("Execution Date & Official Attestation", 185)]
+    rows_t92 = [
+        ("Abdullah Mamun", "Managing Director, FAIRYTALES GROUP", "29th October 2026 // UNANIMOUS BOARD SEAL"),
+        ("Strategic Advisory Lead", "Healthcare Advisory, AbdullahMamun.com", "29th October 2026 // CERTIFIED MASTER AUDIT"),
+        ("Registered Company Secretary", "Corporate Governance, ADOV LIMITED", "29th October 2026 // REGISTERED ON FILE")
+    ]
+    y = p10.draw_booktabs_table("TABLE 9.2: STATUTORY SIGNATORY REGISTER & CORPORATE SEAL", cols_t92, rows_t92, y, row_h=9.6, font_size=5.6)
+    
+    p10.set_stroke_color(0.75, 0.80, 0.88)
+    p10.draw_line(p10.mx, y - 2, p10.width - p10.mx, y - 2, stroke_w=0.6)
+    p10.set_fill_color(0.40, 0.45, 0.55)
+    p10.draw_text("Project Planned by AbdullahMamun.com  |  FAIRYTALES GROUP  |  ADOV LIMITED  |  Print-Ready Academic Monograph", p10.mx, y - 11, font="F1", size=6.2)

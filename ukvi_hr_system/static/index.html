@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Ether Worldwide Ltd • UKVI SponsorGuard (iOS Edition)</title>
+  <link rel="stylesheet" href="ios_theme.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+</head>
+<body>
+
+  <!-- Dynamic Island & iOS Top Header -->
+  <header class="ios-glass-header">
+    <div class="dynamic-bar">
+      <div class="dynamic-brand">
+        <div class="brand-icon">🌐</div>
+        <div>
+          <div style="font-weight: 700; font-size: 16px; letter-spacing: -0.3px; display: flex; align-items: center; gap: 6px;">
+            Ether Worldwide Ltd
+            <span class="ios-badge badge-blue">Licence: SMS-ETH-882910</span>
+          </div>
+          <div style="font-size: 11.5px; color: var(--ios-text-secondary);">
+            E-Commerce Skilled Worker Appendix D & SMS Compliance Engine
+          </div>
+        </div>
+      </div>
+
+      <!-- Dynamic Island Center Widget -->
+      <div id="dynamic-island-status" class="dynamic-island-pill">
+        <span class="pulsing-dot" id="island-pulse"></span>
+        <span id="island-text">Sponsor Licence: Active Grade A • SMS Feed Online</span>
+        <span style="opacity: 0.5;">|</span>
+        <span id="live-clock">12:00:00</span>
+      </div>
+
+      <!-- Active User & Role Switcher -->
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div style="text-align: right;">
+          <div id="current-user-name" style="font-weight: 600; font-size: 13.5px;">Mr. Abdullah Al Mamun</div>
+          <div id="current-user-role" style="font-size: 11px; color: var(--ios-blue); font-weight: 600;">MANAGING DIRECTOR & AUTHORISING OFFICER</div>
+        </div>
+        <select id="role-quick-switch" class="ios-select" style="width: auto; padding: 6px 12px; font-size: 12px;" onchange="switchDemoUser(this.value)">
+          <option value="1">Mr. Abdullah Al Mamun (Director & Authorising Officer)</option>
+          <option value="2">Ariful Islam (Lead E-Commerce Software Architect)</option>
+          <option value="3">Prabal Barua (Supply Chain Operations - Visa Expiring 28d)</option>
+          <option value="4">Amina Zaib (Marketplace Growth Strategist - Missing Address)</option>
+          <option value="5">Sophia Reed (Head of People & SMS Level 1 User)</option>
+        </select>
+        <button onclick="toggleDarkMode()" class="ios-btn btn-secondary" style="padding: 6px 10px; font-size: 13px;" title="Toggle Dark/Light Mode">🌗</button>
+      </div>
+    </div>
+
+    <!-- Mode Navigation Switcher (Segmented Control) -->
+    <div style="padding: 6px 24px 12px; display: flex; align-items: center; justify-content: space-between; gap: 16px; overflow-x: auto;">
+      <div class="ios-segmented" id="main-nav-segments">
+        <!-- Dynamically rendered based on role -->
+      </div>
+      <div id="quick-action-btns" style="display: flex; gap: 8px;">
+        <!-- Contextual quick action buttons -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Main View Container -->
+  <main style="max-width: 1400px; margin: 0 auto; padding: 24px;">
+    
+    <!-- ========================================== -->
+    <!-- VIEW 1: SUPER ADMIN / AO COMMAND CENTER     -->
+    <!-- ========================================== -->
+    <div id="admin-view" style="display: block;">
+      
+      <!-- Top Health KPI Banner -->
+      <div class="ios-card" style="margin-bottom: 24px; background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(240,244,255,0.85) 100%);">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+          <div style="display: flex; align-items: center; gap: 20px;">
+            <!-- Circular Progress Ring -->
+            <div class="circle-progress">
+              <svg width="80" height="80">
+                <circle class="circle-bg" cx="40" cy="40" r="32"></circle>
+                <circle id="org-health-circle" class="circle-bar" cx="40" cy="40" r="32" stroke-dasharray="201" stroke-dashoffset="15"></circle>
+              </svg>
+              <div class="circle-text" id="org-health-text">92%</div>
+            </div>
+            <div>
+              <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--ios-text-secondary); font-weight: 600;">
+                Home Office Sponsor Licence Readiness Score
+              </div>
+              <h1 style="font-size: 22px; font-weight: 700; margin: 2px 0;">Ether Worldwide Ltd • Sponsor Health: Active Grade A</h1>
+              <p style="font-size: 13px; color: var(--ios-text-secondary);" id="org-summary-subtitle">
+                Authorising Officer: <strong>Mr. Abdullah Al Mamun</strong> | Monitoring cross-border E-Commerce staff under UKVI Appendix D & SMS rules.
+              </p>
+            </div>
+          </div>
+          
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <button onclick="openNewStaffModal()" class="ios-btn btn-primary">
+              <span>➕</span> Onboard Worker
+            </button>
+            <button onclick="downloadMasterCompliancePack()" class="ios-btn btn-secondary">
+              <span>📑</span> Export UKVI Inspection Pack
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Critical Notice Radar (Missing Docs & SMS Alerts) -->
+      <div id="critical-alert-box" style="margin-bottom: 24px;"></div>
+
+      <!-- 4 Quick KPI Cards -->
+      <div class="grid-cols-4" style="margin-bottom: 24px;">
+        <div class="ios-card" style="padding: 16px;">
+          <div style="font-size: 12px; color: var(--ios-text-secondary); font-weight: 600;">SMS REPORTING QUEUE</div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: 8px;">
+            <span style="font-size: 28px; font-weight: 700;" id="kpi-sms-count" class="text-orange">1</span>
+            <span class="ios-badge badge-orange">Renewal Duty</span>
+          </div>
+          <div style="font-size: 11.5px; color: var(--ios-text-secondary); margin-top: 4px;">Prabal Barua (28 days left)</div>
+        </div>
+
+        <div class="ios-card" style="padding: 16px;">
+          <div style="font-size: 12px; color: var(--ios-text-secondary); font-weight: 600;">VISA EXPIRIES (90 DAYS)</div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: 8px;">
+            <span style="font-size: 28px; font-weight: 700;" id="kpi-visa-exp-count">1</span>
+            <span class="ios-badge badge-orange">Prabal Barua</span>
+          </div>
+          <div style="font-size: 11.5px; color: var(--ios-text-secondary); margin-top: 4px;">Expires 26 Nov 2026</div>
+        </div>
+
+        <div class="ios-card" style="padding: 16px;">
+          <div style="font-size: 12px; color: var(--ios-text-secondary); font-weight: 600;">10-DAY ABSENCE BREACHES</div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: 8px;">
+            <span style="font-size: 28px; font-weight: 700; color: var(--ios-green);" id="kpi-absence-count">0</span>
+            <span class="ios-badge badge-green">100% Compliant</span>
+          </div>
+          <div style="font-size: 11.5px; color: var(--ios-text-secondary); margin-top: 4px;">Zero unexcused absences</div>
+        </div>
+
+        <div class="ios-card" style="padding: 16px;">
+          <div style="font-size: 12px; color: var(--ios-text-secondary); font-weight: 600;">APPENDIX D COMPLIANCE</div>
+          <div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: 8px;">
+            <span style="font-size: 28px; font-weight: 700; color: var(--ios-green);" id="kpi-compliant-pct">92.4%</span>
+            <span class="ios-badge badge-green">Audit Ready</span>
+          </div>
+          <div style="font-size: 11.5px; color: var(--ios-text-secondary); margin-top: 4px;">Ariful Islam 100% Verified</div>
+        </div>
+      </div>
+
+      <!-- Tab Content Area for Admin -->
+      <div id="admin-subtab-container">
+        <!-- Rendered based on sub-tab -->
+      </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- VIEW 2: STAFF SELF-SERVICE PORTAL          -->
+    <!-- ========================================== -->
+    <div id="staff-view" style="display: none; max-width: 900px; margin: 0 auto;">
+      
+      <!-- Staff Profile Hero -->
+      <div class="ios-card" style="margin-bottom: 24px; position: relative; overflow: hidden;">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div id="staff-avatar" style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #007AFF, #5856D6); display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; font-weight: 700;">
+              AI
+            </div>
+            <div>
+              <h2 id="staff-hero-name" style="font-size: 20px; font-weight: 700;">Ariful Islam</h2>
+              <div id="staff-hero-job" style="font-size: 13.5px; color: var(--ios-text-secondary);">Lead E-Commerce Software Architect • Tech Infrastructure</div>
+              <div style="display: flex; gap: 8px; margin-top: 6px;" id="staff-hero-badges">
+                <span class="ios-badge badge-blue">Skilled Worker (SOC 2136)</span>
+                <span class="ios-badge badge-green">CoS: C7X9K20241</span>
+              </div>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 11px; text-transform: uppercase; color: var(--ios-text-secondary); font-weight: 600;">Right to Work Validity</div>
+            <div id="staff-hero-rtw-date" style="font-size: 15px; font-weight: 700; color: var(--ios-green);">Valid until 15 Sept 2028</div>
+            <div style="font-size: 11px; color: var(--ios-text-secondary); margin-top: 2px;">Share Code: SH-7821-A912-M401</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Staff Interactive Tabs Container -->
+      <div id="staff-subtab-container">
+        <!-- Rendered based on sub-tab: timeclock, my_documents, leave_request, supplementary_work, my_payslips -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- MODALS & SHEETS                             -->
+  <!-- ========================================== -->
+
+  <!-- Modal 1: SMS Draft & Report Modal -->
+  <div id="sms-modal" class="ios-modal-overlay">
+    <div class="ios-modal-card">
+      <div style="padding: 20px 24px; border-bottom: 1px solid var(--ios-separator); display: flex; align-items: center; justify-content: space-between;">
+        <div>
+          <h3 style="font-size: 17px; font-weight: 700;">UKVI SMS Notification Drafter</h3>
+          <p style="font-size: 12px; color: var(--ios-text-secondary);">Ether Worldwide Ltd • Sponsor Licence: SMS-ETH-882910</p>
+        </div>
+        <button onclick="closeModal('sms-modal')" class="ios-btn btn-secondary" style="padding: 6px 12px; border-radius: 50%;">✕</button>
+      </div>
+      <div style="padding: 24px;">
+        <div style="background: rgba(0, 122, 255, 0.08); border: 1px solid rgba(0, 122, 255, 0.2); border-radius: var(--radius-sm); padding: 12px; margin-bottom: 16px;">
+          <div style="font-weight: 600; color: var(--ios-blue); font-size: 13px;" id="sms-modal-headline">
+            Authorising Officer Notification
+          </div>
+          <p style="font-size: 12.5px; color: var(--ios-text); margin-top: 4px;" id="sms-modal-subline">
+            Official SMS text formatted for Mr. Abdullah Al Mamun to submit via Home Office Sponsorship Management System.
+          </p>
+        </div>
+
+        <div class="ios-input-group">
+          <label class="ios-label">Formatted Text for SMS Portal (Copy & Paste)</label>
+          <textarea id="sms-draft-textarea" class="ios-textarea" style="height: 180px; font-family: monospace; font-size: 12px; line-height: 1.5;" readonly></textarea>
+        </div>
+
+        <div class="ios-input-group">
+          <label class="ios-label">Authorising Officer / Level 1 Submission Notes</label>
+          <input type="text" id="sms-notes-input" class="ios-input" placeholder="e.g. Reviewed and verified by Mr. Abdullah Al Mamun.">
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+          <button onclick="copySmsText()" class="ios-btn btn-secondary">
+            <span>📋</span> Copy to Clipboard
+          </button>
+          <button onclick="executeSmsReportAction('REPORTED_TO_SMS')" class="ios-btn btn-primary">
+            <span>🚀</span> Confirm Reported to SMS
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Employee Inspection Pack / Appendix D Dossier Modal -->
+  <div id="dossier-modal" class="ios-modal-overlay">
+    <div class="ios-modal-card" style="max-width: 840px;">
+      <div style="padding: 20px 24px; border-bottom: 1px solid var(--ios-separator); display: flex; align-items: center; justify-content: space-between;">
+        <div>
+          <h3 style="font-size: 17px; font-weight: 700;" id="dossier-title">Home Office Appendix D Inspection Pack</h3>
+          <p style="font-size: 12px; color: var(--ios-text-secondary);">Ether Worldwide Ltd • Official Statutory Evidence Pack for UKVI Compliance Audit</p>
+        </div>
+        <button onclick="closeModal('dossier-modal')" class="ios-btn btn-secondary" style="padding: 6px 12px; border-radius: 50%;">✕</button>
+      </div>
+      <div style="padding: 24px;" id="dossier-body">
+        <!-- Dynamic Dossier content -->
+      </div>
+      <div style="padding: 16px 24px; border-top: 1px solid var(--ios-separator); display: flex; justify-content: flex-end; gap: 10px;">
+        <button onclick="window.print()" class="ios-btn btn-primary">
+          <span>🖨️</span> Print / Save as Official PDF Dossier
+        </button>
+        <button onclick="closeModal('dossier-modal')" class="ios-btn btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Comprehensive Appendix D Onboarding Modal -->
+  <div id="onboard-modal" class="ios-modal-overlay">
+    <div class="ios-modal-card" style="max-width: 900px;">
+      <div style="padding: 20px 24px; border-bottom: 1px solid var(--ios-separator); display: flex; align-items: center; justify-content: space-between;">
+        <div>
+          <h3 style="font-size: 17px; font-weight: 700;">Comprehensive Appendix D Worker Onboarding</h3>
+          <p style="font-size: 12px; color: var(--ios-text-secondary);">Ether Worldwide Ltd • UKVI Sponsor Licence: SMS-ETH-882910 • Authorising Officer: Mr. Abdullah Al Mamun</p>
+        </div>
+        <button onclick="closeModal('onboard-modal')" class="ios-btn btn-secondary" style="padding: 6px 12px; border-radius: 50%;">✕</button>
+      </div>
+
+      <!-- Stepper / Section Tabs -->
+      <div style="display: flex; gap: 8px; padding: 12px 24px 0; border-bottom: 1px solid var(--ios-separator); background: rgba(118,118,128,0.03); overflow-x: auto;">
+        <button type="button" class="ios-segment-btn active" id="onboard-tab-btn-1" onclick="switchOnboardStep(1)">1. Personal & Passport</button>
+        <button type="button" class="ios-segment-btn" id="onboard-tab-btn-2" onclick="switchOnboardStep(2)">2. Sponsorship & CoS</button>
+        <button type="button" class="ios-segment-btn" id="onboard-tab-btn-3" onclick="switchOnboardStep(3)">3. Right to Work & English</button>
+        <button type="button" class="ios-segment-btn" id="onboard-tab-btn-4" onclick="switchOnboardStep(4)">4. Address & Emergency</button>
+      </div>
+
+      <form id="onboard-form" onsubmit="handleComprehensiveOnboardSubmit(event)" style="padding: 24px; max-height: 70vh; overflow-y: auto;">
+        
+        <!-- STEP 1: Personal & Passport -->
+        <div id="onboard-step-1" class="onboard-step-pane">
+          <div style="font-size: 13px; font-weight: 700; margin-bottom: 12px; color: var(--ios-blue);">STEP 1: PERSONAL IDENTITY & TRAVEL DOCUMENTATION</div>
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">Full Legal Name (as per Passport Bio Page) *</label>
+              <input type="text" name="full_name" class="ios-input" required placeholder="e.g. Tanvir Ahmed">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">Preferred Name / Known As</label>
+              <input type="text" name="preferred_name" class="ios-input" placeholder="e.g. Tanvir">
+            </div>
+          </div>
+
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">Date of Birth *</label>
+              <input type="date" name="date_of_birth" class="ios-input" required value="1994-06-15">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">Nationality / Citizenship *</label>
+              <input type="text" name="nationality" class="ios-input" required placeholder="e.g. Bangladeshi / Pakistani / Indian">
+            </div>
+          </div>
+
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">Official Work Email *</label>
+              <input type="email" name="email" class="ios-input" required placeholder="tanvir.ahmed@etherworldwide.co.uk">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">Personal Mobile Phone *</label>
+              <input type="tel" name="phone_number" class="ios-input" required placeholder="+44 7700 900555">
+            </div>
+          </div>
+
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">Passport / Travel Document Number *</label>
+              <input type="text" name="passport_number" class="ios-input" required placeholder="e.g. A90182741">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">Passport Issuing Country *</label>
+              <input type="text" name="passport_issuing_country" class="ios-input" required placeholder="e.g. Bangladesh">
+            </div>
+          </div>
+
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">Passport Issue Date</label>
+              <input type="date" name="passport_issue_date" class="ios-input" value="2022-01-10">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">Passport Expiry Date *</label>
+              <input type="date" name="passport_expiry_date" class="ios-input" required value="2032-01-09">
+            </div>
+          </div>
+
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">UK Arrival Date (First Entry)</label>
+              <input type="date" name="uk_arrival_date" class="ios-input" value="2024-03-01">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">90-Day Entry Vignette Reference / Border Stamp</label>
+              <input type="text" name="vignette_reference" class="ios-input" placeholder="e.g. VIG-90D-882103">
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
+            <button type="button" onclick="switchOnboardStep(2)" class="ios-btn btn-primary">Next: Sponsorship & CoS →</button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Sponsorship & CoS -->
+        <div id="onboard-step-2" class="onboard-step-pane" style="display: none;">
+          <div style="font-size: 13px; font-weight: 700; margin-bottom: 12px; color: var(--ios-blue);">STEP 2: SPONSORSHIP, COS ALLOCATION & E-COMMERCE ROLE</div>
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">Immigration Route / Status *</label>
+              <select name="immigration_status" class="ios-select">
+                <option value="SKILLED_WORKER" selected>Skilled Worker Visa (Sponsored)</option>
+                <option value="BRITISH_CITIZEN">British Citizen</option>
+                <option value="SETTLED_STATUS">EU Settled / Pre-Settled</option>
+                <option value="GLOBAL_TALENT">Global Talent Visa</option>
+                <option value="HIGH_POTENTIAL_INDIVIDUAL">High Potential Individual (HPI)</option>
+                <option value="STUDENT_VISA">Student Visa (20h statutory limit)</option>
+              </select>
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">Certificate of Sponsorship (CoS) # *</label>
+              <input type="text" name="cos_number" class="ios-input" required placeholder="e.g. C7X9K20246">
+            </div>
+          </div>
+
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">CoS Issue Date</label>
+              <input type="date" name="cos_issue_date" class="ios-input" value="2024-02-15">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">CoS Expiry Date</label>
+              <input type="date" name="cos_expiry_date" class="ios-input" value="2027-02-14">
+            </div>
+          </div>
+
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">E-Commerce Job Title *</label>
+              <input type="text" name="job_title" class="ios-input" required placeholder="e.g. E-Commerce Software Engineer">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">Standard Occupational Classification (SOC 2020) *</label>
+              <select name="soc_code" class="ios-select">
+                <option value="2136 - Programmers and software development professionals">2136 - Programmers & Dev (£49,400 min)</option>
+                <option value="2424 - Business and financial project management professionals">2424 - Supply Chain & Ops (£44,700 min)</option>
+                <option value="3545 - Sales accounts and business development managers">3545 - Marketplace Growth (£38,700 min)</option>
+                <option value="1136 - Information technology directors">1136 - IT & E-Commerce Director (£58,900 min)</option>
+                <option value="3562 - Human resources and industrial relations officers">3562 - HR Compliance Officer (£38,700 min)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">Annual Gross Salary (£) * (Must meet SOC Going Rate)</label>
+              <input type="number" step="100" name="annual_gross_salary" class="ios-input" required value="50000">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">Contracted Weekly Hours *</label>
+              <input type="number" step="0.5" name="contracted_weekly_hours" class="ios-input" required value="37.5">
+            </div>
+          </div>
+
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">Workplace Model & Hybrid Ratio</label>
+              <input type="text" name="workplace_hybrid_ratio" class="ios-input" value="3 days London HQ, 2 days remote">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">Reporting Manager / AO</label>
+              <input type="text" name="reporting_manager" class="ios-input" value="Mr. Abdullah Al Mamun">
+            </div>
+          </div>
+
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">Standard Working Pattern</label>
+              <input type="text" name="standard_working_pattern" class="ios-input" value="Monday to Friday, 09:00 - 17:30 (37.5 hrs)">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">Recruitment Method (Appendix D Proof)</label>
+              <input type="text" name="recruitment_method" class="ios-input" value="Direct e-commerce tech listing & competitive interview">
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; margin-top: 16px;">
+            <button type="button" onclick="switchOnboardStep(1)" class="ios-btn btn-secondary">← Back</button>
+            <button type="button" onclick="switchOnboardStep(3)" class="ios-btn btn-primary">Next: Right to Work & English →</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Right to Work & English -->
+        <div id="onboard-step-3" class="onboard-step-pane" style="display: none;">
+          <div style="font-size: 13px; font-weight: 700; margin-bottom: 12px; color: var(--ios-blue);">STEP 3: RIGHT TO WORK, EVISA & STATUTORY ENGLISH LEVEL</div>
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">Home Office eVisa / RTW Share Code *</label>
+              <input type="text" name="brp_or_share_code" class="ios-input" required placeholder="e.g. SH-8192-M019-K192">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">Visa / Permission Expiry Date *</label>
+              <input type="date" name="visa_expiry_date" class="ios-input" required value="2028-02-14">
+            </div>
+          </div>
+
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">English Language Competency Level (CEFR) *</label>
+              <input type="text" name="english_language_level" class="ios-input" required value="Degree taught in English / CEFR B2 (IELTS 7.0)">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">Ecctis Qualification Reference Number</label>
+              <input type="text" name="ecctis_reference" class="ios-input" placeholder="e.g. ECCTIS-UK-9081273">
+            </div>
+          </div>
+
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">National Insurance Number (HMRC)</label>
+              <input type="text" name="national_insurance_number" class="ios-input" placeholder="e.g. JN 12 34 56 C">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">Probation End Date</label>
+              <input type="date" name="probation_end_date" class="ios-input" value="2026-08-30">
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; margin-top: 16px;">
+            <button type="button" onclick="switchOnboardStep(2)" class="ios-btn btn-secondary">← Back</button>
+            <button type="button" onclick="switchOnboardStep(4)" class="ios-btn btn-primary">Next: Address & Emergency →</button>
+          </div>
+        </div>
+
+        <!-- STEP 4: Address & Emergency Contacts -->
+        <div id="onboard-step-4" class="onboard-step-pane" style="display: none;">
+          <div style="font-size: 13px; font-weight: 700; margin-bottom: 12px; color: var(--ios-blue);">STEP 4: RESIDENTIAL ADDRESS & NEXT OF KIN CONTACTS</div>
+          <div class="ios-input-group">
+            <label class="ios-label">Current UK Residential Address (<3 Months Proof Mandatory) *</label>
+            <input type="text" name="uk_residential_address" class="ios-input" required placeholder="Flat 8, 45 Canary Wharf Riverside, London E14 5AB">
+          </div>
+
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">Emergency Contact Full Name *</label>
+              <input type="text" name="emergency_contact_name" class="ios-input" required placeholder="e.g. Fahmida Rahman">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">Relationship to Worker *</label>
+              <input type="text" name="emergency_contact_relationship" class="ios-input" required placeholder="e.g. Spouse / Brother / Next of Kin">
+            </div>
+          </div>
+
+          <div class="grid-cols-2">
+            <div class="ios-input-group">
+              <label class="ios-label">Emergency Contact Phone Number *</label>
+              <input type="tel" name="emergency_contact_phone" class="ios-input" required placeholder="+44 7700 900888">
+            </div>
+            <div class="ios-input-group">
+              <label class="ios-label">Emergency Contact Address</label>
+              <input type="text" name="emergency_contact_address" class="ios-input" placeholder="Flat 8, 45 Canary Wharf Riverside, London E14 5AB">
+            </div>
+          </div>
+
+          <div style="padding: 12px; background: rgba(52, 199, 89, 0.08); border-radius: var(--radius-sm); border-left: 4px solid var(--ios-green); margin-top: 12px;">
+            <div style="font-weight: 600; font-size: 12.5px; color: #1a7e36;">Automatic Statutory Baseline Creation</div>
+            <div style="font-size: 11.5px; color: var(--ios-text-secondary); margin-top: 2px;">
+              Submitting will automatically generate all 5 statutory Appendix D baseline document tracks (Passport bio, eVisa check, Contract of Employment, Address verification, and NI proof) with full audit logging for Authorising Officer <strong>Mr. Abdullah Al Mamun</strong>.
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button type="button" onclick="switchOnboardStep(3)" class="ios-btn btn-secondary">← Back</button>
+            <button type="submit" class="ios-btn btn-primary" style="padding: 10px 24px; font-weight: 700;">
+              <span>✅</span> Complete Onboarding & Create Appendix D File
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 4: Upload / Verify Document Modal -->
+  <div id="upload-doc-modal" class="ios-modal-overlay">
+    <div class="ios-modal-card">
+      <div style="padding: 20px 24px; border-bottom: 1px solid var(--ios-separator); display: flex; align-items: center; justify-content: space-between;">
+        <div>
+          <h3 style="font-size: 17px; font-weight: 700;">Upload & Verify Appendix D Statutory Document</h3>
+          <p style="font-size: 12px; color: var(--ios-text-secondary);">Ether Worldwide Ltd • UKVI Sponsor Compliance Verification</p>
+        </div>
+        <button onclick="closeModal('upload-doc-modal')" class="ios-btn btn-secondary" style="padding: 6px 12px; border-radius: 50%;">✕</button>
+      </div>
+      <form id="upload-doc-form" onsubmit="handleUploadDocSubmit(event)" style="padding: 24px;">
+        <input type="hidden" id="upload-doc-emp-id" name="employee_id">
+        
+        <div class="ios-input-group" id="upload-doc-emp-select-wrap">
+          <label class="ios-label">Target Employee</label>
+          <select id="upload-doc-emp-select" class="ios-select" onchange="document.getElementById('upload-doc-emp-id').value = this.value">
+            <option value="1">Mr. Abdullah Al Mamun (Authorising Officer)</option>
+            <option value="2">Ariful Islam (Lead Software Architect)</option>
+            <option value="3">Prabal Barua (Supply Chain Operations)</option>
+            <option value="4">Amina Zaib (Marketplace Growth Strategist)</option>
+            <option value="5">Sophia Reed (Head of People & SMS Level 1)</option>
+          </select>
+        </div>
+
+        <div class="ios-input-group">
+          <label class="ios-label">Appendix D Statutory Category (10 Core Pillars)</label>
+          <select id="upload-doc-cat" name="category" class="ios-select" required>
+            <option value="PASSPORT_BIO">1. Passport / Travel Document Bio Page & Vignette</option>
+            <option value="RTW_VERIFICATION_CHECK">2. Right to Work Online Verification Check Record</option>
+            <option value="CONTRACT_OF_EMPLOYMENT">3. Signed Employment Contract & Terms</option>
+            <option value="JOB_DESCRIPTION_SOC">4. Job Description Matching SOC 2020 Code</option>
+            <option value="UK_ADDRESS_PROOF">5. Current UK Residential Address Proof (<3 Months)</option>
+            <option value="NI_PROOF">6. National Insurance Evidence (HMRC / P45 / P60)</option>
+            <option value="QUALIFICATIONS_AND_REGISTRATION">7. Qualifications, Degrees & Ecctis Accreditations</option>
+            <option value="PAYROLL_AND_PAYSLIP">8. Itemised Monthly Payslips Matching CoS</option>
+            <option value="ATTENDANCE_AND_TIMESHEET">9. Daily Attendance Logs & Shift Time Records</option>
+            <option value="RECRUITMENT_AND_ADVERT">10. Recruitment Advert & Selection Evidence</option>
+          </select>
+        </div>
+
+        <div class="ios-input-group">
+          <label class="ios-label">Document Description / Reference #</label>
+          <input type="text" id="upload-doc-ref" name="document_reference" class="ios-input" required placeholder="e.g. Certified Tenancy Agreement & Council Tax Statement">
+        </div>
+
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Issuing Authority</label>
+            <input type="text" id="upload-doc-authority" name="issued_by_authority" class="ios-input" placeholder="e.g. Tower Hamlets Council / HMPO">
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Expiry Date (if applicable)</label>
+            <input type="date" id="upload-doc-expiry" name="expiry_date" class="ios-input">
+          </div>
+        </div>
+
+        <div class="ios-input-group">
+          <label class="ios-label">Verification & Audit Notes</label>
+          <input type="text" id="upload-doc-notes" name="notes" class="ios-input" placeholder="e.g. Verified by Authorising Officer Mr. Abdullah Al Mamun">
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+          <button type="button" onclick="closeModal('upload-doc-modal')" class="ios-btn btn-secondary">Cancel</button>
+          <button type="submit" class="ios-btn btn-primary">Save & Mark Verified</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 5: Super Admin Edit Worker Dossier Modal -->
+  <div id="edit-worker-modal" class="ios-modal-overlay">
+    <div class="ios-modal-card" style="max-width: 900px;">
+      <div style="padding: 20px 24px; border-bottom: 1px solid var(--ios-separator); display: flex; align-items: center; justify-content: space-between;">
+        <div>
+          <h3 style="font-size: 17px; font-weight: 700;">Edit Employee Record & Appendix D Details</h3>
+          <p style="font-size: 12px; color: var(--ios-text-secondary);">Ether Worldwide Ltd • Super Admin & Authorising Officer Controls</p>
+        </div>
+        <button onclick="closeModal('edit-worker-modal')" class="ios-btn btn-secondary" style="padding: 6px 12px; border-radius: 50%;">✕</button>
+      </div>
+
+      <form id="edit-worker-form" onsubmit="handleEditWorkerSubmit(event)" style="padding: 24px; max-height: 75vh; overflow-y: auto;">
+        <input type="hidden" id="edit-emp-id" name="id">
+
+        <div style="font-size: 13px; font-weight: 700; color: var(--ios-blue); margin-bottom: 10px;">1. IDENTITY & CONTACT PARTICULARS</div>
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Full Legal Name</label>
+            <input type="text" id="edit-full-name" name="full_name" class="ios-input" required>
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Preferred Name</label>
+            <input type="text" id="edit-preferred-name" name="preferred_name" class="ios-input">
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Work Email</label>
+            <input type="email" id="edit-email" name="email" class="ios-input" required>
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Phone Number</label>
+            <input type="tel" id="edit-phone" name="phone_number" class="ios-input">
+          </div>
+        </div>
+
+        <div class="ios-input-group">
+          <label class="ios-label">Current UK Residential Address (Appendix D Verified)</label>
+          <input type="text" id="edit-uk-address" name="uk_residential_address" class="ios-input" required>
+        </div>
+
+        <div style="font-size: 13px; font-weight: 700; color: var(--ios-blue); margin: 20px 0 10px;">2. EMPLOYMENT, REMUNERATION & SOC CODE</div>
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Job Title</label>
+            <input type="text" id="edit-job-title" name="job_title" class="ios-input" required>
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">SOC 2020 Code</label>
+            <select id="edit-soc-code" name="soc_code" class="ios-select">
+              <option value="2136 - Programmers and software development professionals">2136 - Programmers & Dev (£49,400 min)</option>
+              <option value="2424 - Business and financial project management professionals">2424 - Supply Chain & Ops (£44,700 min)</option>
+              <option value="3545 - Sales accounts and business development managers">3545 - Marketplace Growth (£38,700 min)</option>
+              <option value="1136 - Information technology directors">1136 - IT & E-Commerce Director</option>
+              <option value="3562 - Human resources and industrial relations officers">3562 - HR Compliance Officer</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Contracted Annual Gross Salary (£)</label>
+            <input type="number" step="100" id="edit-salary" name="annual_gross_salary" class="ios-input" required>
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Contracted Weekly Hours</label>
+            <input type="number" step="0.5" id="edit-hours" name="contracted_weekly_hours" class="ios-input" required>
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Work Location</label>
+            <input type="text" id="edit-location" name="work_location" class="ios-input">
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Workplace Hybrid Ratio</label>
+            <input type="text" id="edit-hybrid" name="workplace_hybrid_ratio" class="ios-input">
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Reporting Manager</label>
+            <input type="text" id="edit-manager" name="reporting_manager" class="ios-input">
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Standard Working Pattern</label>
+            <input type="text" id="edit-pattern" name="standard_working_pattern" class="ios-input">
+          </div>
+        </div>
+
+        <div style="font-size: 13px; font-weight: 700; color: var(--ios-blue); margin: 20px 0 10px;">3. UKVI SPONSORSHIP, VISA & PASSPORT</div>
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Immigration Status</label>
+            <select id="edit-imm-status" name="immigration_status" class="ios-select">
+              <option value="SKILLED_WORKER">Skilled Worker</option>
+              <option value="BRITISH_CITIZEN">British Citizen</option>
+              <option value="SETTLED_STATUS">EU Settled Status</option>
+              <option value="GLOBAL_TALENT">Global Talent</option>
+              <option value="HIGH_POTENTIAL_INDIVIDUAL">HPI Visa</option>
+              <option value="STUDENT_VISA">Student Visa</option>
+            </select>
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">CoS Number</label>
+            <input type="text" id="edit-cos-number" name="cos_number" class="ios-input">
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Visa / Permission Expiry Date</label>
+            <input type="date" id="edit-visa-expiry" name="visa_expiry_date" class="ios-input">
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">eVisa / RTW Share Code</label>
+            <input type="text" id="edit-share-code" name="brp_or_share_code" class="ios-input">
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Passport Number</label>
+            <input type="text" id="edit-passport-num" name="passport_number" class="ios-input">
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Passport Expiry Date</label>
+            <input type="date" id="edit-passport-exp" name="passport_expiry_date" class="ios-input">
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Passport Issuing Country</label>
+            <input type="text" id="edit-passport-country" name="passport_issuing_country" class="ios-input">
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">UK Arrival Date</label>
+            <input type="date" id="edit-arrival-date" name="uk_arrival_date" class="ios-input">
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">English Language Level</label>
+            <input type="text" id="edit-english" name="english_language_level" class="ios-input">
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Ecctis Qualification Reference</label>
+            <input type="text" id="edit-ecctis" name="ecctis_reference" class="ios-input">
+          </div>
+        </div>
+
+        <div style="font-size: 13px; font-weight: 700; color: var(--ios-blue); margin: 20px 0 10px;">4. EMERGENCY CONTACTS</div>
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Emergency Contact Name</label>
+            <input type="text" id="edit-em-name" name="emergency_contact_name" class="ios-input">
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Relationship to Worker</label>
+            <input type="text" id="edit-em-rel" name="emergency_contact_relationship" class="ios-input">
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Emergency Contact Phone</label>
+            <input type="tel" id="edit-em-phone" name="emergency_contact_phone" class="ios-input">
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Emergency Contact Address</label>
+            <input type="text" id="edit-em-addr" name="emergency_contact_address" class="ios-input">
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 24px;">
+          <button type="button" onclick="closeModal('edit-worker-modal')" class="ios-btn btn-secondary">Cancel</button>
+          <button type="submit" class="ios-btn btn-primary" style="padding: 10px 24px; font-weight: 700;">
+            💾 Save Dossier Updates
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 6: Document QuickLook Viewer & Editor Modal -->
+  <div id="doc-quicklook-modal" class="ios-modal-overlay">
+    <div class="ios-modal-card" style="max-width: 860px;">
+      <div style="padding: 20px 24px; border-bottom: 1px solid var(--ios-separator); display: flex; align-items: center; justify-content: space-between;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <h3 style="font-size: 17px; font-weight: 700;" id="ql-doc-title">Document QuickLook</h3>
+            <span id="ql-type-badge" class="ios-badge badge-blue">PDF</span>
+            <span id="ql-status-badge" class="ios-badge badge-green">VERIFIED</span>
+          </div>
+          <p style="font-size: 12px; color: var(--ios-text-secondary);" id="ql-worker-sub">Ether Worldwide Ltd • Appendix D Statutory Inspection Evidence</p>
+        </div>
+        <button onclick="closeModal('doc-quicklook-modal')" class="ios-btn btn-secondary" style="padding: 6px 12px; border-radius: 50%;">✕</button>
+      </div>
+
+      <div style="padding: 24px; max-height: 75vh; overflow-y: auto;">
+        
+        <!-- Official Document Sheet Simulated Rendering -->
+        <div class="doc-preview-sheet" id="ql-sheet-preview">
+          <div class="doc-watermark" id="ql-watermark">UKVI APPENDIX D</div>
+          
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid rgba(0,0,0,0.08); padding-bottom: 14px; margin-bottom: 16px;">
+            <div>
+              <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--ios-text-secondary);" id="ql-issuing-authority">HOME OFFICE UKVI</div>
+              <h2 style="font-size: 18px; font-weight: 800; margin: 4px 0;" id="ql-sheet-name">Certificate of Online Right to Work Check</h2>
+              <div style="font-size: 12px; color: var(--ios-text-secondary);">Sponsor: <strong>Ether Worldwide Ltd</strong> (Licence: SMS-ETH-882910)</div>
+            </div>
+            <div style="text-align: right;">
+              <div class="doc-seal-badge" id="ql-seal-tag">🛡️ OFFICIAL RECORD</div>
+              <div style="font-size: 11px; color: var(--ios-text-secondary); margin-top: 4px;" id="ql-ref-tag">Ref: DOC-88192</div>
+            </div>
+          </div>
+
+          <!-- Formatted Content Body -->
+          <div style="padding: 14px 16px; background: rgba(0,0,0,0.02); border: 1px dashed rgba(0,0,0,0.15); border-radius: 8px; font-family: -apple-system, monospace; font-size: 12.5px; line-height: 1.6; white-space: pre-wrap; margin-bottom: 16px;" id="ql-content-text">
+            Document Content Loading...
+          </div>
+
+          <!-- Metadata Grid -->
+          <div class="doc-meta-grid">
+            <div>
+              <span style="color: var(--ios-text-secondary);">Verification Status:</span>
+              <strong id="ql-meta-status" style="margin-left: 4px;">Verified</strong>
+            </div>
+            <div>
+              <span style="color: var(--ios-text-secondary);">Verified By:</span>
+              <strong id="ql-meta-verifier" style="margin-left: 4px;">Sophia Reed (HR Level 1)</strong>
+            </div>
+            <div>
+              <span style="color: var(--ios-text-secondary);">Verification Date:</span>
+              <strong id="ql-meta-date" style="margin-left: 4px;">2024-03-01</strong>
+            </div>
+            <div>
+              <span style="color: var(--ios-text-secondary);">Statutory Expiry:</span>
+              <strong id="ql-meta-expiry" style="margin-left: 4px;">2028-09-15</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Super Admin & HR Edit Inspector Box -->
+        <div class="ios-card" style="margin-top: 20px; background: rgba(118, 118, 128, 0.04); border: 1px solid var(--ios-border);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <div style="font-weight: 700; font-size: 13.5px; display: flex; align-items: center; gap: 6px;">
+              <span>✏️</span> Super Admin Document Controls
+            </div>
+            <span class="ios-badge badge-blue">AO Authorised</span>
+          </div>
+
+          <form id="ql-edit-form" onsubmit="handleQuickLookDocSave(event)">
+            <input type="hidden" id="ql-edit-doc-id">
+            <div class="grid-cols-2">
+              <div class="ios-input-group">
+                <label class="ios-label">Official Document Reference #</label>
+                <input type="text" id="ql-edit-ref" class="ios-input">
+              </div>
+              <div class="ios-input-group">
+                <label class="ios-label">Issuing Authority</label>
+                <input type="text" id="ql-edit-authority" class="ios-input">
+              </div>
+            </div>
+
+            <div class="grid-cols-2">
+              <div class="ios-input-group">
+                <label class="ios-label">Document Expiry Date</label>
+                <input type="date" id="ql-edit-expiry" class="ios-input">
+              </div>
+              <div class="ios-input-group">
+                <label class="ios-label">Compliance Verification Status</label>
+                <select id="ql-edit-status" class="ios-select">
+                  <option value="VERIFIED">VERIFIED (Statutory compliant)</option>
+                  <option value="PENDING_REVIEW">PENDING REVIEW</option>
+                  <option value="EXPIRED">EXPIRED (Urgent action needed)</option>
+                  <option value="MISSING">MISSING</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="ios-input-group">
+              <label class="ios-label">Compliance Audit Notes</label>
+              <input type="text" id="ql-edit-notes" class="ios-input" placeholder="e.g. Original physical passport examined in person by Authorising Officer.">
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 14px;">
+              <button type="button" onclick="window.print()" class="ios-btn btn-secondary">
+                <span>🖨️</span> Print Document Sheet
+              </button>
+              <button type="submit" class="ios-btn btn-primary">
+                <span>💾</span> Save Document Verification
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 7: Super Admin Edit Payroll Modal -->
+  <div id="edit-payroll-modal" class="ios-modal-overlay">
+    <div class="ios-modal-card" style="max-width: 860px;">
+      <div style="padding: 20px 24px; border-bottom: 1px solid var(--ios-separator); display: flex; align-items: center; justify-content: space-between;">
+        <div>
+          <h3 style="font-size: 17px; font-weight: 700;">Edit Statutory Payslip & HMRC Record</h3>
+          <p style="font-size: 12px; color: var(--ios-text-secondary);">Ether Worldwide Ltd • Super Admin & AO Override (Mr. Abdullah Al Mamun)</p>
+        </div>
+        <button onclick="closeModal('edit-payroll-modal')" class="ios-btn btn-secondary" style="padding: 6px 12px; border-radius: 50%;">✕</button>
+      </div>
+
+      <form id="edit-payroll-form" onsubmit="handleSavePayrollRecord(event)" style="padding: 24px; max-height: 75vh; overflow-y: auto;">
+        <input type="hidden" id="edit-payroll-id">
+
+        <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0, 122, 255, 0.06); padding: 12px 16px; border-radius: var(--radius-sm); margin-bottom: 18px;">
+          <div>
+            <div style="font-size: 14px; font-weight: 700;" id="edit-payroll-emp-name">Employee Name</div>
+            <div style="font-size: 12px; color: var(--ios-text-secondary);" id="edit-payroll-period-badge">Period: October 2026</div>
+          </div>
+          <button type="button" onclick="triggerHmrAutoRecalculate()" class="ios-btn btn-secondary" style="font-size: 11.5px; padding: 6px 12px;">
+            <span>⚡</span> Auto-Calculate HMRC PAYE/NI
+          </button>
+        </div>
+
+        <div style="font-size: 13px; font-weight: 700; color: var(--ios-blue); margin-bottom: 10px;">1. REMUNERATION & EARNINGS</div>
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Monthly Basic Salary (£)</label>
+            <input type="number" step="0.01" id="edit-pay-basic" class="ios-input" required oninput="updateGrossPreview()">
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Discretionary Bonus (£)</label>
+            <input type="number" step="0.01" id="edit-pay-bonus" class="ios-input" value="0.00" oninput="updateGrossPreview()">
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Overtime Hours Worked</label>
+            <input type="number" step="0.5" id="edit-pay-ot-hours" class="ios-input" value="0.0" oninput="updateOvertimeCalc()">
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Overtime Hourly Rate (£/hr)</label>
+            <input type="number" step="0.01" id="edit-pay-ot-rate" class="ios-input" value="0.00" oninput="updateOvertimeCalc()">
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Overtime Pay Total (£)</label>
+            <input type="number" step="0.01" id="edit-pay-ot-pay" class="ios-input" value="0.00" oninput="updateGrossPreview()">
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Total Gross Remuneration (£)</label>
+            <input type="number" step="0.01" id="edit-pay-gross" class="ios-input" required style="font-weight: 700;">
+          </div>
+        </div>
+
+        <div style="font-size: 13px; font-weight: 700; color: var(--ios-blue); margin: 20px 0 10px;">2. HMRC DEDUCTIONS & PENSION</div>
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">HMRC PAYE Tax Deducted (£)</label>
+            <input type="number" step="0.01" id="edit-pay-tax" class="ios-input" required oninput="updateNetPreview()">
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Class 1 Primary Employee NI (£)</label>
+            <input type="number" step="0.01" id="edit-pay-ni" class="ios-input" required oninput="updateNetPreview()">
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">Workplace Pension Employee (5%) (£)</label>
+            <input type="number" step="0.01" id="edit-pay-pension-ee" class="ios-input" required oninput="updateNetPreview()">
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Student Loan Deductions (£)</label>
+            <input type="number" step="0.01" id="edit-pay-student-loan" class="ios-input" value="0.00" oninput="updateNetPreview()">
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <div class="ios-input-group">
+            <label class="ios-label">HMRC Tax Code</label>
+            <input type="text" id="edit-pay-tax-code" class="ios-input" value="1257L" required>
+          </div>
+          <div class="ios-input-group">
+            <label class="ios-label">Net Take-Home Pay (£)</label>
+            <input type="number" step="0.01" id="edit-pay-net" class="ios-input" required style="font-weight: 700; color: var(--ios-green);">
+          </div>
+        </div>
+
+        <div style="font-size: 13px; font-weight: 700; color: var(--ios-blue); margin: 20px 0 10px;">3. AUDIT TRAIL & STATUTORY JUSTIFICATION</div>
+        <div class="ios-input-group">
+          <label class="ios-label">Authorising Officer Change Notes / HMRC Justification</label>
+          <input type="text" id="edit-pay-notes" class="ios-input" placeholder="e.g. Corrected overtime calculation verified against shift records by Mr. Abdullah Al Mamun.">
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 24px;">
+          <button type="button" onclick="closeModal('edit-payroll-modal')" class="ios-btn btn-secondary">Cancel</button>
+          <button type="submit" class="ios-btn btn-primary" style="padding: 10px 24px; font-weight: 700;">
+            💾 Save Payslip & Update Record
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 8: Run Monthly Payroll Modal -->
+  <div id="run-payroll-modal" class="ios-modal-overlay">
+    <div class="ios-modal-card">
+      <div style="padding: 20px 24px; border-bottom: 1px solid var(--ios-separator); display: flex; align-items: center; justify-content: space-between;">
+        <div>
+          <h3 style="font-size: 17px; font-weight: 700;">Execute Monthly HMRC Payroll Run</h3>
+          <p style="font-size: 12px; color: var(--ios-text-secondary);">Ether Worldwide Ltd • Full Payment Submission (FPS) Generation</p>
+        </div>
+        <button onclick="closeModal('run-payroll-modal')" class="ios-btn btn-secondary" style="padding: 6px 12px; border-radius: 50%;">✕</button>
+      </div>
+
+      <form onsubmit="handleRunMonthlyPayrollSubmit(event)" style="padding: 24px;">
+        <div class="ios-input-group">
+          <label class="ios-label">Pay Period (Month & Year)</label>
+          <select id="run-pay-period" class="ios-select" required>
+            <option value="November 2026">November 2026 (Upcoming Month 8)</option>
+            <option value="December 2026">December 2026 (Month 9)</option>
+            <option value="January 2027">January 2027 (Month 10)</option>
+          </select>
+        </div>
+
+        <div class="ios-input-group">
+          <label class="ios-label">Scheduled Pay Date</label>
+          <input type="date" id="run-pay-date" class="ios-input" value="2026-11-28" required>
+        </div>
+
+        <div style="padding: 14px; background: rgba(0, 122, 255, 0.08); border-left: 4px solid var(--ios-blue); border-radius: var(--radius-sm); margin: 16px 0;">
+          <div style="font-weight: 600; font-size: 12.5px; color: var(--ios-blue);">UKVI Skilled Worker Compliance Check</div>
+          <div style="font-size: 11.5px; color: var(--ios-text); margin-top: 4px;">
+            This pay run will execute automated HMRC PAYE (2026/27 bands), Class 1 NI, and 8% auto-enrolment workplace pensions for all 5 active staff members at Ether Worldwide Ltd, validating each against Certificate of Sponsorship (CoS) requirements.
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+          <button type="button" onclick="closeModal('run-payroll-modal')" class="ios-btn btn-secondary">Cancel</button>
+          <button type="submit" class="ios-btn btn-primary" style="padding: 10px 20px; font-weight: 700;">
+            🚀 Run Payroll & Create FPS Draft
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 9: Official HMRC Payslip & CoS Verification Modal -->
+  <div id="payslip-detail-modal" class="ios-modal-overlay">
+    <div class="ios-modal-card" style="max-width: 860px;">
+      <div style="padding: 20px 24px; border-bottom: 1px solid var(--ios-separator); display: flex; align-items: center; justify-content: space-between;">
+        <div>
+          <h3 style="font-size: 17px; font-weight: 700;">Official Itemised Statutory Payslip</h3>
+          <p style="font-size: 12px; color: var(--ios-text-secondary);">Ether Worldwide Ltd • Employment Rights Act 1996 s.8 & HMRC Compliant</p>
+        </div>
+        <button onclick="closeModal('payslip-detail-modal')" class="ios-btn btn-secondary" style="padding: 6px 12px; border-radius: 50%;">✕</button>
+      </div>
+
+      <div style="padding: 24px; max-height: 75vh; overflow-y: auto;" id="payslip-detail-body">
+        <!-- Rendered dynamically by viewPayslipDetail(recordId) -->
+      </div>
+
+      <div style="padding: 16px 24px; border-top: 1px solid var(--ios-separator); display: flex; justify-content: flex-end; gap: 10px;">
+        <button onclick="window.print()" class="ios-btn btn-primary">
+          <span>🖨️</span> Print / Save PDF Payslip
+        </button>
+        <button onclick="closeModal('payslip-detail-modal')" class="ios-btn btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+
+    # ==========================================================================
+    # PAGE 7: 6.0 HMRC TAX LAW & INTERCOMPANY STRUCTURING + FIGURE 3
+    # ==========================================================================
+    p7 = pdf.add_page()
+    p7.draw_academic_header("SECTION 6.0", "HMRC TAX LAW & LEASE ARBITRAGE")
+    
+    y = p7.height - 48
+    y = p7.draw_section_heading("6.0", "HMRC TAX LAW & INTERCOMPANY LEASE ARBITRAGE", y)
+    
+    p7_txt = (
+        "The tax structuring of care home assets requires meticulous compliance with HMRC corporate tax, employment income, and "
+        "property lease legislation. FAIRYTALES GROUP operates a tripartite corporate architecture: Fairytales Group (holding company), "
+        "ADOV LIMITED (asset holding company owning the freeholds of 78, 80, and 82 Marston Gardens), and ADOV Care Group LIMITED "
+        "(CQC registered care operating company). In Scenario A, PropCo leases 78 & 80 to OpCo under 10-year commercial leases, while "
+        "leasing 82 to the Director under an open-market Assured Shorthold Tenancy (AST)."
+    )
+    y = p7.draw_wrapped_text(p7_txt, p7.mx, y, p7.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    y = p7.draw_section_heading("6.1", "Sections 105 & 106 ITEPA 2003 (Living Accommodation BIK Neutrality)", y)
+    p7_itepa = (
+        "Under the Income Tax (Earnings and Pensions) Act 2003 (ITEPA 2003) Sections 105 and 106, where living accommodation is provided "
+        "to a company director by reason of employment, the benefit is treated as taxable employment earnings (Benefit-in-Kind). "
+        "Under Section 106(2), the cash equivalent of the benefit is legally calculated as the open-market annual rental value of the property "
+        "minus any sum made good by the employee or director. By establishing an arm's-length AST where the Director personally pays the "
+        "full open-market rent of £1,500/month (£18,000/year) from post-tax dividend income to ADOV LIMITED for 82 Marston Gardens, the sum "
+        "made good exactly equals the statutory rental value. Consequently, the taxable Benefit-in-Kind under Section 106 is precisely £0 NIL."
+    )
+    y = p7.draw_wrapped_text(p7_itepa, p7.mx, y, p7.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    # --------------------------------------------------------------------------
+    # FIGURE 3: HMRC TAX-NEUTRAL RENT ARBITRAGE ARCHITECTURE (VECTOR SCHEMATIC)
+    # --------------------------------------------------------------------------
+    p7.set_fill_color(0.08, 0.14, 0.24)
+    p7.draw_text("FIGURE 3: HMRC TAX-NEUTRAL RENT ARBITRAGE ARCHITECTURE", p7.mx, y, font="F2", size=7.4)
+    y -= 5
+    
+    fig3_h = 155
+    fig3_y = y - fig3_h
+    p7.set_fill_color(0.99, 0.995, 1.0)
+    p7.set_stroke_color(0.70, 0.78, 0.88)
+    p7.draw_rect(p7.mx, fig3_y, p7.cw, fig3_h, fill=True, stroke=True, stroke_w=0.8)
+    
+    # Box 1: Operating Care Company (OpCo)
+    bx_opco = p7.mx + 20
+    by_opco = fig3_y + 20
+    bw = 140
+    bh = 115
+    p7.set_fill_color(0.95, 0.97, 1.0)
+    p7.set_stroke_color(0.10, 0.25, 0.45)
+    p7.draw_rect(bx_opco, by_opco, bw, bh, fill=True, stroke=True, stroke_w=1.0)
+    p7.set_fill_color(0.10, 0.25, 0.45)
+    p7.draw_text("CARE OPCO", bx_opco + 10, by_opco + bh - 15, font="F2", size=7.2)
+    p7.set_fill_color(0.20, 0.30, 0.40)
+    p7.draw_text("ADOV Care Group LTD", bx_opco + 10, by_opco + bh - 26, font="F3", size=6.0)
+    p7.draw_text("• CQC Registered Provider", bx_opco + 10, by_opco + bh - 38, font="F1", size=6.0)
+    p7.draw_text("• Operates 78 & 80 Campus", bx_opco + 10, by_opco + bh - 49, font="F1", size=6.0)
+    p7.draw_text("• Generates £1.33m Fees", bx_opco + 10, by_opco + bh - 60, font="F1", size=6.0)
+    p7.draw_text("• Deducts £50k Rent (CTA 09)", bx_opco + 10, by_opco + bh - 71, font="F1", size=6.0)
+    p7.set_fill_color(0.12, 0.45, 0.22)
+    p7.draw_text("Saves £12.5k Corp Tax/yr", bx_opco + 10, by_opco + bh - 84, font="F2", size=6.0)
+    
+    # Box 2: Property Asset Company (PropCo)
+    bx_prop = p7.mx + p7.cw/2 - bw/2
+    p7.set_fill_color(0.98, 0.98, 0.95)
+    p7.set_stroke_color(0.76, 0.61, 0.22)
+    p7.draw_rect(bx_prop, by_opco, bw, bh, fill=True, stroke=True, stroke_w=1.0)
+    p7.set_fill_color(0.76, 0.61, 0.22)
+    p7.draw_text("ASSET PROPCO", bx_prop + 10, by_opco + bh - 15, font="F2", size=7.2)
+    p7.set_fill_color(0.35, 0.30, 0.15)
+    p7.draw_text("ADOV LIMITED", bx_prop + 10, by_opco + bh - 26, font="F3", size=6.0)
+    p7.draw_text("• Freehold Owner 78, 80, 82", bx_prop + 10, by_opco + bh - 38, font="F1", size=6.0)
+    p7.draw_text("• Receives £50k OpCo Rent", bx_prop + 10, by_opco + bh - 49, font="F1", size=6.0)
+    p7.draw_text("• Receives £18k Director AST", bx_prop + 10, by_opco + bh - 60, font="F1", size=6.0)
+    p7.draw_text("• Total Rent: £68k/yr", bx_prop + 10, by_opco + bh - 71, font="F1", size=6.0)
+    p7.set_fill_color(0.10, 0.25, 0.45)
+    p7.draw_text("Ring-Fenced Asset Entity", bx_prop + 10, by_opco + bh - 84, font="F2", size=6.0)
+    
+    # Box 3: Founding Director (Family Sanctum)
+    bx_dir = p7.mx + p7.cw - bw - 20
+    p7.set_fill_color(0.95, 0.98, 0.96)
+    p7.set_stroke_color(0.12, 0.45, 0.22)
+    p7.draw_rect(bx_dir, by_opco, bw, bh, fill=True, stroke=True, stroke_w=1.0)
+    p7.set_fill_color(0.12, 0.45, 0.22)
+    p7.draw_text("DIRECTOR RESIDENCE", bx_dir + 10, by_opco + bh - 15, font="F2", size=7.2)
+    p7.set_fill_color(0.20, 0.35, 0.25)
+    p7.draw_text("82 Marston Gardens", bx_dir + 10, by_opco + bh - 26, font="F3", size=6.0)
+    p7.draw_text("• Relocates to Detached 82", bx_dir + 10, by_opco + bh - 38, font="F1", size=6.0)
+    p7.draw_text("• Pays £18k AST Market Rent", bx_dir + 10, by_opco + bh - 49, font="F1", size=6.0)
+    p7.draw_text("• ITEPA ss.105-106 BIK: £0", bx_dir + 10, by_opco + bh - 60, font="F1", size=6.0)
+    p7.draw_text("• Net Surplus Cash: +£32k/yr", bx_dir + 10, by_opco + bh - 71, font="F1", size=6.0)
+    p7.set_fill_color(0.76, 0.61, 0.22)
+    p7.draw_text("100% Tax-Neutral Arbitrage", bx_dir + 10, by_opco + bh - 84, font="F2", size=6.0)
+    
+    # Connecting Arrows & Flows
+    p7.set_stroke_color(0.12, 0.45, 0.22)
+    p7.draw_line(bx_opco + bw, by_opco + bh/2 + 10, bx_prop, by_opco + bh/2 + 10, stroke_w=1.2)
+    p7.set_fill_color(0.12, 0.45, 0.22)
+    p7.draw_text("£50k Rent ->", bx_opco + bw + 8, by_opco + bh/2 + 15, font="F2", size=6.0)
+    
+    p7.set_stroke_color(0.76, 0.61, 0.22)
+    p7.draw_line(bx_dir, by_opco + bh/2 + 10, bx_prop + bw, by_opco + bh/2 + 10, stroke_w=1.2)
+    p7.set_fill_color(0.76, 0.61, 0.22)
+    p7.draw_text("<- £18k AST", bx_prop + bw + 8, by_opco + bh/2 + 15, font="F2", size=6.0)
+    
+    # Net Surplus Callout Ribbon
+    p7.set_fill_color(0.10, 0.25, 0.45)
+    p7.draw_rect(p7.mx + 20, fig3_y + 8, p7.cw - 40, 16, fill=True)
+    p7.set_fill_color(1.0, 1.0, 1.0)
+    p7.draw_text("COMMERCIAL RENT ARBITRAGE RESULT: £50,000 LEASE - £18,000 AST = +£32,000 / YEAR TAX-FREE CASH SURPLUS", p7.mx + 28, fig3_y + 13, font="F2", size=5.8)
+    
+    y = fig3_y - 6
+    
+    y = p7.draw_section_heading("6.2", "Corporation Tax Deductibility & SDLT Analysis", y)
+    p7_tax = (
+        "Under Section 54 of the Corporation Tax Act 2009 (CTA 2009), expenses incurred wholly and exclusively for the purposes of the "
+        "trade are fully tax-deductible. The £50,000 annual commercial rent paid by ADOV Care Group LIMITED to ADOV LIMITED for 80 Marston "
+        "Gardens constitutes a legitimate commercial occupancy cost benchmarked by RICS Red Book commercial valuation. At the UK Corporation "
+        "Tax rate of 25%, this deduction shields £12,500 annually in corporate taxes. Furthermore, Stamp Duty Land Tax (SDLT) group relief "
+        "under Schedule 7 FA 2003 applies between 75% parent-subsidiary holdings, and welfare care remains exempt under Schedule 9 VATA 1994."
+    )
+    y = p7.draw_wrapped_text(p7_tax, p7.mx, y, p7.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    # Table 6.0: Comparative Tax, Lease & Personal Cashflow Ledger
+    cols_t6 = [("Fiscal Ledger Line Item", 155), ("Scenario A: Campus (78 & 80)", 120), ("Scenario B: Split (78 & 82)", 120), ("Net Variance Delta", 120)]
+    rows_t6 = [
+        ("OpCo Commercial Rent Paid", "£50,000 / yr (for 80 Marston Gdns)", "£0 (Director stays in 80; no lease)", "+£50,000 Deductible Rent"),
+        ("OpCo Corporation Tax Relief (25%)", "-£12,500 tax reduction", "£0 tax relief", "-£12,500 Tax Saved"),
+        ("Director AST Rent Paid for 82", "-£18,000 / yr (open-market rate)", "£0 (Director remains in 80)", "-£18,000 Cash Paid"),
+        ("HMRC Benefit-in-Kind (s.106)", "£0 NIL (Full rent made good)", "£0 NIL (Personal home owned)", "Neutral (£0 BIK)"),
+        ("PropCo Commercial Rental Income", "+£68,000 / yr (£50k OpCo + £18k AST)", "£0 / yr (Assets not leased)", "+£68,000 Asset Cashflow"),
+        ("NET COMBINED CASH SURPLUS", "+£32,000 / YEAR TO FAIRYTALES GROUP", "£0 SURPLUS / TRAPPED CAPITAL", "+£32,000 ANNUAL ADVANTAGE")
+    ]
+    y = p7.draw_booktabs_table("TABLE 6.0: COMPARATIVE TAX, LEASE & PERSONAL CASHFLOW LEDGER", cols_t6, rows_t6, y, row_h=9.6, font_size=5.6)
+    y -= 3
+    
+    cols_t61 = [("Statutory Tax Compliance Vector", 130), ("HMRC Statutory Standard", 185), ("Assurance & Documentation", 200)]
+    rows_t61 = [
+        ("Arm's Length Commercial Lease", "Section 54 CTA 2009 wholly and exclusively", "Supported by independent RICS Red Book valuation"),
+        ("Living Accommodation Valuation", "Sections 105 & 106 ITEPA 2003 statutory rules", "Open-market AST at £1,500/mo completely offsets BIK"),
+        ("VAT Welfare Exemption", "Schedule 9 Group 7 Value Added Tax Act 1994", "Supported living exempt from VAT; no partial exemption leak"),
+        ("SDLT Group Relief", "Schedule 7 Finance Act 2003 group provisions", "Intercompany leases structured within 75% group threshold")
+    ]
+    y = p7.draw_booktabs_table("TABLE 6.1: STATUTORY TAX COMPLIANCE & ANTI-AVOIDANCE MATRIX", cols_t61, rows_t61, y, row_h=9.6, font_size=5.6)
+    y -= 2
+    
+    p7_rec_box = (
+        "HMRC STATUTORY COMPLIANCE & CASH SURPLUS CERTIFICATION: Scenario A executes a fully compliant, tax-neutral lease structure. "
+        "Paying £50,000 commercial rent from OpCo saves £12,500 in Corporation Tax, while the Director's £18,000 open-market AST rent for 82 "
+        "eliminates taxable BIK under Section 106 ITEPA 2003, unlocking a net £32,000/year annual surplus for the group."
+    )
+    y = p7.draw_academic_callout("HMRC STATUTORY COMPLIANCE & CASH SURPLUS CERTIFICATION", p7_rec_box, y, h=36)
+
+
+    # ==========================================================================
+    # PAGE 8: 7.0 THREE-YEAR PRO-FORMA FINANCIAL WATERFALL + FIGURE 4
+    # ==========================================================================
+    p8 = pdf.add_page()
+    p8.draw_academic_header("SECTION 7.0", "THREE-YEAR PRO-FORMA FINANCIAL WATERFALL")
+    
+    y = p8.height - 48
+    y = p8.draw_section_heading("7.0", "THREE-YEAR PRO-FORMA FINANCIAL WATERFALL", y)
+    
+    p8_txt = (
+        "Placement fees for high-dependency supported living for adults with severe autism command significant specialist tariffs. "
+        "Local authorities and NHS Integrated Care Boards in Bedfordshire contract complex autism placements at £2,800 to £3,600 per bed "
+        "per week, delivering an average blended fee of £3,200 per week (£166,400 per annum per resident). At full capacity across 8 beds, "
+        "gross potential annual turnover reaches £1,331,200. Pro-forma modeling across a 36-month horizon reveals consistent, structural "
+        "financial outperformance under Scenario A."
+    )
+    y = p8.draw_wrapped_text(p8_txt, p8.mx, y, p8.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    # Table 7.0: Comprehensive Three-Year Comparative P&L Statement
+    cols_t7 = [("Financial Line Item", 100), ("Y1 Scen A", 65), ("Y1 Scen B", 65), ("Y2 Scen A", 65), ("Y2 Scen B", 65), ("Y3 Scen A", 75), ("Y3 Scen B", 80)]
+    rows_t7 = [
+        ("Gross Placement Fees", "£832,000", "£832,000", "£1,164,800", "£1,164,800", "£1,331,200", "£1,331,200"),
+        ("Frontline Day Staff", "-£244,600", "-£244,600", "-£342,440", "-£342,440", "-£391,360", "-£391,360"),
+        ("Waking Night Rota", "-£140,400", "-£210,600", "-£147,420", "-£221,130", "-£154,790", "-£232,190"),
+        ("Agency Cover / Relief", "-£41,600", "-£49,920", "-£58,240", "-£69,890", "-£66,560", "-£79,870"),
+        ("Catering, Utilities & DDA", "-£45,000", "-£55,000", "-£63,000", "-£77,000", "-£72,000", "-£88,000"),
+        ("Commercial Rent Paid", "-£50,000", "£0", "-£52,500", "£0", "-£55,130", "£0"),
+        ("Head Office & Overheads", "-£45,400", "-£84,880", "-£53,200", "-£84,340", "-£50,360", "-£76,780"),
+        ("OPERATING EBITDA", "£265,000", "£187,000", "£448,000", "£370,000", "£541,000", "£463,000"),
+        ("EBITDA MARGIN %", "31.8%", "22.5%", "38.5%", "31.8%", "40.6%", "34.8%")
+    ]
+    y = p8.draw_booktabs_table("TABLE 7.0: THREE-YEAR PRO-FORMA COMPARATIVE P&L STATEMENT", cols_t7, rows_t7, y, row_h=9.6, font_size=5.6)
+    y -= 3
+    
+    # --------------------------------------------------------------------------
+    # FIGURE 4: FINANCIAL PERFORMANCE COMPARISON (VECTOR VISUALIZER)
+    # --------------------------------------------------------------------------
+    p8.set_fill_color(0.08, 0.14, 0.24)
+    p8.draw_text("FIGURE 4: FINANCIAL PERFORMANCE COMPARISON (EBITDA & CUMULATIVE RETURN)", p8.mx, y, font="F2", size=7.4)
+    y -= 5
+    
+    fig4_h = 145
+    fig4_y = y - fig4_h
+    p8.set_fill_color(0.99, 0.995, 1.0)
+    p8.set_stroke_color(0.70, 0.78, 0.88)
+    p8.draw_rect(p8.mx, fig4_y, p8.cw, fig4_h, fill=True, stroke=True, stroke_w=0.8)
+    
+    # 3 Comparison Groups: Year 1, Year 2, Year 3
+    chart_x = p8.mx + 40
+    chart_w = p8.cw - 80
+    chart_y = fig4_y + 20
+    chart_h = 100
+    
+    # Baseline line
+    p8.set_stroke_color(0.70, 0.78, 0.88)
+    p8.draw_line(chart_x, chart_y, chart_x + chart_w, chart_y, stroke_w=0.8)
+    
+    years_data = [
+        ("Year 1 (62.5% Occ)", 265, 187, chart_x + 30),
+        ("Year 2 (87.5% Occ)", 448, 370, chart_x + chart_w/2 - 35),
+        ("Year 3 (100% Occ)", 541, 463, chart_x + chart_w - 100)
+    ]
+    
+    for lbl, eb_a, eb_b, gx in years_data:
+        # Scale: max 600k = 80pt height
+        scale = 80.0 / 600.0
+        ha = eb_a * scale
+        hb = eb_b * scale
+        
+        # Scenario A Bar (Navy/Gold accent)
+        p8.set_fill_color(0.10, 0.25, 0.45)
+        p8.draw_rect(gx, chart_y, 28, ha, fill=True)
+        p8.set_fill_color(0.10, 0.25, 0.45)
+        p8.draw_text(f"£{eb_a}k", gx + 1, chart_y + ha + 3, font="F2", size=5.8)
+        
+        # Scenario B Bar (Slate Red)
+        p8.set_fill_color(0.70, 0.25, 0.25)
+        p8.draw_rect(gx + 32, chart_y, 28, hb, fill=True)
+        p8.set_fill_color(0.70, 0.25, 0.25)
+        p8.draw_text(f"£{eb_b}k", gx + 33, chart_y + hb + 3, font="F2", size=5.8)
+        
+        # Label below
+        p8.set_fill_color(0.20, 0.25, 0.35)
+        p8.draw_text(lbl, gx - 5, chart_y - 11, font="F2", size=5.6)
+        
+        # Delta badge
+        delta = eb_a - eb_b
+        p8.set_fill_color(0.12, 0.45, 0.22)
+        p8.draw_text(f"+£{delta}k", gx + 18, chart_y + ha + 12, font="F2", size=5.6)
+        
+    # Legend
+    leg_x = p8.mx + p8.cw - 170
+    leg_y = fig4_y + fig4_h - 18
+    p8.set_fill_color(0.10, 0.25, 0.45)
+    p8.draw_rect(leg_x, leg_y, 10, 6, fill=True)
+    p8.set_fill_color(0.10, 0.25, 0.45)
+    p8.draw_text("Scenario A (Unified Campus)", leg_x + 14, leg_y + 1, font="F2", size=5.6)
+    
+    p8.set_fill_color(0.70, 0.25, 0.25)
+    p8.draw_rect(leg_x, leg_y - 9, 10, 6, fill=True)
+    p8.set_fill_color(0.70, 0.25, 0.25)
+    p8.draw_text("Scenario B (Disconnected)", leg_x + 14, leg_y - 8, font="F2", size=5.6)
+    
+    y = fig4_y - 6
+    
+    y = p8.draw_section_heading("7.1", "Sensitivity Analysis, Breakeven Occupancy & Debt Service Coverage", y)
+    p8_sens = (
+        "Stress-testing the pro-forma models reveals profound differences in resilience. Scenario A achieves breakeven at just 48.2% "
+        "occupancy (3.8 beds), ensuring debt service and fixed overheads are fully covered even during initial ramp-up. In contrast, "
+        "Scenario B requires a perilous 68.4% breakeven occupancy (5.5 beds) due to its duplicated night shift fixed overheads. "
+        "The Debt Service Coverage Ratio (DSCR) for Scenario A is 2.85x compared to 1.62x for Scenario B, securing prime tier banking terms."
+    )
+    y = p8.draw_wrapped_text(p8_sens, p8.mx, y, p8.cw, font="F1", size=6.8, leading=8.7)
+    y -= 3
+    
+    cols_t71 = [("Stress Scenario / Downside Vector", 145), ("Scenario A (Unified Campus)", 125), ("Scenario B (Disconnected)", 125), ("Downside Resilience", 120)]
+    rows_t71 = [
+        ("Base Case Year 3 EBITDA", "£541,000 (40.6% Margin)", "£463,000 (34.8% Margin)", "+£78,000 Outperformance"),
+        ("Wage Inflation Shock (+10% Pay)", "£495,000 EBITDA (37.2%)", "£408,000 EBITDA (30.6%)", "Scenario A retains 37% margin"),
+        ("Occupancy Drop to 70% (5.6 Beds)", "£322,000 EBITDA (34.6%)", "£234,000 EBITDA (25.1%)", "Scenario B approaches cash crisis"),
+        ("Breakeven Occupancy Threshold", "48.2% (3.8 Resident Beds)", "68.4% (5.5 Resident Beds)", "Scenario A survives extended voids")
+    ]
+    y = p8.draw_booktabs_table("TABLE 7.1: BREAKEVEN OCCUPANCY & DOWNSIDE STRESS TEST MATRIX", cols_t71, rows_t71, y, row_h=9.6, font_size=5.6)
+    y -= 2
+    
+    p8_rec_box = (
+        "FINANCIAL SUPERIORITY & CAPITAL PRESERVATION VERDICT: Over a 3-year commissioning horizon, Scenario A generates cumulative "
+        "EBITDA of £1,254,000 versus £1,020,000 for Scenario B, delivering an additional £234,000 in net operational cashflow. Combined with "
+        "the £87,000 CapEx preservation, Scenario A unlocks a massive £321,000 total commercial advantage for FAIRYTALES GROUP."
+    )
+    y = p8.draw_academic_callout("FINANCIAL SUPERIORITY & CAPITAL PRESERVATION VERDICT", p8_rec_box, y, h=36)

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 856" width="540" height="856">
+  <defs>
+    <!-- Background Gradient: Deep Matte Obsidian (Silky Smooth, Zero Lines) -->
+    <radialGradient id="d2BackBg" cx="50%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="55%" stop-color="#070A12"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 1. Base Credit Card Surface (ISO/IEC 7810 ID-1: rx=32, Zero Background Lines) -->
+  <rect width="540" height="856" rx="32" fill="url(#d2BackBg)"/>
+
+  <!-- 2. Clean Subtle Outer Bevel Border -->
+  <rect x="8" y="8" width="524" height="840" rx="28" fill="none" stroke="#1E293B" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- 3. Top what3words Spatial Identifier -->
+  <g transform="translate(270, 72)">
+    <text x="0" y="0" text-anchor="middle" font-family="'Space Grotesk', -apple-system, monospace" font-size="13" font-weight="700" letter-spacing="3">
+      <tspan fill="#00F0FF">///</tspan><tspan fill="#E2E8F0">chest.vision.moth</tspan>
+    </text>
+  </g>
+
+  <!-- 4. Central Flat Silver Phoenix Emblem (Circle-Free, Centered at X=270, Y=255) -->
+  <g transform="translate(270, 255)">
+    <!-- Exact Phoenix Silhouette in FLAT BRUSHED SILVER / PLATINUM (No circles, zero blur) -->
+    <path d="M 167.6 20.0 L 153.4 57.2 L 148.0 86.9 L 148.0 111.9 L 154.1 143.6 L 166.9 174.7 L 181.8 195.6 L 205.4 215.9 L 227.7 227.4 L 230.4 226.7 L 231.1 220.6 L 231.1 190.2 L 228.4 180.1 L 220.3 174.0 L 202.7 178.1 L 206.8 167.3 L 212.2 161.9 L 239.2 144.3 L 250.0 142.9 L 262.2 145.0 L 269.6 142.3 L 277.0 134.2 L 278.4 134.8 L 263.5 155.8 L 268.9 174.7 L 270.9 227.4 L 287.2 220.6 L 304.7 208.5 L 321.6 191.6 L 332.4 176.0 L 345.9 143.6 L 352.7 102.4 L 349.3 66.6 L 344.6 49.0 L 332.4 20.0 L 360.1 34.2 L 381.0 53.1 L 394.6 74.0 L 403.3 99.7 L 405.4 130.1 L 400.0 150.4 L 389.8 167.3 L 369.6 186.2 L 370.2 187.5 L 382.4 185.5 L 397.9 177.4 L 409.4 166.6 L 418.9 151.0 L 422.9 136.9 L 424.3 119.3 L 420.9 94.3 L 415.5 76.7 L 430.4 93.0 L 443.2 117.9 L 446.6 132.1 L 447.2 149.7 L 443.9 163.2 L 434.4 178.7 L 424.3 188.2 L 409.4 197.0 L 360.1 211.8 L 366.2 215.2 L 379.7 217.9 L 403.3 213.9 L 423.6 203.1 L 452.6 178.1 L 450.6 198.3 L 441.8 215.2 L 425.6 230.1 L 408.1 237.5 L 390.5 240.9 L 345.2 242.9 L 358.8 249.0 L 377.7 253.0 L 402.0 252.4 L 426.3 244.9 L 422.2 252.4 L 407.4 264.5 L 387.8 270.6 L 370.2 270.6 L 324.3 264.5 L 326.3 269.9 L 336.5 278.7 L 365.5 289.5 L 352.7 294.2 L 338.5 294.2 L 311.5 285.5 L 302.0 285.5 L 292.6 292.2 L 286.5 303.7 L 283.8 313.8 L 283.8 328.0 L 286.5 336.8 L 300.7 363.8 L 316.2 383.4 L 320.2 393.5 L 318.2 413.8 L 306.1 408.4 L 294.6 397.6 L 282.4 376.7 L 273.6 344.9 L 271.6 343.6 L 270.3 371.2 L 276.3 395.6 L 289.2 420.6 L 307.4 444.2 L 299.3 457.7 L 287.2 449.6 L 274.3 433.4 L 266.9 417.9 L 261.5 399.6 L 260.1 414.5 L 264.2 437.4 L 270.3 453.7 L 281.1 473.2 L 265.5 480.0 L 250.0 443.5 L 235.1 479.3 L 220.3 473.9 L 237.8 428.0 L 240.5 412.5 L 239.2 398.3 L 231.1 422.6 L 222.3 438.8 L 206.8 455.0 L 202.7 457.7 L 200.0 455.7 L 194.6 448.9 L 193.9 443.5 L 210.1 423.9 L 220.3 406.4 L 227.0 385.4 L 229.7 362.5 L 227.7 344.9 L 221.0 371.2 L 210.1 391.5 L 199.3 403.7 L 186.5 413.1 L 183.1 414.5 L 180.4 408.4 L 179.8 394.2 L 181.8 388.1 L 204.1 359.1 L 214.2 334.8 L 214.9 313.8 L 208.1 292.2 L 198.7 285.5 L 189.2 285.5 L 161.5 294.2 L 147.3 294.2 L 135.2 290.9 L 162.2 279.4 L 178.4 262.5 L 136.5 271.3 L 117.6 271.3 L 98.0 265.9 L 82.5 255.7 L 73.7 246.3 L 101.4 253.0 L 121.7 253.0 L 135.8 250.3 L 154.8 242.2 L 108.8 240.2 L 81.1 233.5 L 70.3 227.4 L 60.2 217.9 L 50.7 200.4 L 47.4 176.7 L 69.0 199.7 L 91.9 212.5 L 108.1 215.9 L 120.3 215.9 L 139.2 211.2 L 101.4 201.0 L 74.4 186.8 L 64.2 176.7 L 56.8 163.9 L 53.4 151.7 L 53.4 133.5 L 58.8 113.2 L 66.3 97.7 L 83.2 75.4 L 76.4 117.9 L 77.1 136.9 L 80.5 149.7 L 85.9 160.5 L 98.7 174.7 L 116.3 184.8 L 129.8 188.2 L 130.4 186.2 L 108.8 165.9 L 99.4 147.7 L 94.6 123.3 L 96.7 99.7 L 106.8 72.0 L 123.0 49.0 L 141.9 32.8 L 166.9 20.7 Z" transform="scale(0.50) translate(-250, -250)" 
+          fill="#E2E8F0" stroke="#FFFFFF" stroke-width="0.8"/>
+
+    <!-- Crisp Oceanic Cyan Center Accent -->
+    <circle cx="0" cy="0" r="3" fill="#00F0FF"/>
+  </g>
+
+  <!-- 5. Brand Wordmark & Agency Tagline (Centered at X=270) -->
+  <g transform="translate(270, 425)">
+    <text x="0" y="0" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="29" font-weight="800" letter-spacing="9">
+      FAIRYTALES SMM
+    </text>
+
+    <text x="0" y="32" text-anchor="middle" fill="#00F0FF" font-family="'Space Grotesk', -apple-system, monospace" font-size="11" font-weight="700" letter-spacing="3.5">
+      NEXT-GEN SOCIAL COMMERCE &amp; CREATOR STUDIO
+    </text>
+
+    <!-- Clean Cyan Accent Divider -->
+    <line x1="-80" y1="56" x2="80" y2="56" stroke="#00F0FF" stroke-width="1.8"/>
+
+    <!-- Official Enterprise Gateway -->
+    <text x="0" y="86" text-anchor="middle" fill="#CBD5E1" font-family="'Space Grotesk', -apple-system, monospace" font-size="12.5" font-weight="700" letter-spacing="2.5">
+      WWW.FAIRYTALESGROUP.UK
+    </text>
+  </g>
+
+  <!-- 6. Production Campus Address (Restored Cleanly & Prominently on Back) -->
+  <g transform="translate(270, 580)">
+    <text x="0" y="0" text-anchor="middle" fill="#00F0FF" font-family="'Space Grotesk', -apple-system, monospace" font-size="10.5" font-weight="700" letter-spacing="2.5">
+      PRODUCTION CAMPUS
+    </text>
+
+    <text x="0" y="26" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13.5" font-weight="700" letter-spacing="0.5">
+      Fairytales SMM, Yard 1
+    </text>
+
+    <text x="0" y="48" text-anchor="middle" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="500">
+      High Heath Farm, Whitwell Rd, Codicote
+    </text>
+
+    <text x="0" y="68" text-anchor="middle" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="12" font-weight="500">
+      Hitchin, SG4 8SZ, United Kingdom
+    </text>
+  </g>
+
+  <!-- 7. Agency Capabilities Focus -->
+  <g transform="translate(270, 715)">
+    <text x="0" y="0" text-anchor="middle" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.5">
+      Creator UGC • Spark Ads • TikTok Shop Scaling
+    </text>
+  </g>
+
+  <!-- 8. Bottom Geographic Anchor -->
+  <text x="270" y="785" text-anchor="middle" fill="#64748B" font-family="'Space Grotesk', -apple-system, monospace" font-size="9.5" letter-spacing="3">
+    HERTFORDSHIRE • UNITED KINGDOM
+  </text>
+</svg>

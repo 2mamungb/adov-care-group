@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 600" width="1050" height="600">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="60%" stop-color="#070A12"/>
+      <stop offset="100%" stop-color="#030508"/>
+    </radialGradient>
+
+    <!-- Holographic Cyan-Violet Gradient -->
+    <linearGradient id="holoAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="50%" stop-color="#7000FF"/>
+      <stop offset="100%" stop-color="#FF007A"/>
+    </linearGradient>
+
+    <!-- Metallic Platinum Sheen -->
+    <linearGradient id="platinumSheen" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+
+    <!-- Subtle Tech Grid Pattern -->
+    <pattern id="techGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5" opacity="0.4"/>
+      <circle cx="0" cy="0" r="0.8" fill="#38BDF8" opacity="0.3"/>
+    </pattern>
+
+    <!-- Outer Card Glow Filter -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- 1. Base Card Surface (Matte Obsidian) -->
+  <rect width="1050" height="600" rx="24" fill="url(#bgGlow)"/>
+  
+  <!-- 2. Subtle Micro-Grid Overlay -->
+  <rect x="25" y="25" width="1000" height="550" rx="16" fill="url(#techGrid)"/>
+
+  <!-- 3. Futuristic Corner Framing Brackets -->
+  <g stroke="#38BDF8" stroke-width="1.2" fill="none" opacity="0.6">
+    <!-- Top-Left -->
+    <path d="M 45 65 L 45 45 L 65 45"/>
+    <!-- Top-Right -->
+    <path d="M 985 45 L 1005 45 L 1005 65"/>
+    <!-- Bottom-Left -->
+    <path d="M 45 535 L 45 555 L 65 555"/>
+    <!-- Bottom-Right -->
+    <path d="M 985 555 L 1005 555 L 1005 535"/>
+  </g>
+
+  <!-- 4. Subtle Geolocation & System Coordinates (Micro-Typography) -->
+  <text x="50" y="80" fill="#64748B" font-family="'Space Grotesk', 'Courier New', monospace" font-size="11" letter-spacing="3" opacity="0.8">
+    NODE // 51.8795° N, 0.2398° W • HERTS UK
+  </text>
+  <text x="1000" y="80" text-anchor="end" fill="#64748B" font-family="'Space Grotesk', 'Courier New', monospace" font-size="11" letter-spacing="3" opacity="0.8">
+    SYS // VER. 3.0 • ENCRYPTED NFC
+  </text>
+
+  <!-- 5. Central Futuristic Emblem (Optical Dimensional Glyph) -->
+  <g transform="translate(525, 260)">
+    <!-- Outer Orbit Ring -->
+    <circle cx="0" cy="0" r="82" fill="none" stroke="#1E293B" stroke-width="1.5" stroke-dasharray="4 8"/>
+    <circle cx="0" cy="0" r="95" fill="none" stroke="#334155" stroke-width="0.8" opacity="0.4"/>
+    
+    <!-- Outer Dynamic Arc (Cyan Highlight) -->
+    <path d="M -65 -65 A 92 92 0 0 1 65 -65" fill="none" stroke="url(#holoAccent)" stroke-width="3" filter="url(#softGlow)"/>
+    <path d="M 65 65 A 92 92 0 0 1 -65 65" fill="none" stroke="url(#holoAccent)" stroke-width="3" filter="url(#softGlow)"/>
+
+    <!-- Central Geometric Prism Core (The "F" Monogram Prism) -->
+    <polygon points="0,-50 43,-25 43,25 0,50 -43,25 -43,-25" fill="#0A0F1D" stroke="#38BDF8" stroke-width="2"/>
+    <polygon points="0,-35 30,-18 30,18 0,35 -30,18 -30,-18" fill="none" stroke="url(#holoAccent)" stroke-width="1.5"/>
+    
+    <!-- Central Beam Indicator -->
+    <circle cx="0" cy="0" r="6" fill="#00F0FF" filter="url(#softGlow)"/>
+  </g>
+
+  <!-- 6. Brand Typography (Minimal, High-Status Sans-Serif) -->
+  <text x="525" y="415" text-anchor="middle" fill="url(#platinumSheen)" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="14">
+    FAIRYTALES SMM
+  </text>
+
+  <text x="525" y="452" text-anchor="middle" fill="#00F0FF" font-family="'Space Grotesk', 'Inter', monospace" font-size="13" font-weight="600" letter-spacing="7" opacity="0.95">
+    NEXT-GEN SOCIAL COMMERCE &amp; CREATOR STUDIO
+  </text>
+
+  <!-- 7. Bottom Minimal Accent Bar -->
+  <line x1="425" y1="485" x2="625" y2="485" stroke="url(#holoAccent)" stroke-width="2" filter="url(#softGlow)"/>
+  
+  <text x="525" y="535" text-anchor="middle" fill="#475569" font-family="'Space Grotesk', monospace" font-size="10" letter-spacing="4">
+    HIGH HEATH FARM CAMPUS // CODICOTE SG4 8SZ
+  </text>
+</svg>

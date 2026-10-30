@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="gradGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B45309" />
+      <stop offset="100%" stop-color="#78350F" />
+    </linearGradient>
+    <linearGradient id="gradGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#064E3B" />
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="440" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5" />
+
+  <!-- TOP TIER: HOLDING COMPANY -->
+  <rect x="330" y="30" width="300" height="85" rx="12" fill="url(#gradNavy)" stroke="#38BDF8" stroke-width="1.5" />
+  <text x="480" y="58" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#38BDF8" text-anchor="middle" letter-spacing="1">PARENT HOLDING CO (100% ULTIMATE OWNER)</text>
+  <text x="480" y="82" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF" text-anchor="middle">MAMUN LIMITED</text>
+  <text x="480" y="100" font-family="-apple-system, sans-serif" font-size="10.5" fill="#94A3B8" text-anchor="middle">Sole Shareholder &amp; Ultimate Beneficiary</text>
+
+  <!-- Connectors -->
+  <line x1="480" y1="115" x2="480" y2="155" stroke="#94A3B8" stroke-width="2" />
+  <line x1="240" y1="155" x2="720" y2="155" stroke="#94A3B8" stroke-width="2" />
+  <line x1="240" y1="155" x2="240" y2="185" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="720" y1="155" x2="720" y2="185" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- LEFT: PROPCO -->
+  <rect x="90" y="185" width="300" height="150" rx="12" fill="url(#gradGold)" stroke="#F59E0B" stroke-width="1.5" />
+  <text x="240" y="212" font-family="-apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#FDE68A" text-anchor="middle" letter-spacing="1">PROPERTY CO (PROPCO)</text>
+  <text x="240" y="235" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF" text-anchor="middle">ADOV LIMITED</text>
+  <text x="240" y="255" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#FEF3C7" text-anchor="middle">Holds 100% Freehold Real Estate</text>
+
+  <rect x="110" y="270" width="260" height="50" rx="8" fill="rgba(0,0,0,0.2)" />
+  <text x="240" y="290" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">Freehold Assets: 78, 80 &amp; 82 Marston Gdns</text>
+  <text x="240" y="306" font-family="-apple-system, sans-serif" font-size="9.5" fill="#FDE68A" text-anchor="middle">Rental Income: £97,000 / Yr (Commercial FRI)</text>
+
+  <!-- RIGHT: OPCO -->
+  <rect x="570" y="185" width="300" height="150" rx="12" fill="url(#gradGreen)" stroke="#10B981" stroke-width="1.5" />
+  <text x="720" y="212" font-family="-apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#A7F3D0" text-anchor="middle" letter-spacing="1">OPERATING CARE CO (OPCO)</text>
+  <text x="720" y="235" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF" text-anchor="middle">ADOV CARE GROUP LIMITED</text>
+  <text x="720" y="255" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#D1FAE5" text-anchor="middle">Regulated Service Provider</text>
+
+  <rect x="590" y="270" width="260" height="50" rx="8" fill="rgba(0,0,0,0.2)" />
+  <text x="720" y="290" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">CQC 'Personal Care' Regulated Provider</text>
+  <text x="720" y="306" font-family="-apple-system, sans-serif" font-size="9.5" fill="#A7F3D0" text-anchor="middle">Turnover: £977,600 / Yr // EBITDA: £341,392</text>
+
+  <!-- INTERCOMPANY FRI LEASE CONNECTOR -->
+  <path d="M 390 260 L 570 260" stroke="#0284C7" stroke-width="3" stroke-dasharray="6,4" />
+  <rect x="420" y="244" width="120" height="28" rx="6" fill="#0284C7" />
+  <text x="480" y="262" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">Commercial FRI Lease</text>
+
+  <!-- BOTTOM STRIP: BENEFICIARY / 82 RELOCATION -->
+  <rect x="90" y="360" width="780" height="55" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+  <text x="480" y="384" font-family="-apple-system, sans-serif" font-size="11.5" font-weight="800" fill="#1E293B" text-anchor="middle">
+    DIRECTOR RESIDENCE AT 82 MARSTON GARDENS: OPEN MARKET AST (s.105/106 ITEPA 2003)
+  </text>
+  <text x="480" y="402" font-family="-apple-system, sans-serif" font-size="10.5" fill="#059669" text-anchor="middle">
+    Paying open market commercial rent eliminates HMRC Benefit in Kind (BIK = Nil) and creates total corporate veil protection.
+  </text>
+</svg>
