@@ -3098,6 +3098,138 @@ cite.ref-title {
   color: var(--navy, #0F1E36);
 }
 
+
+/* =========================================================================
+   1-COLUMN ACADEMIC RESEARCH JOURNAL ARCHITECTURE & ENHANCED TYPOGRAPHY
+   ========================================================================= */
+.editorial-layout {
+  display: block !important;
+  max-width: 1060px !important;
+  margin: 0 auto !important;
+  padding: 36px 32px 100px 32px !important;
+}
+
+.editorial-main {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* Full-width Academic Companion Grid at Base of Single-Column Reading */
+.editorial-rail {
+  position: static !important;
+  top: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  margin-top: 52px !important;
+  margin-bottom: 28px !important;
+  padding: 26px 30px !important;
+  background: #F8FAFC !important;
+  border: 1.5px solid var(--border, #E2E8F0) !important;
+  border-radius: 12px !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 22px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03) !important;
+}
+
+[data-theme="dark"] .editorial-rail {
+  background: #141E33 !important;
+  border-color: #334155 !important;
+}
+
+.editorial-rail .rail-card {
+  margin-bottom: 0 !important;
+  height: 100% !important;
+}
+
+/* Academic Research Typography Standards */
+.editorial-prose-wrap,
+.editorial-body,
+.card-body,
+.tab-pane p,
+.tab-pane li {
+  font-size: 16.5px !important;
+  line-height: 1.76 !important;
+  color: var(--text-main, #1E293B) !important;
+  letter-spacing: -0.008em;
+}
+
+[data-theme="dark"] .editorial-prose-wrap,
+[data-theme="dark"] .editorial-body,
+[data-theme="dark"] .card-body,
+[data-theme="dark"] .tab-pane p,
+[data-theme="dark"] .tab-pane li {
+  color: #E2E8F0 !important;
+}
+
+.page-title {
+  font-family: "Charter", "Iowan Old Style", "Georgia", "Merriweather", serif !important;
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  color: var(--navy, #0F1E36) !important;
+  letter-spacing: -0.02em !important;
+}
+
+[data-theme="dark"] .page-title {
+  color: #F8FAFC !important;
+}
+
+.editorial-prose-wrap h2,
+.card-title {
+  font-family: "Charter", "Iowan Old Style", "Georgia", "Merriweather", serif !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  color: var(--navy, #0F1E36) !important;
+  margin-top: 36px !important;
+  margin-bottom: 14px !important;
+  line-height: 1.35 !important;
+}
+
+[data-theme="dark"] .editorial-prose-wrap h2,
+[data-theme="dark"] .card-title {
+  color: #F1F5F9 !important;
+}
+
+.editorial-prose-wrap h3 {
+  font-size: 18.5px !important;
+  font-weight: 700 !important;
+  color: var(--navy, #0F1E36) !important;
+  margin-top: 26px !important;
+  margin-bottom: 12px !important;
+}
+
+[data-theme="dark"] .editorial-prose-wrap h3 {
+  color: #93C5FD !important;
+}
+
+/* Academic Tables Readability */
+.table-wrap table {
+  font-size: 14.5px !important;
+  line-height: 1.6 !important;
+}
+
+.table-wrap th {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  padding: 12px 16px !important;
+  letter-spacing: 0.02em !important;
+}
+
+.table-wrap td {
+  padding: 13px 16px !important;
+}
+
+/* Architectural Blueprint Responsive Frame */
+.blueprint-svg {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 480px;
+  border: 1px solid #1E3E62;
+  border-radius: 10px;
+}
+
 </style>
 </head>
 <body>
@@ -3296,7 +3428,232 @@ cite.ref-title {
           <span class="visual-diagram-title">78 &amp; 80 Marston Gardens // 8-Bed Unified Specialist Campus</span>
         </div>
         <div class="visual-diagram-body">
-          <img src="assets/diagrams/diagram_campus_masterplan.svg" alt="Campus Masterplan Blueprint" class="visual-diagram-img" loading="lazy">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" width="100%" height="auto" class="blueprint-svg" style="max-width:100%; height:auto; display:block; background:#0B192C; border-radius:12px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Blueprint Grid Pattern -->
+    <pattern id="bpGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E3E62" stroke-width="0.8" opacity="0.45" />
+      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#2563EB" stroke-width="1.2" opacity="0.3" />
+    </pattern>
+    <!-- Card Gradients -->
+    <linearGradient id="bpWall78" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="bpWall80" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065F46" />
+      <stop offset="100%" stop-color="#022C22" />
+    </linearGradient>
+    <linearGradient id="bpWall82" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="bpGarden" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#022C22" stop-opacity="0.95" />
+    </linearGradient>
+    <filter id="bpGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Background with Grid -->
+  <rect width="1100" height="720" rx="12" fill="#0A1628" />
+  <rect width="1100" height="720" fill="url(#bpGrid)" />
+
+  <!-- Outer Architectural Border -->
+  <rect x="18" y="18" width="1064" height="684" rx="8" fill="none" stroke="#38BDF8" stroke-width="1.5" opacity="0.6" />
+  <rect x="24" y="24" width="1052" height="672" rx="6" fill="none" stroke="#1E40AF" stroke-width="0.8" opacity="0.4" />
+
+  <!-- BLUEPRINT TITLE BLOCK (Top Header) -->
+  <rect x="36" y="32" width="1028" height="52" rx="6" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" />
+  <text x="56" y="55" fill="#38BDF8" font-size="13" font-weight="800" letter-spacing="1.5">ARCHITECTURAL CAMPUS MASTERPLAN // CLASS C3(b) SPECIALIST SUPPORTED LIVING</text>
+  <text x="56" y="73" fill="#F8FAFC" font-size="16" font-weight="700">78 &amp; 80 Marston Gardens, Luton, LU2 7DY // 8-Bed Unified Healthcare Campus</text>
+  <rect x="910" y="42" width="140" height="32" rx="4" fill="#0284C7" />
+  <text x="980" y="63" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">SCALE: 1:100 NTS</text>
+
+  <!-- 1. HIGHWAYS / ROAD ACCESS -->
+  <rect x="36" y="96" width="1028" height="48" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1" />
+  <line x1="36" y1="120" x2="1064" y2="120" stroke="#FCD34D" stroke-width="2" stroke-dasharray="12,12" />
+  <text x="550" y="117" fill="#F8FAFC" font-size="14" font-weight="800" text-anchor="middle" letter-spacing="2">MARSTON GARDENS (RESIDENTIAL CUL-DE-SAC // HIGHWAYS COMPLIANT)</text>
+  <text x="550" y="135" fill="#94A3B8" font-size="12" font-weight="600" text-anchor="middle">Luton Local Plan Policy LLP31 &amp; LLP32 Approved Access Route</text>
+
+  <!-- 2. FLANK PARKING DRIVEWAYS -->
+  <!-- Left Flank Parking: 80 Marston Gardens (4 Dedicated Spaces) -->
+  <g filter="url(#bpGlow)">
+    <rect x="36" y="156" width="140" height="180" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.8" />
+    <rect x="44" y="166" width="124" height="26" rx="4" fill="#065F46" />
+    <text x="106" y="184" fill="#6EE7B7" font-size="13" font-weight="800" text-anchor="middle">4 CAR SPACES</text>
+    <!-- Parking Bays -->
+    <rect x="46" y="200" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="219" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 1 (Staff 80)</text>
+    <rect x="46" y="232" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="251" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 2 (MDT/Doctor)</text>
+    <rect x="46" y="264" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="283" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 3 (Visitor/SW)</text>
+    <rect x="46" y="296" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="315" fill="#6EE7B7" font-size="12" font-weight="700" text-anchor="middle">Bay 4 (Accessible EV)</text>
+    <text x="106" y="331" fill="#94A3B8" font-size="10.5" font-weight="600" text-anchor="middle">Outer Flank Driveway</text>
+  </g>
+
+  <!-- Right Flank Parking: 78 Marston Gardens (4 Dedicated Spaces) -->
+  <g filter="url(#bpGlow)">
+    <rect x="924" y="156" width="140" height="180" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1.8" />
+    <rect x="932" y="166" width="124" height="26" rx="4" fill="#1E3A8A" />
+    <text x="994" y="184" fill="#93C5FD" font-size="13" font-weight="800" text-anchor="middle">4 CAR SPACES</text>
+    <!-- Parking Bays -->
+    <rect x="934" y="200" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="219" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 5 (Registered Mgr)</text>
+    <rect x="934" y="232" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="251" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 6 (Staff 78)</text>
+    <rect x="934" y="264" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="283" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 7 (Support Worker)</text>
+    <rect x="934" y="296" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="315" fill="#93C5FD" font-size="12" font-weight="700" text-anchor="middle">Bay 8 (Accessible EV)</text>
+    <text x="994" y="331" fill="#94A3B8" font-size="10.5" font-weight="600" text-anchor="middle">Outer Flank Driveway</text>
+  </g>
+
+  <!-- 3. CAMPUS RESIDENTIAL PROPERTIES -->
+  <!-- PROPERTY 80 MARSTON GARDENS (3 Beds + Calm Hub + Staff Office) -->
+  <g filter="url(#bpGlow)">
+    <rect x="194" y="156" width="340" height="220" rx="10" fill="url(#bpWall80)" stroke="#10B981" stroke-width="2.5" />
+    <!-- Property Title Badge -->
+    <rect x="206" y="168" width="160" height="28" rx="5" fill="#064E3B" stroke="#34D399" stroke-width="1.2" />
+    <text x="286" y="187" fill="#A7F3D0" font-size="13.5" font-weight="800" text-anchor="middle">80 MARSTON GDNS</text>
+    <rect x="374" y="168" width="148" height="28" rx="5" fill="#047857" />
+    <text x="448" y="187" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">3 RESIDENT SUITES</text>
+
+    <!-- Rooms Layout Grid -->
+    <!-- Room 1: Resident Bedrooms -->
+    <rect x="206" y="206" width="154" height="64" rx="6" fill="#064E3B" stroke="#059669" stroke-width="1.2" />
+    <text x="283" y="226" fill="#F0FDF4" font-size="13" font-weight="700" text-anchor="middle">3 Large Bedrooms</text>
+    <text x="283" y="244" fill="#A7F3D0" font-size="11.5" text-anchor="middle">12.4m² – 14.8m² usable</text>
+    <text x="283" y="260" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">FD30S Fire Doors • Cat L1</text>
+
+    <!-- Room 2: Accessible Wet Room -->
+    <rect x="368" y="206" width="154" height="64" rx="6" fill="#064E3B" stroke="#059669" stroke-width="1.2" />
+    <text x="445" y="226" fill="#F0FDF4" font-size="13" font-weight="700" text-anchor="middle">Accessible Wet Room</text>
+    <text x="445" y="244" fill="#6EE7B7" font-size="11.5" text-anchor="middle">TMV3 Anti-Scald (41°C)</text>
+    <text x="445" y="260" fill="#93C5FD" font-size="11" font-weight="700" text-anchor="middle">+ Separate Visitor WC</text>
+
+    <!-- Room 3: Sensory Calm Hub -->
+    <rect x="206" y="278" width="154" height="88" rx="6" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="283" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Calm Sensory Lounge</text>
+    <text x="283" y="318" fill="#D1FAE5" font-size="11.5" text-anchor="middle">Dimmable LED Lighting</text>
+    <text x="283" y="335" fill="#D1FAE5" font-size="11.5" text-anchor="middle">Acoustic Damping Wall Panels</text>
+    <text x="283" y="353" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">De-escalation Zone</text>
+
+    <!-- Room 4: Staff Office & Sleep-In -->
+    <rect x="368" y="278" width="154" height="88" rx="6" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="445" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Staff Office &amp; Sleep-In</text>
+    <text x="445" y="318" fill="#FDE68A" font-size="11.5" font-weight="700" text-anchor="middle">BS 2881 Meds CD Safe</text>
+    <text x="445" y="335" fill="#D1FAE5" font-size="11.5" text-anchor="middle">Nourish e-MAR Terminal</text>
+    <text x="445" y="353" fill="#93C5FD" font-size="11" font-weight="700" text-anchor="middle">Waking Night Base</text>
+  </g>
+
+  <!-- PARTY WALL INDICATOR (Between 78 & 80) -->
+  <line x1="550" y1="156" x2="550" y2="376" stroke="#F59E0B" stroke-width="4" stroke-dasharray="8,6" />
+  <g filter="url(#bpGlow)">
+    <circle cx="550" cy="266" r="22" fill="#D97706" stroke="#FEF3C7" stroke-width="2" />
+    <text x="550" y="262" fill="#FFFFFF" font-size="11" font-weight="900" text-anchor="middle">PARTY</text>
+    <text x="550" y="276" fill="#FFFFFF" font-size="11" font-weight="900" text-anchor="middle">WALL</text>
+    <rect x="506" y="296" width="88" height="22" rx="4" fill="#78350F" />
+    <text x="550" y="311" fill="#FDE68A" font-size="10" font-weight="700" text-anchor="middle">DOC E SOUND</text>
+  </g>
+
+  <!-- PROPERTY 78 MARSTON GARDENS (5 Beds + Commercial Kitchen + Dining Hall) -->
+  <g filter="url(#bpGlow)">
+    <rect x="566" y="156" width="340" height="220" rx="10" fill="url(#bpWall78)" stroke="#38BDF8" stroke-width="2.5" />
+    <!-- Property Title Badge -->
+    <rect x="578" y="168" width="160" height="28" rx="5" fill="#1E3A8A" stroke="#60A5FA" stroke-width="1.2" />
+    <text x="658" y="187" fill="#BFDBFE" font-size="13.5" font-weight="800" text-anchor="middle">78 MARSTON GDNS</text>
+    <rect x="746" y="168" width="148" height="28" rx="5" fill="#2563EB" />
+    <text x="820" y="187" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">5 RESIDENT SUITES</text>
+
+    <!-- Rooms Layout Grid -->
+    <!-- Room 1: 5 Specialist Bedrooms -->
+    <rect x="578" y="206" width="154" height="64" rx="6" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1.2" />
+    <text x="655" y="226" fill="#EFF6FF" font-size="13" font-weight="700" text-anchor="middle">5 Bedrooms (1 En-Suite)</text>
+    <text x="655" y="244" fill="#93C5FD" font-size="11.5" text-anchor="middle">13.2m² – 16.5m² usable</text>
+    <text x="655" y="260" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">FD30S Fire Doors • Cat L1</text>
+
+    <!-- Room 2: Assisted Wet Room -->
+    <rect x="740" y="206" width="154" height="64" rx="6" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1.2" />
+    <text x="817" y="226" fill="#EFF6FF" font-size="13" font-weight="700" text-anchor="middle">Assisted Wet Room</text>
+    <text x="817" y="244" fill="#93C5FD" font-size="11.5" text-anchor="middle">TMV3 Anti-Scald (41°C)</text>
+    <text x="817" y="260" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">+ Separate Visitor WC</text>
+
+    <!-- Room 3: Commercial Kitchen -->
+    <rect x="578" y="278" width="154" height="88" rx="6" fill="#1D4ED8" stroke="#60A5FA" stroke-width="1.2" />
+    <text x="655" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Commercial Kitchen</text>
+    <text x="655" y="318" fill="#FDE68A" font-size="11.5" font-weight="700" text-anchor="middle">Food Hygiene Rating 5</text>
+    <text x="655" y="335" fill="#BFDBFE" font-size="11.5" text-anchor="middle">Stainless Steel Workstations</text>
+    <text x="655" y="353" fill="#6EE7B7" font-size="11" font-weight="700" text-anchor="middle">HTM 01-04 Laundry Flow</text>
+
+    <!-- Room 4: Communal Dining & Activity Hall -->
+    <rect x="740" y="278" width="154" height="88" rx="6" fill="#1D4ED8" stroke="#60A5FA" stroke-width="1.2" />
+    <text x="817" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Communal Dining Hall</text>
+    <text x="817" y="318" fill="#BFDBFE" font-size="11.5" text-anchor="middle">Resident Social &amp; Dining Hub</text>
+    <text x="817" y="335" fill="#BFDBFE" font-size="11.5" text-anchor="middle">Bi-Fold Doors to Garden</text>
+    <text x="817" y="353" fill="#FDE68A" font-size="11" font-weight="700" text-anchor="middle">Direct Sensory Access</text>
+  </g>
+
+  <!-- 4. 100FT ENCLOSED SENSORY REAR GARDENS -->
+  <g filter="url(#bpGlow)">
+    <rect x="36" y="394" width="1028" height="190" rx="10" fill="url(#bpGarden)" stroke="#10B981" stroke-width="2" stroke-dasharray="8,4" />
+    <!-- Garden Title Banner -->
+    <rect x="56" y="408" width="988" height="34" rx="6" fill="#065F46" stroke="#34D399" stroke-width="1.2" />
+    <text x="550" y="430" fill="#6EE7B7" font-size="14.5" font-weight="800" text-anchor="middle" letter-spacing="1.5">100FT PRIVATE ENCLOSED SENSORY REAR GARDENS (SHARED CAMPUS THERAPEUTIC ZONE)</text>
+
+    <!-- Garden Feature Zones -->
+    <!-- Feature 1: Therapeutic Pavilion -->
+    <rect x="66" y="454" width="220" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="176" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Therapeutic Pavilion</text>
+    <text x="176" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">Covered Outdoor Seating</text>
+    <text x="176" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">All-Weather Heated Area</text>
+    <text x="176" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Quiet Sensory Retreat</text>
+    <text x="176" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">CQC 'Right Support' Aligned</text>
+
+    <!-- Feature 2: Sensory Raised Beds & Herb Pathway -->
+    <rect x="306" y="454" width="230" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="421" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Sensory Herb &amp; Planters</text>
+    <text x="421" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">Raised Wheelchair Planters</text>
+    <text x="421" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">Lavender, Mint, Rosemary</text>
+    <text x="421" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Non-Slip Rubberized Pathway</text>
+    <text x="421" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">Horticultural Therapy</text>
+
+    <!-- Feature 3: Tactile Water Feature & Acoustic Damping -->
+    <rect x="556" y="454" width="230" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="671" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Tactile Acoustic Feature</text>
+    <text x="671" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">Self-Contained Bubble Fountain</text>
+    <text x="671" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">Calming Audio White Noise</text>
+    <text x="671" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Smooth River Pebble Textures</text>
+    <text x="671" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">Sensory Modulation</text>
+
+    <!-- Feature 4: De-escalation & Perimeter Security -->
+    <rect x="806" y="454" width="238" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="925" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Safe Security Perimeter</text>
+    <text x="925" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">6ft Acoustic Security Fencing</text>
+    <text x="925" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">Anti-Climb Softened Boundary</text>
+    <text x="925" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Safe De-escalation Zones</text>
+    <text x="925" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">100% Secure Enclosure</text>
+  </g>
+
+  <!-- 5. STATUTORY COMPLIANCE & LEGAL BOTTOM LEGEND -->
+  <rect x="36" y="600" width="1028" height="90" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" />
+  
+  <!-- Left Cell: Planning & Statutory -->
+  <text x="56" y="624" fill="#38BDF8" font-size="12" font-weight="800" letter-spacing="1">TOWN PLANNING &amp; STATUTORY IMMUNITY:</text>
+  <text x="56" y="643" fill="#F1F5F9" font-size="12.5" font-weight="600">• S.192 CLPUD Permitted Development Class C3(b) (Up to 6 residents living together receiving care)</text>
+  <text x="56" y="662" fill="#94A3B8" font-size="12">• North Devon DC v FSS [2004] Precedent: Non-resident carers establish single household C3(b) use</text>
+  <text x="56" y="680" fill="#FCD34D" font-size="11.5" font-weight="700">• 82 Marston Gardens: Director Private Residence (let on AST, eliminates BIK under ITEPA 2003 s.105/106)</text>
+
+  <!-- Right Cell: Health & Safety / CQC -->
+  <text x="620" y="624" fill="#34D399" font-size="12" font-weight="800" letter-spacing="1">FIRE SAFETY &amp; CLINICAL SPECIFICATIONS:</text>
+  <text x="620" y="643" fill="#F1F5F9" font-size="12.5" font-weight="600">• BS 5839 Category L1 Addressable Automatic Fire Detection System</text>
+  <text x="620" y="662" fill="#94A3B8" font-size="12">• FD30S Fire &amp; Smoke Resisting Doors with Dorgard magnetic hold-open</text>
+  <text x="620" y="680" fill="#6EE7B7" font-size="11.5" font-weight="700">• BS 5266 3-Hour Maintained Emergency Lighting &amp; Document M Accessible Access</text>
+</svg>
         </div>
         <div class="visual-diagram-caption">
           <strong>Campus Topology:</strong> 78 (5 Suites + Commercial Kitchen + Activity Hall), 80 (3 Suites + Sensory Lounge + Staff Office &amp; Sleep-in), 8 off-street parking spaces (4 on each flank), and shared 100ft therapeutic rear sensory gardens.
@@ -3371,83 +3728,83 @@ cite.ref-title {
       <text x="480" y="46" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#475569" text-anchor="middle" letter-spacing="1.2">MARSTON GARDENS, LUTON (LU2 7DY) &bull; RESIDENTIAL CUL-DE-SAC HIGHWAYS COMPLIANT</text>
 
       <rect x="40" y="76" width="85" height="140" rx="6" fill="#F8FAFC" stroke="#94A3B8" stroke-dasharray="4,4"/>
-      <text x="82" y="135" font-family="-apple-system, sans-serif" font-size="11" font-weight="800" fill="#334155" text-anchor="middle">4 PARKING</text>
-      <text x="82" y="152" font-family="-apple-system, sans-serif" font-size="9" fill="#64748B" text-anchor="middle">Flank Drive (80)</text>
+      <text x="82" y="135" font-family="-apple-system, sans-serif" font-size="14.5" font-weight="800" fill="#334155" text-anchor="middle">4 PARKING</text>
+      <text x="82" y="152" font-family="-apple-system, sans-serif" font-size="12.5" fill="#64748B" text-anchor="middle">Flank Drive (80)</text>
 
       <rect x="135" y="76" width="235" height="155" rx="10" fill="url(#grad80)" stroke="#10B981" stroke-width="1.5"/>
       <rect x="148" y="88" width="105" height="20" rx="4" fill="rgba(255,255,255,0.2)"/>
-      <text x="200" y="102" font-family="-apple-system, sans-serif" font-size="10" font-weight="800" fill="#A7F3D0" text-anchor="middle">80 MARSTON GDNS</text>
-      <text x="260" y="103" font-family="-apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF">3 SPECIALIST SUITES</text>
+      <text x="200" y="102" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#A7F3D0" text-anchor="middle">80 MARSTON GDNS</text>
+      <text x="260" y="103" font-family="-apple-system, sans-serif" font-size="14.5" font-weight="800" fill="#FFFFFF">3 SPECIALIST SUITES</text>
       <rect x="148" y="116" width="102" height="46" rx="4" fill="rgba(255,255,255,0.12)"/>
-      <text x="199" y="134" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">3 Private Suites</text>
-      <text x="199" y="150" font-family="-apple-system, sans-serif" font-size="8.5" fill="#D1FAE5" text-anchor="middle">Wetroom + WC</text>
+      <text x="199" y="134" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">3 Private Suites</text>
+      <text x="199" y="150" font-family="-apple-system, sans-serif" font-size="12.5" fill="#D1FAE5" text-anchor="middle">Wetroom + WC</text>
       <rect x="256" y="116" width="102" height="46" rx="4" fill="rgba(255,255,255,0.12)"/>
-      <text x="307" y="134" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">Sensory Lounge</text>
-      <text x="307" y="150" font-family="-apple-system, sans-serif" font-size="8.5" fill="#FCD34D" text-anchor="middle">Acoustic Calm Hub</text>
+      <text x="307" y="134" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Sensory Lounge</text>
+      <text x="307" y="150" font-family="-apple-system, sans-serif" font-size="12.5" fill="#FCD34D" text-anchor="middle">Acoustic Calm Hub</text>
       <rect x="148" y="170" width="210" height="46" rx="4" fill="rgba(255,255,255,0.14)"/>
-      <text x="253" y="188" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">Staff Office &amp; Sleep-In Suite</text>
-      <text x="253" y="204" font-family="-apple-system, sans-serif" font-size="8.5" fill="#93C5FD" text-anchor="middle">BS 2881 CD Meds Cabinet + Monitoring</text>
+      <text x="253" y="188" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Staff Office &amp; Sleep-In Suite</text>
+      <text x="253" y="204" font-family="-apple-system, sans-serif" font-size="12.5" fill="#93C5FD" text-anchor="middle">BS 2881 CD Meds Cabinet + Monitoring</text>
 
       <line x1="385" y1="76" x2="385" y2="231" stroke="#C29B38" stroke-width="2.5" stroke-dasharray="5,4"/>
       <circle cx="385" cy="153" r="12" fill="#C29B38"/>
-      <text x="385" y="157" font-family="-apple-system, sans-serif" font-size="9" font-weight="900" fill="#0F1E36" text-anchor="middle">PW</text>
+      <text x="385" y="157" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="900" fill="#0F1E36" text-anchor="middle">PW</text>
 
       <rect x="400" y="76" width="240" height="155" rx="10" fill="url(#grad78)" stroke="#3B82F6" stroke-width="1.5"/>
       <rect x="412" y="88" width="105" height="20" rx="4" fill="rgba(255,255,255,0.2)"/>
-      <text x="464" y="102" font-family="-apple-system, sans-serif" font-size="10" font-weight="800" fill="#93C5FD" text-anchor="middle">78 MARSTON GDNS</text>
-      <text x="524" y="103" font-family="-apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF">5 SPECIALIST SUITES</text>
+      <text x="464" y="102" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#93C5FD" text-anchor="middle">78 MARSTON GDNS</text>
+      <text x="524" y="103" font-family="-apple-system, sans-serif" font-size="14.5" font-weight="800" fill="#FFFFFF">5 SPECIALIST SUITES</text>
       <rect x="412" y="116" width="108" height="46" rx="4" fill="rgba(255,255,255,0.12)"/>
-      <text x="466" y="134" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">5 Private Suites</text>
-      <text x="466" y="150" font-family="-apple-system, sans-serif" font-size="8.5" fill="#BFDBFE" text-anchor="middle">1 En-Suite + Wetroom</text>
+      <text x="466" y="134" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">5 Private Suites</text>
+      <text x="466" y="150" font-family="-apple-system, sans-serif" font-size="12.5" fill="#BFDBFE" text-anchor="middle">1 En-Suite + Wetroom</text>
       <rect x="526" y="116" width="102" height="46" rx="4" fill="rgba(255,255,255,0.12)"/>
-      <text x="577" y="134" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">Catering Kitchen</text>
-      <text x="577" y="150" font-family="-apple-system, sans-serif" font-size="8.5" fill="#FCD34D" text-anchor="middle">Food Hygiene 5 Hub</text>
+      <text x="577" y="134" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Catering Kitchen</text>
+      <text x="577" y="150" font-family="-apple-system, sans-serif" font-size="12.5" fill="#FCD34D" text-anchor="middle">Food Hygiene 5 Hub</text>
       <rect x="412" y="170" width="216" height="46" rx="4" fill="rgba(255,255,255,0.14)"/>
-      <text x="520" y="188" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">Communal Dining &amp; Activity Hall</text>
-      <text x="520" y="204" font-family="-apple-system, sans-serif" font-size="8.5" fill="#A7F3D0" text-anchor="middle">Direct Bi-Fold Access to Gardens</text>
+      <text x="520" y="188" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Communal Dining &amp; Activity Hall</text>
+      <text x="520" y="204" font-family="-apple-system, sans-serif" font-size="12.5" fill="#A7F3D0" text-anchor="middle">Direct Bi-Fold Access to Gardens</text>
 
       <rect x="655" y="76" width="85" height="140" rx="6" fill="#F8FAFC" stroke="#94A3B8" stroke-dasharray="4,4"/>
-      <text x="697" y="135" font-family="-apple-system, sans-serif" font-size="11" font-weight="800" fill="#334155" text-anchor="middle">4 PARKING</text>
-      <text x="697" y="152" font-family="-apple-system, sans-serif" font-size="9" fill="#64748B" text-anchor="middle">Flank Drive (78)</text>
+      <text x="697" y="135" font-family="-apple-system, sans-serif" font-size="14.5" font-weight="800" fill="#334155" text-anchor="middle">4 PARKING</text>
+      <text x="697" y="152" font-family="-apple-system, sans-serif" font-size="12.5" fill="#64748B" text-anchor="middle">Flank Drive (78)</text>
 
       <rect x="755" y="76" width="175" height="155" rx="10" fill="url(#grad82)" stroke="#64748B" stroke-width="1"/>
       <rect x="767" y="88" width="151" height="20" rx="4" fill="rgba(255,255,255,0.15)"/>
-      <text x="842" y="102" font-family="-apple-system, sans-serif" font-size="10" font-weight="800" fill="#E2E8F0" text-anchor="middle">82 MARSTON GDNS</text>
-      <text x="842" y="132" font-family="-apple-system, sans-serif" font-size="10.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Director AST Residence</text>
-      <text x="842" y="150" font-family="-apple-system, sans-serif" font-size="8.5" fill="#CBD5E1" text-anchor="middle">Independent Private Lease</text>
-      <text x="842" y="170" font-family="-apple-system, sans-serif" font-size="8.5" fill="#FCD34D" text-anchor="middle">&bull; Nil HMRC BIK Tax</text>
-      <text x="842" y="188" font-family="-apple-system, sans-serif" font-size="8.5" fill="#A7F3D0" text-anchor="middle">&bull; Physical Security Buffer</text>
-      <text x="842" y="206" font-family="-apple-system, sans-serif" font-size="8" fill="#94A3B8" text-anchor="middle">ITEPA 2003 s.105/106</text>
+      <text x="842" y="102" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#E2E8F0" text-anchor="middle">82 MARSTON GDNS</text>
+      <text x="842" y="132" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Director AST Residence</text>
+      <text x="842" y="150" font-family="-apple-system, sans-serif" font-size="12.5" fill="#CBD5E1" text-anchor="middle">Independent Private Lease</text>
+      <text x="842" y="170" font-family="-apple-system, sans-serif" font-size="12.5" fill="#FCD34D" text-anchor="middle">&bull; Nil HMRC BIK Tax</text>
+      <text x="842" y="188" font-family="-apple-system, sans-serif" font-size="12.5" fill="#A7F3D0" text-anchor="middle">&bull; Physical Security Buffer</text>
+      <text x="842" y="206" font-family="-apple-system, sans-serif" font-size="12.5" fill="#94A3B8" text-anchor="middle">ITEPA 2003 s.105/106</text>
 
       <rect x="135" y="246" width="505" height="94" rx="8" fill="url(#gradGarden)" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,3"/>
-      <text x="387" y="270" font-family="-apple-system, sans-serif" font-size="11.5" font-weight="800" fill="#065F46" text-anchor="middle">SHARED 100FT SECURE REAR SENSORY GARDENS &bull; HIGH TIMBER ACOUSTIC FENCING</text>
-      <text x="387" y="290" font-family="-apple-system, sans-serif" font-size="9.5" fill="#047857" text-anchor="middle">Circular Mobility Pathway &bull; Raised Horticultural Therapy Beds &bull; Calming Gazebo &bull; Zero Public Overlook</text>
-      <text x="387" y="310" font-family="-apple-system, sans-serif" font-size="9" font-weight="700" fill="#064E3B" text-anchor="middle">Internal Interconnecting Security Gate (Between 78 &amp; 80 Grounds) &bull; Rapid Staff Intervention Access</text>
+      <text x="387" y="270" font-family="-apple-system, sans-serif" font-size="14.5" font-weight="800" fill="#065F46" text-anchor="middle">SHARED 100FT SECURE REAR SENSORY GARDENS &bull; HIGH TIMBER ACOUSTIC FENCING</text>
+      <text x="387" y="290" font-family="-apple-system, sans-serif" font-size="12.5" fill="#047857" text-anchor="middle">Circular Mobility Pathway &bull; Raised Horticultural Therapy Beds &bull; Calming Gazebo &bull; Zero Public Overlook</text>
+      <text x="387" y="310" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#064E3B" text-anchor="middle">Internal Interconnecting Security Gate (Between 78 &amp; 80 Grounds) &bull; Rapid Staff Intervention Access</text>
 
       <rect x="30" y="355" width="900" height="148" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
       <rect x="30" y="355" width="900" height="28" rx="8" fill="#0F1E36"/>
-      <text x="480" y="374" font-family="-apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">UNIFIED CAMPUS STAFFING DEPLOYMENT MATRIX &bull; 10 FTE PERMANENT SUPPORT WORKERS</text>
+      <text x="480" y="374" font-family="-apple-system, sans-serif" font-size="14.5" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">UNIFIED CAMPUS STAFFING DEPLOYMENT MATRIX &bull; 10 FTE PERMANENT SUPPORT WORKERS</text>
 
       <rect x="45" y="393" width="270" height="96" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
-      <text x="180" y="413" font-family="-apple-system, sans-serif" font-size="10.5" font-weight="800" fill="#1E3A8A" text-anchor="middle">EARLY SHIFT (07:30 &ndash; 15:30)</text>
-      <text x="180" y="431" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#1E293B" text-anchor="middle">4 WTE Support Workers On Duty</text>
-      <text x="180" y="447" font-family="-apple-system, sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">&bull; 78 Marston: 2 Staff (1:2.5 ratio)</text>
-      <text x="180" y="462" font-family="-apple-system, sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">&bull; 80 Marston: 2 Staff (1:1.5 ratio)</text>
-      <text x="180" y="477" font-family="-apple-system, sans-serif" font-size="8.5" font-weight="700" fill="#059669" text-anchor="middle">Dynamic Cross-Cover via Garden Gate</text>
+      <text x="180" y="413" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#1E3A8A" text-anchor="middle">EARLY SHIFT (07:30 &ndash; 15:30)</text>
+      <text x="180" y="431" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#1E293B" text-anchor="middle">4 WTE Support Workers On Duty</text>
+      <text x="180" y="447" font-family="-apple-system, sans-serif" font-size="12.5" fill="#64748B" text-anchor="middle">&bull; 78 Marston: 2 Staff (1:2.5 ratio)</text>
+      <text x="180" y="462" font-family="-apple-system, sans-serif" font-size="12.5" fill="#64748B" text-anchor="middle">&bull; 80 Marston: 2 Staff (1:1.5 ratio)</text>
+      <text x="180" y="477" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#059669" text-anchor="middle">Dynamic Cross-Cover via Garden Gate</text>
 
       <rect x="345" y="393" width="270" height="96" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
-      <text x="480" y="413" font-family="-apple-system, sans-serif" font-size="10.5" font-weight="800" fill="#047857" text-anchor="middle">LATE SHIFT (15:00 &ndash; 22:00)</text>
-      <text x="480" y="431" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#1E293B" text-anchor="middle">4 WTE Support Workers On Duty</text>
-      <text x="480" y="447" font-family="-apple-system, sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">&bull; Community outings &amp; life skills</text>
-      <text x="480" y="462" font-family="-apple-system, sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">&bull; Evening meals &amp; PBS therapy</text>
-      <text x="480" y="477" font-family="-apple-system, sans-serif" font-size="8.5" font-weight="700" fill="#C29B38" text-anchor="middle">30-Min Structured Shift Handover</text>
+      <text x="480" y="413" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#047857" text-anchor="middle">LATE SHIFT (15:00 &ndash; 22:00)</text>
+      <text x="480" y="431" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#1E293B" text-anchor="middle">4 WTE Support Workers On Duty</text>
+      <text x="480" y="447" font-family="-apple-system, sans-serif" font-size="12.5" fill="#64748B" text-anchor="middle">&bull; Community outings &amp; life skills</text>
+      <text x="480" y="462" font-family="-apple-system, sans-serif" font-size="12.5" fill="#64748B" text-anchor="middle">&bull; Evening meals &amp; PBS therapy</text>
+      <text x="480" y="477" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#C29B38" text-anchor="middle">30-Min Structured Shift Handover</text>
 
       <rect x="645" y="393" width="270" height="96" rx="6" fill="#FFFFFF" stroke="#E2E8F0"/>
-      <text x="780" y="413" font-family="-apple-system, sans-serif" font-size="10.5" font-weight="800" fill="#7C3AED" text-anchor="middle">NIGHT SHIFT (21:45 &ndash; 07:45)</text>
-      <text x="780" y="431" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#1E293B" text-anchor="middle">1 Waking Night + 1 Sleep-in Officer</text>
-      <text x="780" y="447" font-family="-apple-system, sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">&bull; Sleep-in Suite inside 80 Marston</text>
-      <text x="780" y="462" font-family="-apple-system, sans-serif" font-size="8.5" fill="#64748B" text-anchor="middle">&bull; Wireless Interlinked Nurse Call System</text>
-      <text x="780" y="477" font-family="-apple-system, sans-serif" font-size="8.5" font-weight="700" fill="#DC2626" text-anchor="middle">&pound;56,478/yr Rota Synergy vs Standalone</text>
+      <text x="780" y="413" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#7C3AED" text-anchor="middle">NIGHT SHIFT (21:45 &ndash; 07:45)</text>
+      <text x="780" y="431" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#1E293B" text-anchor="middle">1 Waking Night + 1 Sleep-in Officer</text>
+      <text x="780" y="447" font-family="-apple-system, sans-serif" font-size="12.5" fill="#64748B" text-anchor="middle">&bull; Sleep-in Suite inside 80 Marston</text>
+      <text x="780" y="462" font-family="-apple-system, sans-serif" font-size="12.5" fill="#64748B" text-anchor="middle">&bull; Wireless Interlinked Nurse Call System</text>
+      <text x="780" y="477" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#DC2626" text-anchor="middle">&pound;56,478/yr Rota Synergy vs Standalone</text>
     </svg>
   </div>
   <figcaption class="figure-caption">
@@ -3478,51 +3835,51 @@ cite.ref-title {
       <line x1="60" y1="210" x2="900" y2="210" stroke="#F1F5F9" stroke-width="1"/>
       <line x1="60" y1="275" x2="900" y2="275" stroke="#F1F5F9" stroke-width="1"/>
       <line x1="60" y1="340" x2="900" y2="340" stroke="#CBD5E1" stroke-width="1.5"/>
-      <text x="50" y="84" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8" text-anchor="end">&pound;1.0M</text>
-      <text x="50" y="149" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8" text-anchor="end">&pound;750k</text>
-      <text x="50" y="214" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8" text-anchor="end">&pound;500k</text>
-      <text x="50" y="279" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8" text-anchor="end">&pound;250k</text>
-      <text x="50" y="344" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8" text-anchor="end">&pound;0</text>
+      <text x="50" y="84" font-family="-apple-system, sans-serif" font-size="12.5" fill="#94A3B8" text-anchor="end">&pound;1.0M</text>
+      <text x="50" y="149" font-family="-apple-system, sans-serif" font-size="12.5" fill="#94A3B8" text-anchor="end">&pound;750k</text>
+      <text x="50" y="214" font-family="-apple-system, sans-serif" font-size="12.5" fill="#94A3B8" text-anchor="end">&pound;500k</text>
+      <text x="50" y="279" font-family="-apple-system, sans-serif" font-size="12.5" fill="#94A3B8" text-anchor="end">&pound;250k</text>
+      <text x="50" y="344" font-family="-apple-system, sans-serif" font-size="12.5" fill="#94A3B8" text-anchor="end">&pound;0</text>
 
       <rect x="75" y="86" width="115" height="254" rx="6" fill="url(#wfTurnover)"/>
-      <text x="132" y="108" font-family="-apple-system, sans-serif" font-size="10.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">100.0% BASE</text>
+      <text x="132" y="108" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">100.0% BASE</text>
       <text x="132" y="150" font-family="-apple-system, sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle">&pound;977,600</text>
-      <text x="132" y="172" font-family="-apple-system, sans-serif" font-size="10" fill="#BFDBFE" text-anchor="middle">Gross Turnover</text>
-      <text x="132" y="188" font-family="-apple-system, sans-serif" font-size="8.5" fill="#93C5FD" text-anchor="middle">(8 Stabilized Beds)</text>
+      <text x="132" y="172" font-family="-apple-system, sans-serif" font-size="13.5" fill="#BFDBFE" text-anchor="middle">Gross Turnover</text>
+      <text x="132" y="188" font-family="-apple-system, sans-serif" font-size="12.5" fill="#93C5FD" text-anchor="middle">(8 Stabilized Beds)</text>
 
       <line x1="190" y1="86" x2="220" y2="86" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="3,3"/>
 
       <rect x="220" y="86" width="115" height="92" rx="6" fill="url(#wfPayroll)"/>
       <text x="277" y="120" font-family="-apple-system, sans-serif" font-size="13" font-weight="900" fill="#FFFFFF" text-anchor="middle">-&pound;355,108</text>
-      <text x="277" y="138" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FEE2E2" text-anchor="middle">Care Staff Payroll</text>
-      <text x="277" y="154" font-family="-apple-system, sans-serif" font-size="8.5" fill="#FECACA" text-anchor="middle">36.3% of Rev (10 FTE)</text>
+      <text x="277" y="138" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#FEE2E2" text-anchor="middle">Care Staff Payroll</text>
+      <text x="277" y="154" font-family="-apple-system, sans-serif" font-size="12.5" fill="#FECACA" text-anchor="middle">36.3% of Rev (10 FTE)</text>
 
       <line x1="335" y1="178" x2="365" y2="178" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="3,3"/>
 
       <rect x="365" y="178" width="115" height="26" rx="5" fill="url(#wfRent)"/>
-      <text x="422" y="196" font-family="-apple-system, sans-serif" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle">-&pound;97,000</text>
-      <text x="422" y="226" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#B45309" text-anchor="middle">PropCo Lease Rent</text>
-      <text x="422" y="242" font-family="-apple-system, sans-serif" font-size="8.5" fill="#78350F" text-anchor="middle">9.9% (78 &amp; 80 FRI Lease)</text>
+      <text x="422" y="196" font-family="-apple-system, sans-serif" font-size="14.5" font-weight="900" fill="#FFFFFF" text-anchor="middle">-&pound;97,000</text>
+      <text x="422" y="226" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#B45309" text-anchor="middle">PropCo Lease Rent</text>
+      <text x="422" y="242" font-family="-apple-system, sans-serif" font-size="12.5" fill="#78350F" text-anchor="middle">9.9% (78 &amp; 80 FRI Lease)</text>
 
       <line x1="480" y1="204" x2="510" y2="204" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="3,3"/>
 
       <rect x="510" y="204" width="115" height="48" rx="5" fill="url(#wfOpEx)"/>
-      <text x="567" y="234" font-family="-apple-system, sans-serif" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">-&pound;184,100</text>
-      <text x="567" y="274" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#9D174D" text-anchor="middle">Operating Overheads</text>
-      <text x="567" y="290" font-family="-apple-system, sans-serif" font-size="8.5" fill="#831843" text-anchor="middle">18.8% (Utilities, Food, Ins.)</text>
+      <text x="567" y="234" font-family="-apple-system, sans-serif" font-size="14.5" font-weight="900" fill="#FFFFFF" text-anchor="middle">-&pound;184,100</text>
+      <text x="567" y="274" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#9D174D" text-anchor="middle">Operating Overheads</text>
+      <text x="567" y="290" font-family="-apple-system, sans-serif" font-size="12.5" fill="#831843" text-anchor="middle">18.8% (Utilities, Food, Ins.)</text>
 
       <line x1="625" y1="252" x2="655" y2="252" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="3,3"/>
 
       <rect x="655" y="252" width="115" height="88" rx="6" fill="url(#wfEbitda)"/>
-      <text x="712" y="271" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">34.92% MARGIN</text>
+      <text x="712" y="271" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">34.92% MARGIN</text>
       <text x="712" y="298" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="900" fill="#FFFFFF" text-anchor="middle">+&pound;341,392</text>
-      <text x="712" y="316" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#D1FAE5" text-anchor="middle">OpCo EBITDA</text>
+      <text x="712" y="316" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#D1FAE5" text-anchor="middle">OpCo EBITDA</text>
 
       <rect x="800" y="226" width="115" height="114" rx="6" fill="url(#wfCash)" stroke="#B59020" stroke-width="1.5"/>
-      <text x="857" y="245" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">44.84% COMBINED</text>
+      <text x="857" y="245" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">44.84% COMBINED</text>
       <text x="857" y="276" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="900" fill="#FFFFFF" text-anchor="middle">+&pound;438,392</text>
-      <text x="857" y="294" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Pre-Tax Cashflow</text>
-      <text x="857" y="308" font-family="-apple-system, sans-serif" font-size="8.5" fill="#FDF2E9" text-anchor="middle">OpCo + PropCo Total</text>
+      <text x="857" y="294" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Pre-Tax Cashflow</text>
+      <text x="857" y="308" font-family="-apple-system, sans-serif" font-size="12.5" fill="#FDF2E9" text-anchor="middle">OpCo + PropCo Total</text>
     </svg>
   </div>
   <figcaption class="figure-caption">
@@ -6230,7 +6587,232 @@ cite.ref-title {
           <span class="visual-diagram-title">78 &amp; 80 Marston Gardens // 8-Bed Unified Specialist Campus</span>
         </div>
         <div class="visual-diagram-body">
-          <img src="assets/diagrams/diagram_campus_masterplan.svg" alt="Campus Masterplan Blueprint" class="visual-diagram-img" loading="lazy">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" width="100%" height="auto" class="blueprint-svg" style="max-width:100%; height:auto; display:block; background:#0B192C; border-radius:12px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Blueprint Grid Pattern -->
+    <pattern id="bpGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E3E62" stroke-width="0.8" opacity="0.45" />
+      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#2563EB" stroke-width="1.2" opacity="0.3" />
+    </pattern>
+    <!-- Card Gradients -->
+    <linearGradient id="bpWall78" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="bpWall80" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065F46" />
+      <stop offset="100%" stop-color="#022C22" />
+    </linearGradient>
+    <linearGradient id="bpWall82" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="bpGarden" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#022C22" stop-opacity="0.95" />
+    </linearGradient>
+    <filter id="bpGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Background with Grid -->
+  <rect width="1100" height="720" rx="12" fill="#0A1628" />
+  <rect width="1100" height="720" fill="url(#bpGrid)" />
+
+  <!-- Outer Architectural Border -->
+  <rect x="18" y="18" width="1064" height="684" rx="8" fill="none" stroke="#38BDF8" stroke-width="1.5" opacity="0.6" />
+  <rect x="24" y="24" width="1052" height="672" rx="6" fill="none" stroke="#1E40AF" stroke-width="0.8" opacity="0.4" />
+
+  <!-- BLUEPRINT TITLE BLOCK (Top Header) -->
+  <rect x="36" y="32" width="1028" height="52" rx="6" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" />
+  <text x="56" y="55" fill="#38BDF8" font-size="13" font-weight="800" letter-spacing="1.5">ARCHITECTURAL CAMPUS MASTERPLAN // CLASS C3(b) SPECIALIST SUPPORTED LIVING</text>
+  <text x="56" y="73" fill="#F8FAFC" font-size="16" font-weight="700">78 &amp; 80 Marston Gardens, Luton, LU2 7DY // 8-Bed Unified Healthcare Campus</text>
+  <rect x="910" y="42" width="140" height="32" rx="4" fill="#0284C7" />
+  <text x="980" y="63" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">SCALE: 1:100 NTS</text>
+
+  <!-- 1. HIGHWAYS / ROAD ACCESS -->
+  <rect x="36" y="96" width="1028" height="48" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1" />
+  <line x1="36" y1="120" x2="1064" y2="120" stroke="#FCD34D" stroke-width="2" stroke-dasharray="12,12" />
+  <text x="550" y="117" fill="#F8FAFC" font-size="14" font-weight="800" text-anchor="middle" letter-spacing="2">MARSTON GARDENS (RESIDENTIAL CUL-DE-SAC // HIGHWAYS COMPLIANT)</text>
+  <text x="550" y="135" fill="#94A3B8" font-size="12" font-weight="600" text-anchor="middle">Luton Local Plan Policy LLP31 &amp; LLP32 Approved Access Route</text>
+
+  <!-- 2. FLANK PARKING DRIVEWAYS -->
+  <!-- Left Flank Parking: 80 Marston Gardens (4 Dedicated Spaces) -->
+  <g filter="url(#bpGlow)">
+    <rect x="36" y="156" width="140" height="180" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.8" />
+    <rect x="44" y="166" width="124" height="26" rx="4" fill="#065F46" />
+    <text x="106" y="184" fill="#6EE7B7" font-size="13" font-weight="800" text-anchor="middle">4 CAR SPACES</text>
+    <!-- Parking Bays -->
+    <rect x="46" y="200" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="219" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 1 (Staff 80)</text>
+    <rect x="46" y="232" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="251" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 2 (MDT/Doctor)</text>
+    <rect x="46" y="264" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="283" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 3 (Visitor/SW)</text>
+    <rect x="46" y="296" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="315" fill="#6EE7B7" font-size="12" font-weight="700" text-anchor="middle">Bay 4 (Accessible EV)</text>
+    <text x="106" y="331" fill="#94A3B8" font-size="10.5" font-weight="600" text-anchor="middle">Outer Flank Driveway</text>
+  </g>
+
+  <!-- Right Flank Parking: 78 Marston Gardens (4 Dedicated Spaces) -->
+  <g filter="url(#bpGlow)">
+    <rect x="924" y="156" width="140" height="180" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1.8" />
+    <rect x="932" y="166" width="124" height="26" rx="4" fill="#1E3A8A" />
+    <text x="994" y="184" fill="#93C5FD" font-size="13" font-weight="800" text-anchor="middle">4 CAR SPACES</text>
+    <!-- Parking Bays -->
+    <rect x="934" y="200" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="219" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 5 (Registered Mgr)</text>
+    <rect x="934" y="232" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="251" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 6 (Staff 78)</text>
+    <rect x="934" y="264" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="283" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 7 (Support Worker)</text>
+    <rect x="934" y="296" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="315" fill="#93C5FD" font-size="12" font-weight="700" text-anchor="middle">Bay 8 (Accessible EV)</text>
+    <text x="994" y="331" fill="#94A3B8" font-size="10.5" font-weight="600" text-anchor="middle">Outer Flank Driveway</text>
+  </g>
+
+  <!-- 3. CAMPUS RESIDENTIAL PROPERTIES -->
+  <!-- PROPERTY 80 MARSTON GARDENS (3 Beds + Calm Hub + Staff Office) -->
+  <g filter="url(#bpGlow)">
+    <rect x="194" y="156" width="340" height="220" rx="10" fill="url(#bpWall80)" stroke="#10B981" stroke-width="2.5" />
+    <!-- Property Title Badge -->
+    <rect x="206" y="168" width="160" height="28" rx="5" fill="#064E3B" stroke="#34D399" stroke-width="1.2" />
+    <text x="286" y="187" fill="#A7F3D0" font-size="13.5" font-weight="800" text-anchor="middle">80 MARSTON GDNS</text>
+    <rect x="374" y="168" width="148" height="28" rx="5" fill="#047857" />
+    <text x="448" y="187" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">3 RESIDENT SUITES</text>
+
+    <!-- Rooms Layout Grid -->
+    <!-- Room 1: Resident Bedrooms -->
+    <rect x="206" y="206" width="154" height="64" rx="6" fill="#064E3B" stroke="#059669" stroke-width="1.2" />
+    <text x="283" y="226" fill="#F0FDF4" font-size="13" font-weight="700" text-anchor="middle">3 Large Bedrooms</text>
+    <text x="283" y="244" fill="#A7F3D0" font-size="11.5" text-anchor="middle">12.4m² – 14.8m² usable</text>
+    <text x="283" y="260" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">FD30S Fire Doors • Cat L1</text>
+
+    <!-- Room 2: Accessible Wet Room -->
+    <rect x="368" y="206" width="154" height="64" rx="6" fill="#064E3B" stroke="#059669" stroke-width="1.2" />
+    <text x="445" y="226" fill="#F0FDF4" font-size="13" font-weight="700" text-anchor="middle">Accessible Wet Room</text>
+    <text x="445" y="244" fill="#6EE7B7" font-size="11.5" text-anchor="middle">TMV3 Anti-Scald (41°C)</text>
+    <text x="445" y="260" fill="#93C5FD" font-size="11" font-weight="700" text-anchor="middle">+ Separate Visitor WC</text>
+
+    <!-- Room 3: Sensory Calm Hub -->
+    <rect x="206" y="278" width="154" height="88" rx="6" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="283" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Calm Sensory Lounge</text>
+    <text x="283" y="318" fill="#D1FAE5" font-size="11.5" text-anchor="middle">Dimmable LED Lighting</text>
+    <text x="283" y="335" fill="#D1FAE5" font-size="11.5" text-anchor="middle">Acoustic Damping Wall Panels</text>
+    <text x="283" y="353" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">De-escalation Zone</text>
+
+    <!-- Room 4: Staff Office & Sleep-In -->
+    <rect x="368" y="278" width="154" height="88" rx="6" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="445" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Staff Office &amp; Sleep-In</text>
+    <text x="445" y="318" fill="#FDE68A" font-size="11.5" font-weight="700" text-anchor="middle">BS 2881 Meds CD Safe</text>
+    <text x="445" y="335" fill="#D1FAE5" font-size="11.5" text-anchor="middle">Nourish e-MAR Terminal</text>
+    <text x="445" y="353" fill="#93C5FD" font-size="11" font-weight="700" text-anchor="middle">Waking Night Base</text>
+  </g>
+
+  <!-- PARTY WALL INDICATOR (Between 78 & 80) -->
+  <line x1="550" y1="156" x2="550" y2="376" stroke="#F59E0B" stroke-width="4" stroke-dasharray="8,6" />
+  <g filter="url(#bpGlow)">
+    <circle cx="550" cy="266" r="22" fill="#D97706" stroke="#FEF3C7" stroke-width="2" />
+    <text x="550" y="262" fill="#FFFFFF" font-size="11" font-weight="900" text-anchor="middle">PARTY</text>
+    <text x="550" y="276" fill="#FFFFFF" font-size="11" font-weight="900" text-anchor="middle">WALL</text>
+    <rect x="506" y="296" width="88" height="22" rx="4" fill="#78350F" />
+    <text x="550" y="311" fill="#FDE68A" font-size="10" font-weight="700" text-anchor="middle">DOC E SOUND</text>
+  </g>
+
+  <!-- PROPERTY 78 MARSTON GARDENS (5 Beds + Commercial Kitchen + Dining Hall) -->
+  <g filter="url(#bpGlow)">
+    <rect x="566" y="156" width="340" height="220" rx="10" fill="url(#bpWall78)" stroke="#38BDF8" stroke-width="2.5" />
+    <!-- Property Title Badge -->
+    <rect x="578" y="168" width="160" height="28" rx="5" fill="#1E3A8A" stroke="#60A5FA" stroke-width="1.2" />
+    <text x="658" y="187" fill="#BFDBFE" font-size="13.5" font-weight="800" text-anchor="middle">78 MARSTON GDNS</text>
+    <rect x="746" y="168" width="148" height="28" rx="5" fill="#2563EB" />
+    <text x="820" y="187" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">5 RESIDENT SUITES</text>
+
+    <!-- Rooms Layout Grid -->
+    <!-- Room 1: 5 Specialist Bedrooms -->
+    <rect x="578" y="206" width="154" height="64" rx="6" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1.2" />
+    <text x="655" y="226" fill="#EFF6FF" font-size="13" font-weight="700" text-anchor="middle">5 Bedrooms (1 En-Suite)</text>
+    <text x="655" y="244" fill="#93C5FD" font-size="11.5" text-anchor="middle">13.2m² – 16.5m² usable</text>
+    <text x="655" y="260" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">FD30S Fire Doors • Cat L1</text>
+
+    <!-- Room 2: Assisted Wet Room -->
+    <rect x="740" y="206" width="154" height="64" rx="6" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1.2" />
+    <text x="817" y="226" fill="#EFF6FF" font-size="13" font-weight="700" text-anchor="middle">Assisted Wet Room</text>
+    <text x="817" y="244" fill="#93C5FD" font-size="11.5" text-anchor="middle">TMV3 Anti-Scald (41°C)</text>
+    <text x="817" y="260" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">+ Separate Visitor WC</text>
+
+    <!-- Room 3: Commercial Kitchen -->
+    <rect x="578" y="278" width="154" height="88" rx="6" fill="#1D4ED8" stroke="#60A5FA" stroke-width="1.2" />
+    <text x="655" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Commercial Kitchen</text>
+    <text x="655" y="318" fill="#FDE68A" font-size="11.5" font-weight="700" text-anchor="middle">Food Hygiene Rating 5</text>
+    <text x="655" y="335" fill="#BFDBFE" font-size="11.5" text-anchor="middle">Stainless Steel Workstations</text>
+    <text x="655" y="353" fill="#6EE7B7" font-size="11" font-weight="700" text-anchor="middle">HTM 01-04 Laundry Flow</text>
+
+    <!-- Room 4: Communal Dining & Activity Hall -->
+    <rect x="740" y="278" width="154" height="88" rx="6" fill="#1D4ED8" stroke="#60A5FA" stroke-width="1.2" />
+    <text x="817" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Communal Dining Hall</text>
+    <text x="817" y="318" fill="#BFDBFE" font-size="11.5" text-anchor="middle">Resident Social &amp; Dining Hub</text>
+    <text x="817" y="335" fill="#BFDBFE" font-size="11.5" text-anchor="middle">Bi-Fold Doors to Garden</text>
+    <text x="817" y="353" fill="#FDE68A" font-size="11" font-weight="700" text-anchor="middle">Direct Sensory Access</text>
+  </g>
+
+  <!-- 4. 100FT ENCLOSED SENSORY REAR GARDENS -->
+  <g filter="url(#bpGlow)">
+    <rect x="36" y="394" width="1028" height="190" rx="10" fill="url(#bpGarden)" stroke="#10B981" stroke-width="2" stroke-dasharray="8,4" />
+    <!-- Garden Title Banner -->
+    <rect x="56" y="408" width="988" height="34" rx="6" fill="#065F46" stroke="#34D399" stroke-width="1.2" />
+    <text x="550" y="430" fill="#6EE7B7" font-size="14.5" font-weight="800" text-anchor="middle" letter-spacing="1.5">100FT PRIVATE ENCLOSED SENSORY REAR GARDENS (SHARED CAMPUS THERAPEUTIC ZONE)</text>
+
+    <!-- Garden Feature Zones -->
+    <!-- Feature 1: Therapeutic Pavilion -->
+    <rect x="66" y="454" width="220" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="176" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Therapeutic Pavilion</text>
+    <text x="176" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">Covered Outdoor Seating</text>
+    <text x="176" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">All-Weather Heated Area</text>
+    <text x="176" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Quiet Sensory Retreat</text>
+    <text x="176" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">CQC 'Right Support' Aligned</text>
+
+    <!-- Feature 2: Sensory Raised Beds & Herb Pathway -->
+    <rect x="306" y="454" width="230" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="421" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Sensory Herb &amp; Planters</text>
+    <text x="421" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">Raised Wheelchair Planters</text>
+    <text x="421" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">Lavender, Mint, Rosemary</text>
+    <text x="421" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Non-Slip Rubberized Pathway</text>
+    <text x="421" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">Horticultural Therapy</text>
+
+    <!-- Feature 3: Tactile Water Feature & Acoustic Damping -->
+    <rect x="556" y="454" width="230" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="671" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Tactile Acoustic Feature</text>
+    <text x="671" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">Self-Contained Bubble Fountain</text>
+    <text x="671" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">Calming Audio White Noise</text>
+    <text x="671" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Smooth River Pebble Textures</text>
+    <text x="671" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">Sensory Modulation</text>
+
+    <!-- Feature 4: De-escalation & Perimeter Security -->
+    <rect x="806" y="454" width="238" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="925" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Safe Security Perimeter</text>
+    <text x="925" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">6ft Acoustic Security Fencing</text>
+    <text x="925" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">Anti-Climb Softened Boundary</text>
+    <text x="925" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Safe De-escalation Zones</text>
+    <text x="925" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">100% Secure Enclosure</text>
+  </g>
+
+  <!-- 5. STATUTORY COMPLIANCE & LEGAL BOTTOM LEGEND -->
+  <rect x="36" y="600" width="1028" height="90" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" />
+  
+  <!-- Left Cell: Planning & Statutory -->
+  <text x="56" y="624" fill="#38BDF8" font-size="12" font-weight="800" letter-spacing="1">TOWN PLANNING &amp; STATUTORY IMMUNITY:</text>
+  <text x="56" y="643" fill="#F1F5F9" font-size="12.5" font-weight="600">• S.192 CLPUD Permitted Development Class C3(b) (Up to 6 residents living together receiving care)</text>
+  <text x="56" y="662" fill="#94A3B8" font-size="12">• North Devon DC v FSS [2004] Precedent: Non-resident carers establish single household C3(b) use</text>
+  <text x="56" y="680" fill="#FCD34D" font-size="11.5" font-weight="700">• 82 Marston Gardens: Director Private Residence (let on AST, eliminates BIK under ITEPA 2003 s.105/106)</text>
+
+  <!-- Right Cell: Health & Safety / CQC -->
+  <text x="620" y="624" fill="#34D399" font-size="12" font-weight="800" letter-spacing="1">FIRE SAFETY &amp; CLINICAL SPECIFICATIONS:</text>
+  <text x="620" y="643" fill="#F1F5F9" font-size="12.5" font-weight="600">• BS 5839 Category L1 Addressable Automatic Fire Detection System</text>
+  <text x="620" y="662" fill="#94A3B8" font-size="12">• FD30S Fire &amp; Smoke Resisting Doors with Dorgard magnetic hold-open</text>
+  <text x="620" y="680" fill="#6EE7B7" font-size="11.5" font-weight="700">• BS 5266 3-Hour Maintained Emergency Lighting &amp; Document M Accessible Access</text>
+</svg>
         </div>
         <div class="visual-diagram-caption">
           <strong>Campus Topology:</strong> 78 (5 Suites + Commercial Kitchen + Activity Hall), 80 (3 Suites + Sensory Lounge + Staff Office &amp; Sleep-in), 8 off-street parking spaces (4 on each flank), and shared 100ft therapeutic rear sensory gardens.
@@ -6670,7 +7252,232 @@ cite.ref-title {
           <span class="visual-diagram-title">78 &amp; 80 Marston Gardens // 8-Bed Unified Specialist Campus</span>
         </div>
         <div class="visual-diagram-body">
-          <img src="assets/diagrams/diagram_campus_masterplan.svg" alt="Campus Masterplan Blueprint" class="visual-diagram-img" loading="lazy">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" width="100%" height="auto" class="blueprint-svg" style="max-width:100%; height:auto; display:block; background:#0B192C; border-radius:12px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Blueprint Grid Pattern -->
+    <pattern id="bpGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E3E62" stroke-width="0.8" opacity="0.45" />
+      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#2563EB" stroke-width="1.2" opacity="0.3" />
+    </pattern>
+    <!-- Card Gradients -->
+    <linearGradient id="bpWall78" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="bpWall80" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065F46" />
+      <stop offset="100%" stop-color="#022C22" />
+    </linearGradient>
+    <linearGradient id="bpWall82" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="bpGarden" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#022C22" stop-opacity="0.95" />
+    </linearGradient>
+    <filter id="bpGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Background with Grid -->
+  <rect width="1100" height="720" rx="12" fill="#0A1628" />
+  <rect width="1100" height="720" fill="url(#bpGrid)" />
+
+  <!-- Outer Architectural Border -->
+  <rect x="18" y="18" width="1064" height="684" rx="8" fill="none" stroke="#38BDF8" stroke-width="1.5" opacity="0.6" />
+  <rect x="24" y="24" width="1052" height="672" rx="6" fill="none" stroke="#1E40AF" stroke-width="0.8" opacity="0.4" />
+
+  <!-- BLUEPRINT TITLE BLOCK (Top Header) -->
+  <rect x="36" y="32" width="1028" height="52" rx="6" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" />
+  <text x="56" y="55" fill="#38BDF8" font-size="13" font-weight="800" letter-spacing="1.5">ARCHITECTURAL CAMPUS MASTERPLAN // CLASS C3(b) SPECIALIST SUPPORTED LIVING</text>
+  <text x="56" y="73" fill="#F8FAFC" font-size="16" font-weight="700">78 &amp; 80 Marston Gardens, Luton, LU2 7DY // 8-Bed Unified Healthcare Campus</text>
+  <rect x="910" y="42" width="140" height="32" rx="4" fill="#0284C7" />
+  <text x="980" y="63" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">SCALE: 1:100 NTS</text>
+
+  <!-- 1. HIGHWAYS / ROAD ACCESS -->
+  <rect x="36" y="96" width="1028" height="48" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1" />
+  <line x1="36" y1="120" x2="1064" y2="120" stroke="#FCD34D" stroke-width="2" stroke-dasharray="12,12" />
+  <text x="550" y="117" fill="#F8FAFC" font-size="14" font-weight="800" text-anchor="middle" letter-spacing="2">MARSTON GARDENS (RESIDENTIAL CUL-DE-SAC // HIGHWAYS COMPLIANT)</text>
+  <text x="550" y="135" fill="#94A3B8" font-size="12" font-weight="600" text-anchor="middle">Luton Local Plan Policy LLP31 &amp; LLP32 Approved Access Route</text>
+
+  <!-- 2. FLANK PARKING DRIVEWAYS -->
+  <!-- Left Flank Parking: 80 Marston Gardens (4 Dedicated Spaces) -->
+  <g filter="url(#bpGlow)">
+    <rect x="36" y="156" width="140" height="180" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.8" />
+    <rect x="44" y="166" width="124" height="26" rx="4" fill="#065F46" />
+    <text x="106" y="184" fill="#6EE7B7" font-size="13" font-weight="800" text-anchor="middle">4 CAR SPACES</text>
+    <!-- Parking Bays -->
+    <rect x="46" y="200" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="219" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 1 (Staff 80)</text>
+    <rect x="46" y="232" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="251" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 2 (MDT/Doctor)</text>
+    <rect x="46" y="264" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="283" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 3 (Visitor/SW)</text>
+    <rect x="46" y="296" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="315" fill="#6EE7B7" font-size="12" font-weight="700" text-anchor="middle">Bay 4 (Accessible EV)</text>
+    <text x="106" y="331" fill="#94A3B8" font-size="10.5" font-weight="600" text-anchor="middle">Outer Flank Driveway</text>
+  </g>
+
+  <!-- Right Flank Parking: 78 Marston Gardens (4 Dedicated Spaces) -->
+  <g filter="url(#bpGlow)">
+    <rect x="924" y="156" width="140" height="180" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1.8" />
+    <rect x="932" y="166" width="124" height="26" rx="4" fill="#1E3A8A" />
+    <text x="994" y="184" fill="#93C5FD" font-size="13" font-weight="800" text-anchor="middle">4 CAR SPACES</text>
+    <!-- Parking Bays -->
+    <rect x="934" y="200" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="219" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 5 (Registered Mgr)</text>
+    <rect x="934" y="232" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="251" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 6 (Staff 78)</text>
+    <rect x="934" y="264" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="283" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 7 (Support Worker)</text>
+    <rect x="934" y="296" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="315" fill="#93C5FD" font-size="12" font-weight="700" text-anchor="middle">Bay 8 (Accessible EV)</text>
+    <text x="994" y="331" fill="#94A3B8" font-size="10.5" font-weight="600" text-anchor="middle">Outer Flank Driveway</text>
+  </g>
+
+  <!-- 3. CAMPUS RESIDENTIAL PROPERTIES -->
+  <!-- PROPERTY 80 MARSTON GARDENS (3 Beds + Calm Hub + Staff Office) -->
+  <g filter="url(#bpGlow)">
+    <rect x="194" y="156" width="340" height="220" rx="10" fill="url(#bpWall80)" stroke="#10B981" stroke-width="2.5" />
+    <!-- Property Title Badge -->
+    <rect x="206" y="168" width="160" height="28" rx="5" fill="#064E3B" stroke="#34D399" stroke-width="1.2" />
+    <text x="286" y="187" fill="#A7F3D0" font-size="13.5" font-weight="800" text-anchor="middle">80 MARSTON GDNS</text>
+    <rect x="374" y="168" width="148" height="28" rx="5" fill="#047857" />
+    <text x="448" y="187" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">3 RESIDENT SUITES</text>
+
+    <!-- Rooms Layout Grid -->
+    <!-- Room 1: Resident Bedrooms -->
+    <rect x="206" y="206" width="154" height="64" rx="6" fill="#064E3B" stroke="#059669" stroke-width="1.2" />
+    <text x="283" y="226" fill="#F0FDF4" font-size="13" font-weight="700" text-anchor="middle">3 Large Bedrooms</text>
+    <text x="283" y="244" fill="#A7F3D0" font-size="11.5" text-anchor="middle">12.4m² – 14.8m² usable</text>
+    <text x="283" y="260" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">FD30S Fire Doors • Cat L1</text>
+
+    <!-- Room 2: Accessible Wet Room -->
+    <rect x="368" y="206" width="154" height="64" rx="6" fill="#064E3B" stroke="#059669" stroke-width="1.2" />
+    <text x="445" y="226" fill="#F0FDF4" font-size="13" font-weight="700" text-anchor="middle">Accessible Wet Room</text>
+    <text x="445" y="244" fill="#6EE7B7" font-size="11.5" text-anchor="middle">TMV3 Anti-Scald (41°C)</text>
+    <text x="445" y="260" fill="#93C5FD" font-size="11" font-weight="700" text-anchor="middle">+ Separate Visitor WC</text>
+
+    <!-- Room 3: Sensory Calm Hub -->
+    <rect x="206" y="278" width="154" height="88" rx="6" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="283" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Calm Sensory Lounge</text>
+    <text x="283" y="318" fill="#D1FAE5" font-size="11.5" text-anchor="middle">Dimmable LED Lighting</text>
+    <text x="283" y="335" fill="#D1FAE5" font-size="11.5" text-anchor="middle">Acoustic Damping Wall Panels</text>
+    <text x="283" y="353" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">De-escalation Zone</text>
+
+    <!-- Room 4: Staff Office & Sleep-In -->
+    <rect x="368" y="278" width="154" height="88" rx="6" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="445" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Staff Office &amp; Sleep-In</text>
+    <text x="445" y="318" fill="#FDE68A" font-size="11.5" font-weight="700" text-anchor="middle">BS 2881 Meds CD Safe</text>
+    <text x="445" y="335" fill="#D1FAE5" font-size="11.5" text-anchor="middle">Nourish e-MAR Terminal</text>
+    <text x="445" y="353" fill="#93C5FD" font-size="11" font-weight="700" text-anchor="middle">Waking Night Base</text>
+  </g>
+
+  <!-- PARTY WALL INDICATOR (Between 78 & 80) -->
+  <line x1="550" y1="156" x2="550" y2="376" stroke="#F59E0B" stroke-width="4" stroke-dasharray="8,6" />
+  <g filter="url(#bpGlow)">
+    <circle cx="550" cy="266" r="22" fill="#D97706" stroke="#FEF3C7" stroke-width="2" />
+    <text x="550" y="262" fill="#FFFFFF" font-size="11" font-weight="900" text-anchor="middle">PARTY</text>
+    <text x="550" y="276" fill="#FFFFFF" font-size="11" font-weight="900" text-anchor="middle">WALL</text>
+    <rect x="506" y="296" width="88" height="22" rx="4" fill="#78350F" />
+    <text x="550" y="311" fill="#FDE68A" font-size="10" font-weight="700" text-anchor="middle">DOC E SOUND</text>
+  </g>
+
+  <!-- PROPERTY 78 MARSTON GARDENS (5 Beds + Commercial Kitchen + Dining Hall) -->
+  <g filter="url(#bpGlow)">
+    <rect x="566" y="156" width="340" height="220" rx="10" fill="url(#bpWall78)" stroke="#38BDF8" stroke-width="2.5" />
+    <!-- Property Title Badge -->
+    <rect x="578" y="168" width="160" height="28" rx="5" fill="#1E3A8A" stroke="#60A5FA" stroke-width="1.2" />
+    <text x="658" y="187" fill="#BFDBFE" font-size="13.5" font-weight="800" text-anchor="middle">78 MARSTON GDNS</text>
+    <rect x="746" y="168" width="148" height="28" rx="5" fill="#2563EB" />
+    <text x="820" y="187" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">5 RESIDENT SUITES</text>
+
+    <!-- Rooms Layout Grid -->
+    <!-- Room 1: 5 Specialist Bedrooms -->
+    <rect x="578" y="206" width="154" height="64" rx="6" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1.2" />
+    <text x="655" y="226" fill="#EFF6FF" font-size="13" font-weight="700" text-anchor="middle">5 Bedrooms (1 En-Suite)</text>
+    <text x="655" y="244" fill="#93C5FD" font-size="11.5" text-anchor="middle">13.2m² – 16.5m² usable</text>
+    <text x="655" y="260" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">FD30S Fire Doors • Cat L1</text>
+
+    <!-- Room 2: Assisted Wet Room -->
+    <rect x="740" y="206" width="154" height="64" rx="6" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1.2" />
+    <text x="817" y="226" fill="#EFF6FF" font-size="13" font-weight="700" text-anchor="middle">Assisted Wet Room</text>
+    <text x="817" y="244" fill="#93C5FD" font-size="11.5" text-anchor="middle">TMV3 Anti-Scald (41°C)</text>
+    <text x="817" y="260" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">+ Separate Visitor WC</text>
+
+    <!-- Room 3: Commercial Kitchen -->
+    <rect x="578" y="278" width="154" height="88" rx="6" fill="#1D4ED8" stroke="#60A5FA" stroke-width="1.2" />
+    <text x="655" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Commercial Kitchen</text>
+    <text x="655" y="318" fill="#FDE68A" font-size="11.5" font-weight="700" text-anchor="middle">Food Hygiene Rating 5</text>
+    <text x="655" y="335" fill="#BFDBFE" font-size="11.5" text-anchor="middle">Stainless Steel Workstations</text>
+    <text x="655" y="353" fill="#6EE7B7" font-size="11" font-weight="700" text-anchor="middle">HTM 01-04 Laundry Flow</text>
+
+    <!-- Room 4: Communal Dining & Activity Hall -->
+    <rect x="740" y="278" width="154" height="88" rx="6" fill="#1D4ED8" stroke="#60A5FA" stroke-width="1.2" />
+    <text x="817" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Communal Dining Hall</text>
+    <text x="817" y="318" fill="#BFDBFE" font-size="11.5" text-anchor="middle">Resident Social &amp; Dining Hub</text>
+    <text x="817" y="335" fill="#BFDBFE" font-size="11.5" text-anchor="middle">Bi-Fold Doors to Garden</text>
+    <text x="817" y="353" fill="#FDE68A" font-size="11" font-weight="700" text-anchor="middle">Direct Sensory Access</text>
+  </g>
+
+  <!-- 4. 100FT ENCLOSED SENSORY REAR GARDENS -->
+  <g filter="url(#bpGlow)">
+    <rect x="36" y="394" width="1028" height="190" rx="10" fill="url(#bpGarden)" stroke="#10B981" stroke-width="2" stroke-dasharray="8,4" />
+    <!-- Garden Title Banner -->
+    <rect x="56" y="408" width="988" height="34" rx="6" fill="#065F46" stroke="#34D399" stroke-width="1.2" />
+    <text x="550" y="430" fill="#6EE7B7" font-size="14.5" font-weight="800" text-anchor="middle" letter-spacing="1.5">100FT PRIVATE ENCLOSED SENSORY REAR GARDENS (SHARED CAMPUS THERAPEUTIC ZONE)</text>
+
+    <!-- Garden Feature Zones -->
+    <!-- Feature 1: Therapeutic Pavilion -->
+    <rect x="66" y="454" width="220" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="176" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Therapeutic Pavilion</text>
+    <text x="176" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">Covered Outdoor Seating</text>
+    <text x="176" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">All-Weather Heated Area</text>
+    <text x="176" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Quiet Sensory Retreat</text>
+    <text x="176" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">CQC 'Right Support' Aligned</text>
+
+    <!-- Feature 2: Sensory Raised Beds & Herb Pathway -->
+    <rect x="306" y="454" width="230" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="421" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Sensory Herb &amp; Planters</text>
+    <text x="421" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">Raised Wheelchair Planters</text>
+    <text x="421" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">Lavender, Mint, Rosemary</text>
+    <text x="421" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Non-Slip Rubberized Pathway</text>
+    <text x="421" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">Horticultural Therapy</text>
+
+    <!-- Feature 3: Tactile Water Feature & Acoustic Damping -->
+    <rect x="556" y="454" width="230" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="671" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Tactile Acoustic Feature</text>
+    <text x="671" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">Self-Contained Bubble Fountain</text>
+    <text x="671" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">Calming Audio White Noise</text>
+    <text x="671" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Smooth River Pebble Textures</text>
+    <text x="671" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">Sensory Modulation</text>
+
+    <!-- Feature 4: De-escalation & Perimeter Security -->
+    <rect x="806" y="454" width="238" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="925" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Safe Security Perimeter</text>
+    <text x="925" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">6ft Acoustic Security Fencing</text>
+    <text x="925" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">Anti-Climb Softened Boundary</text>
+    <text x="925" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Safe De-escalation Zones</text>
+    <text x="925" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">100% Secure Enclosure</text>
+  </g>
+
+  <!-- 5. STATUTORY COMPLIANCE & LEGAL BOTTOM LEGEND -->
+  <rect x="36" y="600" width="1028" height="90" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" />
+  
+  <!-- Left Cell: Planning & Statutory -->
+  <text x="56" y="624" fill="#38BDF8" font-size="12" font-weight="800" letter-spacing="1">TOWN PLANNING &amp; STATUTORY IMMUNITY:</text>
+  <text x="56" y="643" fill="#F1F5F9" font-size="12.5" font-weight="600">• S.192 CLPUD Permitted Development Class C3(b) (Up to 6 residents living together receiving care)</text>
+  <text x="56" y="662" fill="#94A3B8" font-size="12">• North Devon DC v FSS [2004] Precedent: Non-resident carers establish single household C3(b) use</text>
+  <text x="56" y="680" fill="#FCD34D" font-size="11.5" font-weight="700">• 82 Marston Gardens: Director Private Residence (let on AST, eliminates BIK under ITEPA 2003 s.105/106)</text>
+
+  <!-- Right Cell: Health & Safety / CQC -->
+  <text x="620" y="624" fill="#34D399" font-size="12" font-weight="800" letter-spacing="1">FIRE SAFETY &amp; CLINICAL SPECIFICATIONS:</text>
+  <text x="620" y="643" fill="#F1F5F9" font-size="12.5" font-weight="600">• BS 5839 Category L1 Addressable Automatic Fire Detection System</text>
+  <text x="620" y="662" fill="#94A3B8" font-size="12">• FD30S Fire &amp; Smoke Resisting Doors with Dorgard magnetic hold-open</text>
+  <text x="620" y="680" fill="#6EE7B7" font-size="11.5" font-weight="700">• BS 5266 3-Hour Maintained Emergency Lighting &amp; Document M Accessible Access</text>
+</svg>
         </div>
         <div class="visual-diagram-caption">
           <strong>Campus Topology:</strong> 78 (5 Suites + Commercial Kitchen + Activity Hall), 80 (3 Suites + Sensory Lounge + Staff Office &amp; Sleep-in), 8 off-street parking spaces (4 on each flank), and shared 100ft therapeutic rear sensory gardens.
@@ -7736,7 +8543,232 @@ cite.ref-title {
           <span class="visual-diagram-title">78 &amp; 80 Marston Gardens // 8-Bed Unified Specialist Campus</span>
         </div>
         <div class="visual-diagram-body">
-          <img src="assets/diagrams/diagram_campus_masterplan.svg" alt="Campus Masterplan Blueprint" class="visual-diagram-img" loading="lazy">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" width="100%" height="auto" class="blueprint-svg" style="max-width:100%; height:auto; display:block; background:#0B192C; border-radius:12px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Blueprint Grid Pattern -->
+    <pattern id="bpGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E3E62" stroke-width="0.8" opacity="0.45" />
+      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#2563EB" stroke-width="1.2" opacity="0.3" />
+    </pattern>
+    <!-- Card Gradients -->
+    <linearGradient id="bpWall78" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="bpWall80" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065F46" />
+      <stop offset="100%" stop-color="#022C22" />
+    </linearGradient>
+    <linearGradient id="bpWall82" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="bpGarden" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#022C22" stop-opacity="0.95" />
+    </linearGradient>
+    <filter id="bpGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Background with Grid -->
+  <rect width="1100" height="720" rx="12" fill="#0A1628" />
+  <rect width="1100" height="720" fill="url(#bpGrid)" />
+
+  <!-- Outer Architectural Border -->
+  <rect x="18" y="18" width="1064" height="684" rx="8" fill="none" stroke="#38BDF8" stroke-width="1.5" opacity="0.6" />
+  <rect x="24" y="24" width="1052" height="672" rx="6" fill="none" stroke="#1E40AF" stroke-width="0.8" opacity="0.4" />
+
+  <!-- BLUEPRINT TITLE BLOCK (Top Header) -->
+  <rect x="36" y="32" width="1028" height="52" rx="6" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" />
+  <text x="56" y="55" fill="#38BDF8" font-size="13" font-weight="800" letter-spacing="1.5">ARCHITECTURAL CAMPUS MASTERPLAN // CLASS C3(b) SPECIALIST SUPPORTED LIVING</text>
+  <text x="56" y="73" fill="#F8FAFC" font-size="16" font-weight="700">78 &amp; 80 Marston Gardens, Luton, LU2 7DY // 8-Bed Unified Healthcare Campus</text>
+  <rect x="910" y="42" width="140" height="32" rx="4" fill="#0284C7" />
+  <text x="980" y="63" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">SCALE: 1:100 NTS</text>
+
+  <!-- 1. HIGHWAYS / ROAD ACCESS -->
+  <rect x="36" y="96" width="1028" height="48" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1" />
+  <line x1="36" y1="120" x2="1064" y2="120" stroke="#FCD34D" stroke-width="2" stroke-dasharray="12,12" />
+  <text x="550" y="117" fill="#F8FAFC" font-size="14" font-weight="800" text-anchor="middle" letter-spacing="2">MARSTON GARDENS (RESIDENTIAL CUL-DE-SAC // HIGHWAYS COMPLIANT)</text>
+  <text x="550" y="135" fill="#94A3B8" font-size="12" font-weight="600" text-anchor="middle">Luton Local Plan Policy LLP31 &amp; LLP32 Approved Access Route</text>
+
+  <!-- 2. FLANK PARKING DRIVEWAYS -->
+  <!-- Left Flank Parking: 80 Marston Gardens (4 Dedicated Spaces) -->
+  <g filter="url(#bpGlow)">
+    <rect x="36" y="156" width="140" height="180" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.8" />
+    <rect x="44" y="166" width="124" height="26" rx="4" fill="#065F46" />
+    <text x="106" y="184" fill="#6EE7B7" font-size="13" font-weight="800" text-anchor="middle">4 CAR SPACES</text>
+    <!-- Parking Bays -->
+    <rect x="46" y="200" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="219" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 1 (Staff 80)</text>
+    <rect x="46" y="232" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="251" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 2 (MDT/Doctor)</text>
+    <rect x="46" y="264" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="283" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 3 (Visitor/SW)</text>
+    <rect x="46" y="296" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="106" y="315" fill="#6EE7B7" font-size="12" font-weight="700" text-anchor="middle">Bay 4 (Accessible EV)</text>
+    <text x="106" y="331" fill="#94A3B8" font-size="10.5" font-weight="600" text-anchor="middle">Outer Flank Driveway</text>
+  </g>
+
+  <!-- Right Flank Parking: 78 Marston Gardens (4 Dedicated Spaces) -->
+  <g filter="url(#bpGlow)">
+    <rect x="924" y="156" width="140" height="180" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1.8" />
+    <rect x="932" y="166" width="124" height="26" rx="4" fill="#1E3A8A" />
+    <text x="994" y="184" fill="#93C5FD" font-size="13" font-weight="800" text-anchor="middle">4 CAR SPACES</text>
+    <!-- Parking Bays -->
+    <rect x="934" y="200" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="219" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 5 (Registered Mgr)</text>
+    <rect x="934" y="232" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="251" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 6 (Staff 78)</text>
+    <rect x="934" y="264" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="283" fill="#E2E8F0" font-size="12" font-weight="700" text-anchor="middle">Bay 7 (Support Worker)</text>
+    <rect x="934" y="296" width="120" height="28" rx="3" fill="#1E293B" stroke="#334155" />
+    <text x="994" y="315" fill="#93C5FD" font-size="12" font-weight="700" text-anchor="middle">Bay 8 (Accessible EV)</text>
+    <text x="994" y="331" fill="#94A3B8" font-size="10.5" font-weight="600" text-anchor="middle">Outer Flank Driveway</text>
+  </g>
+
+  <!-- 3. CAMPUS RESIDENTIAL PROPERTIES -->
+  <!-- PROPERTY 80 MARSTON GARDENS (3 Beds + Calm Hub + Staff Office) -->
+  <g filter="url(#bpGlow)">
+    <rect x="194" y="156" width="340" height="220" rx="10" fill="url(#bpWall80)" stroke="#10B981" stroke-width="2.5" />
+    <!-- Property Title Badge -->
+    <rect x="206" y="168" width="160" height="28" rx="5" fill="#064E3B" stroke="#34D399" stroke-width="1.2" />
+    <text x="286" y="187" fill="#A7F3D0" font-size="13.5" font-weight="800" text-anchor="middle">80 MARSTON GDNS</text>
+    <rect x="374" y="168" width="148" height="28" rx="5" fill="#047857" />
+    <text x="448" y="187" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">3 RESIDENT SUITES</text>
+
+    <!-- Rooms Layout Grid -->
+    <!-- Room 1: Resident Bedrooms -->
+    <rect x="206" y="206" width="154" height="64" rx="6" fill="#064E3B" stroke="#059669" stroke-width="1.2" />
+    <text x="283" y="226" fill="#F0FDF4" font-size="13" font-weight="700" text-anchor="middle">3 Large Bedrooms</text>
+    <text x="283" y="244" fill="#A7F3D0" font-size="11.5" text-anchor="middle">12.4m² – 14.8m² usable</text>
+    <text x="283" y="260" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">FD30S Fire Doors • Cat L1</text>
+
+    <!-- Room 2: Accessible Wet Room -->
+    <rect x="368" y="206" width="154" height="64" rx="6" fill="#064E3B" stroke="#059669" stroke-width="1.2" />
+    <text x="445" y="226" fill="#F0FDF4" font-size="13" font-weight="700" text-anchor="middle">Accessible Wet Room</text>
+    <text x="445" y="244" fill="#6EE7B7" font-size="11.5" text-anchor="middle">TMV3 Anti-Scald (41°C)</text>
+    <text x="445" y="260" fill="#93C5FD" font-size="11" font-weight="700" text-anchor="middle">+ Separate Visitor WC</text>
+
+    <!-- Room 3: Sensory Calm Hub -->
+    <rect x="206" y="278" width="154" height="88" rx="6" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="283" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Calm Sensory Lounge</text>
+    <text x="283" y="318" fill="#D1FAE5" font-size="11.5" text-anchor="middle">Dimmable LED Lighting</text>
+    <text x="283" y="335" fill="#D1FAE5" font-size="11.5" text-anchor="middle">Acoustic Damping Wall Panels</text>
+    <text x="283" y="353" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">De-escalation Zone</text>
+
+    <!-- Room 4: Staff Office & Sleep-In -->
+    <rect x="368" y="278" width="154" height="88" rx="6" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="445" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Staff Office &amp; Sleep-In</text>
+    <text x="445" y="318" fill="#FDE68A" font-size="11.5" font-weight="700" text-anchor="middle">BS 2881 Meds CD Safe</text>
+    <text x="445" y="335" fill="#D1FAE5" font-size="11.5" text-anchor="middle">Nourish e-MAR Terminal</text>
+    <text x="445" y="353" fill="#93C5FD" font-size="11" font-weight="700" text-anchor="middle">Waking Night Base</text>
+  </g>
+
+  <!-- PARTY WALL INDICATOR (Between 78 & 80) -->
+  <line x1="550" y1="156" x2="550" y2="376" stroke="#F59E0B" stroke-width="4" stroke-dasharray="8,6" />
+  <g filter="url(#bpGlow)">
+    <circle cx="550" cy="266" r="22" fill="#D97706" stroke="#FEF3C7" stroke-width="2" />
+    <text x="550" y="262" fill="#FFFFFF" font-size="11" font-weight="900" text-anchor="middle">PARTY</text>
+    <text x="550" y="276" fill="#FFFFFF" font-size="11" font-weight="900" text-anchor="middle">WALL</text>
+    <rect x="506" y="296" width="88" height="22" rx="4" fill="#78350F" />
+    <text x="550" y="311" fill="#FDE68A" font-size="10" font-weight="700" text-anchor="middle">DOC E SOUND</text>
+  </g>
+
+  <!-- PROPERTY 78 MARSTON GARDENS (5 Beds + Commercial Kitchen + Dining Hall) -->
+  <g filter="url(#bpGlow)">
+    <rect x="566" y="156" width="340" height="220" rx="10" fill="url(#bpWall78)" stroke="#38BDF8" stroke-width="2.5" />
+    <!-- Property Title Badge -->
+    <rect x="578" y="168" width="160" height="28" rx="5" fill="#1E3A8A" stroke="#60A5FA" stroke-width="1.2" />
+    <text x="658" y="187" fill="#BFDBFE" font-size="13.5" font-weight="800" text-anchor="middle">78 MARSTON GDNS</text>
+    <rect x="746" y="168" width="148" height="28" rx="5" fill="#2563EB" />
+    <text x="820" y="187" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">5 RESIDENT SUITES</text>
+
+    <!-- Rooms Layout Grid -->
+    <!-- Room 1: 5 Specialist Bedrooms -->
+    <rect x="578" y="206" width="154" height="64" rx="6" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1.2" />
+    <text x="655" y="226" fill="#EFF6FF" font-size="13" font-weight="700" text-anchor="middle">5 Bedrooms (1 En-Suite)</text>
+    <text x="655" y="244" fill="#93C5FD" font-size="11.5" text-anchor="middle">13.2m² – 16.5m² usable</text>
+    <text x="655" y="260" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">FD30S Fire Doors • Cat L1</text>
+
+    <!-- Room 2: Assisted Wet Room -->
+    <rect x="740" y="206" width="154" height="64" rx="6" fill="#1E3A8A" stroke="#3B82F6" stroke-width="1.2" />
+    <text x="817" y="226" fill="#EFF6FF" font-size="13" font-weight="700" text-anchor="middle">Assisted Wet Room</text>
+    <text x="817" y="244" fill="#93C5FD" font-size="11.5" text-anchor="middle">TMV3 Anti-Scald (41°C)</text>
+    <text x="817" y="260" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">+ Separate Visitor WC</text>
+
+    <!-- Room 3: Commercial Kitchen -->
+    <rect x="578" y="278" width="154" height="88" rx="6" fill="#1D4ED8" stroke="#60A5FA" stroke-width="1.2" />
+    <text x="655" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Commercial Kitchen</text>
+    <text x="655" y="318" fill="#FDE68A" font-size="11.5" font-weight="700" text-anchor="middle">Food Hygiene Rating 5</text>
+    <text x="655" y="335" fill="#BFDBFE" font-size="11.5" text-anchor="middle">Stainless Steel Workstations</text>
+    <text x="655" y="353" fill="#6EE7B7" font-size="11" font-weight="700" text-anchor="middle">HTM 01-04 Laundry Flow</text>
+
+    <!-- Room 4: Communal Dining & Activity Hall -->
+    <rect x="740" y="278" width="154" height="88" rx="6" fill="#1D4ED8" stroke="#60A5FA" stroke-width="1.2" />
+    <text x="817" y="299" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">Communal Dining Hall</text>
+    <text x="817" y="318" fill="#BFDBFE" font-size="11.5" text-anchor="middle">Resident Social &amp; Dining Hub</text>
+    <text x="817" y="335" fill="#BFDBFE" font-size="11.5" text-anchor="middle">Bi-Fold Doors to Garden</text>
+    <text x="817" y="353" fill="#FDE68A" font-size="11" font-weight="700" text-anchor="middle">Direct Sensory Access</text>
+  </g>
+
+  <!-- 4. 100FT ENCLOSED SENSORY REAR GARDENS -->
+  <g filter="url(#bpGlow)">
+    <rect x="36" y="394" width="1028" height="190" rx="10" fill="url(#bpGarden)" stroke="#10B981" stroke-width="2" stroke-dasharray="8,4" />
+    <!-- Garden Title Banner -->
+    <rect x="56" y="408" width="988" height="34" rx="6" fill="#065F46" stroke="#34D399" stroke-width="1.2" />
+    <text x="550" y="430" fill="#6EE7B7" font-size="14.5" font-weight="800" text-anchor="middle" letter-spacing="1.5">100FT PRIVATE ENCLOSED SENSORY REAR GARDENS (SHARED CAMPUS THERAPEUTIC ZONE)</text>
+
+    <!-- Garden Feature Zones -->
+    <!-- Feature 1: Therapeutic Pavilion -->
+    <rect x="66" y="454" width="220" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="176" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Therapeutic Pavilion</text>
+    <text x="176" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">Covered Outdoor Seating</text>
+    <text x="176" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">All-Weather Heated Area</text>
+    <text x="176" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Quiet Sensory Retreat</text>
+    <text x="176" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">CQC 'Right Support' Aligned</text>
+
+    <!-- Feature 2: Sensory Raised Beds & Herb Pathway -->
+    <rect x="306" y="454" width="230" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="421" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Sensory Herb &amp; Planters</text>
+    <text x="421" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">Raised Wheelchair Planters</text>
+    <text x="421" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">Lavender, Mint, Rosemary</text>
+    <text x="421" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Non-Slip Rubberized Pathway</text>
+    <text x="421" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">Horticultural Therapy</text>
+
+    <!-- Feature 3: Tactile Water Feature & Acoustic Damping -->
+    <rect x="556" y="454" width="230" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="671" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Tactile Acoustic Feature</text>
+    <text x="671" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">Self-Contained Bubble Fountain</text>
+    <text x="671" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">Calming Audio White Noise</text>
+    <text x="671" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Smooth River Pebble Textures</text>
+    <text x="671" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">Sensory Modulation</text>
+
+    <!-- Feature 4: De-escalation & Perimeter Security -->
+    <rect x="806" y="454" width="238" height="114" rx="8" fill="#047857" stroke="#34D399" stroke-width="1.2" />
+    <text x="925" y="478" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Safe Security Perimeter</text>
+    <text x="925" y="498" fill="#D1FAE5" font-size="12" text-anchor="middle">6ft Acoustic Security Fencing</text>
+    <text x="925" y="516" fill="#D1FAE5" font-size="12" text-anchor="middle">Anti-Climb Softened Boundary</text>
+    <text x="925" y="534" fill="#D1FAE5" font-size="12" text-anchor="middle">Safe De-escalation Zones</text>
+    <text x="925" y="552" fill="#FCD34D" font-size="11" font-weight="700" text-anchor="middle">100% Secure Enclosure</text>
+  </g>
+
+  <!-- 5. STATUTORY COMPLIANCE & LEGAL BOTTOM LEGEND -->
+  <rect x="36" y="600" width="1028" height="90" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" />
+  
+  <!-- Left Cell: Planning & Statutory -->
+  <text x="56" y="624" fill="#38BDF8" font-size="12" font-weight="800" letter-spacing="1">TOWN PLANNING &amp; STATUTORY IMMUNITY:</text>
+  <text x="56" y="643" fill="#F1F5F9" font-size="12.5" font-weight="600">• S.192 CLPUD Permitted Development Class C3(b) (Up to 6 residents living together receiving care)</text>
+  <text x="56" y="662" fill="#94A3B8" font-size="12">• North Devon DC v FSS [2004] Precedent: Non-resident carers establish single household C3(b) use</text>
+  <text x="56" y="680" fill="#FCD34D" font-size="11.5" font-weight="700">• 82 Marston Gardens: Director Private Residence (let on AST, eliminates BIK under ITEPA 2003 s.105/106)</text>
+
+  <!-- Right Cell: Health & Safety / CQC -->
+  <text x="620" y="624" fill="#34D399" font-size="12" font-weight="800" letter-spacing="1">FIRE SAFETY &amp; CLINICAL SPECIFICATIONS:</text>
+  <text x="620" y="643" fill="#F1F5F9" font-size="12.5" font-weight="600">• BS 5839 Category L1 Addressable Automatic Fire Detection System</text>
+  <text x="620" y="662" fill="#94A3B8" font-size="12">• FD30S Fire &amp; Smoke Resisting Doors with Dorgard magnetic hold-open</text>
+  <text x="620" y="680" fill="#6EE7B7" font-size="11.5" font-weight="700">• BS 5266 3-Hour Maintained Emergency Lighting &amp; Document M Accessible Access</text>
+</svg>
         </div>
         <div class="visual-diagram-caption">
           <strong>Campus Topology:</strong> 78 (5 Suites + Commercial Kitchen + Activity Hall), 80 (3 Suites + Sensory Lounge + Staff Office &amp; Sleep-in), 8 off-street parking spaces (4 on each flank), and shared 100ft therapeutic rear sensory gardens.
@@ -11120,51 +12152,51 @@ cite.ref-title {
       <line x1="60" y1="210" x2="900" y2="210" stroke="#F1F5F9" stroke-width="1"/>
       <line x1="60" y1="275" x2="900" y2="275" stroke="#F1F5F9" stroke-width="1"/>
       <line x1="60" y1="340" x2="900" y2="340" stroke="#CBD5E1" stroke-width="1.5"/>
-      <text x="50" y="84" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8" text-anchor="end">&pound;1.0M</text>
-      <text x="50" y="149" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8" text-anchor="end">&pound;750k</text>
-      <text x="50" y="214" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8" text-anchor="end">&pound;500k</text>
-      <text x="50" y="279" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8" text-anchor="end">&pound;250k</text>
-      <text x="50" y="344" font-family="-apple-system, sans-serif" font-size="9" fill="#94A3B8" text-anchor="end">&pound;0</text>
+      <text x="50" y="84" font-family="-apple-system, sans-serif" font-size="12.5" fill="#94A3B8" text-anchor="end">&pound;1.0M</text>
+      <text x="50" y="149" font-family="-apple-system, sans-serif" font-size="12.5" fill="#94A3B8" text-anchor="end">&pound;750k</text>
+      <text x="50" y="214" font-family="-apple-system, sans-serif" font-size="12.5" fill="#94A3B8" text-anchor="end">&pound;500k</text>
+      <text x="50" y="279" font-family="-apple-system, sans-serif" font-size="12.5" fill="#94A3B8" text-anchor="end">&pound;250k</text>
+      <text x="50" y="344" font-family="-apple-system, sans-serif" font-size="12.5" fill="#94A3B8" text-anchor="end">&pound;0</text>
 
       <rect x="75" y="86" width="115" height="254" rx="6" fill="url(#wfTurnover)"/>
-      <text x="132" y="108" font-family="-apple-system, sans-serif" font-size="10.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">100.0% BASE</text>
+      <text x="132" y="108" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">100.0% BASE</text>
       <text x="132" y="150" font-family="-apple-system, sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle">&pound;977,600</text>
-      <text x="132" y="172" font-family="-apple-system, sans-serif" font-size="10" fill="#BFDBFE" text-anchor="middle">Gross Turnover</text>
-      <text x="132" y="188" font-family="-apple-system, sans-serif" font-size="8.5" fill="#93C5FD" text-anchor="middle">(8 Stabilized Beds)</text>
+      <text x="132" y="172" font-family="-apple-system, sans-serif" font-size="13.5" fill="#BFDBFE" text-anchor="middle">Gross Turnover</text>
+      <text x="132" y="188" font-family="-apple-system, sans-serif" font-size="12.5" fill="#93C5FD" text-anchor="middle">(8 Stabilized Beds)</text>
 
       <line x1="190" y1="86" x2="220" y2="86" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="3,3"/>
 
       <rect x="220" y="86" width="115" height="92" rx="6" fill="url(#wfPayroll)"/>
       <text x="277" y="120" font-family="-apple-system, sans-serif" font-size="13" font-weight="900" fill="#FFFFFF" text-anchor="middle">-&pound;355,108</text>
-      <text x="277" y="138" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#FEE2E2" text-anchor="middle">Care Staff Payroll</text>
-      <text x="277" y="154" font-family="-apple-system, sans-serif" font-size="8.5" fill="#FECACA" text-anchor="middle">36.3% of Rev (10 FTE)</text>
+      <text x="277" y="138" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#FEE2E2" text-anchor="middle">Care Staff Payroll</text>
+      <text x="277" y="154" font-family="-apple-system, sans-serif" font-size="12.5" fill="#FECACA" text-anchor="middle">36.3% of Rev (10 FTE)</text>
 
       <line x1="335" y1="178" x2="365" y2="178" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="3,3"/>
 
       <rect x="365" y="178" width="115" height="26" rx="5" fill="url(#wfRent)"/>
-      <text x="422" y="196" font-family="-apple-system, sans-serif" font-size="11" font-weight="900" fill="#FFFFFF" text-anchor="middle">-&pound;97,000</text>
-      <text x="422" y="226" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#B45309" text-anchor="middle">PropCo Lease Rent</text>
-      <text x="422" y="242" font-family="-apple-system, sans-serif" font-size="8.5" fill="#78350F" text-anchor="middle">9.9% (78 &amp; 80 FRI Lease)</text>
+      <text x="422" y="196" font-family="-apple-system, sans-serif" font-size="14.5" font-weight="900" fill="#FFFFFF" text-anchor="middle">-&pound;97,000</text>
+      <text x="422" y="226" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#B45309" text-anchor="middle">PropCo Lease Rent</text>
+      <text x="422" y="242" font-family="-apple-system, sans-serif" font-size="12.5" fill="#78350F" text-anchor="middle">9.9% (78 &amp; 80 FRI Lease)</text>
 
       <line x1="480" y1="204" x2="510" y2="204" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="3,3"/>
 
       <rect x="510" y="204" width="115" height="48" rx="5" fill="url(#wfOpEx)"/>
-      <text x="567" y="234" font-family="-apple-system, sans-serif" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">-&pound;184,100</text>
-      <text x="567" y="274" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#9D174D" text-anchor="middle">Operating Overheads</text>
-      <text x="567" y="290" font-family="-apple-system, sans-serif" font-size="8.5" fill="#831843" text-anchor="middle">18.8% (Utilities, Food, Ins.)</text>
+      <text x="567" y="234" font-family="-apple-system, sans-serif" font-size="14.5" font-weight="900" fill="#FFFFFF" text-anchor="middle">-&pound;184,100</text>
+      <text x="567" y="274" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="700" fill="#9D174D" text-anchor="middle">Operating Overheads</text>
+      <text x="567" y="290" font-family="-apple-system, sans-serif" font-size="12.5" fill="#831843" text-anchor="middle">18.8% (Utilities, Food, Ins.)</text>
 
       <line x1="625" y1="252" x2="655" y2="252" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="3,3"/>
 
       <rect x="655" y="252" width="115" height="88" rx="6" fill="url(#wfEbitda)"/>
-      <text x="712" y="271" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">34.92% MARGIN</text>
+      <text x="712" y="271" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">34.92% MARGIN</text>
       <text x="712" y="298" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="900" fill="#FFFFFF" text-anchor="middle">+&pound;341,392</text>
-      <text x="712" y="316" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#D1FAE5" text-anchor="middle">OpCo EBITDA</text>
+      <text x="712" y="316" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#D1FAE5" text-anchor="middle">OpCo EBITDA</text>
 
       <rect x="800" y="226" width="115" height="114" rx="6" fill="url(#wfCash)" stroke="#B59020" stroke-width="1.5"/>
-      <text x="857" y="245" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">44.84% COMBINED</text>
+      <text x="857" y="245" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">44.84% COMBINED</text>
       <text x="857" y="276" font-family="-apple-system, sans-serif" font-size="13.5" font-weight="900" fill="#FFFFFF" text-anchor="middle">+&pound;438,392</text>
-      <text x="857" y="294" font-family="-apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Pre-Tax Cashflow</text>
-      <text x="857" y="308" font-family="-apple-system, sans-serif" font-size="8.5" fill="#FDF2E9" text-anchor="middle">OpCo + PropCo Total</text>
+      <text x="857" y="294" font-family="-apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">Pre-Tax Cashflow</text>
+      <text x="857" y="308" font-family="-apple-system, sans-serif" font-size="12.5" fill="#FDF2E9" text-anchor="middle">OpCo + PropCo Total</text>
     </svg>
   </div>
   <figcaption class="figure-caption">
@@ -11486,11 +12518,11 @@ cite.ref-title {
       <line x1="120" y1="135" x2="880" y2="135" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,3"/>
       <line x1="120" y1="60" x2="880" y2="60" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,3"/>
 
-      <text x="105" y="364" font-family="-apple-system, sans-serif" font-size="9.5" fill="#64748B" text-anchor="end">&pound;0</text>
-      <text x="105" y="289" font-family="-apple-system, sans-serif" font-size="9.5" fill="#64748B" text-anchor="end">&pound;250k</text>
-      <text x="105" y="214" font-family="-apple-system, sans-serif" font-size="9.5" fill="#64748B" text-anchor="end">&pound;500k</text>
-      <text x="105" y="139" font-family="-apple-system, sans-serif" font-size="9.5" fill="#64748B" text-anchor="end">&pound;750k</text>
-      <text x="105" y="64" font-family="-apple-system, sans-serif" font-size="9.5" fill="#64748B" text-anchor="end">&pound;1.0M</text>
+      <text x="105" y="364" font-family="-apple-system, sans-serif" font-size="13" fill="#64748B" text-anchor="end">&pound;0</text>
+      <text x="105" y="289" font-family="-apple-system, sans-serif" font-size="13" fill="#64748B" text-anchor="end">&pound;250k</text>
+      <text x="105" y="214" font-family="-apple-system, sans-serif" font-size="13" fill="#64748B" text-anchor="end">&pound;500k</text>
+      <text x="105" y="139" font-family="-apple-system, sans-serif" font-size="13" fill="#64748B" text-anchor="end">&pound;750k</text>
+      <text x="105" y="64" font-family="-apple-system, sans-serif" font-size="13" fill="#64748B" text-anchor="end">&pound;1.0M</text>
 
       <!-- Revenue Curve (Green) -->
       <line x1="120" y1="360" x2="880" y2="67" stroke="#10B981" stroke-width="3"/>
@@ -11500,7 +12532,7 @@ cite.ref-title {
       <!-- Break Even Vertical Marker -->
       <line x1="483" y1="60" x2="483" y2="360" stroke="#C29B38" stroke-width="2.5" stroke-dasharray="4,4"/>
       <circle cx="483" cy="220" r="7" fill="#C29B38"/>
-      <text x="483" y="45" font-family="-apple-system, sans-serif" font-size="11" font-weight="900" fill="#9A751E" text-anchor="middle">BREAK-EVEN: 3.82 BEDS (47.7% OCCUPANCY)</text>
+      <text x="483" y="45" font-family="-apple-system, sans-serif" font-size="14.5" font-weight="900" fill="#9A751E" text-anchor="middle">BREAK-EVEN: 3.82 BEDS (47.7% OCCUPANCY)</text>
     </svg>
   </div>
   <figcaption class="figure-caption">
@@ -11510,44 +12542,289 @@ cite.ref-title {
 </figure>
 
                 <!-- INTERACTIVE CALCULATOR -->
-          <div class="card">
-            <h3 class="card-title">Dynamic Placement Fee & Bed Occupancy Simulator</h3>
-            <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 14px;">
-              Drag the sliders below to calculate projected turnover, operating EBITDA, and group cashflow in real time:
-            </p>
-
-            <div class="calc-card">
-              <div class="calc-row">
-                <span class="calc-label">Weekly Fee per Bed (£):</span>
-                <input type="range" id="fee-slider" class="calc-slider" min="1800" max="3500" step="50" value="2350" oninput="updateCalculator()">
-                <span id="fee-val" class="calc-val-box">£2,350</span>
+          
+          <!-- =========================================================================
+               1. ADVANCED DYNAMIC PLACEMENT FEE & BED OCCUPANCY SIMULATOR
+               ========================================================================= -->
+          <div class="card" id="sec-fin-simulator" style="border: 2px solid #2563EB; box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08); margin-bottom: 36px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+              <div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="badge" style="background:#2563EB; color:#FFFFFF; font-weight:800; font-size:12px;">SIMULATOR 01 // REVENUE ENGINE</span>
+                  <h3 class="card-title" style="margin: 0; font-size: 22px;">Dynamic Placement Fee &amp; Bed Occupancy Simulator</h3>
+                </div>
+                <p style="font-size: 14.5px; color: var(--text-muted, #475569); margin-top: 6px;">
+                  Adjust placement variables below to stress-test weekly fee compositions, occupancy thresholds, and annualized gross turnover:
+                </p>
               </div>
-              <div class="calc-row">
-                <span class="calc-label">Occupied Beds (Capacity 8):</span>
-                <input type="range" id="beds-slider" class="calc-slider" min="1" max="8" step="1" value="8" oninput="updateCalculator()">
-                <span id="beds-val" class="calc-val-box">8 Beds</span>
+              <span class="badge" style="background: #ECFDF5; color: #047857; border: 1px solid #10B981; font-weight: 700; font-size: 13px; padding: 6px 12px;">
+                Campus Capacity: 8 Beds
+              </span>
+            </div>
+
+            <div class="calc-card" style="background: #FAFAFC; border: 1.5px solid #E2E8F0; border-radius: 10px; padding: 22px;">
+              <!-- Row 1: Bed Occupancy -->
+              <div class="calc-row" style="margin-bottom: 18px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1.2; min-width: 220px;">
+                  <label for="beds-slider" style="display: block; font-weight: 700; font-size: 14.5px; color: #0F1E36;">
+                    1. Occupied Campus Beds (1 to 8):
+                  </label>
+                  <span style="font-size: 12px; color: #64748B;">78 Marston Gdns (5 beds) + 80 Marston Gdns (3 beds)</span>
+                </div>
+                <input type="range" id="beds-slider" class="calc-slider" min="1" max="8" step="1" value="8" oninput="updateSimulators()" style="flex: 2; margin: 0 16px;">
+                <span id="beds-val" class="calc-val-box" style="font-weight: 800; font-size: 16px; min-width: 125px; text-align: center; background: #2563EB; color: #FFF; padding: 6px 14px; border-radius: 6px;">8 Beds (100%)</span>
               </div>
 
-              <div class="calc-results-grid">
-                <div class="calc-res-item">
-                  <div class="calc-res-label">Weekly Gross Income</div>
-                  <div id="calc-weekly" class="calc-res-val">£18,800</div>
+              <!-- Row 2: Core Care Fee -->
+              <div class="calc-row" style="margin-bottom: 18px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1.2; min-width: 220px;">
+                  <label for="core-fee-slider" style="display: block; font-weight: 700; font-size: 14.5px; color: #0F1E36;">
+                    2. Core Care Weekly Fee (£ / res / wk):
+                  </label>
+                  <span style="font-size: 12px; color: #64748B;">Luton Council / NHS BLMK ICB standard core care fee</span>
                 </div>
-                <div class="calc-res-item">
-                  <div class="calc-res-label">Annual Turnover</div>
-                  <div id="calc-annual" class="calc-res-val">£977,600</div>
+                <input type="range" id="core-fee-slider" class="calc-slider" min="800" max="1800" step="25" value="1100" oninput="updateSimulators()" style="flex: 2; margin: 0 16px;">
+                <span id="core-fee-val" class="calc-val-box" style="font-weight: 800; font-size: 16px; min-width: 125px; text-align: center; background: #0F1E36; color: #FFF; padding: 6px 14px; border-radius: 6px;">£1,100 / wk</span>
+              </div>
+
+              <!-- Row 3: Commissioned 1:1 Care Hours -->
+              <div class="calc-row" style="margin-bottom: 18px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1.2; min-width: 220px;">
+                  <label for="hours-1to1-slider" style="display: block; font-weight: 700; font-size: 14.5px; color: #0F1E36;">
+                    3. Commissioned 1:1 Hours (hrs / res / wk):
+                  </label>
+                  <span style="font-size: 12px; color: #64748B;">Complex autism / PBS assessed 1:1 care hours</span>
                 </div>
-                <div class="calc-res-item">
-                  <div class="calc-res-label">Operating EBITDA</div>
-                  <div id="calc-ebitda" class="calc-res-val">£355,600</div>
+                <input type="range" id="hours-1to1-slider" class="calc-slider" min="0" max="60" step="1" value="35" oninput="updateSimulators()" style="flex: 2; margin: 0 16px;">
+                <span id="hours-1to1-val" class="calc-val-box" style="font-weight: 800; font-size: 16px; min-width: 125px; text-align: center; background: #0F1E36; color: #FFF; padding: 6px 14px; border-radius: 6px;">35 hrs / wk</span>
+              </div>
+
+              <!-- Row 4: 1:1 Hourly Billing Rate -->
+              <div class="calc-row" style="margin-bottom: 18px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1.2; min-width: 220px;">
+                  <label for="rate-1to1-slider" style="display: block; font-weight: 700; font-size: 14.5px; color: #0F1E36;">
+                    4. 1:1 Hourly Billing Rate (£ / hr):
+                  </label>
+                  <span style="font-size: 12px; color: #64748B;">Luton DPS AT1115 contracted 1:1 hourly rate</span>
                 </div>
-                <div class="calc-res-item">
-                  <div class="calc-res-label">Total Group Cashflow</div>
-                  <div id="calc-group-cash" class="calc-res-val">£452,600</div>
+                <input type="range" id="rate-1to1-slider" class="calc-slider" min="20.00" max="35.00" step="0.50" value="25.71" oninput="updateSimulators()" style="flex: 2; margin: 0 16px;">
+                <span id="rate-1to1-val" class="calc-val-box" style="font-weight: 800; font-size: 16px; min-width: 125px; text-align: center; background: #0F1E36; color: #FFF; padding: 6px 14px; border-radius: 6px;">£25.71 / hr</span>
+              </div>
+
+              <!-- Row 5: Supported Exempt Housing Benefit -->
+              <div class="calc-row" style="margin-bottom: 22px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1.2; min-width: 220px;">
+                  <label for="hb-slider" style="display: block; font-weight: 700; font-size: 14.5px; color: #0F1E36;">
+                    5. Exempt Accommodation Housing Benefit (£ / res / wk):
+                  </label>
+                  <span style="font-size: 12px; color: #64748B;">Paid under Housing Benefit Regulations 2006 Reg 14(f)</span>
+                </div>
+                <input type="range" id="hb-slider" class="calc-slider" min="250" max="450" step="10" value="350" oninput="updateSimulators()" style="flex: 2; margin: 0 16px;">
+                <span id="hb-val" class="calc-val-box" style="font-weight: 800; font-size: 16px; min-width: 125px; text-align: center; background: #0F1E36; color: #FFF; padding: 6px 14px; border-radius: 6px;">£350 / wk</span>
+              </div>
+
+              <!-- Dynamic Output KPI Cards -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-top: 10px;">
+                <div style="background: #FFFFFF; border: 1.5px solid #CBD5E1; border-radius: 8px; padding: 14px; text-align: center;">
+                  <div style="font-size: 12px; font-weight: 700; color: #64748B; text-transform: uppercase;">Weekly Fee / Bed</div>
+                  <div id="sim-fee-per-bed" style="font-size: 24px; font-weight: 900; color: #0F1E36; margin-top: 4px;">£2,350</div>
+                  <div id="sim-fee-breakdown" style="font-size: 11px; color: #475569; margin-top: 2px;">£1,100 + £900 + £350</div>
+                </div>
+                <div style="background: #FFFFFF; border: 1.5px solid #CBD5E1; border-radius: 8px; padding: 14px; text-align: center;">
+                  <div style="font-size: 12px; font-weight: 700; color: #64748B; text-transform: uppercase;">Weekly Campus Gross</div>
+                  <div id="sim-weekly-rev" style="font-size: 24px; font-weight: 900; color: #2563EB; margin-top: 4px;">£18,800</div>
+                  <div id="sim-weekly-sub" style="font-size: 11px; color: #475569; margin-top: 2px;">8 Beds Active (100% Cap)</div>
+                </div>
+                <div style="background: #FFFFFF; border: 1.5px solid #CBD5E1; border-radius: 8px; padding: 14px; text-align: center;">
+                  <div style="font-size: 12px; font-weight: 700; color: #64748B; text-transform: uppercase;">Monthly Campus Gross</div>
+                  <div id="sim-monthly-rev" style="font-size: 24px; font-weight: 900; color: #047857; margin-top: 4px;">£81,467</div>
+                  <div style="font-size: 11px; color: #475569; margin-top: 2px;">52 Weeks &divide; 12 Months</div>
+                </div>
+                <div style="background: #FFFFFF; border: 1.5px solid #CBD5E1; border-radius: 8px; padding: 14px; text-align: center;">
+                  <div style="font-size: 12px; font-weight: 700; color: #64748B; text-transform: uppercase;">Annualized Turnover</div>
+                  <div id="sim-annual-rev" style="font-size: 24px; font-weight: 900; color: #D97706; margin-top: 4px;">£977,600</div>
+                  <div id="sim-annual-sub" style="font-size: 11px; color: #475569; margin-top: 2px;">100% Stabilized Run-Rate</div>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- =========================================================================
+               2. ITEMIZED MONTHLY RUNNING COST MODEL BY CATEGORY (OPEX BREAKDOWN) SIMULATOR
+               ========================================================================= -->
+          <div class="card" id="sec-fin-opex-simulator" style="border: 2px solid #059669; box-shadow: 0 4px 20px rgba(5, 150, 105, 0.08); margin-bottom: 36px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+              <div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="badge" style="background:#059669; color:#FFFFFF; font-weight:800; font-size:12px;">SIMULATOR 02 // COST &amp; PROFIT ENGINE</span>
+                  <h3 class="card-title" style="margin: 0; font-size: 22px;">Itemized Monthly Running Cost Model by Category (OpEx Breakdown)</h3>
+                </div>
+                <p style="font-size: 14.5px; color: var(--text-muted, #475569); margin-top: 6px;">
+                  Adjust each monthly cost category slider to calculate live operating expenses, OpCo EBITDA profit, PropCo rental income, and consolidated group cashflow:
+                </p>
+              </div>
+              <button type="button" onclick="resetToBoardroomBaseline()" style="background: #FFFFFF; border: 1.5px solid #059669; color: #059669; font-weight: 700; font-size: 13px; padding: 8px 16px; border-radius: 6px; cursor: pointer; transition: all 0.2s;">
+                ↺ Reset to Boardroom Baseline
+              </button>
+            </div>
+
+            <div class="calc-card" style="background: #FAFAFC; border: 1.5px solid #E2E8F0; border-radius: 10px; padding: 22px;">
+              <!-- 7 Itemized Category Sliders -->
+              <!-- Cat 1: Care Payroll -->
+              <div class="calc-row" style="margin-bottom: 16px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1.2; min-width: 220px;">
+                  <label for="cat1-slider" style="display: block; font-weight: 700; font-size: 14px; color: #0F1E36;">
+                    1. Direct Care Staffing &amp; Payroll:
+                  </label>
+                  <span style="font-size: 11.5px; color: #64748B;">10.0 FTE Staff, Autumn 2024 NI (£5k threshold @ 15%), Pension, Holiday &amp; Agency buffer</span>
+                </div>
+                <input type="range" id="cat1-slider" class="calc-slider" min="20000" max="45000" step="250" value="29592" oninput="updateSimulators()" style="flex: 2; margin: 0 16px;">
+                <span id="cat1-val" class="calc-val-box" style="font-weight: 800; font-size: 15px; min-width: 120px; text-align: center; background: #0F1E36; color: #FFF; padding: 6px 12px; border-radius: 6px;">£29,592 / mo</span>
+              </div>
+
+              <!-- Cat 2: Leases -->
+              <div class="calc-row" style="margin-bottom: 16px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1.2; min-width: 220px;">
+                  <label for="cat2-slider" style="display: block; font-weight: 700; font-size: 14px; color: #0F1E36;">
+                    2. Property Commercial FRI Leases:
+                  </label>
+                  <span style="font-size: 11.5px; color: #64748B;">78 Marston Gdns (£5,417/mo) + 80 Marston Gdns (£2,667/mo) paid to PropCo</span>
+                </div>
+                <input type="range" id="cat2-slider" class="calc-slider" min="5000" max="14000" step="250" value="8083" oninput="updateSimulators()" style="flex: 2; margin: 0 16px;">
+                <span id="cat2-val" class="calc-val-box" style="font-weight: 800; font-size: 15px; min-width: 120px; text-align: center; background: #0F1E36; color: #FFF; padding: 6px 12px; border-radius: 6px;">£8,083 / mo</span>
+              </div>
+
+              <!-- Cat 3: Utilities -->
+              <div class="calc-row" style="margin-bottom: 16px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1.2; min-width: 220px;">
+                  <label for="cat3-slider" style="display: block; font-weight: 700; font-size: 14px; color: #0F1E36;">
+                    3. Utilities &amp; Overheads:
+                  </label>
+                  <span style="font-size: 11.5px; color: #64748B;">Commercial dual-fuel gas/electricity, water rates, HTM 07-01 waste, telecare</span>
+                </div>
+                <input type="range" id="cat3-slider" class="calc-slider" min="2500" max="7000" step="100" value="4017" oninput="updateSimulators()" style="flex: 2; margin: 0 16px;">
+                <span id="cat3-val" class="calc-val-box" style="font-weight: 800; font-size: 15px; min-width: 120px; text-align: center; background: #0F1E36; color: #FFF; padding: 6px 12px; border-radius: 6px;">£4,017 / mo</span>
+              </div>
+
+              <!-- Cat 4: Provisions -->
+              <div class="calc-row" style="margin-bottom: 16px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1.2; min-width: 220px;">
+                  <label for="cat4-slider" style="display: block; font-weight: 700; font-size: 14px; color: #0F1E36;">
+                    4. Resident Provisions &amp; Housekeeping:
+                  </label>
+                  <span style="font-size: 11.5px; color: #64748B;">Fresh nutrition (£59.60/res/wk), PPE, COSHH infection control chemicals</span>
+                </div>
+                <input type="range" id="cat4-slider" class="calc-slider" min="1200" max="4500" step="100" value="2067" oninput="updateSimulators()" style="flex: 2; margin: 0 16px;">
+                <span id="cat4-val" class="calc-val-box" style="font-weight: 800; font-size: 15px; min-width: 120px; text-align: center; background: #0F1E36; color: #FFF; padding: 6px 12px; border-radius: 6px;">£2,067 / mo</span>
+              </div>
+
+              <!-- Cat 5: Regulatory & Insurance -->
+              <div class="calc-row" style="margin-bottom: 16px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1.2; min-width: 220px;">
+                  <label for="cat5-slider" style="display: block; font-weight: 700; font-size: 14px; color: #0F1E36;">
+                    5. Regulatory Fees, £10M Insurance &amp; Legal:
+                  </label>
+                  <span style="font-size: 11.5px; color: #64748B;">CQC provider fees, Medical Malpractice/Public Liability, Citation retained legal</span>
+                </div>
+                <input type="range" id="cat5-slider" class="calc-slider" min="1000" max="3500" step="50" value="1550" oninput="updateSimulators()" style="flex: 2; margin: 0 16px;">
+                <span id="cat5-val" class="calc-val-box" style="font-weight: 800; font-size: 15px; min-width: 120px; text-align: center; background: #0F1E36; color: #FFF; padding: 6px 12px; border-radius: 6px;">£1,550 / mo</span>
+              </div>
+
+              <!-- Cat 6: Digital & Training -->
+              <div class="calc-row" style="margin-bottom: 16px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1.2; min-width: 220px;">
+                  <label for="cat6-slider" style="display: block; font-weight: 700; font-size: 14px; color: #0F1E36;">
+                    6. Digital Systems &amp; Mandatory Training:
+                  </label>
+                  <span style="font-size: 11.5px; color: #64748B;">Nourish e-MAR digital care suite, Oliver McGowan Autism training, PMVA certification</span>
+                </div>
+                <input type="range" id="cat6-slider" class="calc-slider" min="1000" max="3500" step="50" value="1875" oninput="updateSimulators()" style="flex: 2; margin: 0 16px;">
+                <span id="cat6-val" class="calc-val-box" style="font-weight: 800; font-size: 15px; min-width: 120px; text-align: center; background: #0F1E36; color: #FFF; padding: 6px 12px; border-radius: 6px;">£1,875 / mo</span>
+              </div>
+
+              <!-- Cat 7: Sinking Fund -->
+              <div class="calc-row" style="margin-bottom: 22px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1.2; min-width: 220px;">
+                  <label for="cat7-slider" style="display: block; font-weight: 700; font-size: 14px; color: #0F1E36;">
+                    7. Sinking Fund &amp; Contingency Reserve:
+                  </label>
+                  <span style="font-size: 11.5px; color: #64748B;">Reactive building fabric repair fund (£1,667/mo) + Working capital buffer (£4,167/mo)</span>
+                </div>
+                <input type="range" id="cat7-slider" class="calc-slider" min="2000" max="12000" step="250" value="5833" oninput="updateSimulators()" style="flex: 2; margin: 0 16px;">
+                <span id="cat7-val" class="calc-val-box" style="font-weight: 800; font-size: 15px; min-width: 120px; text-align: center; background: #0F1E36; color: #FFF; padding: 6px 12px; border-radius: 6px;">£5,833 / mo</span>
+              </div>
+
+              <!-- Segmented Visual Proportion Bar -->
+              <div style="margin: 22px 0 16px 0;">
+                <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; color: #64748B; margin-bottom: 6px;">
+                  <span>MONTHLY OPEX DISTRIBUTION BY CATEGORY</span>
+                  <span id="sim-opex-bar-label">Total Monthly OpEx: £53,017 / mo</span>
+                </div>
+                <div style="height: 18px; width: 100%; border-radius: 9px; overflow: hidden; display: flex; background: #E2E8F0;">
+                  <div id="bar-cat1" title="Care Payroll" style="width: 55.8%; background: #DC2626;"></div>
+                  <div id="bar-cat2" title="Commercial Leases" style="width: 15.2%; background: #F59E0B;"></div>
+                  <div id="bar-cat3" title="Utilities" style="width: 7.6%; background: #3B82F6;"></div>
+                  <div id="bar-cat4" title="Provisions" style="width: 3.9%; background: #10B981;"></div>
+                  <div id="bar-cat5" title="Regulatory/Insurance" style="width: 2.9%; background: #8B5CF6;"></div>
+                  <div id="bar-cat6" title="Digital/Training" style="width: 3.5%; background: #EC4899;"></div>
+                  <div id="bar-cat7" title="Sinking Fund" style="width: 11.0%; background: #64748B;"></div>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px; font-size: 11px; color: #475569; margin-top: 8px;">
+                  <span><span style="display:inline-block;width:10px;height:10px;background:#DC2626;border-radius:2px;margin-right:4px;"></span>Payroll: <strong id="pct-cat1">55.8%</strong></span>
+                  <span><span style="display:inline-block;width:10px;height:10px;background:#F59E0B;border-radius:2px;margin-right:4px;"></span>Leases: <strong id="pct-cat2">15.2%</strong></span>
+                  <span><span style="display:inline-block;width:10px;height:10px;background:#3B82F6;border-radius:2px;margin-right:4px;"></span>Utilities: <strong id="pct-cat3">7.6%</strong></span>
+                  <span><span style="display:inline-block;width:10px;height:10px;background:#10B981;border-radius:2px;margin-right:4px;"></span>Provisions: <strong id="pct-cat4">3.9%</strong></span>
+                  <span><span style="display:inline-block;width:10px;height:10px;background:#8B5CF6;border-radius:2px;margin-right:4px;"></span>Regulatory: <strong id="pct-cat5">2.9%</strong></span>
+                  <span><span style="display:inline-block;width:10px;height:10px;background:#EC4899;border-radius:2px;margin-right:4px;"></span>Digital: <strong id="pct-cat6">3.5%</strong></span>
+                  <span><span style="display:inline-block;width:10px;height:10px;background:#64748B;border-radius:2px;margin-right:4px;"></span>Sinking Fund: <strong id="pct-cat7">11.0%</strong></span>
+                </div>
+              </div>
+
+              <!-- Live Performance & Profit Dashboard -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-top: 18px;">
+                <!-- Total Monthly OpEx -->
+                <div style="background: #FFFFFF; border: 1.5px solid #CBD5E1; border-radius: 8px; padding: 14px; text-align: center;">
+                  <div style="font-size: 12px; font-weight: 700; color: #64748B; text-transform: uppercase;">Total Monthly OpEx</div>
+                  <div id="sim-monthly-opex" style="font-size: 24px; font-weight: 900; color: #DC2626; margin-top: 4px;">£53,017</div>
+                  <div id="sim-annual-opex" style="font-size: 11px; color: #475569; margin-top: 2px;">£636,204 / Year</div>
+                </div>
+
+                <!-- Monthly OpCo EBITDA -->
+                <div style="background: #FFFFFF; border: 2px solid #10B981; border-radius: 8px; padding: 14px; text-align: center; background: #F0FDF4;">
+                  <div style="font-size: 12px; font-weight: 700; color: #047857; text-transform: uppercase;">Monthly OpCo EBITDA</div>
+                  <div id="sim-monthly-ebitda" style="font-size: 24px; font-weight: 900; color: #047857; margin-top: 4px;">+£28,450</div>
+                  <div id="sim-annual-ebitda" style="font-size: 11px; font-weight: 700; color: #065F46; margin-top: 2px;">£341,396 / Year (34.9%)</div>
+                </div>
+
+                <!-- PropCo Rent -->
+                <div style="background: #FFFFFF; border: 1.5px solid #CBD5E1; border-radius: 8px; padding: 14px; text-align: center;">
+                  <div style="font-size: 12px; font-weight: 700; color: #64748B; text-transform: uppercase;">PropCo Monthly Rent</div>
+                  <div id="sim-propco-rent" style="font-size: 24px; font-weight: 900; color: #0F1E36; margin-top: 4px;">£8,083</div>
+                  <div style="font-size: 11px; color: #475569; margin-top: 2px;">£97,000 / Year (Tax-deductible)</div>
+                </div>
+
+                <!-- Consolidated Cashflow -->
+                <div style="background: #FFFFFF; border: 2px solid #D97706; border-radius: 8px; padding: 14px; text-align: center; background: #FFFBEB;">
+                  <div style="font-size: 12px; font-weight: 700; color: #92400E; text-transform: uppercase;">Consolidated Net Cashflow</div>
+                  <div id="sim-group-cashflow" style="font-size: 24px; font-weight: 900; color: #B45309; margin-top: 4px;">+£36,533</div>
+                  <div id="sim-group-annual" style="font-size: 11px; font-weight: 700; color: #78350F; margin-top: 2px;">£438,396 / Year Total</div>
+                </div>
+              </div>
+
+              <!-- Live Solvency & Break-Even Metric Callout -->
+              <div style="margin-top: 18px; padding: 14px 18px; background: #FFFFFF; border: 1.5px solid #CBD5E1; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <span style="font-size: 13px; font-weight: 800; color: #0F1E36;">DYNAMIC BREAK-EVEN OCCUPANCY:</span>
+                  <span id="sim-breakeven-beds" style="font-size: 16px; font-weight: 900; color: #2563EB; margin-left: 8px;">3.82 Beds (47.7% Occupancy)</span>
+                  <span style="font-size: 12px; color: #64748B; margin-left: 8px;">(Margin of Safety: <strong id="sim-margin-safety" style="color:#047857;">+52.3%</strong>)</span>
+                </div>
+                <div id="sim-status-badge" style="background: #D1FAE5; color: #065F46; font-size: 12px; font-weight: 800; padding: 6px 14px; border-radius: 20px; border: 1px solid #10B981;">
+                  ● SOLVENT: 34.9% EBITDA MARGIN
+                </div>
+              </div>
+            </div>
+          </div>
+
 
           <div class="card">
             <h3 class="card-title">3-Year Operating Waterfall Statement</h3>
@@ -14689,42 +15966,179 @@ cite.ref-title {
     }
 
     // 7. INTERACTIVE CALCULATOR
-    function updateCalculator() {
-      const feeSlider = document.getElementById("fee-slider");
-      const bedsSlider = document.getElementById("beds-slider");
-      if (!feeSlider || !bedsSlider) return;
+    
+    // =========================================================================
+    // DYNAMIC FINANCIAL & ITEMIZED OPEX SIMULATOR ENGINE (LINKED REAL-TIME MODEL)
+    // =========================================================================
+    function updateSimulators() {
+      // 1. Placement Fee & Revenue Variables
+      const beds = parseInt(document.getElementById("beds-slider")?.value || 8);
+      const coreFee = parseFloat(document.getElementById("core-fee-slider")?.value || 1100);
+      const hours1to1 = parseFloat(document.getElementById("hours-1to1-slider")?.value || 35);
+      const rate1to1 = parseFloat(document.getElementById("rate-1to1-slider")?.value || 25.71);
+      const hbFee = parseFloat(document.getElementById("hb-slider")?.value || 350);
 
-      const fee = parseInt(feeSlider.value);
-      const beds = parseInt(bedsSlider.value);
-
-      const feeVal = document.getElementById("fee-val");
+      // Display inputs
       const bedsVal = document.getElementById("beds-val");
-      if (feeVal) feeVal.innerText = "£" + fee.toLocaleString();
-      if (bedsVal) bedsVal.innerText = beds + " Beds";
+      if (bedsVal) bedsVal.innerText = beds + " Beds (" + ((beds / 8) * 100).toFixed(0) + "%)";
+      const coreVal = document.getElementById("core-fee-val");
+      if (coreVal) coreVal.innerText = "£" + Math.round(coreFee).toLocaleString() + " / wk";
+      const hoursVal = document.getElementById("hours-1to1-val");
+      if (hoursVal) hoursVal.innerText = hours1to1 + " hrs / wk";
+      const rateVal = document.getElementById("rate-1to1-val");
+      if (rateVal) rateVal.innerText = "£" + rate1to1.toFixed(2) + " / hr";
+      const hbVal = document.getElementById("hb-val");
+      if (hbVal) hbVal.innerText = "£" + Math.round(hbFee).toLocaleString() + " / wk";
 
-      const weeklyGross = fee * beds;
-      const annualGross = weeklyGross * 52;
+      // Revenue Calculations
+      const weekly1to1 = hours1to1 * rate1to1;
+      const weeklyPerBed = coreFee + weekly1to1 + hbFee;
+      const weeklyCampusRev = weeklyPerBed * beds;
+      const monthlyCampusRev = (weeklyCampusRev * 52) / 12;
+      const annualRev = weeklyCampusRev * 52;
 
-      const elWeekly = document.getElementById("calc-gross-weekly");
-      const elAnnual = document.getElementById("calc-gross-annual");
-      if (elWeekly) elWeekly.innerText = "£" + weeklyGross.toLocaleString();
-      if (elAnnual) elAnnual.innerText = "£" + annualGross.toLocaleString();
+      document.getElementById("sim-fee-per-bed") && (document.getElementById("sim-fee-per-bed").innerText = "£" + Math.round(weeklyPerBed).toLocaleString());
+      document.getElementById("sim-fee-breakdown") && (document.getElementById("sim-fee-breakdown").innerText = "£" + Math.round(coreFee).toLocaleString() + " + £" + Math.round(weekly1to1).toLocaleString() + " + £" + Math.round(hbFee).toLocaleString());
+      document.getElementById("sim-weekly-rev") && (document.getElementById("sim-weekly-rev").innerText = "£" + Math.round(weeklyCampusRev).toLocaleString());
+      document.getElementById("sim-weekly-sub") && (document.getElementById("sim-weekly-sub").innerText = beds + " Beds Active (" + ((beds / 8) * 100).toFixed(0) + "% Cap)");
+      document.getElementById("sim-monthly-rev") && (document.getElementById("sim-monthly-rev").innerText = "£" + Math.round(monthlyCampusRev).toLocaleString());
+      document.getElementById("sim-annual-rev") && (document.getElementById("sim-annual-rev").innerText = "£" + Math.round(annualRev).toLocaleString());
 
-      const staffCost = beds * 44388;
-      const opexFixed = 184100;
-      const totalOpEx = staffCost + opexFixed;
-      const ebitda = annualGross - totalOpEx;
-      const margin = annualGross > 0 ? ((ebitda / annualGross) * 100).toFixed(1) : 0;
+      // 2. Itemized Monthly OpEx Variables
+      const cat1 = parseFloat(document.getElementById("cat1-slider")?.value || 29592);
+      const cat2 = parseFloat(document.getElementById("cat2-slider")?.value || 8083);
+      const cat3 = parseFloat(document.getElementById("cat3-slider")?.value || 4017);
+      const cat4 = parseFloat(document.getElementById("cat4-slider")?.value || 2067);
+      const cat5 = parseFloat(document.getElementById("cat5-slider")?.value || 1550);
+      const cat6 = parseFloat(document.getElementById("cat6-slider")?.value || 1875);
+      const cat7 = parseFloat(document.getElementById("cat7-slider")?.value || 5833);
 
-      const elEbitda = document.getElementById("calc-ebitda");
-      const elMargin = document.getElementById("calc-margin");
-      if (elEbitda) elEbitda.innerText = "£" + Math.round(ebitda).toLocaleString();
-      if (elMargin) elMargin.innerText = margin + "%";
+      // Display OpEx inputs
+      document.getElementById("cat1-val") && (document.getElementById("cat1-val").innerText = "£" + Math.round(cat1).toLocaleString() + " / mo");
+      document.getElementById("cat2-val") && (document.getElementById("cat2-val").innerText = "£" + Math.round(cat2).toLocaleString() + " / mo");
+      document.getElementById("cat3-val") && (document.getElementById("cat3-val").innerText = "£" + Math.round(cat3).toLocaleString() + " / mo");
+      document.getElementById("cat4-val") && (document.getElementById("cat4-val").innerText = "£" + Math.round(cat4).toLocaleString() + " / mo");
+      document.getElementById("cat5-val") && (document.getElementById("cat5-val").innerText = "£" + Math.round(cat5).toLocaleString() + " / mo");
+      document.getElementById("cat6-val") && (document.getElementById("cat6-val").innerText = "£" + Math.round(cat6).toLocaleString() + " / mo");
+      document.getElementById("cat7-val") && (document.getElementById("cat7-val").innerText = "£" + Math.round(cat7).toLocaleString() + " / mo");
 
-      try {
-        localStorage.setItem("adov_calc_fee", fee);
-        localStorage.setItem("adov_calc_beds", beds);
-      } catch (e) {}
+      // Calculations OpEx & Profit
+      const totalMonthlyOpEx = cat1 + cat2 + cat3 + cat4 + cat5 + cat6 + cat7;
+      const totalAnnualOpEx = totalMonthlyOpEx * 12;
+
+      const monthlyEbitda = monthlyCampusRev - totalMonthlyOpEx;
+      const annualEbitda = monthlyEbitda * 12;
+      const ebitdaMargin = annualRev > 0 ? ((annualEbitda / annualRev) * 100).toFixed(1) : 0;
+
+      const propCoRent = cat2;
+      const groupMonthlyCash = monthlyEbitda + propCoRent;
+      const groupAnnualCash = groupMonthlyCash * 12;
+
+      // Segmented Bar Percentages
+      const p1 = ((cat1 / totalMonthlyOpEx) * 100).toFixed(1);
+      const p2 = ((cat2 / totalMonthlyOpEx) * 100).toFixed(1);
+      const p3 = ((cat3 / totalMonthlyOpEx) * 100).toFixed(1);
+      const p4 = ((cat4 / totalMonthlyOpEx) * 100).toFixed(1);
+      const p5 = ((cat5 / totalMonthlyOpEx) * 100).toFixed(1);
+      const p6 = ((cat6 / totalMonthlyOpEx) * 100).toFixed(1);
+      const p7 = ((cat7 / totalMonthlyOpEx) * 100).toFixed(1);
+
+      document.getElementById("bar-cat1") && (document.getElementById("bar-cat1").style.width = p1 + "%");
+      document.getElementById("bar-cat2") && (document.getElementById("bar-cat2").style.width = p2 + "%");
+      document.getElementById("bar-cat3") && (document.getElementById("bar-cat3").style.width = p3 + "%");
+      document.getElementById("bar-cat4") && (document.getElementById("bar-cat4").style.width = p4 + "%");
+      document.getElementById("bar-cat5") && (document.getElementById("bar-cat5").style.width = p5 + "%");
+      document.getElementById("bar-cat6") && (document.getElementById("bar-cat6").style.width = p6 + "%");
+      document.getElementById("bar-cat7") && (document.getElementById("bar-cat7").style.width = p7 + "%");
+
+      document.getElementById("pct-cat1") && (document.getElementById("pct-cat1").innerText = p1 + "%");
+      document.getElementById("pct-cat2") && (document.getElementById("pct-cat2").innerText = p2 + "%");
+      document.getElementById("pct-cat3") && (document.getElementById("pct-cat3").innerText = p3 + "%");
+      document.getElementById("pct-cat4") && (document.getElementById("pct-cat4").innerText = p4 + "%");
+      document.getElementById("pct-cat5") && (document.getElementById("pct-cat5").innerText = p5 + "%");
+      document.getElementById("pct-cat6") && (document.getElementById("pct-cat6").innerText = p6 + "%");
+      document.getElementById("pct-cat7") && (document.getElementById("pct-cat7").innerText = p7 + "%");
+      document.getElementById("sim-opex-bar-label") && (document.getElementById("sim-opex-bar-label").innerText = "Total Monthly OpEx: £" + Math.round(totalMonthlyOpEx).toLocaleString() + " / mo");
+
+      // Outputs
+      document.getElementById("sim-monthly-opex") && (document.getElementById("sim-monthly-opex").innerText = "£" + Math.round(totalMonthlyOpEx).toLocaleString());
+      document.getElementById("sim-annual-opex") && (document.getElementById("sim-annual-opex").innerText = "£" + Math.round(totalAnnualOpEx).toLocaleString() + " / Year");
+
+      const elEbitda = document.getElementById("sim-monthly-ebitda");
+      if (elEbitda) {
+        elEbitda.innerText = (monthlyEbitda >= 0 ? "+£" : "-£") + Math.abs(Math.round(monthlyEbitda)).toLocaleString();
+        elEbitda.style.color = monthlyEbitda >= 0 ? "#047857" : "#DC2626";
+      }
+      const elAnnualEbitda = document.getElementById("sim-annual-ebitda");
+      if (elAnnualEbitda) {
+        elAnnualEbitda.innerText = (annualEbitda >= 0 ? "£" : "-£") + Math.abs(Math.round(annualEbitda)).toLocaleString() + " / Year (" + ebitdaMargin + "%)";
+      }
+
+      document.getElementById("sim-propco-rent") && (document.getElementById("sim-propco-rent").innerText = "£" + Math.round(propCoRent).toLocaleString());
+
+      const elGroupCash = document.getElementById("sim-group-cashflow");
+      if (elGroupCash) {
+        elGroupCash.innerText = (groupMonthlyCash >= 0 ? "+£" : "-£") + Math.abs(Math.round(groupMonthlyCash)).toLocaleString();
+        elGroupCash.style.color = groupMonthlyCash >= 0 ? "#B45309" : "#DC2626";
+      }
+      document.getElementById("sim-group-annual") && (document.getElementById("sim-group-annual").innerText = (groupAnnualCash >= 0 ? "£" : "-£") + Math.abs(Math.round(groupAnnualCash)).toLocaleString() + " / Year Total");
+
+      // Dynamic Break-Even Occupancy
+      const monthlyRevPerBed = (weeklyPerBed * 52) / 12;
+      const variableCostPerBed = (cat4 / 8) + (cat1 * 0.45 / 8);
+      const contributionMarginPerBed = monthlyRevPerBed - variableCostPerBed;
+      const fixedOverheadsMonthly = totalMonthlyOpEx - (variableCostPerBed * beds);
+      const breakEvenBeds = contributionMarginPerBed > 0 ? (fixedOverheadsMonthly / contributionMarginPerBed).toFixed(2) : "N/A";
+      const breakEvenPct = contributionMarginPerBed > 0 ? ((breakEvenBeds / 8) * 100).toFixed(1) : 0;
+      const safetyMargin = (100 - breakEvenPct).toFixed(1);
+
+      const elBe = document.getElementById("sim-breakeven-beds");
+      if (elBe) elBe.innerText = breakEvenBeds + " Beds (" + breakEvenPct + "% Occupancy)";
+      const elSafe = document.getElementById("sim-margin-safety");
+      if (elSafe) elSafe.innerText = "+" + safetyMargin + "%";
+
+      const elStatus = document.getElementById("sim-status-badge");
+      if (elStatus) {
+        if (monthlyEbitda > 10000) {
+          elStatus.innerText = "● SOLVENT: " + ebitdaMargin + "% EBITDA MARGIN";
+          elStatus.style.background = "#D1FAE5";
+          elStatus.style.color = "#065F46";
+          elStatus.style.borderColor = "#10B981";
+        } else if (monthlyEbitda >= 0) {
+          elStatus.innerText = "● MODERATE SURPLUS: " + ebitdaMargin + "% MARGIN";
+          elStatus.style.background = "#FEF3C7";
+          elStatus.style.color = "#92400E";
+          elStatus.style.borderColor = "#F59E0B";
+        } else {
+          elStatus.innerText = "● OPERATING DEFICIT: VOID SENSITIVITY TRIGGERED";
+          elStatus.style.background = "#FEE2E2";
+          elStatus.style.color = "#991B1B";
+          elStatus.style.borderColor = "#EF4444";
+        }
+      }
+    }
+
+    function resetToBoardroomBaseline() {
+      document.getElementById("beds-slider") && (document.getElementById("beds-slider").value = 8);
+      document.getElementById("core-fee-slider") && (document.getElementById("core-fee-slider").value = 1100);
+      document.getElementById("hours-1to1-slider") && (document.getElementById("hours-1to1-slider").value = 35);
+      document.getElementById("rate-1to1-slider") && (document.getElementById("rate-1to1-slider").value = 25.71);
+      document.getElementById("hb-slider") && (document.getElementById("hb-slider").value = 350);
+
+      document.getElementById("cat1-slider") && (document.getElementById("cat1-slider").value = 29592);
+      document.getElementById("cat2-slider") && (document.getElementById("cat2-slider").value = 8083);
+      document.getElementById("cat3-slider") && (document.getElementById("cat3-slider").value = 4017);
+      document.getElementById("cat4-slider") && (document.getElementById("cat4-slider").value = 2067);
+      document.getElementById("cat5-slider") && (document.getElementById("cat5-slider").value = 1550);
+      document.getElementById("cat6-slider") && (document.getElementById("cat6-slider").value = 1875);
+      document.getElementById("cat7-slider") && (document.getElementById("cat7-slider").value = 5833);
+
+      updateSimulators();
+    }
+
+    // Connect updateCalculator fallback to updateSimulators
+    function updateCalculator() {
+      updateSimulators();
     }
 
     // 8. EXECUTION TRACKER
