@@ -1,0 +1,7 @@
+care_category,service_type,number_of_services,number_of_beds_or_places,beds_per_1000_target_pop,target_pop_definition,outstanding_pct,good_pct,requires_improvement_pct,inadequate_pct,reference_year,data_source
+Children's Care (0-17 & 16-25),Residential Children's Homes (Ofsted),11,38,0.65,"Per 1,000 children aged 0-17 (58,478)",9.1%,63.6%,18.2%,9.1%,2024,Ofsted Children's Social Care in England 2024 / Luton Sufficiency Strategy
+Children's Care (0-17 & 16-25),Supported Accommodation (16-17 & 18-25),6,24,1.59,"Per 1,000 young people aged 15-19 (15,072)",NOT AVAILABLE,NOT AVAILABLE,NOT AVAILABLE,NOT AVAILABLE,2024,Ofsted Supported Accommodation Register (Mandatory from Oct 2023)
+Elderly Care (65+),Residential Care Homes (CQC),16,527,19.99,"Per 1,000 older adults aged 65+ (26,366)",6.3%,68.7%,18.8%,6.2%,2023,Luton Borough Council Market Position Statement: Older Adults / CQC Directory
+Elderly Care (65+),Nursing Care Homes (CQC),7,368,13.96,"Per 1,000 older adults aged 65+ (26,366)",0.0%,71.4%,28.6%,0.0%,2023,Luton Borough Council Market Position Statement: Older Adults / CQC Directory
+Mental Health Rehabilitation,Specialist Supported Living & MH Homes (CQC),14,112,0.80,"Per 1,000 working-age adults 18-64 (140,417)",7.1%,78.6%,14.3%,0.0%,2023,Luton ASC Market Position Statement: Mental Health / CQC Directory
+Autism & Learning Disability,Adult LD & Autism Supported Living / Care Homes,19,148,1.05,"Per 1,000 working-age adults 18-64 (140,417)",10.5%,78.9%,10.5%,0.0%,2023,Living a Good Life in Luton Strategy / Luton Council ASC Directory
