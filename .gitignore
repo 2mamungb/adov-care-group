@@ -7,6 +7,26 @@
 ehthumbs.db
 Thumbs.db
 
+# Secrets, Credentials & API Keys (Strict Hacker Prevention)
+*.env
+*.env.*
+*.env.local
+*.env.production
+*.env.development
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+*.id_rsa
+*.id_ed25519
+*credential*
+*secret*
+*token*
+api_key*
+apikey*
+
 # Python bytecode & environments
 __pycache__/
 *.py[cod]
