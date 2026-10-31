@@ -1,0 +1,247 @@
+def generate_cad_blueprint_svg():
+    return '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 820" width="100%" height="auto" class="blueprint-svg" style="max-width:100%; height:auto; display:block; background:#0B1728; border-radius:10px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Architectural CAD Grid Pattern -->
+    <pattern id="cadGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E334D" stroke-width="0.7" opacity="0.6" />
+      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#2563EB" stroke-width="1.0" opacity="0.25" />
+    </pattern>
+    <!-- Architectural Linear Gradients (Non-Funky, Corporate CAD Slate) -->
+    <linearGradient id="cadGrad78" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16273E" />
+      <stop offset="100%" stop-color="#0F1A2A" />
+    </linearGradient>
+    <linearGradient id="cadGrad80" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#142C34" />
+      <stop offset="100%" stop-color="#0D1E24" />
+    </linearGradient>
+    <linearGradient id="cadGrad82" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#141C28" />
+    </linearGradient>
+    <linearGradient id="cadGradGarden" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E2822" />
+      <stop offset="100%" stop-color="#081A16" />
+    </linearGradient>
+    <filter id="cadShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Base Grid Background -->
+  <rect width="1240" height="820" fill="#0B1728" rx="10" />
+  <rect width="1240" height="820" fill="url(#cadGrid)" />
+
+  <!-- Outer Architectural Border & Trim -->
+  <rect x="20" y="20" width="1200" height="780" fill="none" stroke="#38BDF8" stroke-width="1.5" opacity="0.5" rx="6" />
+  <rect x="26" y="26" width="1188" height="768" fill="none" stroke="#1E3E62" stroke-width="0.8" opacity="0.4" rx="4" />
+
+  <!-- BLUEPRINT DRAWING TITLE BLOCK (Top Header) -->
+  <rect x="40" y="36" width="1160" height="54" rx="6" fill="#112236" stroke="#38BDF8" stroke-width="1.2" />
+  <text x="60" y="58" fill="#38BDF8" font-size="13" font-weight="800" letter-spacing="1.5">ARCHITECTURAL CAMPUS SPECIFICATION // CLASS C3(b) SPECIALIST SUPPORTED LIVING</text>
+  <text x="60" y="78" fill="#FFFFFF" font-size="16.5" font-weight="700">78, 80 &amp; 82 Marston Gardens, Luton, LU2 7DY // 8-Bed Specialist Campus + Director Residence</text>
+  <rect x="1050" y="46" width="135" height="34" rx="4" fill="#0284C7" />
+  <text x="1117" y="68" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">CAD REF: AG-2026</text>
+
+  <!-- 1. HIGHWAYS & ROAD FRONTAGE -->
+  <rect x="40" y="104" width="1160" height="46" rx="6" fill="#162232" stroke="#334155" stroke-width="1" />
+  <line x1="40" y1="127" x2="1200" y2="127" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="10,10" />
+  <text x="620" y="124" fill="#F1F5F9" font-size="13.5" font-weight="800" text-anchor="middle" letter-spacing="1.5">MARSTON GARDENS (RESIDENTIAL CUL-DE-SAC // HIGHWAYS COMPLIANT)</text>
+  <text x="620" y="141" fill="#94A3B8" font-size="11.5" font-weight="600" text-anchor="middle">Luton Local Plan 2011-2031 Policies LLP1, LLP25, LLP31 &amp; LLP32 Approved Access</text>
+
+  <!-- 2. PROPERTIES ROW: 78 ON LEFT, 80 IN MIDDLE, 82 ON RIGHT -->
+
+  <!-- ==================== PROPERTY 78 (LEFT SIDE - 5 BEDS) ==================== -->
+  <g filter="url(#cadShadow)">
+    <!-- 78 Outer Shell -->
+    <rect x="40" y="164" width="410" height="280" rx="8" fill="url(#cadGrad78)" stroke="#38BDF8" stroke-width="2" />
+    
+    <!-- 78 Title Bar -->
+    <rect x="52" y="176" width="200" height="30" rx="4" fill="#1E3A8A" stroke="#60A5FA" stroke-width="1" />
+    <text x="152" y="196" fill="#FFFFFF" font-size="14" font-weight="800" text-anchor="middle">78 MARSTON GDNS (LEFT)</text>
+    <rect x="258" y="176" width="180" height="30" rx="4" fill="#0F2847" />
+    <text x="348" y="196" fill="#93C5FD" font-size="13" font-weight="800" text-anchor="middle">5 SPECIALIST SUITES</text>
+
+    <!-- Rooms inside 78 -->
+    <!-- Room A: 5 Specialist Bedrooms -->
+    <rect x="52" y="216" width="186" height="86" rx="5" fill="#132338" stroke="#2563EB" stroke-width="1" />
+    <text x="145" y="238" fill="#FFFFFF" font-size="13.5" font-weight="700" text-anchor="middle">5 Specialist Bedrooms</text>
+    <text x="145" y="258" fill="#93C5FD" font-size="12" text-anchor="middle">13.2m² – 16.5m² Usable Area</text>
+    <text x="145" y="276" fill="#93C5FD" font-size="12" text-anchor="middle">1 Suite with Private En-Suite</text>
+    <text x="145" y="293" fill="#FDE68A" font-size="11" font-weight="700" text-anchor="middle">FD30S Fire Doors • Cat L1</text>
+
+    <!-- Room B: Assisted Wet Room -->
+    <rect x="246" y="216" width="192" height="86" rx="5" fill="#132338" stroke="#2563EB" stroke-width="1" />
+    <text x="342" y="238" fill="#FFFFFF" font-size="13.5" font-weight="700" text-anchor="middle">Assisted Wet Room</text>
+    <text x="342" y="258" fill="#93C5FD" font-size="12" text-anchor="middle">TMV3 Anti-Scald (41°C)</text>
+    <text x="342" y="276" fill="#93C5FD" font-size="12" text-anchor="middle">DDA Accessible Level Access</text>
+    <text x="342" y="293" fill="#6EE7B7" font-size="11" font-weight="700" text-anchor="middle">+ Separate Visitor WC</text>
+
+    <!-- Room C: Commercial Kitchen -->
+    <rect x="52" y="312" width="186" height="118" rx="5" fill="#162E4A" stroke="#38BDF8" stroke-width="1.2" />
+    <text x="145" y="334" fill="#FFFFFF" font-size="14" font-weight="800" text-anchor="middle">Commercial Kitchen</text>
+    <text x="145" y="354" fill="#FDE68A" font-size="12.5" font-weight="700" text-anchor="middle">Food Hygiene 5 Standards</text>
+    <text x="145" y="372" fill="#CBD5E1" font-size="11.5" text-anchor="middle">Commercial Extraction Hood</text>
+    <text x="145" y="390" fill="#CBD5E1" font-size="11.5" text-anchor="middle">Stainless Steel Prep Stations</text>
+    <text x="145" y="408" fill="#6EE7B7" font-size="11" font-weight="700" text-anchor="middle">HTM 01-04 Laundry Separation</text>
+
+    <!-- Room D: Communal Dining & Activity Hall -->
+    <rect x="246" y="312" width="192" height="118" rx="5" fill="#162E4A" stroke="#38BDF8" stroke-width="1.2" />
+    <text x="342" y="334" fill="#FFFFFF" font-size="14" font-weight="800" text-anchor="middle">Communal Dining Hall</text>
+    <text x="342" y="354" fill="#93C5FD" font-size="12.5" font-weight="700" text-anchor="middle">Activity &amp; Dining Zone</text>
+    <text x="342" y="372" fill="#CBD5E1" font-size="11.5" text-anchor="middle">Bi-Fold Glazed Garden Doors</text>
+    <text x="342" y="390" fill="#CBD5E1" font-size="11.5" text-anchor="middle">Acoustic Ceiling Damping</text>
+    <text x="342" y="408" fill="#FDE68A" font-size="11" font-weight="700" text-anchor="middle">Direct Garden Pathway Access</text>
+  </g>
+
+  <!-- PARTY WALL 1 (Between 78 & 80) -->
+  <line x1="460" y1="164" x2="460" y2="444" stroke="#F59E0B" stroke-width="3" stroke-dasharray="6,4" />
+  <circle cx="460" cy="304" r="16" fill="#B45309" stroke="#FDE68A" stroke-width="1.5" />
+  <text x="460" y="309" fill="#FFFFFF" font-size="9" font-weight="900" text-anchor="middle">PW</text>
+
+  <!-- ==================== PROPERTY 80 (MIDDLE/RIGHT - 3 BEDS) ==================== -->
+  <g filter="url(#cadShadow)">
+    <!-- 80 Outer Shell -->
+    <rect x="470" y="164" width="410" height="280" rx="8" fill="url(#cadGrad80)" stroke="#10B981" stroke-width="2" />
+
+    <!-- 80 Title Bar -->
+    <rect x="482" y="176" width="200" height="30" rx="4" fill="#065F46" stroke="#34D399" stroke-width="1" />
+    <text x="582" y="196" fill="#FFFFFF" font-size="14" font-weight="800" text-anchor="middle">80 MARSTON GDNS (RIGHT)</text>
+    <rect x="688" y="176" width="180" height="30" rx="4" fill="#0A2024" />
+    <text x="778" y="196" fill="#6EE7B7" font-size="13" font-weight="800" text-anchor="middle">3 SPECIALIST SUITES</text>
+
+    <!-- Rooms inside 80 -->
+    <!-- Room A: 3 Resident Bedrooms -->
+    <rect x="482" y="216" width="186" height="86" rx="5" fill="#0C2024" stroke="#059669" stroke-width="1" />
+    <text x="575" y="238" fill="#FFFFFF" font-size="13.5" font-weight="700" text-anchor="middle">3 Large Bedrooms</text>
+    <text x="575" y="258" fill="#A7F3D0" font-size="12" text-anchor="middle">12.4m² – 14.8m² Usable Area</text>
+    <text x="575" y="276" fill="#A7F3D0" font-size="12" text-anchor="middle">Ground &amp; 1st Floor Layout</text>
+    <text x="575" y="293" fill="#FDE68A" font-size="11" font-weight="700" text-anchor="middle">FD30S Fire Doors • Cat L1</text>
+
+    <!-- Room B: Accessible Wet Room -->
+    <rect x="676" y="216" width="192" height="86" rx="5" fill="#0C2024" stroke="#059669" stroke-width="1" />
+    <text x="772" y="238" fill="#FFFFFF" font-size="13.5" font-weight="700" text-anchor="middle">Accessible Wet Room</text>
+    <text x="772" y="258" fill="#A7F3D0" font-size="12" text-anchor="middle">TMV3 Anti-Scald (41°C)</text>
+    <text x="772" y="276" fill="#A7F3D0" font-size="12" text-anchor="middle">Level Access Shower Tray</text>
+    <text x="772" y="293" fill="#6EE7B7" font-size="11" font-weight="700" text-anchor="middle">+ Separate Visitor WC</text>
+
+    <!-- Room C: Calm Sensory Lounge -->
+    <rect x="482" y="312" width="186" height="118" rx="5" fill="#11332C" stroke="#10B981" stroke-width="1.2" />
+    <text x="575" y="334" fill="#FFFFFF" font-size="14" font-weight="800" text-anchor="middle">Sensory Calm Lounge</text>
+    <text x="575" y="354" fill="#FDE68A" font-size="12.5" font-weight="700" text-anchor="middle">Acoustic Damped Walls</text>
+    <text x="575" y="372" fill="#D1FAE5" font-size="11.5" text-anchor="middle">Dimmable Circadian Lighting</text>
+    <text x="575" y="390" fill="#D1FAE5" font-size="11.5" text-anchor="middle">De-escalation Soft Seating</text>
+    <text x="575" y="408" fill="#6EE7B7" font-size="11" font-weight="700" text-anchor="middle">Autism Sensory Profile</text>
+
+    <!-- Room D: Staff Office & Sleep-In -->
+    <rect x="676" y="312" width="192" height="118" rx="5" fill="#11332C" stroke="#10B981" stroke-width="1.2" />
+    <text x="772" y="334" fill="#FFFFFF" font-size="14" font-weight="800" text-anchor="middle">Staff Office &amp; Sleep-In</text>
+    <text x="772" y="354" fill="#FDE68A" font-size="12.5" font-weight="700" text-anchor="middle">BS 2881 Meds CD Safe</text>
+    <text x="772" y="372" fill="#D1FAE5" font-size="11.5" text-anchor="middle">Nourish e-MAR Terminal</text>
+    <text x="772" y="390" fill="#D1FAE5" font-size="11.5" text-anchor="middle">Waking Night Base Station</text>
+    <text x="772" y="408" fill="#38BDF8" font-size="11" font-weight="700" text-anchor="middle">Cross-Campus Night Link</text>
+  </g>
+
+  <!-- PARTY WALL 2 (Between 80 & 82) -->
+  <line x1="890" y1="164" x2="890" y2="444" stroke="#64748B" stroke-width="2.5" stroke-dasharray="6,4" />
+
+  <!-- ==================== PROPERTY 82 (FAR RIGHT - DIRECTOR RESIDENCE) ==================== -->
+  <g filter="url(#cadShadow)">
+    <!-- 82 Outer Shell -->
+    <rect x="900" y="164" width="300" height="280" rx="8" fill="url(#cadGrad82)" stroke="#64748B" stroke-width="1.8" />
+    
+    <!-- 82 Title Bar -->
+    <rect x="912" y="176" width="276" height="30" rx="4" fill="#334155" />
+    <text x="1050" y="196" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">82 MARSTON GDNS (RIGHT FLANK)</text>
+
+    <rect x="912" y="216" width="276" height="64" rx="5" fill="#1E293B" stroke="#475569" stroke-width="1" />
+    <text x="1050" y="238" fill="#F1F5F9" font-size="13" font-weight="700" text-anchor="middle">Director Private Residence</text>
+    <text x="1050" y="258" fill="#94A3B8" font-size="12" text-anchor="middle">Retained C3 Dwellinghouse</text>
+    <text x="1050" y="272" fill="#CBD5E1" font-size="11" text-anchor="middle">Private Garden &amp; Attached Garage</text>
+
+    <!-- Tax & Legal Callout for 82 -->
+    <rect x="912" y="290" width="276" height="140" rx="5" fill="#0F172A" stroke="#C5A059" stroke-width="1.2" />
+    <text x="1050" y="312" fill="#FDE68A" font-size="12.5" font-weight="800" text-anchor="middle">TAX &amp; LEGAL COMPLIANCE</text>
+    <text x="1050" y="332" fill="#FFFFFF" font-size="11.5" font-weight="700" text-anchor="middle">• Market Rent AST Agreement</text>
+    <text x="1050" y="350" fill="#CBD5E1" font-size="11" text-anchor="middle">• S.105/106 ITEPA 2003 BIK Exemption</text>
+    <text x="1050" y="368" fill="#CBD5E1" font-size="11" text-anchor="middle">• HMRC EIM11300 Zero Cash Equivalent</text>
+    <text x="1050" y="386" fill="#CBD5E1" font-size="11" text-anchor="middle">• Complete Corporate Veil Separation</text>
+    <text x="1050" y="404" fill="#6EE7B7" font-size="11" font-weight="700" text-anchor="middle">Zero Operational CQC Interference</text>
+    <text x="1050" y="420" fill="#94A3B8" font-size="10" text-anchor="middle">Independent Private Dwelling</text>
+  </g>
+
+  <!-- 3. PARKING ALLOCATION STRIP (8 DEDICATED OFF-STREET BAYS) -->
+  <rect x="40" y="456" width="1160" height="74" rx="6" fill="#111C2B" stroke="#334155" stroke-width="1.2" />
+  <text x="56" y="476" fill="#38BDF8" font-size="12.5" font-weight="800" letter-spacing="1">DEDICATED OFF-STREET PARKING PROVISION (8 DEDICATED SPACES + 82 PRIVATE DRIVEWAY):</text>
+  
+  <!-- Left Parking Bays (for 78) -->
+  <rect x="56" y="486" width="130" height="34" rx="4" fill="#1E3A8A" stroke="#60A5FA" />
+  <text x="121" y="508" fill="#FFFFFF" font-size="12" font-weight="700" text-anchor="middle">BAYS 1-4: 78 GDNS (4 Cars)</text>
+
+  <!-- Middle Parking Bays (for 80) -->
+  <rect x="196" y="486" width="130" height="34" rx="4" fill="#065F46" stroke="#34D399" />
+  <text x="261" y="508" fill="#FFFFFF" font-size="12" font-weight="700" text-anchor="middle">BAYS 5-8: 80 GDNS (4 Cars)</text>
+
+  <!-- Highway Standards Note -->
+  <text x="340" y="507" fill="#CBD5E1" font-size="12.5">
+    • Permanent off-street capacity satisfies Luton Local Plan Policy LLP31 &amp; Appendix 4 parking standards. Zero street obstruction.
+  </text>
+  <rect x="1050" y="486" width="135" height="34" rx="4" fill="#334155" />
+  <text x="1117" y="508" fill="#FFFFFF" font-size="12" font-weight="700" text-anchor="middle">82 GDNS (Private Drive)</text>
+
+  <!-- 4. 100FT ENCLOSED SENSORY REAR GARDENS (SHARED CAMPUS ZONE) -->
+  <g filter="url(#cadShadow)">
+    <rect x="40" y="542" width="1160" height="150" rx="8" fill="url(#cadGradGarden)" stroke="#10B981" stroke-width="1.5" stroke-dasharray="6,4" />
+    
+    <!-- Garden Title Banner -->
+    <rect x="56" y="554" width="1128" height="30" rx="4" fill="#064E3B" stroke="#059669" stroke-width="1" />
+    <text x="620" y="574" fill="#6EE7B7" font-size="13.5" font-weight="800" text-anchor="middle" letter-spacing="1.5">100FT PRIVATE ENCLOSED SENSORY REAR GARDENS (SHARED CAMPUS THERAPEUTIC ZONE)</text>
+
+    <!-- 4 Garden Feature Cards -->
+    <!-- Feature 1: Therapeutic Pavilion -->
+    <rect x="56" y="594" width="268" height="84" rx="6" fill="#0D2620" stroke="#059669" stroke-width="1" />
+    <text x="190" y="616" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Therapeutic Pavilion</text>
+    <text x="190" y="636" fill="#D1FAE5" font-size="12" text-anchor="middle">All-Weather Covered Seating</text>
+    <text x="190" y="654" fill="#D1FAE5" font-size="12" text-anchor="middle">Infrared Outdoor Radiant Heating</text>
+    <text x="190" y="670" fill="#FDE68A" font-size="11" font-weight="700" text-anchor="middle">Quiet De-escalation Space</text>
+
+    <!-- Feature 2: Raised Sensory Planters -->
+    <rect x="340" y="594" width="268" height="84" rx="6" fill="#0D2620" stroke="#059669" stroke-width="1" />
+    <text x="474" y="616" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Raised Sensory Planters</text>
+    <text x="474" y="636" fill="#D1FAE5" font-size="12" text-anchor="middle">Wheelchair Accessible Herb Beds</text>
+    <text x="474" y="654" fill="#D1FAE5" font-size="12" text-anchor="middle">Tactile Non-Toxic Plants &amp; Flora</text>
+    <text x="474" y="670" fill="#FDE68A" font-size="11" font-weight="700" text-anchor="middle">Horticultural Sensory Therapy</text>
+
+    <!-- Feature 3: Tactile Bubble Fountain -->
+    <rect x="624" y="594" width="268" height="84" rx="6" fill="#0D2620" stroke="#059669" stroke-width="1" />
+    <text x="758" y="616" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">Tactile Acoustic Fountain</text>
+    <text x="758" y="636" fill="#D1FAE5" font-size="12" text-anchor="middle">Self-Contained Bubble Water Hub</text>
+    <text x="758" y="654" fill="#D1FAE5" font-size="12" text-anchor="middle">Calming Audio White-Noise Effect</text>
+    <text x="758" y="670" fill="#FDE68A" font-size="11" font-weight="700" text-anchor="middle">Sensory Modulation Aligned</text>
+
+    <!-- Feature 4: 6ft Security Perimeter -->
+    <rect x="908" y="594" width="276" height="84" rx="6" fill="#0D2620" stroke="#059669" stroke-width="1" />
+    <text x="1046" y="616" fill="#FFFFFF" font-size="13.5" font-weight="800" text-anchor="middle">6ft Acoustic Security Perimeter</text>
+    <text x="1046" y="636" fill="#D1FAE5" font-size="12" text-anchor="middle">Anti-Climb Timber Fence Panels</text>
+    <text x="1046" y="654" fill="#D1FAE5" font-size="12" text-anchor="middle">Complete 100% Secure Enclosure</text>
+    <text x="1046" y="670" fill="#FDE68A" font-size="11" font-weight="700" text-anchor="middle">CQC Safe Safeguarding Compliant</text>
+  </g>
+
+  <!-- 5. STATUTORY & BUILDING REGULATION COMPLIANCE FOOTER -->
+  <rect x="40" y="704" width="1160" height="74" rx="6" fill="#0E1B2A" stroke="#38BDF8" stroke-width="1.2" />
+  <text x="56" y="724" fill="#38BDF8" font-size="12" font-weight="800" letter-spacing="1">STATUTORY &amp; BUILDING REGULATION SPECIFICATIONS:</text>
+  
+  <text x="56" y="744" fill="#FFFFFF" font-size="12.5" font-weight="700">
+    • Town Planning: <tspan fill="#94A3B8" font-weight="400">Class C3(b) Supported Living under S.192 CLPUD (North Devon DC v FSS [2004] Precedent). Luton Local Plan LLP1 &amp; LLP25.</tspan>
+  </text>
+  <text x="56" y="763" fill="#FFFFFF" font-size="12.5" font-weight="700">
+    • Fire Safety &amp; Access: <tspan fill="#94A3B8" font-weight="400">BS 5839 Cat L1 Addressable Automatic Fire Detection, FD30S Fire/Smoke Doors, BS 5266 3-Hour Emergency Lighting, Approved Doc M.</tspan>
+  </text>
+</svg>'''
+
+if __name__ == '__main__':
+    svg = generate_cad_blueprint_svg()
+    print('Generated CAD Blueprint SVG size:', len(svg), 'bytes')
+    with open('portal/assets/diagrams/diagram_campus_masterplan.svg', 'w', encoding='utf-8') as f:
+        f.write(svg)
+    print('Saved to portal/assets/diagrams/diagram_campus_masterplan.svg')
