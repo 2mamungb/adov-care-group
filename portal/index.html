@@ -3,34 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ADOV Care Group — Executive Decision &amp; Planning Portal Gateway</title>
-  <meta name="description" content="Official Gateway for ADOV Care Group Executive Management Portals. Choose between Version 2.0 (Apple-Themed Executive Decision Suite) and Version 1.0 (Classic Management Information System).">
-  <meta name="theme-color" content="#0A192F">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230A192F%22/><text y=%2268%22 x=%2250%22 font-size=%2254%22 font-family=%22serif%22 font-weight=%22bold%22 text-anchor=%22middle%22 fill=%22%23D97706%22>A</text></svg>">
-
+  <title>ADOV Care Group — Executive Portal Gateway</title>
+  <meta name="description" content="Executive Decision Suite & Strategic Planning Portal Gateway for ADOV Care Group (78 & 80 Marston Gardens, Luton LU2 7DY). Choose between Version 2.0 Research Dossier and Version 1.0 Operations Dashboard.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230F2440%22/><text y=%2268%22 x=%2250%22 font-size=%2254%22 font-family=%22serif%22 font-weight=%22bold%22 text-anchor=%22middle%22 fill=%22%23C29B38%22>A</text></svg>">
   <style>
     :root {
-      --navy-deep: #071224;
-      --navy-dark: #0A192F;
-      --navy-card: #0F223D;
+      --bg: #FFFFFF;
+      --navy: #0F2440;
       --navy-light: #1E3A5F;
-      --gold: #D97706;
-      --gold-light: #F59E0B;
-      --gold-subtle: rgba(217, 119, 6, 0.12);
-      --text-white: #FFFFFF;
-      --text-dim: #94A3B8;
+      --gold: #C29B38;
+      --gold-light: #FDF9F0;
+      --text-main: #0F172A;
       --text-muted: #64748B;
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-gold: rgba(217, 119, 6, 0.35);
-      --surface-light: #F8FAFC;
-      --card-bg-light: #FFFFFF;
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 20px;
-      --radius-xl: 28px;
-      --shadow-soft: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
-      --shadow-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.45);
-      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --text-light: #94A3B8;
+      --border: #E2E8F0;
+      --border-hover: #CBD5E1;
+      --card-bg: #FFFFFF;
+      --card-hover-bg: #FAFCFF;
+      --radius: 14px;
+      --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
     * {
@@ -40,973 +31,376 @@
     }
 
     body {
-      font-family: var(--font-sans);
-      background: radial-gradient(circle at 50% 0%, #132742 0%, #0A192F 50%, #060E1A 100%);
-      color: var(--text-white);
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
-    /* Ambient Background Glow */
-    .glow-orb {
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(217, 119, 6, 0.08) 0%, rgba(14, 165, 233, 0.04) 50%, transparent 70%);
-      top: -200px;
-      left: 50%;
-      transform: translateX(-50%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Top Masthead */
-    .gateway-header {
-      position: relative;
-      z-index: 10;
-      padding: 24px 32px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid var(--border-subtle);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      background: rgba(10, 25, 47, 0.65);
-    }
-
-    .brand-group {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .brand-logo-shield {
-      width: 44px;
-      height: 44px;
-      background: linear-gradient(135deg, #1E3A5F 0%, #0A192F 100%);
-      border: 1.5px solid var(--gold);
-      border-radius: 12px;
-      display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
-      font-size: 20px;
-      color: var(--gold-light);
-      box-shadow: 0 4px 12px rgba(217, 119, 6, 0.2);
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    .brand-meta h1 {
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: 0.8px;
-      color: #FFFFFF;
+    .container {
+      width: 100%;
+      max-width: 860px;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 8px;
-    }
-
-    .brand-meta h1 span.corp-tag {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      padding: 2px 7px;
-      background: var(--gold-subtle);
-      color: var(--gold-light);
-      border: 1px solid var(--border-gold);
-      border-radius: 20px;
-    }
-
-    .brand-meta p {
-      font-size: 12px;
-      color: var(--text-dim);
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .badge-pin {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--border-subtle);
-      border-radius: 30px;
-      font-size: 12px;
-      color: var(--text-dim);
-    }
-
-    .badge-pin code {
-      color: var(--gold-light);
-      font-weight: 700;
-      background: rgba(217, 119, 6, 0.15);
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-family: monospace;
-    }
-
-    /* Hero Section */
-    .hero-section {
-      position: relative;
-      z-index: 1;
       text-align: center;
-      padding: 64px 24px 36px;
-      max-width: 900px;
-      margin: 0 auto;
     }
 
-    .hero-eyebrow {
+    /* Brand Header */
+    .brand-eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 16px;
-      background: rgba(217, 119, 6, 0.1);
-      border: 1px solid rgba(217, 119, 6, 0.25);
-      border-radius: 30px;
-      color: var(--gold-light);
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 20px;
-      text-transform: uppercase;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--gold-light);
+      border: 1px solid rgba(194, 155, 56, 0.35);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
       letter-spacing: 1px;
-    }
-
-    .hero-title {
-      font-size: clamp(32px, 5vw, 48px);
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -0.5px;
-      background: linear-gradient(180deg, #FFFFFF 0%, #CBD5E1 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
       margin-bottom: 16px;
     }
 
-    .hero-sub {
-      font-size: clamp(15px, 2.2vw, 18px);
-      color: var(--text-dim);
-      max-width: 700px;
-      margin: 0 auto 36px;
-      font-weight: 400;
-    }
-
-    /* Core Project Metric Pills */
-    .project-metrics-strip {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 48px;
-    }
-
-    .metric-pill {
-      background: rgba(15, 34, 61, 0.7);
-      border: 1px solid var(--border-subtle);
-      border-radius: 12px;
-      padding: 10px 18px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      backdrop-filter: blur(6px);
-    }
-
-    .metric-pill .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #10B981;
-      box-shadow: 0 0 8px #10B981;
-    }
-
-    .metric-pill strong {
-      color: #FFFFFF;
-      font-weight: 700;
-    }
-
-    .metric-pill span {
-      color: var(--text-dim);
-    }
-
-    /* Version Selection Grid */
-    .portal-versions-wrap {
-      position: relative;
-      z-index: 1;
-      max-width: 1140px;
-      margin: 0 auto 60px;
-      padding: 0 24px;
-      width: 100%;
-    }
-
-    .versions-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    @media (max-width: 860px) {
-      .versions-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Version Card */
-    .version-card {
-      position: relative;
-      background: linear-gradient(180deg, rgba(15, 34, 61, 0.8) 0%, rgba(10, 25, 47, 0.95) 100%);
-      border: 1.5px solid var(--border-subtle);
-      border-radius: var(--radius-xl);
-      padding: 36px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .version-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .version-card.recommended {
-      border-color: var(--border-gold);
-      background: linear-gradient(180deg, rgba(23, 44, 76, 0.85) 0%, rgba(12, 28, 52, 0.98) 100%);
-      box-shadow: 0 12px 35px -5px rgba(217, 119, 6, 0.18);
-    }
-
-    .version-card.recommended:hover {
-      border-color: var(--gold);
-      box-shadow: 0 20px 45px -5px rgba(217, 119, 6, 0.28);
-    }
-
-    .card-ribbon {
-      position: absolute;
-      top: 24px;
-      right: 24px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 12px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.6px;
-      border-radius: 20px;
-      text-transform: uppercase;
-    }
-
-    .card-ribbon.gold {
-      background: linear-gradient(90deg, #D97706 0%, #B45309 100%);
-      color: #FFFFFF;
-      box-shadow: 0 2px 10px rgba(217, 119, 6, 0.3);
-    }
-
-    .card-ribbon.navy {
-      background: rgba(255, 255, 255, 0.08);
-      color: var(--text-dim);
-      border: 1px solid var(--border-subtle);
-    }
-
-    .card-header {
-      margin-bottom: 24px;
-    }
-
-    .version-number {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      color: var(--gold-light);
-      text-transform: uppercase;
+    .main-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
       margin-bottom: 8px;
     }
 
-    .version-title {
-      font-size: 26px;
-      font-weight: 800;
-      line-height: 1.25;
-      color: #FFFFFF;
-      margin-bottom: 10px;
-    }
-
-    .version-tagline {
-      font-size: 14px;
-      color: var(--text-dim);
-      line-height: 1.5;
-    }
-
-    /* Feature List */
-    .feature-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin: 24px 0 32px;
-      flex-grow: 1;
-    }
-
-    .feature-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 13.5px;
-      color: #E2E8F0;
-      line-height: 1.45;
-    }
-
-    .feature-icon {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: rgba(217, 119, 6, 0.15);
-      color: var(--gold-light);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .feature-icon.blue {
-      background: rgba(56, 189, 248, 0.15);
-      color: #38BDF8;
-    }
-
-    .feature-text strong {
-      color: #FFFFFF;
-      font-weight: 600;
-    }
-
-    /* Action Buttons */
-    .card-footer {
-      border-top: 1px solid var(--border-subtle);
-      padding-top: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .btn-launch {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 16px 24px;
-      border-radius: var(--radius-md);
+    .subtitle {
       font-size: 15px;
-      font-weight: 700;
+      color: var(--text-muted);
+      max-width: 580px;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    /* Gateway Two-Option Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      width: 100%;
+      margin-bottom: 36px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      text-align: left;
       text-decoration: none;
-      transition: all 0.25s ease;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
       cursor: pointer;
     }
 
-    .btn-launch-primary {
-      background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
-      color: #FFFFFF;
-      box-shadow: 0 4px 15px rgba(217, 119, 6, 0.35);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+    .card:hover {
+      border-color: var(--navy);
+      background: var(--card-hover-bg);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px -12px rgba(15, 36, 64, 0.12);
     }
 
-    .btn-launch-primary:hover {
-      background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
-      box-shadow: 0 8px 25px rgba(217, 119, 6, 0.45);
-      transform: translateY(-2px);
+    .card.primary {
+      border-color: #0F2440;
+      box-shadow: 0 4px 20px rgba(15, 36, 64, 0.05);
     }
 
-    .btn-launch-secondary {
-      background: rgba(255, 255, 255, 0.06);
-      color: #FFFFFF;
-      border: 1px solid var(--border-subtle);
+    .card.primary:hover {
+      border-color: var(--gold);
+      box-shadow: 0 20px 40px -12px rgba(194, 155, 56, 0.2);
     }
 
-    .btn-launch-secondary:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.25);
-      transform: translateY(-2px);
+    .card-top {
+      margin-bottom: 24px;
     }
 
-    .target-audience {
-      font-size: 12px;
-      color: var(--text-muted);
-      text-align: center;
-    }
-
-    /* Comparison Table Strip */
-    .comparison-section {
-      max-width: 1140px;
-      margin: 0 auto 60px;
-      padding: 0 24px;
-      width: 100%;
-    }
-
-    .section-title-wrap {
-      text-align: center;
-      margin-bottom: 28px;
-    }
-
-    .section-title {
-      font-size: 22px;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 8px;
-    }
-
-    .section-desc {
-      font-size: 14px;
-      color: var(--text-dim);
-    }
-
-    .comparison-table-wrap {
-      background: rgba(15, 34, 61, 0.6);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      overflow-x: auto;
-      backdrop-filter: blur(8px);
-    }
-
-    .comparison-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 13.5px;
-      text-align: left;
-    }
-
-    .comparison-table th, 
-    .comparison-table td {
-      padding: 16px 20px;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .comparison-table th {
-      background: rgba(10, 25, 47, 0.85);
-      color: var(--text-dim);
-      font-weight: 600;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-    }
-
-    .comparison-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    .comparison-table td strong {
-      color: #FFFFFF;
-    }
-
-    .tag-pill {
+    .card-tag {
       display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
       padding: 3px 8px;
-      border-radius: 6px;
-      font-size: 11px;
-      font-weight: 600;
-    }
-
-    .tag-gold {
-      background: var(--gold-subtle);
-      color: var(--gold-light);
-      border: 1px solid var(--border-gold);
+      border-radius: 4px;
+      margin-bottom: 12px;
     }
 
     .tag-blue {
-      background: rgba(56, 189, 248, 0.12);
-      color: #38BDF8;
-      border: 1px solid rgba(56, 189, 248, 0.25);
+      background: #EFF6FF;
+      color: #1D4ED8;
+      border: 1px solid #BFDBFE;
     }
 
-    /* Vault Quick Download Section */
-    .vault-preview-section {
-      max-width: 1140px;
-      margin: 0 auto 60px;
-      padding: 0 24px;
-      width: 100%;
+    .tag-gold {
+      background: var(--gold-light);
+      color: var(--gold);
+      border: 1px solid rgba(194, 155, 56, 0.3);
     }
 
-    .vault-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 16px;
-    }
-
-    .vault-card {
-      background: rgba(15, 34, 61, 0.6);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 14px;
-      transition: all 0.2s ease;
-    }
-
-    .vault-card:hover {
-      background: rgba(15, 34, 61, 0.9);
-      border-color: rgba(255, 255, 255, 0.15);
-      transform: translateY(-2px);
-    }
-
-    .vault-meta h4 {
-      font-size: 14px;
+    .card-title {
+      font-size: 21px;
       font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 4px;
-      line-height: 1.35;
-    }
-
-    .vault-meta p {
-      font-size: 12px;
-      color: var(--text-dim);
-      line-height: 1.4;
-    }
-
-    .vault-actions {
+      color: var(--navy);
+      margin-bottom: 8px;
       display: flex;
-      gap: 8px;
-    }
-
-    .btn-file {
-      display: inline-flex;
       align-items: center;
-      gap: 5px;
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 11.5px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
+      justify-content: space-between;
     }
 
-    .btn-pdf-file {
-      background: rgba(239, 68, 68, 0.15);
-      color: #F87171;
-      border: 1px solid rgba(239, 68, 68, 0.3);
-    }
-
-    .btn-pdf-file:hover {
-      background: rgba(239, 68, 68, 0.25);
-    }
-
-    .btn-docx-file {
-      background: rgba(59, 130, 246, 0.15);
-      color: #60A5FA;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-    }
-
-    .btn-docx-file:hover {
-      background: rgba(59, 130, 246, 0.25);
-    }
-
-    /* Footer */
-    .gateway-footer {
-      margin-top: auto;
-      border-top: 1px solid var(--border-subtle);
-      padding: 32px 24px;
-      background: rgba(6, 14, 26, 0.95);
-      text-align: center;
-      font-size: 12.5px;
+    .card-desc {
+      font-size: 13.5px;
+      line-height: 1.6;
       color: var(--text-muted);
     }
 
-    .footer-content {
-      max-width: 900px;
-      margin: 0 auto;
+    .card-features {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      list-style: none;
       display: flex;
       flex-direction: column;
+      gap: 6px;
+    }
+
+    .card-features li {
+      font-size: 12px;
+      color: #475467;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-features li::before {
+      content: "✓";
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 11px;
+    }
+
+    .card-btn {
+      margin-top: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+
+    .card.primary .card-btn {
+      background: var(--navy);
+      color: #FFFFFF;
+      border: 1px solid var(--navy);
+    }
+
+    .card.primary:hover .card-btn {
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+
+    .card.secondary .card-btn {
+      background: #FFFFFF;
+      color: var(--navy);
+      border: 1.5px solid var(--border);
+    }
+
+    .card.secondary:hover .card-btn {
+      background: var(--navy);
+      color: #FFFFFF;
+      border-color: var(--navy);
+    }
+
+    /* Minimal Document Bar */
+    .docs-bar {
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: var(--radius);
+      border: 1px dashed var(--border);
+      background: #FAFAFA;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
       gap: 12px;
     }
 
-    .footer-links {
+    .docs-label {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-muted);
       display: flex;
-      justify-content: center;
-      gap: 20px;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .docs-links {
+      display: flex;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
-    .footer-links a {
-      color: var(--text-dim);
+    .doc-link {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy);
       text-decoration: none;
-      transition: color 0.2s;
+      padding: 6px 12px;
+      border-radius: 6px;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }
 
-    .footer-links a:hover {
-      color: #FFFFFF;
+    .doc-link:hover {
+      border-color: var(--navy);
+      background: #F8FAFC;
+    }
+
+    /* Minimal Footer */
+    .footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (max-width: 720px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .main-title {
+        font-size: 26px;
+      }
+      .docs-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .docs-links {
+        width: 100%;
+      }
+      .doc-link {
+        flex: 1;
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="glow-orb"></div>
+  <div class="container">
+    
+    <!-- Minimal Header -->
+    <div class="brand-eyebrow">Executive Decision Suite</div>
+    <h1 class="main-title">ADOV CARE GROUP</h1>
+    <p class="subtitle">Specialist Supported Living Campus • 78 &amp; 80 Marston Gardens, Luton (LU2 7DY)<br>Please select an executive portal environment to proceed:</p>
 
-  <!-- GATEWAY HEADER -->
-  <header class="gateway-header">
-    <div class="brand-group">
-      <div class="brand-logo-shield">A</div>
-      <div class="brand-meta">
-        <h1>ADOV CARE GROUP <span class="corp-tag">EXECUTIVE PORTAL</span></h1>
-        <p>Marston Gardens Executive Campus, Luton, LU2 7DY // Operational Group</p>
-      </div>
-    </div>
-    <div class="header-actions">
-      <div class="badge-pin">
-        <span>Default Portal PIN:</span>
-        <code>adov2026</code>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO TITLE -->
-  <section class="hero-section">
-    <div class="hero-eyebrow">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-      Executive Gateway &amp; Version Selection
-    </div>
-    <h2 class="hero-title">Choose Your Management Portal</h2>
-    <p class="hero-sub">
-      Select your preferred operating interface below. Both versions are fully live, fully functional, and synchronised with the complete 18-deliverable document repository.
-    </p>
-
-    <!-- KEY PROJECT METRIC PILLS -->
-    <div class="project-metrics-strip">
-      <div class="metric-pill">
-        <span class="dot"></span>
-        <span>Campus Capacity:</span>
-        <strong>8 Supported Living Beds</strong>
-      </div>
-      <div class="metric-pill">
-        <span class="dot"></span>
-        <span>Gross Annual Turnover:</span>
-        <strong>£977,600 / Year</strong>
-      </div>
-      <div class="metric-pill">
-        <span class="dot"></span>
-        <span>Consolidated Cashflow:</span>
-        <strong>£438,392 / Year</strong>
-      </div>
-      <div class="metric-pill">
-        <span class="dot"></span>
-        <span>Break-Even Threshold:</span>
-        <strong>3.8 Beds (47.5%)</strong>
-      </div>
-      <div class="metric-pill">
-        <span class="dot"></span>
-        <span>Town Planning Law:</span>
-        <strong>Class C3(b) / S.192</strong>
-      </div>
-    </div>
-  </section>
-
-  <!-- VERSION SELECTION GRID -->
-  <main class="portal-versions-wrap">
-    <div class="versions-grid">
+    <!-- Two Minimal Options -->
+    <div class="grid">
       
-      <!-- VERSION 2.0 (RECOMMENDED) -->
-      <article class="version-card recommended">
-        <span class="card-ribbon gold">★ Recommended for Board</span>
-        <div>
-          <div class="card-header">
-            <div class="version-number">Version 2.0 // Apple-Themed</div>
-            <h3 class="version-title">Executive Decision Suite</h3>
-            <p class="version-tagline">
-              Curated strategic narrative designed for the Chief Executive, Board of Directors, Non-Executive Directors, and institutional investment committees.
-            </p>
-          </div>
-
-          <ul class="feature-list">
-            <li class="feature-item">
-              <span class="feature-icon">✓</span>
-              <div class="feature-text">
-                <strong>4-Stage Strategic Flow:</strong> Strategy &amp; Viability &rarr; Real Estate &amp; Legal &rarr; CQC &amp; Operations &rarr; Execution &amp; Vault.
-              </div>
-            </li>
-            <li class="feature-item">
-              <span class="feature-icon">✓</span>
-              <div class="feature-text">
-                <strong>Sticky Executive Decision Rail:</strong> Real-time financial waterfall metrics, break-even monitoring, and dynamic KPI tracking.
-              </div>
-            </li>
-            <li class="feature-item">
-              <span class="feature-icon">✓</span>
-              <div class="feature-text">
-                <strong>Dynamic Scenario Simulator:</strong> Interactive sliders to stress-test bed occupancy (50% to 100%) and staff wage ratios in real-time.
-              </div>
-            </li>
-            <li class="feature-item">
-              <span class="feature-icon">✓</span>
-              <div class="feature-text">
-                <strong>Executive Audio Briefings:</strong> Listen to spoken board-level chapter summaries for rapid comprehension.
-              </div>
-            </li>
-            <li class="feature-item">
-              <span class="feature-icon">✓</span>
-              <div class="feature-text">
-                <strong>Architectural Campus Masterplan:</strong> Photographic estate layout showing twin driveways, 8 parking spaces, and sensory gardens.
-              </div>
-            </li>
+      <!-- Option 1: Version 2.0 (Recommended) -->
+      <a href="v2.html" class="card primary">
+        <div class="card-top">
+          <span class="card-tag tag-gold">Version 2.0 • Recommended</span>
+          <h2 class="card-title">
+            Executive Research Portal
+            <span style="font-size: 18px;">&rarr;</span>
+          </h2>
+          <p class="card-desc">
+            Publication-grade single-column research portal and strategic dossier. Engineered with authoritative typography, embedded CAD masterplans, financial waterfalls, and CQC compliance roadmaps.
+          </p>
+          <ul class="card-features">
+            <li>Single-column financial journal layout (no scrolling tables)</li>
+            <li>Embedded high-res CAD architectural blueprints</li>
+            <li>Dynamic placement fee &amp; OpEx breakdown simulators</li>
+            <li>Exhaustive statutory case law &amp; 45-term glossary</li>
           </ul>
         </div>
-
-        <div class="card-footer">
-          <a href="v2.html" class="btn-launch btn-launch-primary" onclick="setSessionAuth()">
-            <span>Launch Version 2.0 (Executive Suite)</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <div class="target-audience">
-            Optimised for: Chairmen, Directors, Angel/PE Investors, Council Commissioners
-          </div>
+        <div class="card-btn">
+          Launch Research Portal V2.0 &rarr;
         </div>
-      </article>
+      </a>
 
-      <!-- VERSION 1.0 (CLASSIC WORKBENCH) -->
-      <article class="version-card">
-        <span class="card-ribbon navy">Operational MIS</span>
-        <div>
-          <div class="card-header">
-            <div class="version-number">Version 1.0 // Classic MIS</div>
-            <h3 class="version-title">Management Information System</h3>
-            <p class="version-tagline">
-              Data-dense, categorized operational workbench engineered for the Registered Manager, Legal Counsel, Financial Controllers, and Compliance Surveyors.
-            </p>
-          </div>
-
-          <ul class="feature-list">
-            <li class="feature-item">
-              <span class="feature-icon blue">✓</span>
-              <div class="feature-text">
-                <strong>11 Categorized Modules:</strong> Quick single-tier dropdown menu covering strategy, planning, CQC, tax, financials, and tracker.
-              </div>
-            </li>
-            <li class="feature-item">
-              <span class="feature-icon blue">✓</span>
-              <div class="feature-text">
-                <strong>Exhaustive Data Tables:</strong> Line-by-line financial line items, statutory legal citations, and detailed room-by-room CapEx schedules.
-              </div>
-            </li>
-            <li class="feature-item">
-              <span class="feature-icon blue">✓</span>
-              <div class="feature-text">
-                <strong>Section-by-Section PDF Export:</strong> Dedicated print buttons on every module formatted for pure white paper A4 printing.
-              </div>
-            </li>
-            <li class="feature-item">
-              <span class="feature-icon blue">✓</span>
-              <div class="feature-text">
-                <strong>Operational Implementation Tracker:</strong> Phased milestone gating checklists with interactive state preservation.
-              </div>
-            </li>
-            <li class="feature-item">
-              <span class="feature-icon blue">✓</span>
-              <div class="feature-text">
-                <strong>Care Sector Glossary:</strong> Exhaustive 38-term legal, CQC, and municipal commissioning dictionary.
-              </div>
-            </li>
+      <!-- Option 2: Version 1.0 (Operations MIS) -->
+      <a href="v1.html" class="card secondary">
+        <div class="card-top">
+          <span class="card-tag tag-blue">Version 1.0 • Operations MIS</span>
+          <h2 class="card-title">
+            Operations Dashboard
+            <span style="font-size: 18px;">&rarr;</span>
+          </h2>
+          <p class="card-desc">
+            Classic multi-tab management information system with interactive KPI widgets, operational fee calculators, 90-day milestone checklist, and direct document vault downloads.
+          </p>
+          <ul class="card-features">
+            <li>Interactive multi-tab MIS interface</li>
+            <li>Real-time financial calculator with fee sliders</li>
+            <li>90-Day execution &amp; operational tracker</li>
+            <li>Integrated statutory document vault (30+ downloads)</li>
           </ul>
         </div>
-
-        <div class="card-footer">
-          <a href="v1.html" class="btn-launch btn-launch-secondary" onclick="setSessionAuth()">
-            <span>Launch Version 1.0 (Classic Workbench)</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <div class="target-audience">
-            Optimised for: Registered Managers, Compliance Officers, Accountants, Surveyors
-          </div>
+        <div class="card-btn">
+          Launch Operations Portal V1.0 &rarr;
         </div>
-      </article>
+      </a>
 
     </div>
-  </main>
 
-  <!-- COMPARISON TABLE SECTION -->
-  <section class="comparison-section">
-    <div class="section-title-wrap">
-      <h3 class="section-title">Version Comparison &amp; Architecture Matrix</h3>
-      <p class="section-desc">Quick reference guide to assist stakeholders in selecting the ideal portal view.</p>
-    </div>
-
-    <div class="comparison-table-wrap">
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th style="width: 25%;">Feature Dimension</th>
-            <th style="width: 37.5%; color: var(--gold-light);">Version 2.0 (Executive Suite)</th>
-            <th style="width: 37.5%; color: #38BDF8;">Version 1.0 (Classic Workbench)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Design System</strong></td>
-            <td>Apple Human Interface Guidelines (clean, airy, white/dark glass)</td>
-            <td>Classic Enterprise Management Information System (dense, compact)</td>
-          </tr>
-          <tr>
-            <td><strong>Navigation Paradigm</strong></td>
-            <td><span class="tag-pill tag-gold">4-Stage Guided Flow</span> + In-Page Stage Tabs</td>
-            <td><span class="tag-pill tag-blue">Single Header Dropdown</span> (11 Direct Modules)</td>
-          </tr>
-          <tr>
-            <td><strong>Executive Decision Support</strong></td>
-            <td>Sticky Decision Rail + Live Sensitivity Simulator</td>
-            <td>Full-width tabular displays &amp; statutory audit boxes</td>
-          </tr>
-          <tr>
-            <td><strong>Document Repository</strong></td>
-            <td>18 Master Deliverables (36 PDF &amp; Word Files)</td>
-            <td>18 Master Deliverables (36 PDF &amp; Word Files)</td>
-          </tr>
-          <tr>
-            <td><strong>Cross-Switching</strong></td>
-            <td>One-click header toggle to V1.0 Classic &amp; Gateway</td>
-            <td>One-click header toggle to V2.0 Executive &amp; Gateway</td>
-          </tr>
-          <tr>
-            <td><strong>Print &amp; PDF Export</strong></td>
-            <td>Global Print Dossier &amp; Active Tab Printer Engine</td>
-            <td>Dedicated Section-by-Section A4 Print Engines</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- QUICK VAULT PREVIEW SECTION -->
-  <section class="vault-preview-section">
-    <div class="section-title-wrap">
-      <h3 class="section-title">Instant Document Vault Access</h3>
-      <p class="section-desc">Download publication-grade research monographs and corporate filings directly without launching full portals.</p>
-    </div>
-
-    <div class="vault-grid">
-      
-      <div class="vault-card" style="border: 2px solid var(--navy-dark); grid-column: 1 / -1; background: linear-gradient(180deg, #FFFFFF 0%, #F6F8FC 100%);">
-        <div class="vault-meta">
-          <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 6px; flex-wrap: wrap;">
-            <span class="tag-pill tag-blue">MASTER DOSSIER 2026</span>
-            <span class="tag-pill tag-gold">ISO A4 PORTRAIT • 16 PAGES • EMBEDDED CAD EXHIBITS</span>
-          </div>
-          <h4 style="font-size: 17px; color: var(--navy-dark);">ADOV CARE GROUP: Executive Planning Dossier &amp; Strategic Investment Monograph</h4>
-          <p>Master finance magazine and institutional research monograph. Features campus elevation photograph, structured executive synopsis, 12 substantive sections, embedded CAD blueprints, 10.0 FTE 24/7 rota matrices, gross-to-EBITDA waterfalls, sensitivity stress-testing models, CQC fast-track roadmaps, planning case law, CapEx BOQ, and 45-term glossary. Zero text overlapping, continuous flow pagination.</p>
-        </div>
-        <div class="vault-actions" style="margin-top: 10px;">
-          <a href="docs/ADOV_Care_Group_Executive_Planning_Dossier_Finance_Magazine.pdf" target="_blank" class="btn-file btn-pdf-file">📄 Open Executive Dossier (PDF Portrait)</a>
-          <a href="docs/ADOV_Care_Group_Executive_Planning_Dossier_Finance_Magazine.docx" download class="btn-file btn-docx-file">📝 Download Word Monograph (.docx Portrait)</a>
-        </div>
+    <!-- Minimal Document Downloads Bar -->
+    <div class="docs-bar">
+      <div class="docs-label">
+        <span>📥</span> Official Executive Planning Dossier (Print-Ready Publications):
       </div>
-      
-      <div class="vault-card">
-        <div class="vault-meta">
-          <span class="tag-pill tag-gold" style="margin-bottom: 6px;">2026-REC-MASTER</span>
-          <h4>Definitive Final Recommendation Report</h4>
-          <p>8-bed specialist Supported Living campus across 78 &amp; 80 Marston Gardens with executive residence at 82.</p>
-        </div>
-        <div class="vault-actions">
-          <a href="docs/ADOV_Care_Group_Final_Recommendation_Report.pdf" target="_blank" class="btn-file btn-pdf-file">PDF (A4 Landscape)</a>
-          <a href="docs/ADOV_Care_Group_Final_Recommendation_Report.docx" download class="btn-file btn-docx-file">Word (.docx)</a>
-        </div>
-      </div>
-
-      <div class="vault-card">
-        <div class="vault-meta">
-          <span class="tag-pill tag-gold" style="margin-bottom: 6px;">2026-ADV-VIABILITY</span>
-          <h4>Advisory Board &amp; Comprehensive Viability Dossier</h4>
-          <p>7-expert multidisciplinary audit: clinical CQC moats, £106k campus rotas, and 192.4% 3-yr PE investor return.</p>
-        </div>
-        <div class="vault-actions">
-          <a href="docs/ADOV_Care_Group_Expert_Advisory_Board_and_Viability_Assessment_Report.pdf" target="_blank" class="btn-file btn-pdf-file">PDF (A4 Landscape)</a>
-          <a href="docs/ADOV_Care_Group_Expert_Advisory_Board_and_Viability_Assessment_Report.docx" download class="btn-file btn-docx-file">Word (.docx)</a>
-        </div>
-      </div>
-
-      <div class="vault-card">
-        <div class="vault-meta">
-          <span class="tag-pill tag-gold" style="margin-bottom: 6px;">2026-FIN-PNL</span>
-          <h4>Operational Profit &amp; Loss Financial Viability Model</h4>
-          <p>Forensic line-by-line GAAP accounts, 35% EBITDA waterfall, and 3.8-bed break-even mechanics.</p>
-        </div>
-        <div class="vault-actions">
-          <a href="docs/ADOV_Care_Group_Operational_PnL_and_Financial_Viability_Model.pdf" target="_blank" class="btn-file btn-pdf-file">PDF (A4 Landscape)</a>
-          <a href="docs/ADOV_Care_Group_Operational_PnL_and_Financial_Viability_Model.docx" download class="btn-file btn-docx-file">Word (.docx)</a>
-        </div>
-      </div>
-
-      <div class="vault-card">
-        <div class="vault-meta">
-          <span class="tag-pill tag-blue" style="margin-bottom: 6px;">2026-PE-MA</span>
-          <h4>Institutional PE &amp; M&amp;A Investment Prospectus</h4>
-          <p>Enterprise valuation multiples (6.5x to 8.5x EBITDA), £970k senior debt capacity, and REIT exit pathways.</p>
-        </div>
-        <div class="vault-actions">
-          <a href="docs/ADOV_Care_Group_Private_Investment_Prospectus.pdf" target="_blank" class="btn-file btn-pdf-file">PDF (A4 Landscape)</a>
-          <a href="docs/ADOV_Care_Group_Private_Investment_Prospectus.docx" download class="btn-file btn-docx-file">Word (.docx)</a>
-        </div>
-      </div>
-
-      <div class="vault-card">
-        <div class="vault-meta">
-          <span class="tag-pill tag-blue" style="margin-bottom: 6px;">2026-PLAN-S192</span>
-          <h4>Section 192 Town Planning Statement</h4>
-          <p>Certificate of Lawfulness for Proposed Use (CLPUD) under Class C3(b) with parking and amenity justification.</p>
-        </div>
-        <div class="vault-actions">
-          <a href="docs/ADOV_Care_Group_Section_192_Planning_Statement.pdf" target="_blank" class="btn-file btn-pdf-file">PDF (A4 Landscape)</a>
-          <a href="docs/ADOV_Care_Group_Section_192_Planning_Statement.docx" download class="btn-file btn-docx-file">Word (.docx)</a>
-        </div>
-      </div>
-
-      <div class="vault-card">
-        <div class="vault-meta">
-          <span class="tag-pill tag-blue" style="margin-bottom: 6px;">2026-CQC-SOP</span>
-          <h4>CQC Statement of Purpose &amp; Registration Pack</h4>
-          <p>Statutory filing under Regulation 12 CQC Regs 2009 for Supported Living / Personal Care regulated activity.</p>
-        </div>
-        <div class="vault-actions">
-          <a href="docs/ADOV_Care_Group_CQC_Statement_of_Purpose.pdf" target="_blank" class="btn-file btn-pdf-file">PDF (A4 Landscape)</a>
-          <a href="docs/ADOV_Care_Group_CQC_Statement_of_Purpose.docx" download class="btn-file btn-docx-file">Word (.docx)</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- GATEWAY FOOTER -->
-  <footer class="gateway-footer">
-    <div class="footer-content">
-      <div class="footer-links">
-        <a href="v2.html">Version 2.0 (Executive Suite)</a>
-        <span>•</span>
-        <a href="v1.html">Version 1.0 (Classic Workbench)</a>
-        <span>•</span>
-        <a href="docs/ADOV_Care_Group_Final_Recommendation_Report.pdf" target="_blank">Final Recommendation PDF</a>
-        <span>•</span>
-        <a href="https://github.com/2mamungb/adov-care-group" target="_blank">GitHub Repository</a>
-      </div>
-      <div>
-        &copy; 2026 ADOV Care Group Limited &amp; FAIRYTALES GROUP (Mamun Limited). All statutory rights reserved.<br>
-        Confidential Executive Planning Dossier // Marston Gardens Executive Campus, Luton, LU2 7DY.
+      <div class="docs-links">
+        <a href="docs/ADOV_Care_Group_Executive_Planning_Dossier_Finance_Magazine.pdf" target="_blank" class="doc-link">
+          <span>📄</span> PDF Dossier (16 Pages)
+        </a>
+        <a href="docs/ADOV_Care_Group_Executive_Planning_Dossier_Finance_Magazine.docx" download class="doc-link">
+          <span>📝</span> Word Monograph (.docx)
+        </a>
       </div>
     </div>
-  </footer>
 
-  <script>
-    // Automatically prime session storage with default authentication on button click
-    function setSessionAuth() {
-      try {
-        sessionStorage.setItem("adov_mgmt_auth", "true");
-      } catch (e) {
-        console.warn("Storage not available");
-      }
-    }
-  </script>
+    <!-- Minimal Footer -->
+    <footer class="footer">
+      <span>&copy; 2026 ADOV Care Group Limited</span>
+      <span>&bull;</span>
+      <span>Strictly Confidential &amp; Proprietary</span>
+      <span>&bull;</span>
+      <span>Luton, LU2 7DY</span>
+    </footer>
+
+  </div>
 
 </body>
 </html>

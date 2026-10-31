@@ -3,58 +3,404 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0; url=portal/index.html">
-  <title>ADOV Care Group — Executive Management Portal Gateway</title>
-  <script>window.location.href = "portal/index.html";</script>
+  <title>ADOV Care Group — Executive Portal Gateway</title>
+  <meta name="description" content="Executive Decision Suite & Strategic Planning Portal Gateway for ADOV Care Group (78 & 80 Marston Gardens, Luton LU2 7DY). Choose between Version 2.0 Research Dossier and Version 1.0 Operations Dashboard.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230F2440%22/><text y=%2268%22 x=%2250%22 font-size=%2254%22 font-family=%22serif%22 font-weight=%22bold%22 text-anchor=%22middle%22 fill=%22%23C29B38%22>A</text></svg>">
   <style>
+    :root {
+      --bg: #FFFFFF;
+      --navy: #0F2440;
+      --navy-light: #1E3A5F;
+      --gold: #C29B38;
+      --gold-light: #FDF9F0;
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --text-light: #94A3B8;
+      --border: #E2E8F0;
+      --border-hover: #CBD5E1;
+      --card-bg: #FFFFFF;
+      --card-hover-bg: #FAFCFF;
+      --radius: 14px;
+      --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font);
+      min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      background: #0A192F;
-      color: #FFFFFF;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 860px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      padding: 24px;
-      box-sizing: border-box;
     }
-    .wrap {
-      max-width: 600px;
-      background: #0F223D;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 18px;
-      padding: 36px 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    }
-    h2 { margin-bottom: 8px; color: #FFFFFF; font-size: 24px; }
-    p { color: #94A3B8; font-size: 14px; margin-bottom: 24px; }
-    .btns { display: flex; flex-direction: column; gap: 12px; }
-    a.btn {
-      display: block;
-      padding: 14px 20px;
-      border-radius: 10px;
-      text-decoration: none;
+
+    /* Brand Header */
+    .brand-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--gold-light);
+      border: 1px solid rgba(194, 155, 56, 0.35);
+      color: var(--gold);
+      font-size: 11px;
       font-weight: 700;
-      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .main-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 580px;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    /* Gateway Two-Option Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      width: 100%;
+      margin-bottom: 36px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      text-align: left;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      border-color: var(--navy);
+      background: var(--card-hover-bg);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px -12px rgba(15, 36, 64, 0.12);
+    }
+
+    .card.primary {
+      border-color: #0F2440;
+      box-shadow: 0 4px 20px rgba(15, 36, 64, 0.05);
+    }
+
+    .card.primary:hover {
+      border-color: var(--gold);
+      box-shadow: 0 20px 40px -12px rgba(194, 155, 56, 0.2);
+    }
+
+    .card-top {
+      margin-bottom: 24px;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    .tag-blue {
+      background: #EFF6FF;
+      color: #1D4ED8;
+      border: 1px solid #BFDBFE;
+    }
+
+    .tag-gold {
+      background: var(--gold-light);
+      color: var(--gold);
+      border: 1px solid rgba(194, 155, 56, 0.3);
+    }
+
+    .card-title {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-desc {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    .card-features {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .card-features li {
+      font-size: 12px;
+      color: #475467;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-features li::before {
+      content: "✓";
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 11px;
+    }
+
+    .card-btn {
+      margin-top: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 700;
       transition: all 0.2s;
     }
-    .btn-gold { background: #D97706; color: #FFFFFF; }
-    .btn-gold:hover { background: #F59E0B; }
-    .btn-outline { background: rgba(255, 255, 255, 0.08); color: #FFFFFF; border: 1px solid rgba(255, 255, 255, 0.15); }
-    .btn-outline:hover { background: rgba(255, 255, 255, 0.15); }
+
+    .card.primary .card-btn {
+      background: var(--navy);
+      color: #FFFFFF;
+      border: 1px solid var(--navy);
+    }
+
+    .card.primary:hover .card-btn {
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+
+    .card.secondary .card-btn {
+      background: #FFFFFF;
+      color: var(--navy);
+      border: 1.5px solid var(--border);
+    }
+
+    .card.secondary:hover .card-btn {
+      background: var(--navy);
+      color: #FFFFFF;
+      border-color: var(--navy);
+    }
+
+    /* Minimal Document Bar */
+    .docs-bar {
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: var(--radius);
+      border: 1px dashed var(--border);
+      background: #FAFAFA;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .docs-label {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .docs-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .doc-link {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .doc-link:hover {
+      border-color: var(--navy);
+      background: #F8FAFC;
+    }
+
+    /* Minimal Footer */
+    .footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (max-width: 720px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .main-title {
+        font-size: 26px;
+      }
+      .docs-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .docs-links {
+        width: 100%;
+      }
+      .doc-link {
+        flex: 1;
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h2>ADOV Care Group</h2>
-    <p>Executive Decision Suite &amp; Planning Portal Gateway</p>
-    <div class="btns">
-      <a href="portal/index.html" class="btn btn-gold">Enter Executive Gateway &rarr;</a>
-      <a href="portal/v2.html" class="btn btn-outline">Launch Version 2.0 (Apple Theme) &rarr;</a>
-      <a href="portal/v1.html" class="btn btn-outline">Launch Version 1.0 (Classic MIS) &rarr;</a>
+
+  <div class="container">
+    
+    <!-- Minimal Header -->
+    <div class="brand-eyebrow">Executive Decision Suite</div>
+    <h1 class="main-title">ADOV CARE GROUP</h1>
+    <p class="subtitle">Specialist Supported Living Campus • 78 &amp; 80 Marston Gardens, Luton (LU2 7DY)<br>Please select an executive portal environment to proceed:</p>
+
+    <!-- Two Minimal Options -->
+    <div class="grid">
+      
+      <!-- Option 1: Version 2.0 (Recommended) -->
+      <a href="portal/v2.html" class="card primary">
+        <div class="card-top">
+          <span class="card-tag tag-gold">Version 2.0 • Recommended</span>
+          <h2 class="card-title">
+            Executive Research Portal
+            <span style="font-size: 18px;">&rarr;</span>
+          </h2>
+          <p class="card-desc">
+            Publication-grade single-column research portal and strategic dossier. Engineered with authoritative typography, embedded CAD masterplans, financial waterfalls, and CQC compliance roadmaps.
+          </p>
+          <ul class="card-features">
+            <li>Single-column financial journal layout (no scrolling tables)</li>
+            <li>Embedded high-res CAD architectural blueprints</li>
+            <li>Dynamic placement fee &amp; OpEx breakdown simulators</li>
+            <li>Exhaustive statutory case law &amp; 45-term glossary</li>
+          </ul>
+        </div>
+        <div class="card-btn">
+          Launch Research Portal V2.0 &rarr;
+        </div>
+      </a>
+
+      <!-- Option 2: Version 1.0 (Operations MIS) -->
+      <a href="portal/v1.html" class="card secondary">
+        <div class="card-top">
+          <span class="card-tag tag-blue">Version 1.0 • Operations MIS</span>
+          <h2 class="card-title">
+            Operations Dashboard
+            <span style="font-size: 18px;">&rarr;</span>
+          </h2>
+          <p class="card-desc">
+            Classic multi-tab management information system with interactive KPI widgets, operational fee calculators, 90-day milestone checklist, and direct document vault downloads.
+          </p>
+          <ul class="card-features">
+            <li>Interactive multi-tab MIS interface</li>
+            <li>Real-time financial calculator with fee sliders</li>
+            <li>90-Day execution &amp; operational tracker</li>
+            <li>Integrated statutory document vault (30+ downloads)</li>
+          </ul>
+        </div>
+        <div class="card-btn">
+          Launch Operations Portal V1.0 &rarr;
+        </div>
+      </a>
+
     </div>
+
+    <!-- Minimal Document Downloads Bar -->
+    <div class="docs-bar">
+      <div class="docs-label">
+        <span>📥</span> Official Executive Planning Dossier (Print-Ready Publications):
+      </div>
+      <div class="docs-links">
+        <a href="portal/docs/ADOV_Care_Group_Executive_Planning_Dossier_Finance_Magazine.pdf" target="_blank" class="doc-link">
+          <span>📄</span> PDF Dossier (16 Pages)
+        </a>
+        <a href="portal/docs/ADOV_Care_Group_Executive_Planning_Dossier_Finance_Magazine.docx" download class="doc-link">
+          <span>📝</span> Word Monograph (.docx)
+        </a>
+      </div>
+    </div>
+
+    <!-- Minimal Footer -->
+    <footer class="footer">
+      <span>&copy; 2026 ADOV Care Group Limited</span>
+      <span>&bull;</span>
+      <span>Strictly Confidential &amp; Proprietary</span>
+      <span>&bull;</span>
+      <span>Luton, LU2 7DY</span>
+    </footer>
+
   </div>
+
 </body>
 </html>
