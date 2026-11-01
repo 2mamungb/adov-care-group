@@ -646,7 +646,9 @@
     .portal-container {
       display: block;
       width: 100%;
-      min-height: calc(100vh - 160px);
+      min-height: 0;
+      margin: 0;
+      padding: 0;
     }
     .portal-content {
       width: 100% !important;
@@ -4318,11 +4320,19 @@ cite.ref-title {
 }
 
 /* PROFESSIONAL EDITORIAL BODY MARGINS (NO EDGE TOUCHING, NO VOID GAP) */
+.portal-container {
+  display: block !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .portal-content {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
-  padding: 12px 24px 80px 24px !important;
+  padding: 6px 24px 80px 24px !important;
   box-sizing: border-box !important;
   overflow-y: visible;
 }
@@ -4332,18 +4342,18 @@ cite.ref-title {
   width: 100% !important;
   max-width: 1360px !important;
   margin: 0 auto !important;
-  padding: 4px 16px 60px 16px !important;
+  padding: 0 16px 60px 16px !important;
   box-sizing: border-box !important;
 }
 
 @media (max-width: 1200px) {
-  .portal-content { padding: 10px 16px 60px 16px !important; }
-  .editorial-layout { padding: 4px 8px 50px 8px !important; }
+  .portal-content { padding: 6px 16px 60px 16px !important; }
+  .editorial-layout { padding: 0 8px 50px 8px !important; }
 }
 
 @media (max-width: 640px) {
-  .portal-content { padding: 8px 10px 40px 10px !important; }
-  .editorial-layout { padding: 2px 4px 30px 4px !important; }
+  .portal-content { padding: 4px 10px 40px 10px !important; }
+  .editorial-layout { padding: 0 4px 30px 4px !important; }
 }
 
 /* Tight Header & Title Spacing */
@@ -6321,9 +6331,7 @@ cite.ref-title {
                 Final Strategic Recommendation: The Board of Mamun LIMITED and ADOV Care Group must formally and definitively commit 100% of executive effort, capital, and resources to OPTION 4 (Adult Autism &amp; Learning Disabilities Supported Living).
               </div>
             </div>
-
           </div>
-              </div>
 
               <!-- BOTTOM SEQUENTIAL READING NAVIGATOR -->
               <nav class="prev-next-nav" aria-label="Sequential Reading">
@@ -7736,7 +7744,7 @@ cite.ref-title {
              TAB-MARKET-DEMAND: STATISTICAL SUPPLY & DEMAND REPORT (LUTON & REGIONAL)
              ========================================================================== -->
         <div id="tab-market-demand" class="tab-pane">
-          <div class="editorial-layout" style="display:block; width:100%; max-width:1360px; margin:0 auto; padding:4px 16px 60px 16px;">
+          <div class="editorial-layout" style="display:block; width:100%; max-width:1360px; margin:0 auto; padding:0 16px 60px 16px;">
             <article class="editorial-main" style="width:100%; max-width:100%;">
 
               <!-- Monograph Editorial Header -->
@@ -10456,7 +10464,6 @@ cite.ref-title {
     </table>
   </div>
 </div>
-</div>
               </div>
 
               <!-- BOTTOM SEQUENTIAL READING NAVIGATOR -->
@@ -10796,7 +10803,7 @@ cite.ref-title {
       <div>✓ Luton DPS AT1115 Placement Activated</div>
     </div>
   </div>
-</div> </div>
+</div>
     
 
               <!-- TAB BODY CONTENT -->
@@ -18505,7 +18512,7 @@ id="sec-cqc-saf-34" style="margin-top: 28px;">
       if (target) {
         target.classList.add("active");
         syncStageNavbar(tabId);
-        try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch (e) {}
+        try { window.scrollTo(0, 0); } catch (e) {}
       } else {
         console.warn("Target tab pane not found:", tabId);
       }
@@ -19076,75 +19083,6 @@ id="sec-cqc-saf-34" style="margin-top: 28px;">
       'tab-vault': { icon: '📁', name: 'Master Vault (38)' },
       'tab-glossary': { icon: '📖', name: 'Technical Glossary' }
     };
-
-    function toggleMainMenu(e) {
-      if (e) {
-        e.stopPropagation();
-        e.preventDefault();
-      }
-      const flyout = document.getElementById('menuDropdownFlyout');
-      const btn = document.getElementById('btnMainDropdown');
-      if (!flyout) return;
-      const isOpen = flyout.style.display === 'block';
-      flyout.style.display = isOpen ? 'none' : 'block';
-      if (btn) btn.setAttribute('aria-expanded', !isOpen);
-    }
-
-    function switchTabAndClose(tabId) {
-      if (typeof switchTab === 'function') {
-        switchTab(tabId);
-      }
-      const flyout = document.getElementById('menuDropdownFlyout');
-      const btn = document.getElementById('btnMainDropdown');
-      if (flyout) flyout.style.display = 'none';
-      if (btn) btn.setAttribute('aria-expanded', 'false');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function updateSectionIndicator(tabId) {
-      const iconEl = document.getElementById('currentSectionIcon');
-      const titleEl = document.getElementById('currentSectionTitle');
-      const info = TAB_SECTION_INFO[tabId];
-      if (info) {
-        if (iconEl) iconEl.textContent = info.icon;
-        if (titleEl) titleEl.textContent = info.name;
-      }
-    }
-
-    // Global listener to close dropdown on click outside
-    document.addEventListener('click', function(e) {
-      const flyout = document.getElementById('menuDropdownFlyout');
-      const btn = document.getElementById('btnMainDropdown');
-      if (flyout && flyout.style.display === 'block') {
-        if (!flyout.contains(e.target) && !btn.contains(e.target)) {
-          flyout.style.display = 'none';
-          if (btn) btn.setAttribute('aria-expanded', 'false');
-        }
-      }
-    });
-
-    // Close on Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        const flyout = document.getElementById('menuDropdownFlyout');
-        const btn = document.getElementById('btnMainDropdown');
-        if (flyout && flyout.style.display === 'block') {
-          flyout.style.display = 'none';
-          if (btn) btn.setAttribute('aria-expanded', 'false');
-        }
-      }
-    });
-
-    // Sync section indicator with switchTab
-    (function hookSwitchTab() {
-      const prevSwitchTab = window.switchTab;
-      window.switchTab = function(tabId, el) {
-        if (typeof prevSwitchTab === 'function') {
-          prevSwitchTab(tabId, el);
-        }
-        updateSectionIndicator(tabId);
-      };
-    })();
     
 </script>
 
