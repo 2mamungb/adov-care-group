@@ -1776,17 +1776,19 @@
     .visual-diagram-body {
       border-radius: 10px;
       overflow: hidden;
-      background: #FAFAFC;
-      border: 1px solid rgba(0, 0, 0, 0.04);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0;
     }
     .visual-diagram-img {
       width: 100%;
+      max-width: 100%;
       height: auto;
       display: block;
-      max-height: 480px;
+      margin: 0 auto;
       object-fit: contain;
     }
     .visual-diagram-caption {
@@ -2467,12 +2469,12 @@
 .figure-body {
   width: 100%;
   border-radius: 6px;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   background: #FAFAFC;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  box-sizing: border-box;
 }
 
 [data-theme="dark"] .figure-body {
@@ -2482,8 +2484,10 @@
 
 .figure-body svg {
   width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 .figure-caption {
@@ -2961,9 +2965,10 @@ cite.ref-title {
 .blueprint-svg {
   width: 100% !important;
   height: auto !important;
-  min-height: 480px;
-  border: 1px solid #1E3E62;
-  border-radius: 10px;
+  background: #FFFFFF !important;
+  border: 1.5px solid #CBD5E1 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 14px rgba(15, 36, 64, 0.08) !important;
 }
 
 
@@ -4605,7 +4610,7 @@ cite.ref-title {
           <span class="visual-diagram-title">78 &amp; 80 Marston Gardens // 8-Bed Unified Specialist Campus</span>
         </div>
         <div class="visual-diagram-body">
-          <img src="assets/diagrams/diagram_campus_masterplan.svg" alt="Architectural Blueprint 78, 80 &amp; 82 Marston Gardens Specialist Campus" class="blueprint-svg" style="width: 100%; height: auto; border-radius: 8px; border: 1.5px solid #1E3E62; display: block; box-shadow: 0 4px 14px rgba(11,23,40,0.12);" loading="lazy">
+          <img src="assets/diagrams/diagram_campus_masterplan.svg" alt="Architectural Blueprint 78, 80 &amp; 82 Marston Gardens Specialist Campus" class="blueprint-svg" style="width: 100%; height: auto; border-radius: 8px; border: 1.5px solid #CBD5E1; background: #FFFFFF; display: block; box-shadow: 0 4px 14px rgba(15,36,64,0.08);" loading="lazy">
         </div>
         <div class="visual-diagram-caption">
           <strong>High-Precision Architectural CAD Masterplan:</strong> <strong>78 Marston Gardens on the Left Flank</strong> (5 Specialist Suites, Commercial Kitchen, Communal Dining Hall), <strong>80 Marston Gardens in the Middle</strong> (3 Specialist Suites, Sensory Calm Lounge, Registered Staff Office &amp; Sleep-In Room), and <strong>82 Marston Gardens on the Right Flank</strong> (Director Private Residence under S.105/106 ITEPA 2003 AST). Cul-de-sac frontage with 10 dedicated off-street parking bays compliant with Luton Local Plan LLP1, LLP25, LLP31 &amp; LLP32. 100ft sensory rear gardens with paved circular mobility pathways.
@@ -4668,15 +4673,7 @@ cite.ref-title {
     <span class="figure-badge">Source: ADOV Operational Audit &bull; BS 2881</span>
   </div>
   <div class="figure-body">
-    
-        <div style="margin: 20px 0;">
-          <img src="assets/diagrams/diagram_campus_masterplan.svg" alt="Highways Compliant Cul-de-Sac Campus Diagram" style="width:100%; height:auto; border-radius:8px; border:1.5px solid #1E3E62; display:block; box-shadow:0 4px 14px rgba(11,23,40,0.12);" loading="lazy">
-          <div style="font-size:12.5px; color:#64748B; margin-top:8px; line-height:1.5;">
-            <strong>Highways &amp; Street Access:</strong> Marston Gardens residential cul-de-sac compliant with Luton Local Plan LLP1, LLP25, LLP31 &amp; LLP32. 78 Marston Gardens on the Left (4 dedicated driveway bays), 80 Marston Gardens in the Middle (4 dedicated driveway bays), and 82 Marston Gardens on the Right Flank (2 garage parking bays).
-          </div>
-        </div>
-        
-        <div class="card" id="campus-rota-card">
+    <div class="card" id="campus-rota-card" style="width:100%; margin:0; border:none; box-shadow:none; background:transparent;">
   <div class="card-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
     <h3 class="card-title" style="margin:0; font-size:16px; font-weight:700;">Unified Campus 24/7 Operational Shift Rota (78 &amp; 80 Marston Gardens)</h3>
     <span class="badge" style="background:#0284c7; color:#fff; padding:4px 8px; border-radius:4px; font-size:11px; font-weight:600;">10.0 FTE Permanent Core + WTR Compliant</span>
@@ -7365,7 +7362,7 @@ cite.ref-title {
           <span class="visual-diagram-title">78 &amp; 80 Marston Gardens // 8-Bed Unified Specialist Campus</span>
         </div>
         <div class="visual-diagram-body">
-          <img src="assets/diagrams/diagram_campus_masterplan.svg" alt="Architectural Blueprint 78, 80 &amp; 82 Marston Gardens Specialist Campus" class="blueprint-svg" style="width: 100%; height: auto; border-radius: 8px; border: 1.5px solid #1E3E62; display: block; box-shadow: 0 4px 14px rgba(11,23,40,0.12);" loading="lazy">
+          <img src="assets/diagrams/diagram_campus_masterplan.svg" alt="Architectural Blueprint 78, 80 &amp; 82 Marston Gardens Specialist Campus" class="blueprint-svg" style="width: 100%; height: auto; border-radius: 8px; border: 1.5px solid #CBD5E1; background: #FFFFFF; display: block; box-shadow: 0 4px 14px rgba(15,36,64,0.08);" loading="lazy">
         </div>
         <div class="visual-diagram-caption">
           <strong>High-Precision Architectural CAD Masterplan:</strong> <strong>78 Marston Gardens on the Left Flank</strong> (5 Specialist Suites, Commercial Kitchen, Communal Dining Hall), <strong>80 Marston Gardens in the Middle</strong> (3 Specialist Suites, Sensory Calm Lounge, Registered Staff Office &amp; Sleep-In Room), and <strong>82 Marston Gardens on the Right Flank</strong> (Director Private Residence under S.105/106 ITEPA 2003 AST). Cul-de-sac frontage with 10 dedicated off-street parking bays compliant with Luton Local Plan LLP1, LLP25, LLP31 &amp; LLP32. 100ft sensory rear gardens with paved circular mobility pathways.
@@ -8881,7 +8878,7 @@ cite.ref-title {
           <span class="visual-diagram-title">78 &amp; 80 Marston Gardens // 8-Bed Unified Specialist Campus</span>
         </div>
         <div class="visual-diagram-body">
-          <img src="assets/diagrams/diagram_campus_masterplan.svg" alt="Architectural Blueprint 78, 80 &amp; 82 Marston Gardens Specialist Campus" class="blueprint-svg" style="width: 100%; height: auto; border-radius: 8px; border: 1.5px solid #1E3E62; display: block; box-shadow: 0 4px 14px rgba(11,23,40,0.12);" loading="lazy">
+          <img src="assets/diagrams/diagram_campus_masterplan.svg" alt="Architectural Blueprint 78, 80 &amp; 82 Marston Gardens Specialist Campus" class="blueprint-svg" style="width: 100%; height: auto; border-radius: 8px; border: 1.5px solid #CBD5E1; background: #FFFFFF; display: block; box-shadow: 0 4px 14px rgba(15,36,64,0.08);" loading="lazy">
         </div>
         <div class="visual-diagram-caption">
           <strong>High-Precision Architectural CAD Masterplan:</strong> <strong>78 Marston Gardens on the Left Flank</strong> (5 Specialist Suites, Commercial Kitchen, Communal Dining Hall), <strong>80 Marston Gardens in the Middle</strong> (3 Specialist Suites, Sensory Calm Lounge, Registered Staff Office &amp; Sleep-In Room), and <strong>82 Marston Gardens on the Right Flank</strong> (Director Private Residence under S.105/106 ITEPA 2003 AST). Cul-de-sac frontage with 10 dedicated off-street parking bays compliant with Luton Local Plan LLP1, LLP25, LLP31 &amp; LLP32. 100ft sensory rear gardens with paved circular mobility pathways.
@@ -9988,7 +9985,7 @@ cite.ref-title {
           <span class="visual-diagram-title">78 &amp; 80 Marston Gardens // 8-Bed Unified Specialist Campus</span>
         </div>
         <div class="visual-diagram-body">
-          <img src="assets/diagrams/diagram_campus_masterplan.svg" alt="Architectural Blueprint 78, 80 &amp; 82 Marston Gardens Specialist Campus" class="blueprint-svg" style="width: 100%; height: auto; border-radius: 8px; border: 1.5px solid #1E3E62; display: block; box-shadow: 0 4px 14px rgba(11,23,40,0.12);" loading="lazy">
+          <img src="assets/diagrams/diagram_campus_masterplan.svg" alt="Architectural Blueprint 78, 80 &amp; 82 Marston Gardens Specialist Campus" class="blueprint-svg" style="width: 100%; height: auto; border-radius: 8px; border: 1.5px solid #CBD5E1; background: #FFFFFF; display: block; box-shadow: 0 4px 14px rgba(15,36,64,0.08);" loading="lazy">
         </div>
         <div class="visual-diagram-caption">
           <strong>High-Precision Architectural CAD Masterplan:</strong> <strong>78 Marston Gardens on the Left Flank</strong> (5 Specialist Suites, Commercial Kitchen, Communal Dining Hall), <strong>80 Marston Gardens in the Middle</strong> (3 Specialist Suites, Sensory Calm Lounge, Registered Staff Office &amp; Sleep-In Room), and <strong>82 Marston Gardens on the Right Flank</strong> (Director Private Residence under S.105/106 ITEPA 2003 AST). Cul-de-sac frontage with 10 dedicated off-street parking bays compliant with Luton Local Plan LLP1, LLP25, LLP31 &amp; LLP32. 100ft sensory rear gardens with paved circular mobility pathways.
