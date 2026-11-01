@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="340" viewBox="0 0 860 340" style="background:#FFFFFF; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <rect width="860" height="340" fill="#FFFFFF" rx="8"/>
+  <text x="30" y="30" font-size="15" font-weight="800" fill="#0F2440">Chart 6: Care Home Bed Density Benchmark (Beds per 1,000 Population 65+)</text>
+  <text x="30" y="48" font-size="11.5" fill="#64748B">Source: Table 5 (table5_regional_benchmarks.csv) • ONS Census 2021 &amp; CQC Local Authority Profiles</text>
+
+  <!-- National England Target Line -->
+  <line x1="680" y1="75" x2="680" y2="290" stroke="#DC2626" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="680" y="70" font-size="10.5" font-weight="800" fill="#DC2626" text-anchor="middle">England Average: 43.5 Beds / 1k</text>
+
+  <!-- Scale Line -->
+  <line x1="260" y1="290" x2="810" y2="290" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="260" y="306" font-size="10" fill="#64748B" text-anchor="middle">0</text>
+  <text x="397" y="306" font-size="10" fill="#64748B" text-anchor="middle">12.5</text>
+  <text x="535" y="306" font-size="10" fill="#64748B" text-anchor="middle">25.0</text>
+  <text x="672" y="306" font-size="10" fill="#64748B" text-anchor="middle">37.5</text>
+  <text x="810" y="306" font-size="10" fill="#64748B" text-anchor="middle">50.0 Beds / 1k</text>
+
+  <!-- Row 1: Luton (33.95) -->
+  <text x="245" y="102" font-size="11.5" font-weight="800" fill="#DC2626" text-anchor="end">Luton Borough Council</text>
+  <rect x="260" y="88" width="373" height="20" fill="#DC2626" rx="3"/>
+  <text x="640" y="103" font-size="11" font-weight="800" fill="#DC2626">33.95 (Severe Deficit: -22.0%)</text>
+
+  <!-- Row 2: Central Beds (36.0) -->
+  <text x="245" y="137" font-size="11.5" font-weight="700" fill="#0F2440" text-anchor="end">Central Bedfordshire</text>
+  <rect x="260" y="123" width="396" height="20" fill="#0F2440" rx="3"/>
+  <text x="663" y="138" font-size="11" font-weight="700" fill="#0F2440">36.00</text>
+
+  <!-- Row 3: Bedford Borough (36.8) -->
+  <text x="245" y="172" font-size="11.5" font-weight="700" fill="#0F2440" text-anchor="end">Bedford Borough</text>
+  <rect x="260" y="158" width="405" height="20" fill="#1E3A5F" rx="3"/>
+  <text x="672" y="173" font-size="11" font-weight="700" fill="#1E3A5F">36.80</text>
+
+  <!-- Row 4: North Hertfordshire (39.6) -->
+  <text x="245" y="207" font-size="11.5" font-weight="700" fill="#0F2440" text-anchor="end">North Hertfordshire</text>
+  <rect x="260" y="193" width="436" height="20" fill="#475467" rx="3"/>
+  <text x="703" y="208" font-size="11" font-weight="700" fill="#475467">39.60</text>
+
+  <!-- Row 5: Dacorum (40.3) -->
+  <text x="245" y="242" font-size="11.5" font-weight="700" fill="#0F2440" text-anchor="end">Dacorum (Herts)</text>
+  <rect x="260" y="228" width="443" height="20" fill="#475467" rx="3"/>
+  <text x="710" y="243" font-size="11" font-weight="700" fill="#475467">40.30</text>
+
+  <!-- Row 6: St Albans (43.1) -->
+  <text x="245" y="277" font-size="11.5" font-weight="700" fill="#0F2440" text-anchor="end">St Albans (Herts)</text>
+  <rect x="260" y="263" width="474" height="20" fill="#166534" rx="3"/>
+  <text x="741" y="278" font-size="11" font-weight="700" fill="#166534">43.10</text>
+</svg>

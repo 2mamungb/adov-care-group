@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="300" viewBox="0 0 860 300" style="background:#FFFFFF; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <rect width="860" height="300" fill="#FFFFFF" rx="8"/>
+  <text x="30" y="30" font-size="15" font-weight="800" fill="#0F2440">Chart 4: Supply-Demand Net Deficit Ranges by Care Sector (Beds)</text>
+  <text x="30" y="48" font-size="11.5" fill="#64748B">Source: Table 3 (table3_gap_analysis_ranges.csv) • Sensitivity Bounds: Low, Central, and High Scenarios</text>
+
+  <!-- Legend -->
+  <rect x="360" y="62" width="12" height="12" fill="#FCA5A5" rx="2"/><text x="378" y="72" font-size="11" fill="#334155">Low Deficit</text>
+  <rect x="475" y="62" width="12" height="12" fill="#EF4444" rx="2"/><text x="493" y="72" font-size="11" fill="#334155">Central Gap</text>
+  <rect x="590" y="62" width="12" height="12" fill="#991B1B" rx="2"/><text x="608" y="72" font-size="11" fill="#334155">High Deficit (Severe)</text>
+
+  <!-- Scale Line -->
+  <line x1="260" y1="255" x2="810" y2="255" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="260" y="272" font-size="10" fill="#64748B" text-anchor="middle">0</text>
+  <text x="397" y="272" font-size="10" fill="#64748B" text-anchor="middle">-60</text>
+  <text x="535" y="272" font-size="10" fill="#64748B" text-anchor="middle">-120</text>
+  <text x="672" y="272" font-size="10" fill="#64748B" text-anchor="middle">-180</text>
+  <text x="810" y="272" font-size="10" fill="#64748B" text-anchor="middle">-240 Bed Deficit</text>
+
+  <!-- Sector 1: Elderly (85 to 225) -->
+  <text x="245" y="104" font-size="11.5" font-weight="700" fill="#0F2440" text-anchor="end">Elderly Care (65+)</text>
+  <rect x="260" y="86" width="194" height="9" fill="#FCA5A5" rx="2"/>
+  <rect x="260" y="97" width="343" height="9" fill="#EF4444" rx="2"/>
+  <rect x="260" y="108" width="514" height="9" fill="#991B1B" rx="2"/>
+  <text x="782" y="103" font-size="10.5" font-weight="800" fill="#991B1B">Gap: -150 (-85 to -225)</text>
+
+  <!-- Sector 2: Mental Health (45 to 110) -->
+  <text x="245" y="146" font-size="11.5" font-weight="700" fill="#0F2440" text-anchor="end">Mental Health Rehab</text>
+  <rect x="260" y="128" width="103" height="9" fill="#FCA5A5" rx="2"/>
+  <rect x="260" y="139" width="167" height="9" fill="#EF4444" rx="2"/>
+  <rect x="260" y="150" width="251" height="9" fill="#991B1B" rx="2"/>
+  <text x="520" y="145" font-size="10.5" font-weight="800" fill="#991B1B">Gap: -73 (-45 to -110)</text>
+
+  <!-- Sector 3: Autism & LD (38 to 95) -->
+  <text x="245" y="188" font-size="11.5" font-weight="700" fill="#0F2440" text-anchor="end">Autism &amp; Learning Dis.</text>
+  <rect x="260" y="170" width="87" height="9" fill="#FCA5A5" rx="2"/>
+  <rect x="260" y="181" width="153" height="9" fill="#EF4444" rx="2"/>
+  <rect x="260" y="192" width="217" height="9" fill="#991B1B" rx="2"/>
+  <text x="485" y="187" font-size="10.5" font-weight="800" fill="#991B1B">Gap: -67 (-38 to -95)</text>
+
+  <!-- Sector 4: Children (18 to 38) -->
+  <text x="245" y="230" font-size="11.5" font-weight="700" fill="#0F2440" text-anchor="end">Children (0-25)</text>
+  <rect x="260" y="212" width="41" height="9" fill="#FCA5A5" rx="2"/>
+  <rect x="260" y="223" width="59" height="9" fill="#EF4444" rx="2"/>
+  <rect x="260" y="234" width="87" height="9" fill="#991B1B" rx="2"/>
+  <text x="355" y="229" font-size="10.5" font-weight="800" fill="#991B1B">Gap: -26 (-18 to -38)</text>
+</svg>

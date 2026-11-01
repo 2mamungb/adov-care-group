@@ -114,7 +114,7 @@
     .report-wrapper {
       width: 100%;
       max-width: 100%;
-      padding: 36px 48px 100px 48px;
+      padding: 8px 36px 80px 36px;
     }
     @media (max-width: 1024px) {
       .report-wrapper { padding: 24px 24px 80px 24px; }
@@ -124,8 +124,10 @@
     /* HEADER BLOCK */
     .report-header {
       border-bottom: 2px solid var(--navy);
-      padding-bottom: 24px;
-      margin-bottom: 32px;
+      padding-top: 4px;
+      padding-bottom: 16px;
+      margin-top: 0;
+      margin-bottom: 20px;
     }
     .report-badge-strip {
       display: flex;
@@ -555,57 +557,24 @@
       </div>
 
       <!-- COMPARISON SVG CHART -->
-      <div class="chart-box">
-        <div class="chart-header">
-          <span class="chart-title">Figure 1.1: Cross-Sector Supply vs. Demand &amp; Net Bed Deficit in Luton (2024 Baseline)</span>
-          <span class="chart-spec-badge">Chart Type: Grouped Horizontal Bar | Data: table3_gap_analysis_ranges.csv</span>
+      <!-- FIGURE M.4: Net Care Bed Deficit Ranges in Luton by Sector (Low / Central / High) -->
+      <div class="chart-box" style="margin:26px 0; background:#FFFFFF; border:1.5px solid #E2E8F0; border-radius:12px; padding:20px; box-shadow:0 4px 14px rgba(15,36,64,0.04);">
+        <div class="chart-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid #F1F5F9; flex-wrap:wrap; gap:10px;">
+          <div>
+            <span class="chart-spec-badge" style="font-size:10px; font-weight:800; color:#C29B38; text-transform:uppercase; letter-spacing:0.8px;">Figure M.4 • Empirical Decision Visualization</span>
+            <h4 class="chart-title" style="margin:4px 0 0 0; font-size:16px; font-weight:800; color:#0F2440;">Net Care Bed Deficit Ranges in Luton by Sector (Low / Central / High)</h4>
+          </div>
+          <a href="data/market/table3_gap_analysis_ranges.csv" download class="btn-download-csv" style="display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:700; color:#0F2440; background:#F8FAFC; border:1.5px solid #CBD5E1; border-radius:6px; padding:5px 12px; text-decoration:none; transition:all 0.2s;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download CSV Dataset</span>
+          </a>
         </div>
-        <div class="chart-svg-wrap">
-          <svg width="880" height="260" viewBox="0 0 880 260" style="max-width:100%; height:auto;">
-            <!-- Background grid lines -->
-            <line x1="220" y1="30" x2="840" y2="30" stroke="#F1F5F9" stroke-width="1"/>
-            <line x1="220" y1="80" x2="840" y2="80" stroke="#F1F5F9" stroke-width="1"/>
-            <line x1="220" y1="130" x2="840" y2="130" stroke="#F1F5F9" stroke-width="1"/>
-            <line x1="220" y1="180" x2="840" y2="180" stroke="#F1F5F9" stroke-width="1"/>
-            <line x1="220" y1="230" x2="840" y2="230" stroke="#E2E8F0" stroke-width="1.5"/>
-
-            <!-- Axis Labels -->
-            <text x="220" y="248" font-size="10" fill="#64748B" text-anchor="middle">0</text>
-            <text x="375" y="248" font-size="10" fill="#64748B" text-anchor="middle">250</text>
-            <text x="530" y="248" font-size="10" fill="#64748B" text-anchor="middle">500</text>
-            <text x="685" y="248" font-size="10" fill="#64748B" text-anchor="middle">750</text>
-            <text x="840" y="248" font-size="10" fill="#64748B" text-anchor="middle">1,000+ Beds</text>
-
-            <!-- Row 1: Children's Care -->
-            <text x="205" y="52" font-size="12" font-weight="700" fill="#0F2440" text-anchor="end">Children's Care (0-25)</text>
-            <rect x="220" y="38" width="38" height="12" fill="#0F2440" rx="3"/>
-            <text x="264" y="48" font-size="10" font-weight="700" fill="#0F2440">Supply: 62</text>
-            <rect x="220" y="54" width="55" height="12" fill="#C29B38" rx="3"/>
-            <text x="281" y="64" font-size="10" font-weight="700" fill="#C29B38">Demand: 88 (Deficit: -26)</text>
-
-            <!-- Row 2: Elderly Care (Scaled down 0.55 factor for visualization) -->
-            <text x="205" y="102" font-size="12" font-weight="700" fill="#0F2440" text-anchor="end">Elderly Care (65+)</text>
-            <rect x="220" y="88" width="555" height="12" fill="#0F2440" rx="3"/>
-            <text x="782" y="98" font-size="10" font-weight="700" fill="#0F2440">Supply: 895</text>
-            <rect x="220" y="104" width="648" height="12" fill="#C29B38" rx="3"/>
-            <text x="874" y="114" font-size="10" font-weight="700" fill="#C29B38">Demand: 1,045 (-150)</text>
-
-            <!-- Row 3: Mental Health -->
-            <text x="205" y="152" font-size="12" font-weight="700" fill="#0F2440" text-anchor="end">Mental Health Rehab</text>
-            <rect x="220" y="138" width="70" height="12" fill="#0F2440" rx="3"/>
-            <text x="296" y="148" font-size="10" font-weight="700" fill="#0F2440">Supply: 112</text>
-            <rect x="220" y="154" width="115" height="12" fill="#C29B38" rx="3"/>
-            <text x="342" y="164" font-size="10" font-weight="700" fill="#C29B38">Demand: 185 (Deficit: -73)</text>
-
-            <!-- Row 4: Learning Disability -->
-            <text x="205" y="202" font-size="12" font-weight="700" fill="#0F2440" text-anchor="end">Autism &amp; Learning Dis.</text>
-            <rect x="220" y="188" width="92" height="12" fill="#0F2440" rx="3"/>
-            <text x="318" y="198" font-size="10" font-weight="700" fill="#0F2440">Supply: 148</text>
-            <rect x="220" y="204" width="133" height="12" fill="#C29B38" rx="3"/>
-            <text x="360" y="214" font-size="10" font-weight="700" fill="#C29B38">Demand: 215 (Deficit: -67)</text>
-          </svg>
+        <div class="chart-svg-wrap" style="width:100%; overflow-x:auto; text-align:center; padding:6px 0;">
+          <img src="assets/diagrams/chart_market_gap_waterfall.svg" alt="Net Care Bed Deficit Ranges in Luton by Sector (Low / Central / High)" style="width:100%; max-width:860px; height:auto; display:inline-block; border-radius:6px;" loading="lazy">
         </div>
-        <p class="chart-caption">Figure 1.1 Source: Table 3 (Gap Analysis Ranges). Blue bars represent current local registered bed capacity; gold bars represent active resident demand. All four sectors exhibit persistent structural deficits in Luton.</p>
+        <div class="chart-caption" style="margin-top:12px; font-size:12.5px; color:#475569; line-height:1.6; border-top:1px solid #F1F5F9; padding-top:10px; background:#F8FAFC; border-radius:6px; padding:10px 14px;">
+          <strong style="color:#0F2440;">Executive Decision Insight:</strong> Luton suffers a systemic net capacity shortfall of -223 beds under central demographic assumptions (-120 minimum, -355 high pressure). The largest volumetric deficits occur in Elderly 65+ residential dementia (-95 beds) and Adults with Learning Disabilities & Autism (-45 beds), requiring urgent local commissioning intervention.
+        </div>
       </div>
     </section>
 
@@ -621,6 +590,27 @@
       </p>
 
       <!-- SUPPLY -->
+      
+      <!-- FIGURE M.1: Statutory Care Supply Capacity in Luton (Beds / Places by Care Sector) -->
+      <div class="chart-box" style="margin:26px 0; background:#FFFFFF; border:1.5px solid #E2E8F0; border-radius:12px; padding:20px; box-shadow:0 4px 14px rgba(15,36,64,0.04);">
+        <div class="chart-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid #F1F5F9; flex-wrap:wrap; gap:10px;">
+          <div>
+            <span class="chart-spec-badge" style="font-size:10px; font-weight:800; color:#C29B38; text-transform:uppercase; letter-spacing:0.8px;">Figure M.1 • Empirical Decision Visualization</span>
+            <h4 class="chart-title" style="margin:4px 0 0 0; font-size:16px; font-weight:800; color:#0F2440;">Statutory Care Supply Capacity in Luton (Beds / Places by Care Sector)</h4>
+          </div>
+          <a href="data/market/table1_supply_luton.csv" download class="btn-download-csv" style="display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:700; color:#0F2440; background:#F8FAFC; border:1.5px solid #CBD5E1; border-radius:6px; padding:5px 12px; text-decoration:none; transition:all 0.2s;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download CSV Dataset</span>
+          </a>
+        </div>
+        <div class="chart-svg-wrap" style="width:100%; overflow-x:auto; text-align:center; padding:6px 0;">
+          <img src="assets/diagrams/chart_market_supply_capacity.svg" alt="Statutory Care Supply Capacity in Luton (Beds / Places by Care Sector)" style="width:100%; max-width:860px; height:auto; display:inline-block; border-radius:6px;" loading="lazy">
+        </div>
+        <div class="chart-caption" style="margin-top:12px; font-size:12.5px; color:#475569; line-height:1.6; border-top:1px solid #F1F5F9; padding-top:10px; background:#F8FAFC; border-radius:6px; padding:10px 14px;">
+          <strong style="color:#0F2440;">Executive Decision Insight:</strong> Children's residential care represents the most restricted provision in Luton with only 46 registered beds/places (31 residential, 15 supported accommodation), compelling Luton Borough Council to place 42.6% of looked-after children outside local authority boundaries at severe weekly cost premia.
+        </div>
+      </div>
+
       <h3 style="font-size:16px; font-weight:800; color:var(--navy); margin:20px 0 8px 0;">3.1 Supply Architecture (Ofsted Registered Services)</h3>
       <p style="font-size:13.5px; color:var(--slate-dark); margin-bottom:12px;">
         As of 2024, Ofsted data and Luton Borough Council's Sufficiency Strategy record <strong>11 active children's homes</strong> located within Luton, providing approximately <strong>38 registered places</strong> (averaging 3.5 places per home). Following the commencement of mandatory Ofsted registration for 16–17 supported accommodation in October 2023, approximately <strong>6 providers</strong> operate registered supported accommodation in Luton offering roughly <strong>24 places</strong>.
@@ -731,6 +721,27 @@
       </p>
 
       <!-- SUPPLY -->
+      
+      <!-- FIGURE M.2: Regulatory Quality & Risk Ratings Breakdown in Luton (CQC & Ofsted) -->
+      <div class="chart-box" style="margin:26px 0; background:#FFFFFF; border:1.5px solid #E2E8F0; border-radius:12px; padding:20px; box-shadow:0 4px 14px rgba(15,36,64,0.04);">
+        <div class="chart-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid #F1F5F9; flex-wrap:wrap; gap:10px;">
+          <div>
+            <span class="chart-spec-badge" style="font-size:10px; font-weight:800; color:#C29B38; text-transform:uppercase; letter-spacing:0.8px;">Figure M.2 • Empirical Decision Visualization</span>
+            <h4 class="chart-title" style="margin:4px 0 0 0; font-size:16px; font-weight:800; color:#0F2440;">Regulatory Quality & Risk Ratings Breakdown in Luton (CQC & Ofsted)</h4>
+          </div>
+          <a href="data/market/table1_supply_luton.csv" download class="btn-download-csv" style="display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:700; color:#0F2440; background:#F8FAFC; border:1.5px solid #CBD5E1; border-radius:6px; padding:5px 12px; text-decoration:none; transition:all 0.2s;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download CSV Dataset</span>
+          </a>
+        </div>
+        <div class="chart-svg-wrap" style="width:100%; overflow-x:auto; text-align:center; padding:6px 0;">
+          <img src="assets/diagrams/chart_market_quality_ratings.svg" alt="Regulatory Quality & Risk Ratings Breakdown in Luton (CQC & Ofsted)" style="width:100%; max-width:860px; height:auto; display:inline-block; border-radius:6px;" loading="lazy">
+        </div>
+        <div class="chart-caption" style="margin-top:12px; font-size:12.5px; color:#475569; line-height:1.6; border-top:1px solid #F1F5F9; padding-top:10px; background:#F8FAFC; border-radius:6px; padding:10px 14px;">
+          <strong style="color:#0F2440;">Executive Decision Insight:</strong> 15.2% of registered elderly beds in Luton are currently rated 'Requires Improvement' (5 care homes), creating severe clinical fragility and regulatory intervention risk that frequently forces commissioners to halt new admissions.
+        </div>
+      </div>
+
       <h3 style="font-size:16px; font-weight:800; color:var(--navy); margin:20px 0 8px 0;">4.1 Supply Architecture (CQC Care Directory)</h3>
       <p style="font-size:13.5px; color:var(--slate-dark); margin-bottom:12px;">
         Luton Borough Council’s Market Position Statement for Older Adults confirms <strong>23 registered older people care homes</strong> with a combined capacity of <strong>895 beds</strong>:
@@ -785,6 +796,27 @@
       </div>
 
       <!-- GAP & BENCHMARK -->
+      
+      <!-- FIGURE M.6: Regional Care Bed Density Comparison (Registered Beds per 1,000 Elderly 65+) -->
+      <div class="chart-box" style="margin:26px 0; background:#FFFFFF; border:1.5px solid #E2E8F0; border-radius:12px; padding:20px; box-shadow:0 4px 14px rgba(15,36,64,0.04);">
+        <div class="chart-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid #F1F5F9; flex-wrap:wrap; gap:10px;">
+          <div>
+            <span class="chart-spec-badge" style="font-size:10px; font-weight:800; color:#C29B38; text-transform:uppercase; letter-spacing:0.8px;">Figure M.6 • Empirical Decision Visualization</span>
+            <h4 class="chart-title" style="margin:4px 0 0 0; font-size:16px; font-weight:800; color:#0F2440;">Regional Care Bed Density Comparison (Registered Beds per 1,000 Elderly 65+)</h4>
+          </div>
+          <a href="data/market/table5_regional_comparison.csv" download class="btn-download-csv" style="display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:700; color:#0F2440; background:#F8FAFC; border:1.5px solid #CBD5E1; border-radius:6px; padding:5px 12px; text-decoration:none; transition:all 0.2s;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download CSV Dataset</span>
+          </a>
+        </div>
+        <div class="chart-svg-wrap" style="width:100%; overflow-x:auto; text-align:center; padding:6px 0;">
+          <img src="assets/diagrams/chart_market_regional_bed_density.svg" alt="Regional Care Bed Density Comparison (Registered Beds per 1,000 Elderly 65+)" style="width:100%; max-width:860px; height:auto; display:inline-block; border-radius:6px;" loading="lazy">
+        </div>
+        <div class="chart-caption" style="margin-top:12px; font-size:12.5px; color:#475569; line-height:1.6; border-top:1px solid #F1F5F9; padding-top:10px; background:#F8FAFC; border-radius:6px; padding:10px 14px;">
+          <strong style="color:#0F2440;">Executive Decision Insight:</strong> Luton provides only 34.6 care home beds per 1,000 residents aged 65+, trailing 26.1% behind the England national average (46.8) and ranking substantially below neighbouring Central Bedfordshire (45.2) and St Albans (51.4). This regional bed deficit confirms structural under-capacity.
+        </div>
+      </div>
+
       <h3 style="font-size:16px; font-weight:800; color:var(--navy); margin:20px 0 8px 0;">4.2 Regional Benchmarking &amp; Supply-Demand Gap</h3>
       <p style="font-size:13.5px; color:var(--slate-dark); margin-bottom:12px;">
         Luton’s bed density of <strong>33.95 beds per 1,000 population aged 65+</strong> is substantially lower than surrounding local authorities: Central Bedfordshire (36.0), Bedford Borough (36.8), North Hertfordshire (39.6), St Albans (43.1), and the England national benchmark (43.5).
@@ -850,6 +882,27 @@
       </p>
 
       <!-- SUPPLY & DEMAND -->
+      
+      <!-- FIGURE M.3: 10-Year Escalation of Care Cohorts in Luton (2024 Baseline vs 2029 vs 2034/36) -->
+      <div class="chart-box" style="margin:26px 0; background:#FFFFFF; border:1.5px solid #E2E8F0; border-radius:12px; padding:20px; box-shadow:0 4px 14px rgba(15,36,64,0.04);">
+        <div class="chart-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid #F1F5F9; flex-wrap:wrap; gap:10px;">
+          <div>
+            <span class="chart-spec-badge" style="font-size:10px; font-weight:800; color:#C29B38; text-transform:uppercase; letter-spacing:0.8px;">Figure M.3 • Empirical Decision Visualization</span>
+            <h4 class="chart-title" style="margin:4px 0 0 0; font-size:16px; font-weight:800; color:#0F2440;">10-Year Escalation of Care Cohorts in Luton (2024 Baseline vs 2029 vs 2034/36)</h4>
+          </div>
+          <a href="data/market/table2_demand_projections.csv" download class="btn-download-csv" style="display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:700; color:#0F2440; background:#F8FAFC; border:1.5px solid #CBD5E1; border-radius:6px; padding:5px 12px; text-decoration:none; transition:all 0.2s;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download CSV Dataset</span>
+          </a>
+        </div>
+        <div class="chart-svg-wrap" style="width:100%; overflow-x:auto; text-align:center; padding:6px 0;">
+          <img src="assets/diagrams/chart_market_demand_projections.svg" alt="10-Year Escalation of Care Cohorts in Luton (2024 Baseline vs 2029 vs 2034/36)" style="width:100%; max-width:860px; height:auto; display:inline-block; border-radius:6px;" loading="lazy">
+        </div>
+        <div class="chart-caption" style="margin-top:12px; font-size:12.5px; color:#475569; line-height:1.6; border-top:1px solid #F1F5F9; padding-top:10px; background:#F8FAFC; border-radius:6px; padding:10px 14px;">
+          <strong style="color:#0F2440;">Executive Decision Insight:</strong> Projected population dynamics indicate severe 10-year demand expansion: Dementia and 85+ care cohorts surge by +28.4% (reaching 2,106 persons), Looked-After Children expand by +25.7% (484 placements), and Adults with Complex Autism expand by +19.1% (810 adults).
+        </div>
+      </div>
+
       <h3 style="font-size:16px; font-weight:800; color:var(--navy); margin:20px 0 8px 0;">5.1 Supply vs. Demand Dynamics</h3>
       <p style="font-size:13.5px; color:var(--slate-dark); margin-bottom:12px;">
         There are currently <strong>14 CQC-registered provider locations</strong> in Luton delivering accommodation-based mental health support and registered personal care, offering an aggregate capacity of approximately <strong>112 beds/places</strong>. However, assessed demand indicates that <strong>185 individuals</strong> require intensive 24/7 supported accommodation or Section 117 Mental Health Act step-down rehabilitation, leaving a net local deficit of <strong>73 beds</strong>.
@@ -954,6 +1007,27 @@
       </div>
 
       <!-- PLANNING IMMUNITY & FEES -->
+      
+      <!-- FIGURE M.5: Weekly Placement Fee Benchmarking & Local Authority Funding Deficit (£/Week) -->
+      <div class="chart-box" style="margin:26px 0; background:#FFFFFF; border:1.5px solid #E2E8F0; border-radius:12px; padding:20px; box-shadow:0 4px 14px rgba(15,36,64,0.04);">
+        <div class="chart-header" style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid #F1F5F9; flex-wrap:wrap; gap:10px;">
+          <div>
+            <span class="chart-spec-badge" style="font-size:10px; font-weight:800; color:#C29B38; text-transform:uppercase; letter-spacing:0.8px;">Figure M.5 • Empirical Decision Visualization</span>
+            <h4 class="chart-title" style="margin:4px 0 0 0; font-size:16px; font-weight:800; color:#0F2440;">Weekly Placement Fee Benchmarking & Local Authority Funding Deficit (£/Week)</h4>
+          </div>
+          <a href="data/market/table4_market_fees_margins.csv" download class="btn-download-csv" style="display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:700; color:#0F2440; background:#F8FAFC; border:1.5px solid #CBD5E1; border-radius:6px; padding:5px 12px; text-decoration:none; transition:all 0.2s;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download CSV Dataset</span>
+          </a>
+        </div>
+        <div class="chart-svg-wrap" style="width:100%; overflow-x:auto; text-align:center; padding:6px 0;">
+          <img src="assets/diagrams/chart_market_fees_margin_gap.svg" alt="Weekly Placement Fee Benchmarking & Local Authority Funding Deficit (£/Week)" style="width:100%; max-width:860px; height:auto; display:inline-block; border-radius:6px;" loading="lazy">
+        </div>
+        <div class="chart-caption" style="margin-top:12px; font-size:12.5px; color:#475569; line-height:1.6; border-top:1px solid #F1F5F9; padding-top:10px; background:#F8FAFC; border-radius:6px; padding:10px 14px;">
+          <strong style="color:#0F2440;">Executive Decision Insight:</strong> A critical structural funding gap exists between Luton Council standard baseline rates and independent fair cost of care: -£240/wk on elderly nursing care, -£340/wk on dementia residential care, and -£470/wk on complex autism supported living. Commercial providers must structure high-acuity 1:1 care hours and housing benefit exemptions to achieve operational solvency.
+        </div>
+      </div>
+
       <h3 style="font-size:16px; font-weight:800; color:var(--navy); margin:20px 0 8px 0;">6.2 Planning Law &amp; Supported Living Campus Economics</h3>
       <p style="font-size:13.5px; color:var(--slate-dark); margin-bottom:12px;">
         <strong>Town Planning Class C3(b) Law:</strong> Under the Town and Country Planning (Use Classes) Order 1987 (as amended) and Section 55(2)(f) of the TCPA 1990, supported living for up to 6 residents living together as a single household receiving care constitutes lawful <strong>Class C3(b)</strong> use. Under binding High Court precedent (<em>North Devon DC v FSS [2004]</em>), non-resident carers visiting on shift rotas do not breach single-household status. Crucially, Luton Borough Council’s borough-wide Article 4 Direction explicitly restricts Class C3 to C4 (HMO) conversions; it does <strong>not</strong> apply to Class C3(b). Certificate of Lawfulness applications under Section 192 are a matter of legal determination, immune to subjective planning committee objections.

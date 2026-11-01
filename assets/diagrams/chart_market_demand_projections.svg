@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="320" viewBox="0 0 860 320" style="background:#FFFFFF; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <rect width="860" height="320" fill="#FFFFFF" rx="8"/>
+  <text x="30" y="30" font-size="15" font-weight="800" fill="#0F2440">Chart 3: 10-Year Escalation of Care Cohorts in Luton (2024 vs 2029 vs 2034)</text>
+  <text x="30" y="48" font-size="11.5" fill="#64748B">Source: Table 2 (table2_demand_projections.csv) • ONS Census 2021 &amp; Luton POPGROUP Cohort Projections</text>
+
+  <!-- Legend -->
+  <rect x="320" y="62" width="12" height="12" fill="#0F2440" rx="2"/><text x="338" y="72" font-size="11" fill="#334155">Current (2024 Baseline)</text>
+  <rect x="495" y="62" width="12" height="12" fill="#C29B38" rx="2"/><text x="513" y="72" font-size="11" fill="#334155">5-Year Need (2029)</text>
+  <rect x="655" y="62" width="12" height="12" fill="#DC2626" rx="2"/><text x="673" y="72" font-size="11" fill="#334155">10-Year Need (2034)</text>
+
+  <!-- Scale Line -->
+  <line x1="260" y1="275" x2="810" y2="275" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="260" y="292" font-size="10" fill="#64748B" text-anchor="middle">0</text>
+  <text x="397" y="292" font-size="10" fill="#64748B" text-anchor="middle">400</text>
+  <text x="535" y="292" font-size="10" fill="#64748B" text-anchor="middle">800</text>
+  <text x="672" y="292" font-size="10" fill="#64748B" text-anchor="middle">1,200</text>
+  <text x="810" y="292" font-size="10" fill="#64748B" text-anchor="middle">1,600 People</text>
+
+  <!-- Group 1: Elderly Bed Demand -->
+  <text x="245" y="112" font-size="11.5" font-weight="700" fill="#0F2440" text-anchor="end">Elderly Bed Need (65+)</text>
+  <rect x="260" y="92" width="358" height="11" fill="#0F2440" rx="2"/>
+  <rect x="260" y="105" width="434" height="11" fill="#C29B38" rx="2"/>
+  <rect x="260" y="118" width="522" height="11" fill="#DC2626" rx="2"/>
+  <text x="790" y="128" font-size="10" font-weight="800" fill="#DC2626">+45.5% (1,520)</text>
+
+  <!-- Group 2: Adults with Learning Disability -->
+  <text x="245" y="166" font-size="11.5" font-weight="700" fill="#0F2440" text-anchor="end">Funded Adults LD Cohort</text>
+  <rect x="260" y="146" width="168" height="11" fill="#0F2440" rx="2"/>
+  <rect x="260" y="159" width="183" height="11" fill="#C29B38" rx="2"/>
+  <rect x="260" y="172" width="204" height="11" fill="#DC2626" rx="2"/>
+  <text x="472" y="182" font-size="10" font-weight="800" fill="#0F2440">489 &rarr; 595</text>
+
+  <!-- Group 3: Looked After Children (CLA) -->
+  <text x="245" y="220" font-size="11.5" font-weight="700" fill="#0F2440" text-anchor="end">Looked After Children</text>
+  <rect x="260" y="200" width="128" height="11" fill="#0F2440" rx="2"/>
+  <rect x="260" y="213" width="135" height="11" fill="#C29B38" rx="2"/>
+  <rect x="260" y="226" width="146" height="11" fill="#DC2626" rx="2"/>
+  <text x="414" y="236" font-size="10" font-weight="800" fill="#0F2440">374 &rarr; 425</text>
+</svg>

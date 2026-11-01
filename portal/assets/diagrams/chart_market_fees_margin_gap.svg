@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="310" viewBox="0 0 860 310" style="background:#FFFFFF; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <rect width="860" height="310" fill="#FFFFFF" rx="8"/>
+  <text x="30" y="30" font-size="15" font-weight="800" fill="#0F2440">Chart 5: Weekly Fee Structure &amp; Operating Cost Gaps (£ / Week)</text>
+  <text x="30" y="48" font-size="11.5" fill="#64748B">Source: Table 4 (table4_market_fees_margins.csv) • Luton Scales of Charges, DHSC Fair Cost &amp; NAO</text>
+
+  <!-- Legend -->
+  <rect x="350" y="62" width="12" height="12" fill="#0F2440" rx="2"/><text x="368" y="72" font-size="11" fill="#334155">Council Base Rate</text>
+  <rect x="495" y="62" width="12" height="12" fill="#C29B38" rx="2"/><text x="513" y="72" font-size="11" fill="#334155">Fair Cost / Benchmark</text>
+  <rect x="660" y="62" width="12" height="12" fill="#166534" rx="2"/><text x="678" y="72" font-size="11" fill="#334155">Private / Market Rate</text>
+
+  <!-- Scale Line -->
+  <line x1="260" y1="265" x2="810" y2="265" stroke="#CBD5E1" stroke-width="1.5"/>
+  <text x="260" y="282" font-size="10" fill="#64748B" text-anchor="middle">£0</text>
+  <text x="397" y="282" font-size="10" fill="#64748B" text-anchor="middle">£1,750</text>
+  <text x="535" y="282" font-size="10" fill="#64748B" text-anchor="middle">£3,500</text>
+  <text x="672" y="282" font-size="10" fill="#64748B" text-anchor="middle">£5,250</text>
+  <text x="810" y="282" font-size="10" fill="#64748B" text-anchor="middle">£7,000 / Wk</text>
+
+  <!-- Row 1: Children's Residential Home (£6,100 avg) -->
+  <text x="245" y="104" font-size="11.5" font-weight="700" fill="#0F2440" text-anchor="end">Children's Residential</text>
+  <rect x="260" y="88" width="434" height="10" fill="#0F2440" rx="2"/>
+  <rect x="260" y="101" width="479" height="10" fill="#C29B38" rx="2"/>
+  <rect x="260" y="114" width="510" height="10" fill="#166534" rx="2"/>
+  <text x="780" y="112" font-size="10.5" font-weight="800" fill="#0F2440">£6,100 (NAO)</text>
+
+  <!-- Row 2: Autism & LD Supported Living (£2,350 blended) -->
+  <text x="245" y="158" font-size="11.5" font-weight="700" fill="#0F2440" text-anchor="end">Autism &amp; LD Campus</text>
+  <rect x="260" y="142" width="176" height="10" fill="#0F2440" rx="2"/>
+  <rect x="260" y="155" width="185" height="10" fill="#C29B38" rx="2"/>
+  <rect x="260" y="168" width="220" height="10" fill="#166534" rx="2"/>
+  <text x="490" y="166" font-size="10.5" font-weight="800" fill="#0F2440">£2,350/wk Avg</text>
+
+  <!-- Row 3: Older People Residential (£947 vs £1,055 fair cost) -->
+  <text x="245" y="212" font-size="11.5" font-weight="700" fill="#0F2440" text-anchor="end">OP Residential (65+)</text>
+  <rect x="260" y="196" width="74" height="10" fill="#0F2440" rx="2"/>
+  <rect x="260" y="209" width="83" height="10" fill="#C29B38" rx="2"/>
+  <rect x="260" y="222" width="105" height="10" fill="#166534" rx="2"/>
+  <text x="375" y="220" font-size="10.5" font-weight="800" fill="#DC2626">-£191 Deficit</text>
+</svg>
