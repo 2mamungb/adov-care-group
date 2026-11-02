@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 560" width="100%" height="auto" class="gantt-svg" style="max-width:100%; height:auto; display:block; background:#FFFFFF; border-radius:8px; border:1px solid #CBD5E1; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <pattern id="ganttGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#F1F5F9" stroke-width="0.8" />
+    </pattern>
+    <linearGradient id="barGantt1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F2440" />
+      <stop offset="100%" stop-color="#1E3A8A" />
+    </linearGradient>
+    <linearGradient id="barGantt2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <linearGradient id="barGantt3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+    <linearGradient id="barGantt4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#6D28D9" />
+    </linearGradient>
+    <linearGradient id="barGantt5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="barGantt6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1180" height="560" fill="#FFFFFF" />
+  <rect width="1180" height="560" fill="url(#ganttGrid)" />
+
+  <!-- Title Header Block -->
+  <rect x="0" y="0" width="1180" height="60" fill="#0F2440" rx="8 8 0 0" />
+  <text x="32" y="30" fill="#38BDF8" font-size="12" font-weight="800" letter-spacing="1.2">EXECUTIVE DELIVERY ROADMAP // 180-DAY CRITICAL PATH GANTT</text>
+  <text x="32" y="49" fill="#FFFFFF" font-size="15" font-weight="700">From Day 0 Planning Filing to Day 180 Full 8-Bed Occupancy Stabilization (£81,467/Mo Run-Rate)</text>
+  <rect x="980" y="14" width="170" height="32" rx="4" fill="#C29B38" />
+  <text x="1065" y="35" fill="#0F2440" font-size="11.5" font-weight="900" text-anchor="middle">DAY 0 TO DAY 180</text>
+
+  <!-- Timeline Column Headers (Months 1 to 6) -->
+  <!-- Left column width = 340px, Timeline width = 800px (133.3px per month) -->
+  <rect x="340" y="70" width="800" height="34" rx="4" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1" />
+  
+  <text x="406" y="92" fill="#0F2440" font-size="11.5" font-weight="800" text-anchor="middle">MONTH 1</text>
+  <text x="406" y="102" fill="#64748B" font-size="8.5" text-anchor="middle">Days 1–30</text>
+  <line x1="473" y1="70" x2="473" y2="480" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4,4" />
+
+  <text x="540" y="92" fill="#0F2440" font-size="11.5" font-weight="800" text-anchor="middle">MONTH 2</text>
+  <text x="540" y="102" fill="#64748B" font-size="8.5" text-anchor="middle">Days 31–60</text>
+  <line x1="606" y1="70" x2="606" y2="480" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4,4" />
+
+  <text x="673" y="92" fill="#0F2440" font-size="11.5" font-weight="800" text-anchor="middle">MONTH 3</text>
+  <text x="673" y="102" fill="#64748B" font-size="8.5" text-anchor="middle">Days 61–90</text>
+  <line x1="740" y1="70" x2="740" y2="480" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4,4" />
+
+  <text x="806" y="92" fill="#0F2440" font-size="11.5" font-weight="800" text-anchor="middle">MONTH 4</text>
+  <text x="806" y="102" fill="#64748B" font-size="8.5" text-anchor="middle">Days 91–120</text>
+  <line x1="873" y1="70" x2="873" y2="480" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4,4" />
+
+  <text x="940" y="92" fill="#0F2440" font-size="11.5" font-weight="800" text-anchor="middle">MONTH 5</text>
+  <text x="940" y="102" fill="#64748B" font-size="8.5" text-anchor="middle">Days 121–150</text>
+  <line x1="1006" y1="70" x2="1006" y2="480" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="4,4" />
+
+  <text x="1073" y="92" fill="#0F2440" font-size="11.5" font-weight="800" text-anchor="middle">MONTH 6</text>
+  <text x="1073" y="102" fill="#64748B" font-size="8.5" text-anchor="middle">Days 151–180</text>
+
+  <!-- Left Header Label -->
+  <text x="32" y="92" fill="#0F2440" font-size="12" font-weight="800">OPERATIONAL WORKSTREAM &amp; MILESTONE</text>
+
+  <!-- Horizontal Rows (6 Workstreams) -->
+  <!-- 1. Corporate, Planning & Leases -->
+  <g transform="translate(0, 115)">
+    <rect x="24" y="0" width="305" height="48" rx="4" fill="#F8FAFC" stroke="#E2E8F0" />
+    <text x="36" y="20" fill="#0F2440" font-size="11.5" font-weight="800">1. Corporate, Planning &amp; Leases</text>
+    <text x="36" y="36" fill="#64748B" font-size="9.5">S.192 CLPUD filing, FRI leases, BIK AST</text>
+    <!-- Bar: Month 1 (Days 1–30) -> x=340, width=133 -->
+    <rect x="340" y="10" width="133" height="28" rx="4" fill="url(#barGantt1)" />
+    <text x="406" y="28" fill="#FFFFFF" font-size="10" font-weight="800" text-anchor="middle">Days 1–30</text>
+    <!-- Milestone Diamond -->
+    <polygon points="473,24 479,16 485,24 479,32" fill="#C29B38" />
+  </g>
+
+  <!-- 2. CapEx Fit-Out & Statutory Compliance -->
+  <g transform="translate(0, 175)">
+    <rect x="24" y="0" width="305" height="48" rx="4" fill="#F8FAFC" stroke="#E2E8F0" />
+    <text x="36" y="20" fill="#0F2440" font-size="11.5" font-weight="800">2. CapEx Fit-Out (£68.4k)</text>
+    <text x="36" y="36" fill="#64748B" font-size="9.5">BS 5839 Cat L1, FD30S, TMV3, acoustic panels</text>
+    <!-- Bar: Days 15 to 60 -> x=406, width=200 -->
+    <rect x="406" y="10" width="200" height="28" rx="4" fill="url(#barGantt2)" />
+    <text x="506" y="28" fill="#FFFFFF" font-size="10" font-weight="800" text-anchor="middle">Days 15–60</text>
+    <polygon points="606,24 612,16 618,24 612,32" fill="#059669" />
+  </g>
+
+  <!-- 3. CQC Single Assessment Registration -->
+  <g transform="translate(0, 235)">
+    <rect x="24" y="0" width="305" height="48" rx="4" fill="#F8FAFC" stroke="#E2E8F0" />
+    <text x="36" y="20" fill="#0F2440" font-size="11.5" font-weight="800">3. CQC Registration (Fast-Track)</text>
+    <text x="36" y="36" fill="#64748B" font-size="9.5">Portal submission, RM interview, S.28(3) waiver</text>
+    <!-- Bar: Days 30 to 90 -> x=473, width=267 -->
+    <rect x="473" y="10" width="267" height="28" rx="4" fill="url(#barGantt3)" />
+    <text x="606" y="28" fill="#FFFFFF" font-size="10" font-weight="800" text-anchor="middle">Days 30–90 (CQC Fast-Track)</text>
+    <!-- Milestone Diamond: Approval -->
+    <polygon points="740,24 746,16 752,24 746,32" fill="#2563EB" />
+  </g>
+
+  <!-- 4. Staffing Recruitment & Training -->
+  <g transform="translate(0, 295)">
+    <rect x="24" y="0" width="305" height="48" rx="4" fill="#F8FAFC" stroke="#E2E8F0" />
+    <text x="36" y="20" fill="#0F2440" font-size="11.5" font-weight="800">4. Staffing Rota (10.0 FTE)</text>
+    <text x="36" y="36" fill="#64748B" font-size="9.5">DBS checks, Oliver McGowan mandatory training</text>
+    <!-- Bar: Days 60 to 120 -> x=606, width=267 -->
+    <rect x="606" y="10" width="267" height="28" rx="4" fill="url(#barGantt4)" />
+    <text x="740" y="28" fill="#FFFFFF" font-size="10" font-weight="800" text-anchor="middle">Days 60–120</text>
+    <polygon points="873,24 879,16 885,24 879,32" fill="#7C3AED" />
+  </g>
+
+  <!-- 5. Luton DPS & ICB Accreditation -->
+  <g transform="translate(0, 355)">
+    <rect x="24" y="0" width="305" height="48" rx="4" fill="#F8FAFC" stroke="#E2E8F0" />
+    <text x="36" y="20" fill="#0F2440" font-size="11.5" font-weight="800">5. Luton DPS (AT1115) &amp; NHS ICB</text>
+    <text x="36" y="36" fill="#64748B" font-size="9.5">ProContract onboarding, IPA contract terms</text>
+    <!-- Bar: Days 75 to 120 -> x=673, width=200 -->
+    <rect x="673" y="10" width="200" height="28" rx="4" fill="url(#barGantt5)" />
+    <text x="773" y="28" fill="#FFFFFF" font-size="10" font-weight="800" text-anchor="middle">Days 75–120</text>
+    <polygon points="873,24 879,16 885,24 879,32" fill="#059669" />
+  </g>
+
+  <!-- 6. Phased Resident Move-In & Full Capacity -->
+  <g transform="translate(0, 415)">
+    <rect x="24" y="0" width="305" height="48" rx="4" fill="#F8FAFC" stroke="#E2E8F0" />
+    <text x="36" y="20" fill="#0F2440" font-size="11.5" font-weight="800">6. Phased Intake &amp; Stabilization</text>
+    <text x="36" y="36" fill="#64748B" font-size="9.5">Beds 1–4 (M5) -> Beds 5–8 (M6) 100% full</text>
+    <!-- Bar: Days 105 to 180 -> x=806, width=334 -->
+    <rect x="806" y="10" width="334" height="28" rx="4" fill="url(#barGantt6)" />
+    <text x="973" y="28" fill="#FFFFFF" font-size="10" font-weight="800" text-anchor="middle">Days 105–180 (Full 8 Beds Stabilized)</text>
+    <polygon points="1140,24 1146,16 1152,24 1146,32" fill="#C29B38" />
+  </g>
+
+  <!-- Critical Path Decision Gateways Strip (Footer) -->
+  <rect x="24" y="490" width="1132" height="54" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" />
+  <text x="36" y="512" fill="#0F2440" font-size="11" font-weight="800">MANAGEMENT DECISION GATEWAYS (GO / NO-GO CRITERIA):</text>
+  <text x="36" y="530" fill="#475569" font-size="10">
+    <tspan font-weight="700" fill="#B45309">Gate 1 (Day 30):</tspan> S.192 Planning Cleared • 
+    <tspan font-weight="700" fill="#2563EB">Gate 2 (Day 60):</tspan> CapEx Signed Off • 
+    <tspan font-weight="700" fill="#7C3AED">Gate 3 (Day 90):</tspan> CQC S.28(3) Fast-Track NOD • 
+    <tspan font-weight="700" fill="#059669">Gate 4 (Day 120):</tspan> Luton DPS AT1115 Active • 
+    <tspan font-weight="700" fill="#047857">Gate 5 (Day 180):</tspan> 8 Beds Full (£81.5k/mo Run-Rate)
+  </text>
+</svg>
